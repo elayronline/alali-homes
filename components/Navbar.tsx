@@ -15,9 +15,27 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("")
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50)
+
+      // Active section detection
+      const sections = ["landlords", "agents", "process", "about", "faq", "contact"]
+      const navHeight = 100
+      let current = ""
+      for (const id of sections) {
+        const el = document.getElementById(id)
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          if (rect.top <= navHeight + 100) {
+            current = id
+          }
+        }
+      }
+      setActiveSection(current)
+    }
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
@@ -30,9 +48,7 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 shadow-sm"
-          : "bg-white/80"
+        scrolled ? "bg-white/95 shadow-sm" : "bg-white/80"
       }`}
       style={{
         backdropFilter: "blur(20px)",
@@ -51,7 +67,9 @@ export function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="cursor-pointer font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] text-charcoal transition-colors hover:text-gold"
+              className={`cursor-pointer font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] transition-colors hover:text-gold ${
+                activeSection === link.href ? "text-gold" : "text-charcoal"
+              }`}
             >
               {link.label}
             </button>
@@ -93,7 +111,9 @@ export function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="cursor-pointer text-left font-body text-sm font-medium uppercase tracking-wide text-charcoal transition-colors hover:text-gold"
+              className={`cursor-pointer text-left font-body text-sm font-medium uppercase tracking-wide transition-colors hover:text-gold ${
+                activeSection === link.href ? "text-gold" : "text-charcoal"
+              }`}
             >
               {link.label}
             </button>

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { scrollToSection } from "@/lib/smoothScroll"
 
 const painPoints = [
   "Months of void periods eating into your returns?",
@@ -92,6 +93,16 @@ export function ForLandlords() {
             <p className="mt-8 font-body text-[0.95rem] font-medium text-charcoal">
               If any of this sounds like you, it&apos;s time to talk to Alali Homes.
             </p>
+            {/* CTA (#5) */}
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              onClick={() => scrollToSection("contact")}
+              className="mt-6 cursor-pointer rounded-sm bg-gold px-6 py-3 font-body text-[0.88rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg"
+            >
+              Submit Your Property
+            </motion.button>
           </motion.div>
 
           {/* Benefits */}
@@ -105,7 +116,7 @@ export function ForLandlords() {
             {benefits.map((b, i) => (
               <div
                 key={i}
-                className="rounded-lg border border-grey-200 bg-white p-5 pl-6 transition-all duration-200 hover:shadow-md"
+                className="rounded-lg border border-grey-200 bg-white p-5 pl-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                 style={{ borderLeft: "3px solid var(--gold)" }}
               >
                 <h4 className="font-display text-[0.95rem] font-semibold text-charcoal">

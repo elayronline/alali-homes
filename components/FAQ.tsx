@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 
 interface FAQItem {
@@ -56,11 +56,21 @@ const agentFAQs: FAQItem[] = [
 
 function FAQAccordion({ item }: { item: FAQItem }) {
   const [open, setOpen] = useState(false)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const [height, setHeight] = useState(0)
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(contentRef.current.scrollHeight)
+    }
+  }, [open])
 
   return (
     <div
       className={`rounded-lg border transition-all duration-200 ${
-        open ? "border-gold/25 bg-gold-pale/30 shadow-sm" : "border-grey-200 bg-white hover:border-gold/15"
+        open
+          ? "border-gold/25 bg-gold-pale/30 shadow-sm"
+          : "border-grey-200 bg-white hover:border-gold/15"
       }`}
     >
       <button
@@ -77,13 +87,20 @@ function FAQAccordion({ item }: { item: FAQItem }) {
           }`}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M7 1v12M1 7h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path
+              d="M7 1v12M1 7h12"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
           </svg>
         </span>
       </button>
+      {/* Fixed: auto-height instead of hardcoded 200px (#3) */}
       <div
+        ref={contentRef}
         className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: open ? "200px" : "0px" }}
+        style={{ maxHeight: open ? `${height}px` : "0px" }}
       >
         <p className="px-5 pb-5 font-body text-[0.88rem] font-light leading-relaxed text-grey-600">
           {item.answer}

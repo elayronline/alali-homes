@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { scrollToSection } from "@/lib/smoothScroll"
 
 const cards = [
   {
@@ -27,8 +28,8 @@ const cards = [
 
 export function ForAgents() {
   return (
-    <section id="agents" className="bg-charcoal px-4 py-20 sm:px-6 sm:py-28">
-      {/* Subtle radial gradient */}
+    <section id="agents" className="relative bg-charcoal px-4 py-20 sm:px-6 sm:py-28">
+      {/* Subtle radial gradient — fixed: added relative to section */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -74,7 +75,7 @@ export function ForAgents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-lg border border-white/8 bg-white/5 p-7 transition-all duration-300 hover:border-gold/25 hover:bg-white/8"
+              className="group rounded-lg border border-white/8 bg-white/5 p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/25 hover:bg-white/8 hover:shadow-lg"
             >
               <div className="mb-5 h-0.5 w-8 bg-gold/30 transition-all duration-300 group-hover:w-full group-hover:bg-gold" />
               <span className="font-display text-2xl font-bold text-gold/30">{card.num}</span>
@@ -87,6 +88,22 @@ export function ForAgents() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA (#6) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-12 text-center"
+        >
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="cursor-pointer rounded-sm border border-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-gold transition-all hover:bg-gold hover:text-white"
+          >
+            Partner With Us
+          </button>
+        </motion.div>
       </div>
     </section>
   )

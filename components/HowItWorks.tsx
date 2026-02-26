@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { scrollToSection } from "@/lib/smoothScroll"
 
 const steps = [
   {
@@ -55,7 +56,7 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="relative rounded-xl border border-grey-200 bg-white p-8 shadow-sm"
+              className="relative rounded-xl border border-grey-200 bg-white p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
             >
               <span className="font-display text-[3.5rem] font-bold leading-none text-gold/12">
                 {step.num}
@@ -72,6 +73,25 @@ export function HowItWorks() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA (#1) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-14 text-center"
+        >
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="cursor-pointer rounded-sm bg-gold px-8 py-3.5 font-body text-[0.9rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg"
+          >
+            Get Started
+          </button>
+          <p className="mt-3 font-body text-[0.8rem] font-light text-grey-400">
+            No commitment. We&apos;ll get back to you within 48 hours.
+          </p>
+        </motion.div>
       </div>
     </section>
   )
