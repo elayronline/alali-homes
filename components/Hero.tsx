@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const stats = [
-  { value: "100%", label: "Rent Guaranteed" },
-  { value: "0", label: "Void Periods" },
-  { value: "1–5yr", label: "Agreement Terms" },
-  { value: "24/7", label: "Management" },
+  { value: "100%", label: "Your Rent, Guaranteed" },
+  { value: "0", label: "Zero Void Periods" },
+  { value: "1–5yr", label: "Long-Term Security" },
+  { value: "24/7", label: "We Handle Everything" },
 ]
 
 export function Hero() {
@@ -122,28 +122,41 @@ export function Hero() {
             {/* Gold top accent */}
             <div className="mx-auto -mt-8 mb-6 h-1 w-16 rounded-b bg-gradient-to-r from-gold-dark to-gold" />
 
-            <div className="grid grid-cols-2 gap-8">
+            {/* Card headline */}
+            <p className="mb-6 text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark">
+              The Alali Promise
+            </p>
+
+            <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, i) => (
                 <div key={i} className="text-center">
-                  <p className="font-display text-3xl font-bold text-charcoal sm:text-4xl">
+                  <p className="font-display text-3xl font-bold text-gold sm:text-4xl">
                     {stat.value}
                   </p>
-                  <p className="mt-1 font-body text-[0.8rem] font-light text-grey-600">
+                  <p className="mt-1 font-body text-[0.78rem] font-medium text-charcoal">
                     {stat.label}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* Currently accepting */}
-            <div className="mt-8 flex items-center justify-center gap-2 border-t border-grey-200 pt-6">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
-              </span>
-              <span className="font-body text-[0.8rem] font-light text-grey-600">
-                Currently accepting new properties
-              </span>
+            {/* Accepting + CTA */}
+            <div className="mt-7 border-t border-grey-200 pt-5">
+              <div className="flex items-center justify-center gap-2">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                </span>
+                <span className="font-body text-[0.8rem] font-medium text-charcoal">
+                  Accepting properties now
+                </span>
+              </div>
+              <button
+                onClick={() => scrollToSection("process")}
+                className="mt-3 w-full cursor-pointer text-center font-body text-[0.82rem] font-medium text-gold transition-colors hover:text-gold-dark"
+              >
+                See how it works &rarr;
+              </button>
             </div>
           </div>
         </motion.div>
