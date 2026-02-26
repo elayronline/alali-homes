@@ -30,15 +30,17 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[rgba(13,13,13,0.97)]" : "bg-[rgba(13,13,13,0.92)]"
+        scrolled
+          ? "bg-white/95 shadow-sm"
+          : "bg-white/80"
       }`}
       style={{
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
-        borderBottom: "1px solid rgba(198, 162, 78, 0.15)",
+        borderBottom: "1px solid rgba(198, 162, 78, 0.12)",
       }}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <button onClick={() => scrollToSection("hero")} className="cursor-pointer">
           <Logo />
         </button>
@@ -49,14 +51,14 @@ export function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="cursor-pointer font-body text-[0.85rem] font-normal uppercase tracking-[0.04em] text-white/80 transition-colors hover:text-gold"
+              className="cursor-pointer font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] text-charcoal transition-colors hover:text-gold"
             >
               {link.label}
             </button>
           ))}
           <button
             onClick={() => handleNav("contact")}
-            className="cursor-pointer rounded border border-gold px-5 py-2 font-body text-[0.85rem] font-medium uppercase tracking-[0.04em] text-gold transition-all hover:bg-gold hover:text-black-brand"
+            className="cursor-pointer rounded-sm bg-gold px-6 py-2.5 font-body text-[0.82rem] font-semibold uppercase tracking-[0.06em] text-white transition-all hover:bg-gold-dark"
           >
             Get In Touch
           </button>
@@ -69,36 +71,36 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-0.5 w-6 bg-white transition-all ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
+            className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`}
+            className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-white transition-all ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
       </div>
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden transition-all duration-300 lg:hidden ${
+        className={`overflow-hidden bg-white transition-all duration-300 lg:hidden ${
           mobileOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <div className="flex flex-col gap-4 border-t border-white/5 px-6 py-6">
+        <div className="flex flex-col gap-4 border-t border-grey-200 px-6 py-6">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="cursor-pointer text-left font-body text-sm uppercase tracking-wide text-white/80 transition-colors hover:text-gold"
+              className="cursor-pointer text-left font-body text-sm font-medium uppercase tracking-wide text-charcoal transition-colors hover:text-gold"
             >
               {link.label}
             </button>
           ))}
           <button
             onClick={() => handleNav("contact")}
-            className="mt-2 w-full cursor-pointer rounded border border-gold py-3 text-center font-body text-sm font-medium uppercase tracking-wide text-gold transition-all hover:bg-gold hover:text-black-brand"
+            className="mt-2 w-full cursor-pointer rounded-sm bg-gold py-3 text-center font-body text-sm font-semibold uppercase tracking-wide text-white transition-all hover:bg-gold-dark"
           >
             Get In Touch
           </button>

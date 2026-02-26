@@ -52,13 +52,13 @@ const values = [
 
 export function ValueProposition() {
   return (
-    <section className="bg-cream px-4 py-20 sm:px-6 sm:py-24">
+    <section className="border-t border-grey-200 bg-grey-50 px-4 py-20 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold"
+          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           Why Alali Homes
         </motion.p>
@@ -73,13 +73,13 @@ export function ValueProposition() {
               transition={{ delay: i * 0.1 }}
               className={`px-6 py-8 ${i < values.length - 1 ? "lg:border-r lg:border-grey-200" : ""}`}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded bg-black-brand text-gold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10 text-gold-dark">
                 {item.icon}
               </div>
-              <h3 className="mt-5 font-display text-[1.3rem] font-semibold text-charcoal">
+              <h3 className="mt-5 font-display text-[1.1rem] font-semibold text-charcoal">
                 {item.title}
               </h3>
-              <p className="mt-3 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">
+              <p className="mt-3 font-body text-[0.88rem] font-light leading-relaxed text-grey-600">
                 {item.description}
               </p>
             </motion.div>

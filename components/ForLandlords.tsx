@@ -41,7 +41,7 @@ export function ForLandlords() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold"
+          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           For Landlords
         </motion.p>
@@ -49,7 +49,7 @@ export function ForLandlords() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 font-display text-[2.4rem] leading-tight font-normal text-charcoal sm:text-[2.8rem]"
+          className="mt-3 font-display text-[2rem] leading-tight font-light text-charcoal sm:text-[2.6rem]"
         >
           Your Property. Our Responsibility.{" "}
           <strong className="font-semibold text-gold">Your Guaranteed Rent.</strong>
@@ -62,11 +62,11 @@ export function ForLandlords() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-display text-xl font-semibold text-charcoal">Sound Familiar?</h3>
+            <h3 className="font-display text-lg font-semibold text-charcoal">Sound Familiar?</h3>
             <div className="mt-6 space-y-4">
               {painPoints.map((point, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gold/40">
+                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gold/30 bg-gold/5">
                     <svg
                       width="12"
                       height="12"
@@ -83,7 +83,7 @@ export function ForLandlords() {
                       />
                     </svg>
                   </div>
-                  <p className="font-body text-[0.95rem] font-light leading-relaxed text-grey-600">
+                  <p className="font-body text-[0.92rem] font-light leading-relaxed text-grey-600">
                     {point}
                   </p>
                 </div>
@@ -100,16 +100,18 @@ export function ForLandlords() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="space-y-4"
+            className="space-y-3"
           >
             {benefits.map((b, i) => (
               <div
                 key={i}
-                className="rounded-lg border border-grey-200 bg-grey-50 p-5 pl-6"
+                className="rounded-lg border border-grey-200 bg-white p-5 pl-6 transition-all duration-200 hover:shadow-md"
                 style={{ borderLeft: "3px solid var(--gold)" }}
               >
-                <h4 className="font-display text-lg font-semibold text-charcoal">{b.title}</h4>
-                <p className="mt-1 font-body text-[0.9rem] font-light text-grey-600">{b.desc}</p>
+                <h4 className="font-display text-[0.95rem] font-semibold text-charcoal">
+                  {b.title}
+                </h4>
+                <p className="mt-1 font-body text-[0.85rem] font-light text-grey-600">{b.desc}</p>
               </div>
             ))}
           </motion.div>

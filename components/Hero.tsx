@@ -14,18 +14,18 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black-brand"
+      className="relative flex min-h-screen items-center overflow-hidden bg-white"
     >
-      {/* Subtle gold radial gradient */}
+      {/* Subtle warm gradient overlay */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(198, 162, 78, 0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(198, 162, 78, 0.04) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 70% 30%, rgba(198, 162, 78, 0.05) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(198, 162, 78, 0.03) 0%, transparent 50%)",
         }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-28 pb-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:pt-0 lg:pb-0">
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-32 pb-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:pt-0 lg:pb-0">
         {/* Left column */}
         <div className="flex flex-col justify-center">
           <motion.div
@@ -33,7 +33,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block rounded-sm border border-gold/20 bg-gold/5 px-4 py-1.5 font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold">
+            <span className="inline-block rounded-full border border-gold/25 bg-gold-pale/50 px-5 py-1.5 font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark">
               Corporate Lettings Specialists
             </span>
           </motion.div>
@@ -42,9 +42,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-6 font-display text-[2.8rem] leading-[1.1] font-light text-white sm:text-[3.8rem]"
+            className="mt-7 font-display text-[2.6rem] leading-[1.1] font-light text-charcoal sm:text-[3.6rem]"
           >
-            Guaranteed Rent. Zero Voids.
+            Guaranteed Rent.
+            <br />
+            Zero Voids.
             <br />
             <strong className="font-semibold text-gold">Professionally Managed.</strong>
           </motion.h1>
@@ -53,7 +55,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 max-w-lg font-body text-[0.95rem] font-light leading-[1.7] text-grey-400"
+            className="mt-6 max-w-lg font-body text-[0.95rem] font-light leading-[1.8] text-grey-600"
           >
             We take on properties under corporate lets and guaranteed rent agreements — managing
             everything so landlords receive reliable income, every month, without the hassle.
@@ -67,13 +69,13 @@ export function Hero() {
           >
             <button
               onClick={() => scrollToSection("contact")}
-              className="cursor-pointer rounded bg-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-black-brand transition-all hover:bg-gold-light"
+              className="cursor-pointer rounded-sm bg-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg"
             >
               Speak To Our Team
             </button>
             <button
               onClick={() => scrollToSection("process")}
-              className="cursor-pointer rounded border border-white/30 px-7 py-3.5 font-body text-[0.9rem] font-medium text-white transition-all hover:border-gold hover:text-gold"
+              className="cursor-pointer rounded-sm border border-charcoal/20 px-7 py-3.5 font-body text-[0.9rem] font-medium text-charcoal transition-all hover:border-gold hover:text-gold"
             >
               How It Works
             </button>
@@ -87,17 +89,17 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex items-center justify-center lg:justify-end"
         >
-          <div className="w-full max-w-md rounded-lg border border-white/5 bg-grey-900/80 p-8">
+          <div className="w-full max-w-md rounded-xl border border-grey-200 bg-white p-8 shadow-lg shadow-black/5">
             {/* Gold top accent */}
             <div className="mx-auto -mt-8 mb-6 h-1 w-16 rounded-b bg-gradient-to-r from-gold-dark to-gold" />
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-8">
               {stats.map((stat, i) => (
                 <div key={i} className="text-center">
-                  <p className="font-display text-3xl font-semibold text-gold sm:text-4xl">
+                  <p className="font-display text-3xl font-bold text-charcoal sm:text-4xl">
                     {stat.value}
                   </p>
-                  <p className="mt-1 font-body text-[0.8rem] font-light text-grey-400">
+                  <p className="mt-1 font-body text-[0.8rem] font-light text-grey-600">
                     {stat.label}
                   </p>
                 </div>
@@ -105,12 +107,12 @@ export function Hero() {
             </div>
 
             {/* Currently accepting */}
-            <div className="mt-8 flex items-center justify-center gap-2 border-t border-white/5 pt-6">
+            <div className="mt-8 flex items-center justify-center gap-2 border-t border-grey-200 pt-6">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
               </span>
-              <span className="font-body text-[0.8rem] font-light text-grey-400">
+              <span className="font-body text-[0.8rem] font-light text-grey-600">
                 Currently accepting new properties
               </span>
             </div>

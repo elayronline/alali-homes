@@ -28,13 +28,13 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="process" className="bg-cream px-4 py-20 sm:px-6 sm:py-28">
+    <section id="process" className="bg-grey-50 px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold"
+          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           The Process
         </motion.p>
@@ -42,7 +42,7 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center font-display text-[2.4rem] leading-tight font-normal text-charcoal sm:text-[2.8rem]"
+          className="mt-3 text-center font-display text-[2rem] leading-tight font-light text-charcoal sm:text-[2.6rem]"
         >
           Three Steps to <strong className="font-semibold text-gold">Guaranteed Rent</strong>
         </motion.h2>
@@ -55,18 +55,18 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="relative"
+              className="relative rounded-xl border border-grey-200 bg-white p-8 shadow-sm"
             >
-              <span className="font-display text-[4rem] font-semibold leading-none text-gold/15">
+              <span className="font-display text-[3.5rem] font-bold leading-none text-gold/12">
                 {step.num}
               </span>
-              <h3 className="mt-2 font-display text-[1.3rem] font-semibold text-charcoal">
+              <h3 className="mt-1 font-display text-[1.1rem] font-semibold text-charcoal">
                 {step.title}
               </h3>
-              <p className="mt-3 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">
+              <p className="mt-3 font-body text-[0.88rem] font-light leading-relaxed text-grey-600">
                 {step.desc}
               </p>
-              <p className="mt-4 font-body text-[0.85rem] font-light italic leading-relaxed text-grey-400">
+              <p className="mt-4 border-t border-grey-200 pt-4 font-body text-[0.82rem] font-light italic leading-relaxed text-grey-400">
                 {step.detail}
               </p>
             </motion.div>

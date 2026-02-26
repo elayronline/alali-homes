@@ -60,7 +60,7 @@ function FAQAccordion({ item }: { item: FAQItem }) {
   return (
     <div
       className={`rounded-lg border transition-all duration-200 ${
-        open ? "border-gold/30 bg-grey-50" : "border-grey-200 bg-white"
+        open ? "border-gold/25 bg-gold-pale/30 shadow-sm" : "border-grey-200 bg-white hover:border-gold/15"
       }`}
     >
       <button
@@ -68,7 +68,7 @@ function FAQAccordion({ item }: { item: FAQItem }) {
         className="flex w-full cursor-pointer items-center justify-between p-5 text-left"
         aria-expanded={open}
       >
-        <span className="pr-4 font-display text-[1.05rem] font-semibold text-charcoal">
+        <span className="pr-4 font-display text-[0.95rem] font-semibold text-charcoal">
           &ldquo;{item.question}&rdquo;
         </span>
         <span
@@ -85,7 +85,7 @@ function FAQAccordion({ item }: { item: FAQItem }) {
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: open ? "200px" : "0px" }}
       >
-        <p className="px-5 pb-5 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">
+        <p className="px-5 pb-5 font-body text-[0.88rem] font-light leading-relaxed text-grey-600">
           {item.answer}
         </p>
       </div>
@@ -95,13 +95,13 @@ function FAQAccordion({ item }: { item: FAQItem }) {
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-cream px-4 py-20 sm:px-6 sm:py-28">
+    <section id="faq" className="bg-grey-50 px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold"
+          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           Frequently Asked
         </motion.p>
@@ -109,13 +109,13 @@ export function FAQ() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center font-display text-[2.4rem] leading-tight font-normal text-charcoal sm:text-[2.8rem]"
+          className="mt-3 text-center font-display text-[2rem] leading-tight font-light text-charcoal sm:text-[2.6rem]"
         >
           Questions Landlords &{" "}
           <strong className="font-semibold text-gold">Agents Ask Us</strong>
         </motion.h2>
 
-        <div className="mt-14 grid gap-4 lg:grid-cols-2">
+        <div className="mt-14 grid gap-3 lg:grid-cols-2 lg:gap-4">
           <div className="space-y-3">
             {landlordFAQs.slice(0, 3).map((faq, i) => (
               <motion.div

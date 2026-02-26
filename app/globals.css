@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Gold palette */
+  /* Gold palette — extracted from logo */
   --gold: #C6A24E;
   --gold-light: #D4B76A;
   --gold-dark: #A8873B;
@@ -34,7 +34,7 @@
   --color-grey-200: var(--grey-200);
   --color-grey-50: var(--grey-50);
   --color-cream: var(--cream);
-  --font-display: "Cormorant Garamond", serif;
+  --font-display: "Montserrat", sans-serif;
   --font-body: "Outfit", sans-serif;
 }
 
@@ -55,7 +55,7 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--black);
+  background: var(--grey-50);
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(198, 162, 78, 0.3);

@@ -1,4 +1,4 @@
-import { Logo } from "./Logo"
+import Image from "next/image"
 
 const companyLinks = [
   { label: "About", href: "#about" },
@@ -22,13 +22,19 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-black-soft px-4 pt-16 pb-8 sm:px-6">
+    <footer className="border-t border-grey-200 bg-charcoal px-4 pt-16 pb-8 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Col 1: Logo + desc */}
           <div>
-            <Logo />
-            <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-grey-400">
+            <Image
+              src="/logo.png"
+              alt="Alali Homes"
+              width={120}
+              height={50}
+              className="h-10 w-auto brightness-0 invert"
+            />
+            <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/50">
               UK-based corporate lettings and property management. Guaranteed rent, zero voids,
               fully managed.
             </p>
@@ -44,7 +50,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[0.85rem] font-light text-grey-400 transition-colors hover:text-gold"
+                    className="font-body text-[0.85rem] font-light text-white/50 transition-colors hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -61,7 +67,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link}>
-                  <span className="font-body text-[0.85rem] font-light text-grey-400">{link}</span>
+                  <span className="font-body text-[0.85rem] font-light text-white/50">{link}</span>
                 </li>
               ))}
             </ul>
@@ -77,7 +83,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[0.85rem] font-light text-grey-400 transition-colors hover:text-gold"
+                    className="font-body text-[0.85rem] font-light text-white/50 transition-colors hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -88,14 +94,14 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="mt-12 h-px bg-white/5" />
+        <div className="mt-12 h-px bg-white/8" />
 
         {/* Bottom bar */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="font-body text-[0.75rem] font-light text-grey-600">
+          <p className="font-body text-[0.75rem] font-light text-white/30">
             &copy; 2026 Alali Homes Ltd. All rights reserved.
           </p>
-          <p className="font-body text-[0.75rem] font-light text-grey-600">
+          <p className="font-body text-[0.75rem] font-light text-white/30">
             Registered in England &amp; Wales
           </p>
         </div>
