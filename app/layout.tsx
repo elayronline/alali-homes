@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: "Alali Homes — Guaranteed Rent & Corporate Lettings",
   description:
     "Alali Homes Ltd offers landlords guaranteed rent through corporate lets and professional property management. Zero voids, fully managed, 1-5 year agreements.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Alali Homes — Guaranteed Rent & Corporate Lettings",
     description:
