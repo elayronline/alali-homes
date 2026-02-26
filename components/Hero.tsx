@@ -69,16 +69,45 @@ export function Hero() {
           >
             <button
               onClick={() => scrollToSection("contact")}
-              className="cursor-pointer rounded-sm bg-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg"
+              className="cursor-pointer rounded-sm bg-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg focus:ring-2 focus:ring-gold/30 focus:ring-offset-2"
             >
-              Speak To Our Team
+              Get a Rent Quote
             </button>
             <button
               onClick={() => scrollToSection("process")}
-              className="cursor-pointer rounded-sm border border-charcoal/20 px-7 py-3.5 font-body text-[0.9rem] font-medium text-charcoal transition-all hover:border-gold hover:text-gold"
+              className="cursor-pointer rounded-sm border border-charcoal/20 px-7 py-3.5 font-body text-[0.9rem] font-medium text-charcoal transition-all hover:border-gold hover:text-gold focus:ring-2 focus:ring-gold/30 focus:ring-offset-2"
             >
               How It Works
             </button>
+          </motion.div>
+
+          {/* Trust micro-strip */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-6 flex flex-wrap items-center gap-4 font-body text-[0.75rem] text-grey-400"
+          >
+            <span className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-gold" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+              UK registered &amp; insured
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-gold" aria-hidden="true">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+              No upfront fees
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-gold" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M12 8v4l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+              48-hour response
+            </span>
           </motion.div>
         </div>
 

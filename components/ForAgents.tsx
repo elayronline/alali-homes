@@ -29,7 +29,7 @@ const cards = [
 export function ForAgents() {
   return (
     <section id="agents" className="relative bg-charcoal px-4 py-20 sm:px-6 sm:py-28">
-      {/* Subtle radial gradient — fixed: added relative to section */}
+      {/* Subtle radial gradient */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -53,8 +53,8 @@ export function ForAgents() {
           viewport={{ once: true }}
           className="mt-3 max-w-2xl font-display text-[2rem] leading-tight font-light text-white sm:text-[2.6rem]"
         >
-          A Reliable Partner{" "}
-          <strong className="font-semibold text-gold">For Your Landlord Clients</strong>
+          Earn Referral Fees.{" "}
+          <strong className="font-semibold text-gold">Solve Problem Stock.</strong>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,8 @@ export function ForAgents() {
           className="mt-4 max-w-2xl font-body text-[0.92rem] font-light leading-relaxed text-white/60"
         >
           Not every landlord wants traditional letting. Some want guaranteed income. Others need a
-          corporate solution for hard-to-let stock. That&apos;s where we come in.
+          corporate solution for hard-to-let stock. That&apos;s where we come in — and you earn for
+          every successful referral.
         </motion.p>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2">
@@ -89,7 +90,7 @@ export function ForAgents() {
           ))}
         </div>
 
-        {/* CTA (#6) */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,10 +100,13 @@ export function ForAgents() {
         >
           <button
             onClick={() => scrollToSection("contact")}
-            className="cursor-pointer rounded-sm border border-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-gold transition-all hover:bg-gold hover:text-white"
+            className="cursor-pointer rounded-sm border border-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-gold transition-all hover:bg-gold hover:text-white focus:ring-2 focus:ring-gold/30 focus:ring-offset-2 focus:ring-offset-charcoal"
           >
-            Partner With Us
+            Refer a Property &amp; Earn
           </button>
+          <p className="mt-3 font-body text-[0.78rem] font-light text-white/40">
+            Terms agreed in writing upfront. No hidden obligations.
+          </p>
         </motion.div>
       </div>
     </section>
