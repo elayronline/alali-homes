@@ -29,11 +29,11 @@ export function Footer() {
           {/* Col 1: Logo + desc + social */}
           <div>
             <Image
-              src="/logo.png"
+              src="/logo-light.png"
               alt="Alali Homes — Corporate Lettings"
               width={120}
               height={50}
-              className="h-14 w-auto brightness-0 invert"
+              className="h-14 w-auto"
             />
             <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/50">
               UK-based corporate lettings and property management. Guaranteed rent, zero voids,
