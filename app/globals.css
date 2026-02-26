@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Gold palette */
+  --gold: #C6A24E;
+  --gold-light: #D4B76A;
+  --gold-dark: #A8873B;
+  --gold-pale: #F5EDDA;
+
+  /* Neutrals */
+  --black: #0D0D0D;
+  --black-soft: #1A1A1A;
+  --charcoal: #2A2A2A;
+  --grey-900: #1F1F1F;
+  --grey-600: #666666;
+  --grey-400: #999999;
+  --grey-200: #E0E0E0;
+  --grey-50: #F9F9F7;
+  --cream: #FDFBF7;
+  --white: #FFFFFF;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-pale: var(--gold-pale);
+  --color-black-brand: var(--black);
+  --color-black-soft: var(--black-soft);
+  --color-charcoal: var(--charcoal);
+  --color-grey-900: var(--grey-900);
+  --color-grey-600: var(--grey-600);
+  --color-grey-400: var(--grey-400);
+  --color-grey-200: var(--grey-200);
+  --color-grey-50: var(--grey-50);
+  --color-cream: var(--cream);
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Outfit", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(198, 162, 78, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(198, 162, 78, 0.5);
 }

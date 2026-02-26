@@ -1,0 +1,120 @@
+"use client"
+
+import { motion } from "framer-motion"
+
+const painPoints = [
+  "Months of void periods eating into your returns?",
+  "Chasing tenants for late or missed rent?",
+  "Unexpected maintenance calls at all hours?",
+  "Navigating ever-changing compliance regulations?",
+  "Tired of the hassle but don\u2019t want to sell?",
+]
+
+const benefits = [
+  {
+    title: "Guaranteed Monthly Rent",
+    desc: "Paid whether the property is occupied or not.",
+  },
+  {
+    title: "Full Property Management",
+    desc: "Tenants, maintenance, check-ins, emergencies.",
+  },
+  {
+    title: "Compliance Covered",
+    desc: "Gas safety, EICR, EPC, smoke/CO alarms.",
+  },
+  {
+    title: "Flexible Terms",
+    desc: "1\u20135 year agreements, clear terms, no hidden fees.",
+  },
+  {
+    title: "Property Protection",
+    desc: "Regular inspections, professional cleaning, condition guarantee.",
+  },
+]
+
+export function ForLandlords() {
+  return (
+    <section id="landlords" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+      <div className="mx-auto max-w-6xl">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold"
+        >
+          For Landlords
+        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-3 font-display text-[2.4rem] leading-tight font-normal text-charcoal sm:text-[2.8rem]"
+        >
+          Your Property. Our Responsibility.{" "}
+          <strong className="font-semibold text-gold">Your Guaranteed Rent.</strong>
+        </motion.h2>
+
+        <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Pain points */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="font-display text-xl font-semibold text-charcoal">Sound Familiar?</h3>
+            <div className="mt-6 space-y-4">
+              {painPoints.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gold/40">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      className="text-gold"
+                    >
+                      <path
+                        d="M2 6l3 3 5-5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <p className="font-body text-[0.95rem] font-light leading-relaxed text-grey-600">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 font-body text-[0.95rem] font-medium text-charcoal">
+              If any of this sounds like you, it&apos;s time to talk to Alali Homes.
+            </p>
+          </motion.div>
+
+          {/* Benefits */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="space-y-4"
+          >
+            {benefits.map((b, i) => (
+              <div
+                key={i}
+                className="rounded-lg border border-grey-200 bg-grey-50 p-5 pl-6"
+                style={{ borderLeft: "3px solid var(--gold)" }}
+              >
+                <h4 className="font-display text-lg font-semibold text-charcoal">{b.title}</h4>
+                <p className="mt-1 font-body text-[0.9rem] font-light text-grey-600">{b.desc}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
