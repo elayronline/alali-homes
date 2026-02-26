@@ -32,7 +32,7 @@ export function Footer() {
               alt="Alali Homes"
               width={120}
               height={50}
-              className="h-10 w-auto brightness-0 invert"
+              className="h-14 w-auto brightness-0 invert"
             />
             <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/50">
               UK-based corporate lettings and property management. Guaranteed rent, zero voids,
