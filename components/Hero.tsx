@@ -25,7 +25,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-32 pb-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:pt-0 lg:pb-0">
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-28 pb-20 sm:px-6 sm:pt-32 lg:grid-cols-2 lg:gap-16 lg:pt-0 lg:pb-0">
         {/* Left column */}
         <div className="flex flex-col justify-center">
           <motion.div
@@ -33,7 +33,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block rounded-full border border-gold/25 bg-gold-pale/50 px-5 py-1.5 font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark">
+            <span className="inline-block rounded-full border border-gold/25 bg-gold-pale/50 px-5 py-1.5 font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
               Corporate Lettings Specialists
             </span>
           </motion.div>
@@ -42,7 +42,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-7 font-display text-[2.6rem] leading-[1.1] font-light text-charcoal sm:text-[3.6rem]"
+            className="mt-7 font-display text-[2.2rem] leading-[1.1] font-light text-charcoal sm:text-[2.8rem] md:text-[3.6rem]"
           >
             Guaranteed Rent.
             <br />
@@ -123,7 +123,7 @@ export function Hero() {
             <div className="mx-auto -mt-8 mb-6 h-1 w-16 rounded-b bg-gradient-to-r from-gold-dark to-gold" />
 
             {/* Card headline */}
-            <p className="mb-6 text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark">
+            <p className="mb-6 text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
               The Alali Promise
             </p>
 

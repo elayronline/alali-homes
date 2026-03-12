@@ -42,7 +42,7 @@ export function ForLandlords() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
+          className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           For Landlords
         </motion.p>
@@ -50,7 +50,7 @@ export function ForLandlords() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 font-display text-[2rem] leading-tight font-light text-charcoal sm:text-[2.6rem]"
+          className="mt-3 font-display text-[1.6rem] leading-tight font-light text-charcoal sm:text-[2rem] md:text-[2.6rem]"
         >
           Your Property. Our Responsibility.{" "}
           <strong className="font-semibold text-gold">Your Guaranteed Rent.</strong>
@@ -116,7 +116,7 @@ export function ForLandlords() {
             {benefits.map((b, i) => (
               <div
                 key={i}
-                className="rounded-lg border border-grey-200 bg-white p-5 pl-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                className="rounded-lg border border-grey-200 bg-white p-4 pl-5 transition-all duration-200 sm:p-5 sm:pl-6 md:hover:-translate-y-0.5 md:hover:shadow-md"
                 style={{ borderLeft: "3px solid var(--gold)" }}
               >
                 <h4 className="font-display text-[0.95rem] font-semibold text-charcoal">

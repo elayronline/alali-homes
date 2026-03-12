@@ -38,7 +38,7 @@ export function CTABanner() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-[2rem] leading-tight font-light text-charcoal sm:text-[2.6rem]"
+          className="font-display text-[1.6rem] leading-tight font-light text-charcoal sm:text-[2rem] md:text-[2.6rem]"
         >
           Let&apos;s Start a{" "}
           <strong className="font-semibold text-gold">Conversation</strong>
@@ -85,7 +85,7 @@ export function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-10 rounded-xl border border-grey-200 bg-grey-50 p-6 text-left shadow-sm sm:p-8"
+          className="mt-10 rounded-xl border border-grey-200 bg-grey-50 p-4 text-left shadow-sm sm:p-8"
         >
           {submitted ? (
             <div className="py-10 text-center">

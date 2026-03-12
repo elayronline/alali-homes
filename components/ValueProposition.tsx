@@ -58,7 +58,7 @@ export function ValueProposition() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
+          className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           Why Alali Homes
         </motion.p>

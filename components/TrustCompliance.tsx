@@ -73,7 +73,7 @@ export function TrustCompliance() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-dark"
+          className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark"
         >
           About Alali Homes
         </motion.p>
@@ -81,7 +81,7 @@ export function TrustCompliance() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 text-center font-display text-[2rem] leading-tight font-light text-charcoal sm:text-[2.6rem]"
+          className="mt-3 text-center font-display text-[1.6rem] leading-tight font-light text-charcoal sm:text-[2rem] md:text-[2.6rem]"
         >
           Fully Registered, Insured &{" "}
           <strong className="font-semibold text-gold">Compliant</strong>

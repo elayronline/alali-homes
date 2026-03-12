@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Instagram, Linkedin } from "lucide-react"
 
 const companyLinks = [
@@ -28,14 +27,15 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Col 1: Logo + desc + social */}
           <div>
-            <Image
-              src="/logo-light.png"
-              alt="Alali Homes — Corporate Lettings"
-              width={120}
-              height={50}
-              className="h-14 w-auto"
-            />
-            <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/50">
+            <div aria-label="Alali Homes — Corporate Lettings">
+              <span className="font-display text-2xl font-light tracking-wide text-white">
+                Alali
+              </span>
+              <span className="ml-1.5 font-display text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-gold">
+                Homes
+              </span>
+            </div>
+            <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/60">
               UK-based corporate lettings and property management. Guaranteed rent, zero voids,
               fully managed.
             </p>
@@ -45,7 +45,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all hover:border-gold/40 hover:text-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/50 transition-all hover:border-gold/40 hover:text-gold"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -54,7 +54,7 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all hover:border-gold/40 hover:text-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/50 transition-all hover:border-gold/40 hover:text-gold"
                 aria-label="Connect on LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
@@ -63,7 +63,7 @@ export function Footer() {
                 href="https://wa.me/442045158438"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all hover:border-gold/40 hover:text-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/50 transition-all hover:border-gold/40 hover:text-gold"
                 aria-label="Message us on WhatsApp"
               >
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -75,7 +75,7 @@ export function Footer() {
 
           {/* Col 2: Company */}
           <div>
-            <h4 className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold">
+            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
               Company
             </h4>
             <ul className="mt-4 space-y-3">
@@ -83,7 +83,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/50 transition-colors duration-200 hover:text-gold"
+                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -94,7 +94,7 @@ export function Footer() {
 
           {/* Col 3: Services */}
           <div>
-            <h4 className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold">
+            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
               Services
             </h4>
             <ul className="mt-4 space-y-3">
@@ -102,7 +102,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/50 transition-colors duration-200 hover:text-gold"
+                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -113,7 +113,7 @@ export function Footer() {
 
           {/* Col 4: Legal */}
           <div>
-            <h4 className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold">
+            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
               Legal
             </h4>
             <ul className="mt-4 space-y-3">
@@ -121,7 +121,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/50 transition-colors duration-200 hover:text-gold"
+                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -136,10 +136,10 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="font-body text-[0.75rem] font-light text-white/40">
+          <p className="font-body text-[0.75rem] font-light text-white/50">
             &copy; 2026 Alali Homes Ltd. All rights reserved.
           </p>
-          <p className="font-body text-[0.75rem] font-light text-white/40">
+          <p className="font-body text-[0.75rem] font-light text-white/50">
             Registered in England &amp; Wales
           </p>
         </div>

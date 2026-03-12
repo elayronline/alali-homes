@@ -66,6 +66,23 @@ body {
   }
 }
 
+/* Prevent horizontal overflow on mobile */
+body {
+  overflow-x: clip;
+}
+
+/* Scroll offset for fixed nav */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+/* Improve tap targets on touch devices */
+@media (pointer: coarse) {
+  button, a, select, input, textarea {
+    min-height: 44px;
+  }
+}
+
 /* Focus ring for keyboard navigation */
 *:focus-visible {
   outline: 2px solid var(--gold);

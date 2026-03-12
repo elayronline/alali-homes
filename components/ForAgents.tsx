@@ -43,7 +43,7 @@ export function ForAgents() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.15em] text-gold-light"
+          className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-light"
         >
           For Agents
         </motion.p>
@@ -51,7 +51,7 @@ export function ForAgents() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-3 max-w-2xl font-display text-[2rem] leading-tight font-light text-white sm:text-[2.6rem]"
+          className="mt-3 max-w-2xl font-display text-[1.6rem] leading-tight font-light text-white sm:text-[2rem] md:text-[2.6rem]"
         >
           Earn Referral Fees.{" "}
           <strong className="font-semibold text-gold">Solve Problem Stock.</strong>
@@ -76,7 +76,7 @@ export function ForAgents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-lg border border-white/8 bg-white/5 p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/25 hover:bg-white/8 hover:shadow-lg"
+              className="group rounded-lg border border-white/8 bg-white/5 p-5 transition-all duration-300 sm:p-7 md:hover:-translate-y-0.5 md:hover:border-gold/25 md:hover:bg-white/8 md:hover:shadow-lg"
             >
               <div className="mb-5 h-0.5 w-8 bg-gold/30 transition-all duration-300 group-hover:w-full group-hover:bg-gold" />
               <span className="font-display text-2xl font-bold text-gold/30">{card.num}</span>

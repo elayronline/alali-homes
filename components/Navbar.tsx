@@ -40,6 +40,12 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : ""
+    return () => { document.body.style.overflow = "" }
+  }, [mobileOpen])
+
   const handleNav = (id: string) => {
     setMobileOpen(false)
     scrollToSection(id)
@@ -85,7 +91,7 @@ export function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex cursor-pointer flex-col gap-1.5 lg:hidden"
+          className="flex cursor-pointer flex-col gap-1.5 p-2 lg:hidden"
           aria-label="Toggle menu"
         >
           <span
@@ -111,7 +117,7 @@ export function Navbar() {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className={`cursor-pointer text-left font-body text-sm font-medium uppercase tracking-wide transition-colors hover:text-gold ${
+              className={`cursor-pointer text-left font-body text-base font-medium uppercase tracking-wide transition-colors hover:text-gold py-1 ${
                 activeSection === link.href ? "text-gold" : "text-charcoal"
               }`}
             >
