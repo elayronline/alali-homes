@@ -29,7 +29,7 @@ export function Footer() {
           {/* Col 1: Logo + desc + social */}
           <div>
             <Image
-              src="/logo.png"
+              src="/logo-light.png"
               alt="Alali Homes — Corporate Lettings"
               width={120}
               height={50}
