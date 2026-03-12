@@ -105,7 +105,7 @@ export function ForAgents() {
             Refer a Property &amp; Earn
           </button>
           <p className="mt-3 font-body text-[0.78rem] font-light text-white/40">
-            Terms agreed in writing upfront. No hidden obligations.
+            Terms agreed in writing upfront. No hidden obligations. Agents are expected to disclose any referral arrangement to their client in line with the Estate Agents Act 1979.
           </p>
         </motion.div>
       </div>

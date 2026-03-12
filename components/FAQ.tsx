@@ -50,7 +50,7 @@ const agentFAQs: FAQItem[] = [
   {
     question: "How does the referral work?",
     answer:
-      "You introduce the landlord. We handle everything from assessment to onboarding. Referral terms are agreed in writing upfront.",
+      "You introduce the landlord. We handle everything from assessment to onboarding. Referral terms are agreed in writing upfront. Agents are expected to disclose any referral arrangement to their client in line with the Estate Agents Act 1979.",
   },
 ]
 
