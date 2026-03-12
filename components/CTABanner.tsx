@@ -63,18 +63,18 @@ export function CTABanner() {
           className="mt-6 flex flex-wrap items-center justify-center gap-6"
         >
           <a
-            href="tel:+44XXXXXXXXXX"
+            href="tel:+442045158438"
             className="flex items-center gap-2 font-body text-[0.85rem] text-grey-600 transition-colors hover:text-gold"
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            +44 (0) XXX XXXX XXX
+            020 4515 8438
           </a>
           <a
-            href="mailto:info@alalihomes.co.uk"
+            href="mailto:info@alalihomes.com"
             className="flex items-center gap-2 font-body text-[0.85rem] text-grey-600 transition-colors hover:text-gold"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
-            info@alalihomes.co.uk
+            info@alalihomes.com
           </a>
         </motion.div>
 

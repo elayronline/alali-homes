@@ -60,7 +60,7 @@ export function Footer() {
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/44XXXXXXXXXX"
+                href="https://wa.me/442045158438"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all hover:border-gold/40 hover:text-gold"

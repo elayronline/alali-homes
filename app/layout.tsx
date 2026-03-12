@@ -87,7 +87,7 @@ const orgSchema = {
   description:
     "UK-based corporate lettings and property management company offering guaranteed rent to landlords.",
   url: "https://alali-homes.vercel.app",
-  email: "info@alalihomes.co.uk",
+  email: "info@alalihomes.com",
   areaServed: "United Kingdom",
 }
 
