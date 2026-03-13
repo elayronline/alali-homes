@@ -21,7 +21,11 @@ export const metadata: Metadata = {
   description:
     "Alali Homes Ltd offers UK landlords guaranteed rent through corporate lets and professional property management. Zero voids, no upfront fees, fully managed 1-5 year agreements.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
     apple: "/apple-icon.png",
   },
   openGraph: {
