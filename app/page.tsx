@@ -16,20 +16,22 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <ValueProposition />
-      <GoldDivider />
-      <ForLandlords />
-      <MidPageCTA />
-      <ForAgents />
-      <GoldDivider />
-      <HowItWorks />
-      <GoldDivider />
-      <TrustCompliance />
-      <GoldDivider />
-      <FAQ />
-      <GoldDivider />
-      <CTABanner />
+      <main>
+        <Hero />
+        <ValueProposition />
+        <GoldDivider />
+        <ForLandlords />
+        <MidPageCTA />
+        <ForAgents />
+        <GoldDivider />
+        <HowItWorks />
+        <GoldDivider />
+        <TrustCompliance />
+        <GoldDivider />
+        <FAQ />
+        <GoldDivider />
+        <CTABanner />
+      </main>
       <Footer />
       <ScrollToTop />
     </>

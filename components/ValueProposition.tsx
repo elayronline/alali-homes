@@ -52,7 +52,7 @@ const values = [
 
 export function ValueProposition() {
   return (
-    <section className="border-t border-grey-200 bg-grey-50 px-4 py-20 sm:px-6 sm:py-24">
+    <section id="value" aria-label="Why Alali Homes" className="border-t border-grey-200 bg-grey-50 px-4 py-20 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -62,6 +62,14 @@ export function ValueProposition() {
         >
           Why Alali Homes
         </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="sr-only"
+        >
+          Why Choose Alali Homes for Guaranteed Rent
+        </motion.h2>
 
         <div className="mt-12 grid gap-0 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((item, i) => (

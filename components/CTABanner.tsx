@@ -17,10 +17,12 @@ export function CTABanner() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
+    setError(false)
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -41,9 +43,11 @@ export function CTABanner() {
       })
       if (res.ok) {
         setSubmitted(true)
+      } else {
+        setError(true)
       }
     } catch {
-      // silently fail — form stays visible so user can retry
+      setError(true)
     } finally {
       setSubmitting(false)
     }
@@ -109,7 +113,7 @@ export function CTABanner() {
           className="mt-10 rounded-xl border border-grey-200 bg-grey-50 p-4 text-left shadow-sm sm:p-8"
         >
           {submitted ? (
-            <div className="py-10 text-center">
+            <div className="py-10 text-center" role="alert" aria-live="polite">
               {/* Success tick */}
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-gold">
@@ -139,6 +143,11 @@ export function CTABanner() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {error && (
+                <div role="alert" className="rounded-lg bg-red-50 px-4 py-3 text-center font-body text-[0.85rem] text-red-600">
+                  Something went wrong. Please try again or email us at info@alalihomes.com.
+                </div>
+              )}
               {/* Reassurance strip */}
               <div className="mb-2 flex flex-wrap items-center justify-center gap-4 rounded-lg bg-gold-pale/40 px-4 py-3 text-center">
                 <span className="font-body text-[0.78rem] font-medium text-gold-dark">

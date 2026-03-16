@@ -1,0 +1,21 @@
+{
+  "name": "Alali Homes — Guaranteed Rent & Corporate Lettings",
+  "short_name": "Alali Homes",
+  "description": "UK corporate lettings and guaranteed rent for landlords. Zero voids, fully managed.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c8a855",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

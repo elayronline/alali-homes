@@ -93,6 +93,8 @@ export function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex cursor-pointer flex-col gap-1.5 p-2 lg:hidden"
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           <span
             className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
@@ -108,6 +110,9 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
+        role="region"
+        aria-label="Mobile navigation"
         className={`overflow-hidden bg-white transition-all duration-300 lg:hidden ${
           mobileOpen ? "max-h-96" : "max-h-0"
         }`}

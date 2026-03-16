@@ -17,9 +17,61 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.alalihomes.com"),
   title: "Alali Homes — Guaranteed Rent & Corporate Lettings | UK",
   description:
-    "Alali Homes Ltd offers UK landlords guaranteed rent through corporate lets and professional property management. Zero voids, no upfront fees, fully managed 1-5 year agreements.",
+    "Alali Homes Ltd offers UK landlords guaranteed rent through corporate lets and professional property management. Zero voids, no upfront fees, fully managed 1–5 year agreements.",
+  keywords: [
+    "guaranteed rent",
+    "corporate lettings",
+    "corporate lets UK",
+    "guaranteed rent scheme",
+    "property management UK",
+    "landlord guaranteed income",
+    "zero void periods",
+    "serviced accommodation",
+    "rent to rent",
+    "corporate housing UK",
+    "Alali Homes",
+  ],
+  alternates: {
+    canonical: "https://www.alalihomes.com",
+  },
+  openGraph: {
+    title: "Alali Homes — Guaranteed Rent & Corporate Lettings",
+    description:
+      "We lease your property, pay guaranteed rent every month, and manage everything to a professional standard. No voids. No hassle.",
+    url: "https://www.alalihomes.com",
+    siteName: "Alali Homes",
+    type: "website",
+    locale: "en_GB",
+    images: [
+      {
+        url: "/icon-512.png",
+        width: 512,
+        height: 512,
+        alt: "Alali Homes — Guaranteed Rent & Corporate Lettings UK",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Alali Homes — Guaranteed Rent & Corporate Lettings | UK",
+    description:
+      "UK landlords: get guaranteed rent, zero voids, and fully managed properties with Alali Homes.",
+    images: ["/icon-512.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32" },
@@ -28,12 +80,7 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
-  openGraph: {
-    title: "Alali Homes — Guaranteed Rent & Corporate Lettings",
-    description:
-      "We lease your property, pay guaranteed rent every month, and manage everything to a professional standard. No voids. No hassle.",
-    type: "website",
-  },
+  manifest: "/manifest.json",
 }
 
 // FAQ structured data for Google rich results
@@ -90,9 +137,49 @@ const orgSchema = {
   name: "Alali Homes Ltd",
   description:
     "UK-based corporate lettings and property management company offering guaranteed rent to landlords.",
-  url: "https://alali-homes.vercel.app",
+  url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
-  areaServed: "United Kingdom",
+  telephone: "+442045158438",
+  logo: "https://www.alalihomes.com/icon-512.png",
+  image: "https://www.alalihomes.com/icon-512.png",
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  sameAs: [
+    "https://www.instagram.com/alalihomes",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+442045158438",
+    contactType: "customer service",
+    email: "info@alalihomes.com",
+    areaServed: "GB",
+    availableLanguage: "English",
+  },
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Guaranteed Rent for Landlords",
+  description:
+    "Alali Homes leases your property under a corporate let agreement and pays guaranteed rent every month for 1–5 years. Zero void periods, no upfront fees, fully managed.",
+  provider: {
+    "@type": "Organization",
+    name: "Alali Homes Ltd",
+    url: "https://www.alalihomes.com",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  serviceType: "Corporate Lettings & Property Management",
+  offers: {
+    "@type": "Offer",
+    description: "Guaranteed rent agreements from 1 to 5 years. No upfront fees to landlords.",
+    priceCurrency: "GBP",
+  },
 }
 
 export default function RootLayout({
@@ -110,6 +197,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
       </head>
       <body className={`${montserrat.variable} ${outfit.variable} antialiased`}>{children}</body>
