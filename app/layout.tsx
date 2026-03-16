@@ -133,21 +133,39 @@ const faqSchema = {
 
 const orgSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://www.alalihomes.com/#organization",
   name: "Alali Homes Ltd",
+  legalName: "Alali Homes Ltd",
   description:
-    "UK-based corporate lettings and property management company offering guaranteed rent to landlords.",
+    "UK-based corporate lettings and property management company offering guaranteed rent to landlords. Zero voids, no upfront fees, fully managed 1–5 year agreements.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",
-  logo: "https://www.alalihomes.com/icon-512.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.alalihomes.com/icon-512.png",
+    width: 512,
+    height: 512,
+  },
   image: "https://www.alalihomes.com/icon-512.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "86-90 Paul Street",
+    addressLocality: "London",
+    postalCode: "EC2A 4NE",
+    addressCountry: "GB",
+  },
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
   },
   sameAs: [
     "https://www.instagram.com/alalihomes",
+  ],
+  founder: [
+    { "@type": "Person", name: "Alayi MacPepple-Jaja" },
+    { "@type": "Person", name: "Ellie Moore" },
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -157,6 +175,17 @@ const orgSchema = {
     areaServed: "GB",
     availableLanguage: "English",
   },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    value: "2-10",
+  },
+  knowsAbout: [
+    "Guaranteed Rent",
+    "Corporate Lettings",
+    "Property Management",
+    "Serviced Accommodation",
+    "HMO Management",
+  ],
 }
 
 const serviceSchema = {
