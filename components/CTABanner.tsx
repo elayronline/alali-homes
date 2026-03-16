@@ -18,14 +18,28 @@ export function CTABanner() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
-    // Simulate submission — replace with Formspree or backend
-    setTimeout(() => {
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "0c711466-2865-4ee1-97fd-410b7bb92a36",
+          subject: `New enquiry from ${formData.name}`,
+          from_name: "Alali Homes Website",
+          ...formData,
+        }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      }
+    } catch {
+      // silently fail — form stays visible so user can retry
+    } finally {
       setSubmitting(false)
-      setSubmitted(true)
-    }, 1200)
+    }
   }
 
   const inputClass =
