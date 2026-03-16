@@ -7,7 +7,7 @@ const steps = [
   {
     num: "01",
     title: "Get in Touch",
-    desc: "Contact us via the form, WhatsApp, or phone. Tell us about your property \u2014 location, type, bedrooms, and current situation. No commitment at this stage.",
+    desc: "Contact us via the form or phone. Tell us about your property \u2014 location, type, bedrooms, and current situation. No commitment at this stage.",
     detail:
       "What we need: basic property details and what you\u2019re looking for \u2014 guaranteed rent, full management, or both.",
   },

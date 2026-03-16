@@ -9,7 +9,6 @@ import { TrustCompliance } from "@/components/TrustCompliance"
 import { FAQ } from "@/components/FAQ"
 import { CTABanner } from "@/components/CTABanner"
 import { Footer } from "@/components/Footer"
-import { WhatsAppButton } from "@/components/WhatsAppButton"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { GoldDivider } from "@/components/GoldDivider"
 
@@ -32,7 +31,6 @@ export default function Home() {
       <GoldDivider />
       <CTABanner />
       <Footer />
-      <WhatsAppButton />
       <ScrollToTop />
     </>
   )
