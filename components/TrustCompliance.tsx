@@ -17,35 +17,6 @@ const badges = [
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "HMRC AML Supervised",
-    subtitle: "Anti-Money Laundering",
-  },
-  {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 8v4l3 3" />
-      </svg>
-    ),
-    title: "ICO Registered",
-    subtitle: "Data Protection Act 2018",
-  },
-  {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" />
-        <path d="M14 2v6h6" />
-      </svg>
-    ),
-    title: "Property Redress Scheme",
-    subtitle: "Dispute Resolution",
-  },
-  {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         <path d="M12 8v4" />
         <circle cx="12" cy="16" r="0.5" fill="currentColor" />
       </svg>
@@ -97,7 +68,7 @@ export function TrustCompliance() {
           everything to a professional standard.
         </motion.p>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-3">
           {badges.map((badge, i) => (
             <motion.div
               key={i}
