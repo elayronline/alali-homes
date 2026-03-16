@@ -47,19 +47,19 @@ export const metadata: Metadata = {
     locale: "en_GB",
     images: [
       {
-        url: "/icon-512.png",
-        width: 512,
-        height: 512,
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Alali Homes — Guaranteed Rent & Corporate Lettings UK",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Alali Homes — Guaranteed Rent & Corporate Lettings | UK",
     description:
       "UK landlords: get guaranteed rent, zero voids, and fully managed properties with Alali Homes.",
-    images: ["/icon-512.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
