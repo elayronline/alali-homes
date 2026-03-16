@@ -42,7 +42,7 @@ export function Footer() {
             {/* Social links — min 44px touch targets */}
             <div className="mt-5 flex gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/alalihomes"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/50 transition-all hover:border-gold/40 hover:text-gold"
