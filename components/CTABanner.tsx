@@ -27,17 +27,50 @@ export function CTABanner() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: "0c711466-2865-4ee1-97fd-410b7bb92a36",
-          subject: `New enquiry from ${formData.name}`,
+          subject: `New Enquiry — ${formData.role} — ${formData.name}`,
           from_name: "Alali Homes Website",
           replyto: formData.email,
-          "h-captcha-response": "",
-          _template: "table",
-          "Full Name": formData.name,
-          "Email": formData.email,
-          "Phone": formData.phone || "Not provided",
-          "Role": formData.role,
-          "Property Postcode": formData.postcode || "Not provided",
-          "Message": formData.message || "No additional details",
+          _template: "blank",
+          _message: `
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
+  <div style="background: #1a1a1a; padding: 24px 32px; border-radius: 8px 8px 0 0;">
+    <span style="font-size: 22px; font-weight: 300; color: #ffffff; letter-spacing: 1px;">Alali</span>
+    <span style="font-size: 10px; font-weight: 600; color: #c8a855; text-transform: uppercase; letter-spacing: 3px; margin-left: 6px;">Homes</span>
+  </div>
+  <div style="background: #f9f9f7; padding: 32px; border: 1px solid #e8e5dc; border-top: none; border-radius: 0 0 8px 8px;">
+    <h2 style="margin: 0 0 24px; font-size: 18px; font-weight: 600; color: #1a1a1a;">New Property Enquiry</h2>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #888; font-size: 13px; width: 140px; vertical-align: top;">Full Name</td>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #1a1a1a; font-size: 14px; font-weight: 500;">${formData.name}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #888; font-size: 13px; vertical-align: top;">Email</td>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #1a1a1a; font-size: 14px;"><a href="mailto:${formData.email}" style="color: #c8a855; text-decoration: none;">${formData.email}</a></td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #888; font-size: 13px; vertical-align: top;">Phone</td>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #1a1a1a; font-size: 14px;">${formData.phone || "Not provided"}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #888; font-size: 13px; vertical-align: top;">Role</td>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #1a1a1a; font-size: 14px;"><span style="background: #c8a855; color: #fff; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 600;">${formData.role}</span></td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #888; font-size: 13px; vertical-align: top;">Postcode</td>
+        <td style="padding: 12px 0; border-bottom: 1px solid #e8e5dc; color: #1a1a1a; font-size: 14px; font-weight: 500;">${formData.postcode || "Not provided"}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 0; color: #888; font-size: 13px; vertical-align: top;">Message</td>
+        <td style="padding: 12px 0; color: #1a1a1a; font-size: 14px; line-height: 1.5;">${formData.message || "No additional details"}</td>
+      </tr>
+    </table>
+    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #e8e5dc; text-align: center;">
+      <a href="mailto:${formData.email}" style="display: inline-block; background: #c8a855; color: #fff; padding: 10px 28px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600;">Reply to ${formData.name}</a>
+    </div>
+    <p style="margin: 20px 0 0; font-size: 11px; color: #aaa; text-align: center;">Submitted via alalihomes.com</p>
+  </div>
+</div>`,
         }),
       })
       if (res.ok) {
