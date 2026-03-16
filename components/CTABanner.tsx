@@ -29,7 +29,15 @@ export function CTABanner() {
           access_key: "0c711466-2865-4ee1-97fd-410b7bb92a36",
           subject: `New enquiry from ${formData.name}`,
           from_name: "Alali Homes Website",
-          ...formData,
+          replyto: formData.email,
+          "h-captcha-response": "",
+          _template: "table",
+          "Full Name": formData.name,
+          "Email": formData.email,
+          "Phone": formData.phone || "Not provided",
+          "Role": formData.role,
+          "Property Postcode": formData.postcode || "Not provided",
+          "Message": formData.message || "No additional details",
         }),
       })
       if (res.ok) {
