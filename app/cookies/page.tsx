@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | Alali Homes",
+  description: "Cookie policy for Alali Homes Ltd. Information about how we use cookies on our website.",
+  alternates: { canonical: "https://www.alalihomes.com/cookies" },
+}
+
 export default function CookiePolicy() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-28 sm:px-6">

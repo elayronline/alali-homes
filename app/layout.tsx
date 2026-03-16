@@ -182,6 +182,19 @@ const serviceSchema = {
   },
 }
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Alali Homes",
+  url: "https://www.alalihomes.com",
+  description:
+    "UK corporate lettings company offering guaranteed rent to landlords. Zero voids, no upfront fees, fully managed 1–5 year agreements.",
+  publisher: {
+    "@type": "Organization",
+    name: "Alali Homes Ltd",
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -201,6 +214,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className={`${montserrat.variable} ${outfit.variable} antialiased`}>{children}</body>

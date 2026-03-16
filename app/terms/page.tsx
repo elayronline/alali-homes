@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Terms of Use | Alali Homes",
+  description: "Terms of use for the Alali Homes website. By using this site you agree to the terms set out by Alali Homes Ltd.",
+  alternates: { canonical: "https://www.alalihomes.com/terms" },
+}
+
 export default function TermsOfUse() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-28 sm:px-6">

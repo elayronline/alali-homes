@@ -1,3 +1,11 @@
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Alali Homes",
+  description: "Privacy policy for Alali Homes Ltd. How we collect, use, and protect your personal data under the Data Protection Act 2018.",
+  alternates: { canonical: "https://www.alalihomes.com/privacy" },
+}
+
 export default function PrivacyPolicy() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-28 sm:px-6">
