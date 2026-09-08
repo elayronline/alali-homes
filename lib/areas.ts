@@ -187,7 +187,7 @@ export const AREAS: Area[] = [
     parent: "south-east",
     strap: "Guaranteed rent for landlords across Guildford, Woking, Epsom and the M25 corridor.",
     intro: [
-      "Surrey sits on the M25 with fast rail into Waterloo and Victoria, which makes it the natural home for relocating professionals who work in London or at the business parks around Leatherhead, Weybridge and Woking. Add Gatwick on the county's edge and a university and major hospital in Guildford, and you have a county with constant demand for managed, furnished accommodation.",
+      "Surrey sits on the M25 with fast rail into Waterloo and Victoria, which makes it the natural home for relocating professionals who work in London or at the business parks around Leatherhead, Weybridge and Woking. Add Gatwick on the county's edge and a university and major hospital in Guildford, and you have a county with constant demand for managed, furnished homes.",
       "Alali Homes leases Surrey properties on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We take on the guests, the maintenance and the compliance. You receive a fixed income and your property back in the agreed condition at the end.",
     ],
     demand: [
