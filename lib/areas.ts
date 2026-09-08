@@ -145,7 +145,7 @@ export const AREAS: Area[] = [
     parent: "south-east",
     strap: "Guaranteed rent for landlords from the Medway towns to the Channel coast.",
     intro: [
-      "Kent's rental demand is shaped by its ports, its high-speed link to London and the growth around Ebbsfleet and the Thames Gateway. Contractors, logistics and port staff, and commuters priced out of the capital all need homes across the county, and much of that demand is for fixed-term, furnished accommodation rather than a conventional tenancy.",
+      "Kent's rental demand is shaped by its ports, its high-speed link to London and the growth around Ebbsfleet and the Thames Gateway. Contractors, logistics and port staff, and commuters priced out of the capital all need homes across the county, and much of that demand is for fixed-term, furnished homes rather than a conventional tenancy.",
       "Alali Homes leases properties across Kent on guaranteed rent agreements and pays the landlord a guaranteed rent every month for the term. You hand over the keys once and receive a fixed income for one to five years while we manage the property and everyone living in it.",
     ],
     demand: [
@@ -271,7 +271,7 @@ export const AREAS: Area[] = [
     parent: "south-east",
     strap: "Guaranteed rent for landlords around Gatwick, Crawley, Horsham, Worthing and Chichester.",
     intro: [
-      "West Sussex is dominated by Gatwick Airport and the Manor Royal business district beside it in Crawley, together one of the largest employment sites in the South East. Airlines, ground handlers, engineering firms and the companies headquartered around the airport all need accommodation for staff and contractors on fixed-term arrangements.",
+      "West Sussex is dominated by Gatwick Airport and the Manor Royal business district beside it in Crawley, together one of the largest employment sites in the South East. Airlines, ground handlers, engineering firms and the companies headquartered around the airport all need homes for staff and contractors on fixed-term arrangements.",
       "Alali Homes leases properties across West Sussex on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We source and manage the guests, handle maintenance and compliance, and pay you the same amount every month regardless of occupancy.",
     ],
     demand: [
