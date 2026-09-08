@@ -99,7 +99,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <main>
         {/* Hero */}
         <section className="light-glow relative overflow-hidden px-4 pt-36 pb-20 sm:px-6 lg:pt-44 lg:pb-24">
-          <Skyline className="opacity-[0.22]" />
+          <Skyline className="opacity-80" />
           <div className="relative z-10 mx-auto max-w-6xl">
             <nav aria-label="Breadcrumb" className="font-body text-xs text-grey-400">
               <ol className="flex flex-wrap items-center gap-2">

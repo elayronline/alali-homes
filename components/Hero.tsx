@@ -23,7 +23,7 @@ export function Hero() {
 
   return (
     <section id="hero" className="light-glow relative overflow-hidden bg-white">
-      <Skyline className="opacity-[0.32]" />
+      <Skyline />
 
       <div className="relative z-10 mx-auto grid max-w-6xl gap-14 px-4 pt-36 pb-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-20 lg:pt-44 lg:pb-28">
         <div>
