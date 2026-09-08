@@ -23,7 +23,7 @@ const steps = [
     title: "Agreement & Handover",
     desc: "Once terms are agreed, we sign the contract, arrange any compliance works, and take over the property. Your guaranteed rent starts from the agreed date.",
     detail:
-      "What happens next: we qualify your property to confirm it is the right fit and, where applicable, work with you to bring it up to the standard we can take on. Then we agree your first day of rent. You get paid monthly like clockwork.",
+      "What happens next: we confirm the property is the right fit, help bring it to standard where needed, and agree your first day of rent.",
   },
 ]
 
@@ -55,15 +55,15 @@ export function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="relative"
+                className="relative flex h-full flex-col"
               >
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark shadow-[0_12px_30px_-12px_rgba(198,162,78,0.8)]">
                   <span className="numeral text-[0.95rem] tracking-[0.1em] text-white">{step.num}</span>
                 </div>
-                <div className="card mt-6 p-7 sm:p-8">
+                <div className="card mt-6 flex flex-1 flex-col p-7 sm:p-8">
                   <h3 className="font-display text-[1.15rem] font-semibold text-charcoal">{step.title}</h3>
-                  <p className="mt-3 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">{step.desc}</p>
-                  <p className="mt-5 border-t border-gold/15 pt-4 font-body text-[0.82rem] font-light italic leading-relaxed text-grey-400">
+                  <p className="mt-3 mb-5 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">{step.desc}</p>
+                  <p className="mt-auto border-t border-gold/15 pt-4 font-body text-[0.82rem] font-light italic leading-relaxed text-grey-400">
                     {step.detail}
                   </p>
                 </div>
