@@ -137,6 +137,12 @@ const orgSchema = {
   "@id": "https://www.alalihomes.com/#organization",
   name: "Alali Homes Ltd",
   legalName: "Alali Homes Ltd",
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "Companies House",
+    value: "17095100",
+  },
+  foundingDate: "2026-03-16",
   description:
     "UK-based corporate lettings and property management company offering guaranteed rent to landlords. Zero voids, fully managed 1–5 year agreements.",
   url: "https://www.alalihomes.com",

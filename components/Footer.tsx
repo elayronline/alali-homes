@@ -120,7 +120,7 @@ export function Footer() {
             &copy; 2026 Alali Homes Ltd. All rights reserved.
           </p>
           <p className="font-body text-[0.75rem] font-light text-white/50">
-            Registered in England &amp; Wales
+            Registered in England &amp; Wales &middot; Company No. 17095100
           </p>
         </div>
       </div>

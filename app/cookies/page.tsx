@@ -1,26 +1,47 @@
 import type { Metadata } from "next"
-import Link from "next/link"
+import { LegalPage, COMPANY } from "@/components/LegalPage"
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Alali Homes",
-  description: "Cookie policy for Alali Homes Ltd. Information about how we use cookies on our website.",
+  description: "The Alali Homes website does not set cookies or use tracking. Details here.",
   alternates: { canonical: "https://www.alalihomes.com/cookies" },
 }
 
 export default function CookiePolicy() {
   return (
-    <main className="mx-auto max-w-3xl px-4 py-28 sm:px-6">
-      <h1 className="font-display text-3xl font-semibold text-charcoal">Cookie Policy</h1>
-      <p className="mt-6 font-body text-grey-600 leading-relaxed">
-        This cookie policy will be updated with full details before launch. Alali Homes Ltd uses
-        minimal cookies necessary for website functionality.
-      </p>
-      <Link
-        href="/"
-        className="mt-8 inline-block font-body text-sm text-gold transition-colors hover:text-gold-light"
-      >
-        &larr; Back to Home
-      </Link>
-    </main>
+    <LegalPage title="Cookie Policy" updated="8 September 2026">
+      <section>
+        <h2>We do not use cookies</h2>
+        <p>
+          This website, operated by {COMPANY.name}, does not set any cookies on your device. It does
+          not use analytics, advertising or social media tracking, and it does not load third-party
+          scripts that would set cookies on our behalf.
+        </p>
+      </section>
+
+      <section>
+        <h2>What that means for you</h2>
+        <p>
+          There is nothing to accept or decline, which is why you will not see a cookie banner on
+          this site. Your visit is not tracked and no record of your browsing is kept by us.
+        </p>
+      </section>
+
+      <section>
+        <h2>If this changes</h2>
+        <p>
+          If we ever add a feature that needs cookies, we will update this page first and, where
+          the law requires it, ask for your consent before setting them.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Questions about this policy can be sent to{" "}
+          <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>.
+        </p>
+      </section>
+    </LegalPage>
   )
 }
