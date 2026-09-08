@@ -16,13 +16,10 @@ interface HouseProps {
   h: number
   roof?: Roof
   gable?: number
-  windows?: [number, number, number, number][] // x, y (from top of front face), w, h
-  door?: { x: number; w: number; h: number; arch?: boolean }
-  arches?: number[] // x positions of arched openings (ground floor)
   chimney?: number // x offset of a chimney, if any
 }
 
-function House({ x, w, h, roof = "gable", gable = 40, windows = [], door, arches = [], chimney }: HouseProps) {
+function House({ x, w, h, roof = "gable", gable = 40, chimney }: HouseProps) {
   const top = GROUND - h
   const side = `${x + w},${top} ${x + w + D},${top - U} ${x + w + D},${GROUND - U} ${x + w},${GROUND}`
   return (
@@ -63,25 +60,6 @@ function House({ x, w, h, roof = "gable", gable = 40, windows = [], door, arches
       )}
       {/* front face */}
       <rect x={x} y={top} width={w} height={h} rx={2.5} fill="url(#faceFront)" />
-      {/* windows */}
-      {windows.map(([wx, wy, ww, wh], i) => (
-        <g key={i}>
-          <rect x={x + wx} y={top + wy} width={ww} height={wh} rx={2} fill="url(#glass)" />
-          <rect x={x + wx + 1} y={top + wy + 1} width={ww - 2} height={wh - 2} rx={1.5} fill="none" stroke="#ffffff" strokeOpacity="0.7" />
-        </g>
-      ))}
-      {/* arched openings */}
-      {arches.map((ax, i) => (
-        <path
-          key={i}
-          d={`M${x + ax},${GROUND} v-38 a20,20 0 0 1 40,0 v38 z`}
-          fill="url(#glass)"
-        />
-      ))}
-      {/* door */}
-      {door && (
-        <rect x={x + door.x} y={GROUND - door.h} width={door.w} height={door.h} rx={door.arch ? door.w / 2 : 2} fill="url(#doorFill)" />
-      )}
     </g>
   )
 }
@@ -111,14 +89,6 @@ export function Skyline({ className = "" }: { className?: string }) {
           <stop offset="0" stopColor="#e7e2d7" />
           <stop offset="1" stopColor="#dcd5c7" />
         </linearGradient>
-        <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#e6e1d6" />
-          <stop offset="1" stopColor="#efebe3" />
-        </linearGradient>
-        <linearGradient id="doorFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#e3ded3" />
-          <stop offset="1" stopColor="#d9d2c4" />
-        </linearGradient>
         <linearGradient id="plinth" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#f7f4ee" />
           <stop offset="1" stopColor="#e9e4d9" />
@@ -138,36 +108,23 @@ export function Skyline({ className = "" }: { className?: string }) {
       <rect x="4" y="311" width="896" height="9" rx="4.5" fill="url(#plinth)" opacity="0.8" />
 
       {/* terrace, left to right */}
-      <House x={40} w={120} h={150} gable={40} chimney={18} windows={[[45, 40, 30, 30]]} door={{ x: 30, w: 60, h: 60 }} />
-      <House x={160} w={140} h={130} gable={50} chimney={52} windows={[[50, 30, 40, 36]]} door={{ x: 35, w: 70, h: 70 }} />
+      <House x={40} w={120} h={150} gable={40} chimney={18} />
+      <House x={160} w={140} h={130} gable={50} chimney={52} />
       <House
         x={300}
         w={120}
         h={210}
         roof="hip"
         gable={30}
-        windows={[
-          [20, 30, 30, 30],
-          [70, 30, 30, 30],
-          [20, 85, 30, 30],
-          [70, 85, 30, 30],
-        ]}
-        door={{ x: 45, w: 30, h: 60, arch: true }}
       />
       <House
         x={440}
         w={180}
         h={170}
         gable={40}
-        windows={[
-          [25, 40, 30, 35],
-          [80, 40, 30, 35],
-          [135, 40, 30, 35],
-        ]}
-        arches={[30, 110]}
       />
-      <House x={640} w={120} h={120} gable={45} chimney={12} windows={[[40, 30, 40, 30]]} door={{ x: 30, w: 60, h: 55 }} />
-      <House x={780} w={100} h={100} gable={35} windows={[[35, 25, 30, 25]]} door={{ x: 25, w: 50, h: 45 }} />
+      <House x={640} w={120} h={120} gable={45} chimney={12} />
+      <House x={780} w={100} h={100} gable={35} />
     </svg>
   )
 }
