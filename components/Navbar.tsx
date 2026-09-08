@@ -11,7 +11,6 @@ const navLinks = [
   { label: "Agents", href: "agents" },
   { label: "How It Works", href: "process" },
   { label: "About", href: "about" },
-  { label: "Areas", href: "areas" },
   { label: "FAQ", href: "faq" },
 ]
 
@@ -74,7 +73,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 50)
 
       // Active section detection
-      const sections = ["landlords", "agents", "process", "about", "areas", "faq", "contact"]
+      const sections = ["landlords", "agents", "process", "about", "faq", "contact"]
       const navHeight = 100
       let current = ""
       for (const id of sections) {

@@ -5,7 +5,6 @@ import { ForLandlords } from "@/components/ForLandlords"
 import { MidPageCTA } from "@/components/MidPageCTA"
 import { ForAgents } from "@/components/ForAgents"
 import { HowItWorks } from "@/components/HowItWorks"
-import { AreasWeCover } from "@/components/AreasWeCover"
 import { TrustCompliance } from "@/components/TrustCompliance"
 import { FAQ } from "@/components/FAQ"
 import { CTABanner } from "@/components/CTABanner"
@@ -116,8 +115,6 @@ export default function Home() {
         <ForAgents />
         <GoldDivider />
         <HowItWorks />
-        <GoldDivider />
-        <AreasWeCover />
         <GoldDivider />
         <TrustCompliance />
         <GoldDivider />
