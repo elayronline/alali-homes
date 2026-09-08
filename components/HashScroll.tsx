@@ -13,9 +13,9 @@ export function HashScroll() {
     const go = () => {
       const id = window.location.hash.replace(/^#/, "")
       if (!id) return
-      // Instant, not smooth: this is a page landing, and a smooth scroll requested
-      // this early is cancelled by the browser under the global scroll-behavior CSS.
-      const jump = () => scrollToSection(id, "auto")
+      // "instant", not "auto": auto defers to the global scroll-behavior CSS (smooth),
+      // and a smooth scroll requested this early on load never runs.
+      const jump = () => scrollToSection(id, "instant")
       jump()
       // Fonts/animations can shift layout in the first moments; settle again.
       window.setTimeout(jump, 150)
