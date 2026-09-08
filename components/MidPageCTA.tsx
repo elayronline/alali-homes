@@ -18,7 +18,7 @@ export function MidPageCTA() {
             <span className="text-gold">48 hours</span>
           </h3>
           <p className="mt-1 font-body text-[0.88rem] font-light text-grey-600">
-            No commitment, no fees, no obligation. Just a straightforward conversation.
+            No commitment, no obligation. Just a straightforward conversation.
           </p>
         </div>
         <button

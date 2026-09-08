@@ -30,9 +30,9 @@ const landlordFAQs: FAQItem[] = [
       "Corporate clients, contractors, and vetted working professionals. Every occupant is referenced and approved. We operate to a far higher standard than standard letting.",
   },
   {
-    question: "Do I need to pay anything upfront?",
+    question: "Who is responsible for compliance works?",
     answer:
-      "No. There are no upfront fees to landlords. If compliance works are needed, we discuss responsibilities before signing.",
+      "If compliance works are needed before we take the property on, responsibilities are agreed in writing before signing.",
   },
   {
     question: "What if I want my property back early?",

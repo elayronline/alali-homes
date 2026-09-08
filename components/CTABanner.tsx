@@ -151,10 +151,6 @@ export function CTABanner() {
               {/* Reassurance strip */}
               <div className="mb-2 flex flex-wrap items-center justify-center gap-4 rounded-lg bg-gold-pale/40 px-4 py-3 text-center">
                 <span className="font-body text-[0.78rem] font-medium text-gold-dark">
-                  No upfront fees
-                </span>
-                <span className="hidden h-3 w-px bg-gold/30 sm:block" />
-                <span className="font-body text-[0.78rem] font-medium text-gold-dark">
                   No obligation
                 </span>
                 <span className="hidden h-3 w-px bg-gold/30 sm:block" />

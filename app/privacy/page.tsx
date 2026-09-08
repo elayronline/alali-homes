@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Alali Homes",
@@ -14,12 +15,12 @@ export default function PrivacyPolicy() {
         This privacy policy will be updated with full details before launch. Alali Homes Ltd is
         registered with the ICO for Data Protection under the Data Protection Act 2018.
       </p>
-      <a
+      <Link
         href="/"
         className="mt-8 inline-block font-body text-sm text-gold transition-colors hover:text-gold-light"
       >
         &larr; Back to Home
-      </a>
+      </Link>
     </main>
   )
 }

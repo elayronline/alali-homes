@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
   title: "Alali Homes — Guaranteed Rent & Corporate Lettings | UK",
   description:
-    "Alali Homes Ltd offers UK landlords guaranteed rent through corporate lets and professional property management. Zero voids, no upfront fees, fully managed 1–5 year agreements.",
+    "Alali Homes Ltd offers UK landlords guaranteed rent through corporate lets and professional property management. Zero voids, fully managed 1–5 year agreements.",
   keywords: [
     "guaranteed rent",
     "corporate lettings",
@@ -114,10 +114,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do I need to pay anything upfront?",
+      name: "Who is responsible for compliance works?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. There are no upfront fees to landlords. If compliance works are needed, we discuss responsibilities before signing.",
+        text: "If compliance works are needed before we take the property on, responsibilities are agreed in writing before signing.",
       },
     },
     {
@@ -138,7 +138,7 @@ const orgSchema = {
   name: "Alali Homes Ltd",
   legalName: "Alali Homes Ltd",
   description:
-    "UK-based corporate lettings and property management company offering guaranteed rent to landlords. Zero voids, no upfront fees, fully managed 1–5 year agreements.",
+    "UK-based corporate lettings and property management company offering guaranteed rent to landlords. Zero voids, fully managed 1–5 year agreements.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",
@@ -193,7 +193,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Guaranteed Rent for Landlords",
   description:
-    "Alali Homes leases your property under a corporate let agreement and pays guaranteed rent every month for 1–5 years. Zero void periods, no upfront fees, fully managed.",
+    "Alali Homes leases your property under a corporate let agreement and pays guaranteed rent every month for 1–5 years. Zero void periods, fully managed.",
   provider: {
     "@type": "Organization",
     name: "Alali Homes Ltd",
@@ -206,7 +206,7 @@ const serviceSchema = {
   serviceType: "Corporate Lettings & Property Management",
   offers: {
     "@type": "Offer",
-    description: "Guaranteed rent agreements from 1 to 5 years. No upfront fees to landlords.",
+    description: "Guaranteed rent agreements from 1 to 5 years.",
     priceCurrency: "GBP",
   },
 }
@@ -217,7 +217,7 @@ const websiteSchema = {
   name: "Alali Homes",
   url: "https://www.alalihomes.com",
   description:
-    "UK corporate lettings company offering guaranteed rent to landlords. Zero voids, no upfront fees, fully managed 1–5 year agreements.",
+    "UK corporate lettings company offering guaranteed rent to landlords. Zero voids, fully managed 1–5 year agreements.",
   publisher: {
     "@type": "Organization",
     name: "Alali Homes Ltd",

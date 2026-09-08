@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Terms of Use | Alali Homes",
@@ -14,12 +15,12 @@ export default function TermsOfUse() {
         These terms of use will be updated with full details before launch. By using this website
         you agree to comply with the terms set out by Alali Homes Ltd.
       </p>
-      <a
+      <Link
         href="/"
         className="mt-8 inline-block font-body text-sm text-gold transition-colors hover:text-gold-light"
       >
         &larr; Back to Home
-      </a>
+      </Link>
     </main>
   )
 }
