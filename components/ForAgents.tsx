@@ -46,7 +46,7 @@ export function ForAgents() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-white/60"
+            className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-white/75"
           >
             Not every landlord wants traditional letting. Some want guaranteed income. Others need a
             hands-off solution for hard-to-let stock. That&apos;s where we come in — and you earn for
@@ -69,7 +69,7 @@ export function ForAgents() {
                 <span className="h-px w-10 bg-gold/30 transition-all duration-500 group-hover:w-20 group-hover:bg-gold" />
               </div>
               <h3 className="mt-6 font-display text-[1.15rem] font-semibold text-white">{card.title}</h3>
-              <p className="mt-3 font-body text-[0.9rem] font-light leading-relaxed text-white/60">{card.desc}</p>
+              <p className="mt-3 font-body text-[0.9rem] font-light leading-relaxed text-white/75">{card.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -84,7 +84,7 @@ export function ForAgents() {
           <button onClick={() => scrollToSection("contact")} className="btn btn-outline-light btn-arrow">
             Refer a Property &amp; Earn
           </button>
-          <p className="max-w-2xl font-body text-[0.78rem] font-light leading-relaxed text-white/40">
+          <p className="max-w-2xl font-body text-[0.78rem] font-light leading-relaxed text-white/65">
             Terms agreed in writing upfront. No hidden obligations. Agents are expected to disclose any
             referral arrangement to their client in line with the Estate Agents Act 1979.
           </p>

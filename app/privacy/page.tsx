@@ -35,8 +35,9 @@ export default function PrivacyPolicy() {
           <li>anything you write in the message box (optional)</li>
         </ul>
         <p>
-          We do not collect any data from you automatically. This website does not set cookies,
-          does not run analytics and does not load third-party tracking scripts.
+          We do not collect personal data from you automatically. This website does not set cookies
+          and does not load advertising or social media tracking scripts. We use Vercel Web
+          Analytics, a cookieless service that counts page views without identifying visitors.
         </p>
       </section>
 
@@ -58,8 +59,8 @@ export default function PrivacyPolicy() {
         <h2>Who processes it</h2>
         <p>
           When you submit the form, your details are delivered to our inbox by Web3Forms, a form
-          delivery service. This website is hosted by Vercel. Both act as processors on our behalf
-          and only handle your data for the purpose of delivering it to us.
+          delivery service. This website is hosted by Vercel, which also provides the cookieless
+          page-view analytics. Both act as processors on our behalf.
         </p>
       </section>
 

@@ -27,11 +27,11 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-6xl gap-14 px-4 pt-36 pb-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-20 lg:pt-44 lg:pb-28">
         <div>
-          <span {...rise(0)} className="rise eyebrow">
+          <span className="eyebrow">
             Guaranteed Rent &amp; Hands-Off Management
           </span>
 
-          <h1 {...rise(0.1)} className="rise display mt-8 text-[2.35rem] sm:text-[3.4rem] md:text-[4.3rem]">
+          <h1 className="display mt-8 text-[2.35rem] sm:text-[3.4rem] md:text-[4.3rem]">
             Guaranteed Rent.
             <br />
             Zero Voids.
@@ -54,7 +54,7 @@ export function Hero() {
             </button>
           </div>
 
-          <ul {...rise(0.45)} className="rise mt-10 flex flex-wrap gap-x-7 gap-y-3 font-body text-[0.78rem] tracking-wide text-grey-400">
+          <ul {...rise(0.45)} className="rise mt-10 flex flex-wrap gap-x-7 gap-y-3 font-body text-[0.78rem] tracking-wide text-grey-500">
             {trust.map((t) => (
               <li key={t} className="flex items-center gap-2.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" />
@@ -88,7 +88,7 @@ export function Hero() {
               </span>
               <button
                 onClick={() => scrollToSection("process")}
-                className="cursor-pointer font-body text-[0.8rem] font-medium text-gold-dark transition-colors hover:text-gold"
+                className="cursor-pointer font-body text-[0.8rem] font-medium text-gold-deep transition-colors hover:text-gold"
               >
                 See how &rarr;
               </button>
@@ -99,7 +99,7 @@ export function Hero() {
 
       <div className="relative z-10 border-t border-gold/15 bg-cream">
         <div className="overflow-hidden py-4">
-          <div className="marquee items-center gap-10 font-body text-[0.7rem] uppercase tracking-[0.28em] text-grey-400">
+          <div className="marquee items-center gap-10 font-body text-[0.7rem] uppercase tracking-[0.28em] text-grey-500">
             {strip.map((n, i) => (
               <span key={`${n}-${i}`} className="flex items-center gap-10">
                 {n}

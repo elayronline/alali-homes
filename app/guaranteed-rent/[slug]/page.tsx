@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const area = getArea(slug)
   if (!area) return {}
-  const title = `Guaranteed Rent ${area.name.replace(/^the /, "")} | Landlords in ${area.name} | Alali Homes`
-  const description = `Guaranteed rent for landlords in ${area.name}. Alali Homes leases your property, pays a fixed rent every month for 1 to 5 years, hosts vetted professional guests and manages everything. Zero voids.`
+  const title = `Guaranteed Rent ${area.name.replace(/^the /, "")} | Alali Homes`
+  const description = `Guaranteed rent for landlords in ${area.name}. A fixed monthly rent for 1 to 5 years, vetted professional guests, fully managed. Zero voids.`
   const url = `${SITE}/guaranteed-rent/${area.slug}`
   return {
     title,
@@ -101,7 +101,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         <section className="light-glow relative overflow-hidden px-4 pt-36 pb-20 sm:px-6 lg:pt-44 lg:pb-24">
           <Skyline className="opacity-80" />
           <div className="relative z-10 mx-auto max-w-6xl">
-            <nav aria-label="Breadcrumb" className="font-body text-xs text-grey-400">
+            <nav aria-label="Breadcrumb" className="font-body text-xs text-grey-500">
               <ol className="flex flex-wrap items-center gap-2">
                 <li><Link href="/" className="hover:text-gold-dark">Home</Link></li>
                 {parent && (

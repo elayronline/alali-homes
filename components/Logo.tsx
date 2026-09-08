@@ -15,6 +15,7 @@ export function Logo({
         alt="Alali Homes"
         width={140}
         height={60}
+        sizes="140px"
         className="h-12 w-auto sm:h-14"
         priority
       />

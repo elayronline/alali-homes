@@ -3,7 +3,7 @@ import { LegalPage, COMPANY } from "@/components/LegalPage"
 
 export const metadata: Metadata = {
   title: "Cookie Policy | Alali Homes",
-  description: "The Alali Homes website does not set cookies or use tracking. Details here.",
+  description: "The Alali Homes website sets no cookies and uses only cookieless, anonymous page-view analytics.",
   alternates: { canonical: "https://www.alalihomes.com/cookies" },
 }
 
@@ -14,8 +14,11 @@ export default function CookiePolicy() {
         <h2>We do not use cookies</h2>
         <p>
           This website, operated by {COMPANY.name}, does not set any cookies on your device. It does
-          not use analytics, advertising or social media tracking, and it does not load third-party
-          scripts that would set cookies on our behalf.
+          not use advertising or social media tracking.
+        </p>
+        <p>
+          We use Vercel Web Analytics to count page views. It is cookieless, stores nothing on your
+          device, and does not identify you: it records that a page was viewed, not who viewed it.
         </p>
       </section>
 

@@ -27,13 +27,13 @@ const legalLinks = [
 ]
 
 const linkClass =
-  "font-body text-[0.85rem] font-light text-white/55 transition-colors duration-200 hover:text-gold-light"
+  "font-body text-[0.85rem] font-light text-white/70 transition-colors duration-200 hover:text-gold-light"
 const headingClass = "font-body text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-gold"
 
 function Column({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
     <div>
-      <h4 className={headingClass}>{title}</h4>
+      <h3 className={headingClass}>{title}</h3>
       <ul className="mt-5 space-y-2.5">
         {links.map((link) => (
           <li key={link.href + link.label}>
@@ -61,7 +61,7 @@ export function Footer() {
                 Homes
               </span>
             </div>
-            <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/55">
+            <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/70">
               Guaranteed rent and hands-off management for landlords in London and the South East.
               Professional guests, zero voids.
             </p>
@@ -89,10 +89,10 @@ export function Footer() {
         <div className="mt-16 h-px bg-white/8" />
 
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="font-body text-[0.75rem] font-light text-white/40">
+          <p className="font-body text-[0.75rem] font-light text-white/60">
             &copy; 2026 Alali Homes Ltd. All rights reserved.
           </p>
-          <p className="font-body text-[0.75rem] font-light text-white/40">
+          <p className="font-body text-[0.75rem] font-light text-white/60">
             Registered in England &amp; Wales &middot; Company No. 17095100
           </p>
         </div>

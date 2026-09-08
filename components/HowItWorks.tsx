@@ -63,7 +63,7 @@ export function HowItWorks() {
                 <div className="card mt-6 flex flex-1 flex-col p-7 sm:p-8">
                   <h3 className="font-display text-[1.15rem] font-semibold text-charcoal">{step.title}</h3>
                   <p className="mt-3 mb-5 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">{step.desc}</p>
-                  <p className="mt-auto border-t border-gold/15 pt-4 font-body text-[0.82rem] font-light italic leading-relaxed text-grey-400">
+                  <p className="mt-auto border-t border-gold/15 pt-4 font-body text-[0.82rem] font-light italic leading-relaxed text-grey-500">
                     {step.detail}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ export function HowItWorks() {
           <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow">
             Get Started
           </button>
-          <p className="mt-4 font-body text-[0.8rem] font-light text-grey-400">
+          <p className="mt-4 font-body text-[0.8rem] font-light text-grey-500">
             No commitment. We&apos;ll get back to you within 48 hours.
           </p>
         </motion.div>

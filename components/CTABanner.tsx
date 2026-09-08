@@ -68,7 +68,7 @@ export function CTABanner() {
             <ul className="mt-8 space-y-3">
               {reassurance.map((r) => (
                 <li key={r} className="flex items-center gap-3 font-body text-[0.88rem] text-charcoal">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold-pale text-gold-dark">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold-pale text-gold-deep">
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
                       <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -95,7 +95,7 @@ export function CTABanner() {
           {submitted ? (
             <div className="flex h-full flex-col items-center justify-center py-10 text-center" role="alert" aria-live="polite">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-pale">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-gold-dark">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="text-gold-deep">
                   <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
@@ -104,13 +104,13 @@ export function CTABanner() {
                 A member of our team will review your property and be in touch within{" "}
                 <strong className="font-medium text-charcoal">48 hours</strong> with a guaranteed rent figure.
               </p>
-              <p className="mt-2 font-body text-[0.82rem] text-grey-400">Check your inbox and phone for our response.</p>
+              <p className="mt-2 font-body text-[0.82rem] text-grey-500">Check your inbox and phone for our response.</p>
               <button
                 onClick={() => {
                   setSubmitted(false)
                   setFormData({ name: "", email: "", phone: "", role: "", postcode: "", message: "" })
                 }}
-                className="mt-7 cursor-pointer font-body text-sm font-medium text-gold-dark transition-colors hover:text-gold"
+                className="mt-7 cursor-pointer font-body text-sm font-medium text-gold-deep transition-colors hover:text-gold"
               >
                 Submit another enquiry
               </button>
@@ -168,7 +168,7 @@ export function CTABanner() {
                   "Get My Guaranteed Rent Figure"
                 )}
               </button>
-              <p className="text-center font-body text-[0.75rem] text-grey-400">Your details are safe. We never share your information with third parties.</p>
+              <p className="text-center font-body text-[0.75rem] text-grey-500">Your details are safe. We never share your information with third parties.</p>
             </form>
           )}
         </div>

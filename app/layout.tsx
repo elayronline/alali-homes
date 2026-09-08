@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Montserrat, Outfit } from "next/font/google"
 import "./globals.css"
+import { Analytics } from "@vercel/analytics/next"
 import { AREA_SERVED } from "@/lib/areas"
 
 const montserrat = Montserrat({
@@ -19,9 +20,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
-  title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
+  title: "Guaranteed Rent, London & the South East | Alali Homes",
   description:
-    "Alali Homes Ltd pays landlords in London and the South East a guaranteed rent every month, hosts vetted professional guests and manages the property end to end. Zero voids, 1–5 year agreements.",
+    "Guaranteed rent every month for landlords in London and the South East. We host vetted professional guests and manage everything. Zero voids.",
   keywords: [
     "guaranteed rent",
     "guaranteed rent scheme",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     canonical: "https://www.alalihomes.com",
   },
   openGraph: {
-    title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
+    title: "Guaranteed Rent, London & the South East | Alali Homes",
     description:
       "We lease your property, pay guaranteed rent every month, host vetted professional guests and manage everything. No voids. No hassle.",
     url: "https://www.alalihomes.com",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
+    title: "Guaranteed Rent, London & the South East | Alali Homes",
     description:
       "UK landlords: get guaranteed rent, zero voids, and fully managed properties with Alali Homes.",
     images: ["/og-image.png"],
@@ -173,7 +174,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={`${montserrat.variable} ${outfit.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.variable} ${outfit.variable} antialiased`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }

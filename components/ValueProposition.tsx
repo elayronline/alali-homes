@@ -88,7 +88,7 @@ export function ValueProposition() {
               className="card group relative p-7"
             >
               <div className="flex items-start justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-pale text-gold-dark transition-colors group-hover:bg-gold group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-pale text-gold-deep transition-colors group-hover:bg-gold group-hover:text-white">
                   {item.icon}
                 </div>
                 <span className="numeral text-[0.8rem] tracking-[0.2em] text-gold/60">{item.num}</span>

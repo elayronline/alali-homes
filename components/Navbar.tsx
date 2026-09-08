@@ -129,7 +129,7 @@ export function Navbar() {
               className={`cursor-pointer font-body text-[0.78rem] font-medium uppercase tracking-[0.12em] transition-colors ${
                 onDark
                   ? activeSection === link.href ? "text-gold-light" : "text-white/80 hover:text-white"
-                  : activeSection === link.href ? "text-gold-dark" : "text-charcoal hover:text-gold-dark"
+                  : activeSection === link.href ? "text-gold-deep" : "text-charcoal hover:text-gold-dark"
               }`}
             >
               {link.label}

@@ -79,7 +79,7 @@ function FAQAccordion({ item }: { item: FAQItem }) {
         className="flex w-full cursor-pointer items-center justify-between gap-6 py-5 text-left"
         aria-expanded={open}
       >
-        <span className={`font-display text-[0.98rem] font-semibold transition-colors ${open ? "text-gold-dark" : "text-charcoal"}`}>
+        <span className={`font-display text-[0.98rem] font-semibold transition-colors ${open ? "text-gold-deep" : "text-charcoal"}`}>
           {item.question}
         </span>
         <span

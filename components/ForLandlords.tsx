@@ -48,7 +48,7 @@ export function ForLandlords() {
               {painPoints.map((point) => (
                 <li key={point} className="flex items-start gap-3.5">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border border-gold/40 bg-gold-pale/60">
-                    <svg width="11" height="11" viewBox="0 0 12 12" fill="none" className="text-gold-dark">
+                    <svg width="11" height="11" viewBox="0 0 12 12" fill="none" className="text-gold-deep">
                       <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
