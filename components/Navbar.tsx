@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { Logo } from "./Logo"
-import { usePathname, useRouter } from "next/navigation"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const navLinks = [
@@ -14,12 +15,53 @@ const navLinks = [
   { label: "FAQ", href: "faq" },
 ]
 
+/**
+ * On the homepage: a button that smooth-scrolls to the section.
+ * On any other page: a real link to /#section so the browser navigates and lands on it.
+ * Sub-pages that have the section themselves (e.g. #contact / #process on area pages)
+ * still scroll in place.
+ */
+function NavItem({
+  id,
+  onHome,
+  onNav,
+  className,
+  children,
+}: {
+  id: string
+  onHome: boolean
+  onNav: (id: string) => void
+  className: string
+  children: React.ReactNode
+}) {
+  if (onHome) {
+    return (
+      <button type="button" onClick={() => onNav(id)} className={className}>
+        {children}
+      </button>
+    )
+  }
+  return (
+    <Link
+      href={`/#${id}`}
+      className={className}
+      onClick={(e) => {
+        if (document.getElementById(id)) {
+          e.preventDefault()
+          onNav(id)
+        }
+      }}
+    >
+      {children}
+    </Link>
+  )
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
   const pathname = usePathname()
-  const router = useRouter()
   const onHome = pathname === "/"
 
   useEffect(() => {
@@ -53,8 +95,7 @@ export function Navbar() {
 
   const handleNav = (id: string) => {
     setMobileOpen(false)
-    if (onHome || document.getElementById(id)) scrollToSection(id)
-    else router.push(`/#${id}`)
+    scrollToSection(id)
   }
 
   return (
@@ -69,29 +110,33 @@ export function Navbar() {
       }}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <button onClick={() => (onHome ? scrollToSection("hero") : router.push("/"))} className="cursor-pointer" aria-label="Alali Homes home">
+        <Link href="/" onClick={(e) => { if (onHome) { e.preventDefault(); scrollToSection("hero") } }} className="cursor-pointer" aria-label="Alali Homes home">
           <Logo />
-        </button>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
-            <button
+            <NavItem
               key={link.href}
-              onClick={() => handleNav(link.href)}
+              id={link.href}
+              onHome={onHome}
+              onNav={handleNav}
               className={`cursor-pointer font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] transition-colors hover:text-gold ${
                 activeSection === link.href ? "text-gold" : "text-charcoal"
               }`}
             >
               {link.label}
-            </button>
+            </NavItem>
           ))}
-          <button
-            onClick={() => handleNav("contact")}
+          <NavItem
+            id="contact"
+            onHome={onHome}
+            onNav={handleNav}
             className="cursor-pointer rounded-sm bg-gold px-6 py-2.5 font-body text-[0.82rem] font-semibold uppercase tracking-[0.06em] text-white transition-all hover:bg-gold-dark"
           >
             Get In Touch
-          </button>
+          </NavItem>
         </div>
 
         {/* Mobile hamburger */}
@@ -125,22 +170,26 @@ export function Navbar() {
       >
         <div className="flex flex-col gap-4 border-t border-grey-200 px-6 py-6">
           {navLinks.map((link) => (
-            <button
+            <NavItem
               key={link.href}
-              onClick={() => handleNav(link.href)}
+              id={link.href}
+              onHome={onHome}
+              onNav={handleNav}
               className={`cursor-pointer text-left font-body text-base font-medium uppercase tracking-wide transition-colors hover:text-gold py-1 ${
                 activeSection === link.href ? "text-gold" : "text-charcoal"
               }`}
             >
               {link.label}
-            </button>
+            </NavItem>
           ))}
-          <button
-            onClick={() => handleNav("contact")}
-            className="mt-2 w-full cursor-pointer rounded-sm bg-gold py-3 text-center font-body text-sm font-semibold uppercase tracking-wide text-white transition-all hover:bg-gold-dark"
+          <NavItem
+            id="contact"
+            onHome={onHome}
+            onNav={handleNav}
+            className="mt-2 block w-full cursor-pointer rounded-sm bg-gold py-3 text-center font-body text-sm font-semibold uppercase tracking-wide text-white transition-all hover:bg-gold-dark"
           >
             Get In Touch
-          </button>
+          </NavItem>
         </div>
       </div>
     </nav>
