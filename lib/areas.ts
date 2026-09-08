@@ -383,7 +383,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "I own a flat in a Reading town-centre development. Is that suitable?",
-        a: "Usually yes. Modern apartments near Reading station are exactly what relocating technology and professional guests ask for, and they are simple for us to furnish and manage.",
+        a: "Usually yes. Modern apartments near Reading station are exactly what relocating technology and professional guests ask for, and they are straightforward for us to take on and manage.",
       },
     ],
   },

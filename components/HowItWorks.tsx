@@ -23,7 +23,7 @@ const steps = [
     title: "Agreement & Handover",
     desc: "Once terms are agreed, we sign the contract, arrange any compliance works, and take over the property. Your guaranteed rent starts from the agreed date.",
     detail:
-      "What happens next: we furnish if applicable, welcome vetted professional guests, and manage from day one. You get paid monthly like clockwork.",
+      "What happens next: we qualify your property to confirm it is the right fit and, where applicable, work with you to bring it up to the standard we can take on. Then we welcome vetted professional guests and manage from day one. You get paid monthly like clockwork.",
   },
 ]
 
