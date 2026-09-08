@@ -64,7 +64,7 @@ export function ForAgents() {
           className="mt-4 max-w-2xl font-body text-[0.92rem] font-light leading-relaxed text-white/60"
         >
           Not every landlord wants traditional letting. Some want guaranteed income. Others need a
-          corporate solution for hard-to-let stock. That&apos;s where we come in — and you earn for
+          hands-off solution for hard-to-let stock. That&apos;s where we come in — and you earn for
           every successful referral.
         </motion.p>
 

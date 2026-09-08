@@ -22,7 +22,7 @@ export default function TermsOfUse() {
       <section>
         <h2>Information only</h2>
         <p>
-          The content on this website describes our guaranteed rent and corporate lettings service
+          The content on this website describes our guaranteed rent and property management service
           in general terms. It is provided for information only. Nothing on this site is an offer,
           a valuation, or financial, legal or tax advice. Any rent figure, term or arrangement we
           may offer for a specific property is set out in a written proposal and agreement, and only

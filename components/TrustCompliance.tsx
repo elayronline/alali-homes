@@ -63,9 +63,9 @@ export function TrustCompliance() {
           viewport={{ once: true }}
           className="mx-auto mt-4 max-w-2xl text-center font-body text-[0.92rem] font-light leading-relaxed text-grey-600"
         >
-          Alali Homes Ltd is a UK-registered corporate lettings and property management company. We
-          offer landlords a better model: we lease your property, pay guaranteed rent, and manage
-          everything to a professional standard.
+          Alali Homes Ltd is a UK-registered guaranteed rent and property management company. We
+          offer landlords a better model: we lease your property, pay guaranteed rent, host vetted
+          professional guests, and manage everything to a professional standard.
         </motion.p>
 
         <div className="mt-14 grid gap-4 sm:grid-cols-3">

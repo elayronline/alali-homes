@@ -25,7 +25,7 @@ const faqSchema = {
       name: "How is the rent actually guaranteed?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We sign a legally binding corporate lease to pay an agreed rent every month for the contract term. This obligation sits with Alali Homes Ltd regardless of occupancy.",
+        text: "We sign a legally binding lease with you and pay an agreed rent every month for the contract term. This obligation sits with Alali Homes Ltd regardless of occupancy.",
       },
     },
     {
@@ -38,10 +38,18 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What type of tenants will live in my property?",
+      name: "Who will stay in my property?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Corporate clients, contractors, and vetted working professionals. Every occupant is referenced and approved. We operate to a far higher standard than standard letting.",
+        text: "Vetted professional guests: relocating professionals, contractors on placement and business travellers on longer stays. Every guest is referenced and approved, and we inspect the property regularly through the term.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is this Airbnb or holiday letting?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. We host vetted professional guests on extended stays, not nightly holiday bookings. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
       },
     },
     {
@@ -76,14 +84,14 @@ const serviceSchema = {
   "@type": "Service",
   name: "Guaranteed Rent for Landlords",
   description:
-    "Alali Homes leases your property under a corporate let agreement and pays guaranteed rent every month for 1–5 years. Zero void periods, fully managed.",
+    "Alali Homes leases your property on a guaranteed rent agreement, pays a fixed rent every month for 1–5 years, hosts vetted professional guests and manages everything. Zero void periods.",
   provider: {
     "@type": "Organization",
     name: "Alali Homes Ltd",
     url: "https://www.alalihomes.com",
   },
   areaServed: AREA_SERVED,
-  serviceType: "Corporate Lettings & Property Management",
+  serviceType: "Guaranteed Rent & Property Management",
   offers: {
     "@type": "Offer",
     description: "Guaranteed rent agreements from 1 to 5 years.",

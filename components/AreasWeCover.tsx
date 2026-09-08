@@ -16,7 +16,7 @@ export function AreasWeCover() {
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center font-body text-[0.95rem] leading-[1.8] text-grey-600">
           We take on properties in every London borough and across the South East counties. Each area
-          page explains where the corporate and contractor demand comes from locally and which
+          page explains where the professional-guest demand comes from locally and which
           properties suit it best.
         </p>
 

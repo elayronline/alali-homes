@@ -21,20 +21,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
   title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
   description:
-    "Alali Homes Ltd pays landlords in London and the South East a guaranteed rent every month through corporate lets, with the property fully managed. Zero voids, 1–5 year agreements.",
+    "Alali Homes Ltd pays landlords in London and the South East a guaranteed rent every month, hosts vetted professional guests and manages the property end to end. Zero voids, 1–5 year agreements.",
   keywords: [
     "guaranteed rent",
-    "corporate lettings",
-    "corporate lets UK",
     "guaranteed rent scheme",
-    "property management UK",
-    "landlord guaranteed income",
-    "zero void periods",
-    "serviced accommodation",
-    "rent to rent",
-    "corporate housing UK",
     "guaranteed rent London",
     "guaranteed rent South East",
+    "hands-off property management",
+    "serviced accommodation management",
+    "landlord guaranteed income",
+    "zero void periods",
     "Alali Homes",
   ],
   alternates: {
@@ -43,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
     description:
-      "We lease your property, pay guaranteed rent every month, and manage everything to a professional standard. No voids. No hassle.",
+      "We lease your property, pay guaranteed rent every month, host vetted professional guests and manage everything. No voids. No hassle.",
     url: "https://www.alalihomes.com",
     siteName: "Alali Homes",
     type: "website",
@@ -53,7 +49,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Alali Homes — Guaranteed Rent & Corporate Lettings UK",
+        alt: "Alali Homes — Guaranteed Rent & Hands-Off Management for Landlords",
       },
     ],
   },
@@ -100,7 +96,7 @@ const orgSchema = {
   },
   foundingDate: "2026-03-16",
   description:
-    "UK-based corporate lettings and property management company offering guaranteed rent to landlords. Zero voids, fully managed 1–5 year agreements.",
+    "Guaranteed rent and property management company for landlords in London and the South East. We lease the property, host vetted professional guests and manage everything. Zero voids, 1–5 year agreements.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",
@@ -140,10 +136,9 @@ const orgSchema = {
   },
   knowsAbout: [
     "Guaranteed Rent",
-    "Corporate Lettings",
     "Property Management",
     "Serviced Accommodation",
-    "HMO Management",
+    "Extended-Stay Accommodation",
   ],
 }
 
@@ -154,7 +149,7 @@ const websiteSchema = {
   name: "Alali Homes",
   url: "https://www.alalihomes.com",
   description:
-    "UK corporate lettings company offering guaranteed rent to landlords. Zero voids, fully managed 1–5 year agreements.",
+    "Guaranteed rent and hands-off management for landlords in London and the South East. Zero voids, 1–5 year agreements.",
   publisher: {
     "@type": "Organization",
     name: "Alali Homes Ltd",

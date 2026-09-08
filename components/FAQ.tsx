@@ -12,7 +12,7 @@ const landlordFAQs: FAQItem[] = [
   {
     question: "How is the rent actually guaranteed?",
     answer:
-      "We sign a legally binding corporate lease to pay an agreed rent every month for the contract term. This obligation sits with Alali Homes Ltd regardless of occupancy.",
+      "We sign a legally binding lease with you and pay an agreed rent every month for the contract term. This obligation sits with Alali Homes Ltd regardless of occupancy.",
   },
   {
     question: "What happens if the property sits empty?",
@@ -20,14 +20,19 @@ const landlordFAQs: FAQItem[] = [
       "You still get paid. That\u2019s the entire point. The void risk is ours, not yours.",
   },
   {
+    question: "Is this Airbnb or holiday letting?",
+    answer:
+      "No. We host vetted professional guests on extended stays, not nightly holiday bookings. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
+  },
+  {
     question: "Will you change or damage my property?",
     answer:
       "Any changes are agreed in writing before we start. We conduct regular inspections, professional cleans, and return the property to the agreed standard at the end of the term.",
   },
   {
-    question: "What type of tenants will live in my property?",
+    question: "Who will stay in my property?",
     answer:
-      "Corporate clients, contractors, and vetted working professionals. Every occupant is referenced and approved. We operate to a far higher standard than standard letting.",
+      "Vetted professional guests: relocating professionals, contractors on placement and business travellers on longer stays. Every guest is referenced and approved, and we inspect the property regularly through the term.",
   },
   {
     question: "Who is responsible for compliance works?",

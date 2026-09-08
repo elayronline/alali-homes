@@ -34,7 +34,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block rounded-full border border-gold/25 bg-gold-pale/50 px-5 py-1.5 font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-              Corporate Lettings Specialists
+              Guaranteed Rent & Hands-Off Management
             </span>
           </motion.div>
 
@@ -57,9 +57,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-lg font-body text-[0.95rem] font-light leading-[1.8] text-grey-600"
           >
-            We take on properties across London and the South East under corporate lets and
-            guaranteed rent agreements, managing everything so landlords receive reliable income,
-            every month, without the hassle.
+            We lease properties across London and the South East on guaranteed rent agreements,
+            host vetted professional guests, and manage everything, so landlords receive reliable
+            income every month without the hassle.
           </motion.p>
 
           <motion.div

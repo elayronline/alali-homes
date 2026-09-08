@@ -18,7 +18,7 @@ const benefits = [
   },
   {
     title: "Full Property Management",
-    desc: "Tenants, maintenance, check-ins, emergencies.",
+    desc: "Guests, maintenance, check-ins, emergencies.",
   },
   {
     title: "Compliance Covered",

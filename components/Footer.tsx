@@ -14,7 +14,7 @@ const companyLinks = [
 ]
 
 const serviceLinks = [
-  { label: "Corporate Lets", href: "/#landlords" },
+  { label: "Hands-Off Management", href: "/#landlords" },
   { label: "Guaranteed Rent", href: "/#landlords" },
   { label: "Serviced Accommodation", href: "/#process" },
   { label: "Property Management", href: "/#about" },
@@ -33,7 +33,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Col 1: Logo + desc + social */}
           <div>
-            <div aria-label="Alali Homes — Corporate Lettings">
+            <div aria-label="Alali Homes — Guaranteed Rent & Hands-Off Management">
               <span className="font-display text-2xl font-light tracking-wide text-white">
                 Alali
               </span>
@@ -42,8 +42,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/60">
-              UK-based corporate lettings and property management. Guaranteed rent, zero voids,
-              fully managed.
+              Guaranteed rent and hands-off management for landlords in London and the South East.
+              Professional guests, zero voids.
             </p>
             {/* Social links — min 44px touch targets */}
             <div className="mt-5 flex gap-3">

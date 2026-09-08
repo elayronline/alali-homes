@@ -23,7 +23,7 @@ const values = [
     ),
     title: "Hands-Free Management",
     description:
-      "We handle everything — tenant sourcing, maintenance, compliance, and day-to-day operations.",
+      "We handle everything — guests, maintenance, compliance, and day-to-day operations.",
   },
   {
     icon: (
@@ -33,9 +33,9 @@ const values = [
         <path d="M12 14v2" />
       </svg>
     ),
-    title: "Professional Tenants",
+    title: "Professional Guests",
     description:
-      "Your property is let to vetted corporate clients, contractors, and working professionals.",
+      "Your property hosts vetted professional guests — relocating professionals, contractors and business travellers on longer stays.",
   },
   {
     icon: (

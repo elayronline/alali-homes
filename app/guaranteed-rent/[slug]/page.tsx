@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = getArea(slug)
   if (!area) return {}
   const title = `Guaranteed Rent ${area.name.replace(/^the /, "")} | Landlords in ${area.name} | Alali Homes`
-  const description = `Guaranteed rent for landlords in ${area.name}. Alali Homes leases your property on a corporate let, pays a fixed rent every month for 1 to 5 years and manages everything. Zero voids.`
+  const description = `Guaranteed rent for landlords in ${area.name}. Alali Homes leases your property, pays a fixed rent every month for 1 to 5 years, hosts vetted professional guests and manages everything. Zero voids.`
   const url = `${SITE}/guaranteed-rent/${area.slug}`
   return {
     title,
@@ -67,7 +67,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     "@type": "Service",
     "@id": `${url}#service`,
     name: `Guaranteed Rent for Landlords in ${area.name}`,
-    serviceType: "Guaranteed rent and corporate lettings",
+    serviceType: "Guaranteed rent and property management",
     description: area.strap,
     url,
     provider: { "@id": `${SITE}/#organization` },
@@ -151,7 +151,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         {/* Demand */}
         <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-6xl">
-            <p className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Who Rents Here</p>
+            <p className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Who Stays Here</p>
             <h2 className="mt-3 text-center font-display text-2xl font-semibold text-charcoal sm:text-3xl">
               Where the demand in {area.name} comes from
             </h2>
