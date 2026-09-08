@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { Logo } from "./Logo"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { scrollToSection } from "@/lib/smoothScroll"
 
@@ -41,8 +40,11 @@ function NavItem({
       </button>
     )
   }
+  // Plain anchor on purpose: a full navigation to /#id is the one thing that
+  // reliably lands on the section from every page. Client-side routing with a
+  // hash was dropping the first click after load.
   return (
-    <Link
+    <a
       href={`/#${id}`}
       className={className}
       onClick={(e) => {
@@ -53,7 +55,7 @@ function NavItem({
       }}
     >
       {children}
-    </Link>
+    </a>
   )
 }
 
@@ -110,9 +112,9 @@ export function Navbar() {
       }}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" onClick={(e) => { if (onHome) { e.preventDefault(); scrollToSection("hero") } }} className="cursor-pointer" aria-label="Alali Homes home">
+        <a href="/" onClick={(e) => { if (onHome) { e.preventDefault(); scrollToSection("hero") } }} className="cursor-pointer" aria-label="Alali Homes home">
           <Logo />
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 lg:flex">
