@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Montserrat, Outfit } from "next/font/google"
 import "./globals.css"
+import { AREA_SERVED } from "@/lib/areas"
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -18,9 +19,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
-  title: "Alali Homes — Guaranteed Rent & Corporate Lettings | UK",
+  title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
   description:
-    "Alali Homes Ltd offers UK landlords guaranteed rent through corporate lets and professional property management. Zero voids, fully managed 1–5 year agreements.",
+    "Alali Homes Ltd pays landlords in London and the South East a guaranteed rent every month through corporate lets, with the property fully managed. Zero voids, 1–5 year agreements.",
   keywords: [
     "guaranteed rent",
     "corporate lettings",
@@ -32,13 +33,15 @@ export const metadata: Metadata = {
     "serviced accommodation",
     "rent to rent",
     "corporate housing UK",
+    "guaranteed rent London",
+    "guaranteed rent South East",
     "Alali Homes",
   ],
   alternates: {
     canonical: "https://www.alalihomes.com",
   },
   openGraph: {
-    title: "Alali Homes — Guaranteed Rent & Corporate Lettings",
+    title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
     description:
       "We lease your property, pay guaranteed rent every month, and manage everything to a professional standard. No voids. No hassle.",
     url: "https://www.alalihomes.com",
@@ -56,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alali Homes — Guaranteed Rent & Corporate Lettings | UK",
+    title: "Guaranteed Rent for Landlords in London & the South East | Alali Homes",
     description:
       "UK landlords: get guaranteed rent, zero voids, and fully managed properties with Alali Homes.",
     images: ["/og-image.png"],
@@ -83,53 +86,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 }
 
-// FAQ structured data for Google rich results
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How is the rent actually guaranteed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We sign a legally binding corporate lease to pay an agreed rent every month for the contract term. This obligation sits with Alali Homes Ltd regardless of occupancy.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What happens if the property sits empty?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You still get paid. The void risk sits with Alali Homes, not the landlord. Your guaranteed rent is paid regardless of occupancy status.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What type of tenants will live in my property?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Corporate clients, contractors, and vetted working professionals. Every occupant is referenced and approved. We operate to a far higher standard than standard letting.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who is responsible for compliance works?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "If compliance works are needed before we take the property on, responsibilities are agreed in writing before signing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you compete with letting agents?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. We are an operator, not a letting agent. We do not list on Rightmove or compete for management fees. We partner with agents to offer an alternative for landlords who want guaranteed income.",
-      },
-    },
-  ],
-}
 
 const orgSchema = {
   "@context": "https://schema.org",
@@ -162,10 +118,7 @@ const orgSchema = {
     postalCode: "EC2A 4NE",
     addressCountry: "GB",
   },
-  areaServed: {
-    "@type": "Country",
-    name: "United Kingdom",
-  },
+  areaServed: AREA_SERVED,
   sameAs: [
     "https://www.instagram.com/alalihomes",
   ],
@@ -194,28 +147,6 @@ const orgSchema = {
   ],
 }
 
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Guaranteed Rent for Landlords",
-  description:
-    "Alali Homes leases your property under a corporate let agreement and pays guaranteed rent every month for 1–5 years. Zero void periods, fully managed.",
-  provider: {
-    "@type": "Organization",
-    name: "Alali Homes Ltd",
-    url: "https://www.alalihomes.com",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "United Kingdom",
-  },
-  serviceType: "Corporate Lettings & Property Management",
-  offers: {
-    "@type": "Offer",
-    description: "Guaranteed rent agreements from 1 to 5 years.",
-    priceCurrency: "GBP",
-  },
-}
 
 const websiteSchema = {
   "@context": "https://schema.org",
@@ -240,15 +171,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <script
-          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
         <script
           type="application/ld+json"

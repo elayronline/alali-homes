@@ -57,8 +57,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-lg font-body text-[0.95rem] font-light leading-[1.8] text-grey-600"
           >
-            We take on properties under corporate lets and guaranteed rent agreements — managing
-            everything so landlords receive reliable income, every month, without the hassle.
+            We take on properties across London and the South East under corporate lets and
+            guaranteed rent agreements, managing everything so landlords receive reliable income,
+            every month, without the hassle.
           </motion.p>
 
           <motion.div

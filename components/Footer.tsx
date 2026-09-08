@@ -1,17 +1,23 @@
 import { Instagram } from "lucide-react"
+import { COUNTIES, REGIONS } from "@/lib/areas"
+
+const areaLinks = [
+  ...REGIONS.map((r) => ({ label: `Guaranteed Rent ${r.name.replace(/^the /, "")}`, href: `/guaranteed-rent/${r.slug}` })),
+  ...COUNTIES.map((c) => ({ label: c.name, href: `/guaranteed-rent/${c.slug}` })),
+]
 
 const companyLinks = [
-  { label: "About", href: "#about" },
-  { label: "How It Works", href: "#process" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "How It Works", href: "/#process" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ]
 
 const serviceLinks = [
-  { label: "Corporate Lets", href: "#landlords" },
-  { label: "Guaranteed Rent", href: "#landlords" },
-  { label: "Serviced Accommodation", href: "#process" },
-  { label: "Property Management", href: "#about" },
+  { label: "Corporate Lets", href: "/#landlords" },
+  { label: "Guaranteed Rent", href: "/#landlords" },
+  { label: "Serviced Accommodation", href: "/#process" },
+  { label: "Property Management", href: "/#about" },
 ]
 
 const legalLinks = [
@@ -24,7 +30,7 @@ export function Footer() {
   return (
     <footer className="border-t border-grey-200 bg-charcoal px-4 pt-16 pb-8 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           {/* Col 1: Logo + desc + social */}
           <div>
             <div aria-label="Alali Homes — Corporate Lettings">
@@ -91,7 +97,26 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Legal */}
+          {/* Col 4: Areas */}
+          <div>
+            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
+              Areas We Cover
+            </h4>
+            <ul className="mt-4 space-y-3">
+              {areaLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 5: Legal */}
           <div>
             <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
               Legal

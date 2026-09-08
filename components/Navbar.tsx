@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Logo } from "./Logo"
+import { usePathname, useRouter } from "next/navigation"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const navLinks = [
@@ -9,6 +10,7 @@ const navLinks = [
   { label: "Agents", href: "agents" },
   { label: "How It Works", href: "process" },
   { label: "About", href: "about" },
+  { label: "Areas", href: "areas" },
   { label: "FAQ", href: "faq" },
 ]
 
@@ -16,13 +18,16 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const pathname = usePathname()
+  const router = useRouter()
+  const onHome = pathname === "/"
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50)
 
       // Active section detection
-      const sections = ["landlords", "agents", "process", "about", "faq", "contact"]
+      const sections = ["landlords", "agents", "process", "about", "areas", "faq", "contact"]
       const navHeight = 100
       let current = ""
       for (const id of sections) {
@@ -48,7 +53,8 @@ export function Navbar() {
 
   const handleNav = (id: string) => {
     setMobileOpen(false)
-    scrollToSection(id)
+    if (onHome || document.getElementById(id)) scrollToSection(id)
+    else router.push(`/#${id}`)
   }
 
   return (
@@ -63,7 +69,7 @@ export function Navbar() {
       }}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <button onClick={() => scrollToSection("hero")} className="cursor-pointer">
+        <button onClick={() => (onHome ? scrollToSection("hero") : router.push("/"))} className="cursor-pointer" aria-label="Alali Homes home">
           <Logo />
         </button>
 

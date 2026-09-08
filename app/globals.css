@@ -103,3 +103,8 @@ section[id] {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(198, 162, 78, 0.5);
 }
+
+/* Fixed navbar is ~80px; keep anchored sections visible when arriving via /#id */
+section[id] {
+  scroll-margin-top: 80px;
+}

@@ -35,6 +35,11 @@ const landlordFAQs: FAQItem[] = [
       "If compliance works are needed before we take the property on, responsibilities are agreed in writing before signing.",
   },
   {
+    question: "Where do you operate?",
+    answer:
+      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site.",
+  },
+  {
     question: "What if I want my property back early?",
     answer:
       "Break clauses and notice periods are built into every agreement. We walk you through exit terms before you commit.",
