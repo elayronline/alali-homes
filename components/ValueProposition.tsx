@@ -35,7 +35,7 @@ const values = [
     ),
     title: "Professional Guests",
     description:
-      "Your property hosts vetted professional guests — relocating professionals, contractors and business travellers on longer stays.",
+      "Working professionals only. Every guest passes our vetting process before they are approved.",
   },
   {
     icon: (

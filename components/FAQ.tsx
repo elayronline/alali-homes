@@ -22,7 +22,7 @@ const landlordFAQs: FAQItem[] = [
   {
     question: "Is this Airbnb or holiday letting?",
     answer:
-      "No. We host vetted professional guests on extended stays, not nightly holiday bookings. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
+      "No. We do not take holiday bookings. Every guest is a working professional who has passed our vetting process. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
   },
   {
     question: "Will you change or damage my property?",
@@ -32,7 +32,7 @@ const landlordFAQs: FAQItem[] = [
   {
     question: "Who will stay in my property?",
     answer:
-      "Vetted professional guests: relocating professionals, contractors on placement and business travellers on longer stays. Every guest is referenced and approved, and we inspect the property regularly through the term.",
+      "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly through the term.",
   },
   {
     question: "Who is responsible for compliance works?",

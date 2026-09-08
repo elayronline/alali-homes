@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "guaranteed rent London",
     "guaranteed rent South East",
     "hands-off property management",
-    "serviced accommodation management",
+    "hands-off property management for landlords",
     "landlord guaranteed income",
     "zero void periods",
     "Alali Homes",
@@ -137,8 +137,8 @@ const orgSchema = {
   knowsAbout: [
     "Guaranteed Rent",
     "Property Management",
-    "Serviced Accommodation",
-    "Extended-Stay Accommodation",
+    "Residential Lettings",
+    "Guest Vetting",
   ],
 }
 

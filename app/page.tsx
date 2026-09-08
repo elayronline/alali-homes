@@ -41,7 +41,7 @@ const faqSchema = {
       name: "Who will stay in my property?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Vetted professional guests: relocating professionals, contractors on placement and business travellers on longer stays. Every guest is referenced and approved, and we inspect the property regularly through the term.",
+        text: "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly through the term.",
       },
     },
     {
@@ -49,7 +49,7 @@ const faqSchema = {
       name: "Is this Airbnb or holiday letting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. We host vetted professional guests on extended stays, not nightly holiday bookings. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
+        text: "No. We do not take holiday bookings. Every guest is a working professional who has passed our vetting process. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
       },
     },
     {

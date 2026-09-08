@@ -41,7 +41,7 @@ const SHARED_FAQS: AreaFAQ[] = [
   },
   {
     q: "Who will stay in the property?",
-    a: "Vetted professional guests: relocating professionals, contractors on placement and business travellers on longer stays. Every guest is referenced and approved, and we inspect the property regularly through the term.",
+    a: "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly through the term.",
   },
 ]
 
@@ -60,7 +60,7 @@ export const AREAS: Area[] = [
     demand: [
       {
         title: "Relocating professionals and project teams",
-        text: "Financial and professional services firms in the City and Canary Wharf, technology companies around King's Cross and Shoreditch, and consultancies placing staff on multi-month engagements all need furnished, managed accommodation for people arriving in the capital.",
+        text: "Financial and professional services firms in the City and Canary Wharf, technology companies around King's Cross and Shoreditch, and consultancies placing staff on multi-month engagements all need furnished, managed homes for people arriving in the capital.",
       },
       {
         title: "Infrastructure and construction",
@@ -102,7 +102,7 @@ export const AREAS: Area[] = [
     kind: "region",
     strap: "Guaranteed rent and full management for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
     intro: [
-      "The South East is the country's busiest commuter region and one of its largest employment areas in its own right. Airports, ports, science campuses, garrisons and company headquarters sit within an hour of London, and each of them brings people who need accommodation for months rather than nights.",
+      "The South East is the country's busiest commuter region and one of its largest employment areas in its own right. Airports, ports, science campuses, garrisons and company headquarters sit within an hour of London, and each of them brings people who need a home for months at a time.",
       "Alali Homes leases properties across the region under guaranteed rent agreements, pays landlords a guaranteed rent every month for the term, and manages the property throughout. If you own a house or flat anywhere in the South East and want a fixed income without the letting cycle, we can give you a written figure.",
     ],
     demand: [
@@ -116,7 +116,7 @@ export const AREAS: Area[] = [
       },
       {
         title: "Company headquarters and business parks",
-        text: "Basingstoke, Milton Keynes, Slough, Bracknell and Crawley each host clusters of national and international companies whose relocating staff and visiting teams need managed accommodation near the office.",
+        text: "Basingstoke, Milton Keynes, Slough, Bracknell and Crawley each host clusters of national and international companies whose relocating staff and visiting teams need a managed home near the office.",
       },
     ],
     properties:
@@ -235,7 +235,7 @@ export const AREAS: Area[] = [
     demand: [
       {
         title: "Brighton's universities and digital sector",
-        text: "The University of Sussex, the University of Brighton and the city's technology and creative companies bring academics, researchers and relocating professionals who want furnished, managed accommodation for a term or a contract.",
+        text: "The University of Sussex, the University of Brighton and the city's technology and creative companies bring academics, researchers and relocating professionals who want a furnished, managed home for a term or a contract.",
       },
       {
         title: "Hospitals and public services",
@@ -257,7 +257,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties in Brighton that have been used as holiday lets?",
-        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We host professional guests on longer stays rather than by the night.",
+        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We take it on under a guaranteed rent agreement for vetted professional guests, not holiday lets.",
       },
     ],
   },
@@ -327,7 +327,7 @@ export const AREAS: Area[] = [
       },
       {
         title: "Basingstoke and Winchester",
-        text: "Basingstoke's company headquarters and business parks and Winchester's hospital, university and county offices provide a steady flow of relocating professionals who want managed accommodation near work.",
+        text: "Basingstoke's company headquarters and business parks and Winchester's hospital, university and county offices provide a steady flow of relocating professionals who want a managed home near work.",
       },
     ],
     properties:
@@ -365,7 +365,7 @@ export const AREAS: Area[] = [
       },
       {
         title: "Slough and Heathrow's western edge",
-        text: "The Slough Trading Estate and the companies serving Heathrow employ engineers, logistics staff and contractors who need accommodation within a short drive of the airport.",
+        text: "The Slough Trading Estate and the companies serving Heathrow employ engineers, logistics staff and contractors who need a home within a short drive of the airport.",
       },
       {
         title: "Newbury, Windsor and Maidenhead",
@@ -403,7 +403,7 @@ export const AREAS: Area[] = [
     demand: [
       {
         title: "Milton Keynes",
-        text: "National and international companies base their UK headquarters and distribution operations in Milton Keynes. Relocating staff, visiting teams and contractors on site need furnished, managed accommodation near the city.",
+        text: "National and international companies base their UK headquarters and distribution operations in Milton Keynes. Relocating staff, visiting teams and contractors on site need a furnished, managed home near the city.",
       },
       {
         title: "Pinewood Studios and the film industry",
@@ -439,7 +439,7 @@ export const AREAS: Area[] = [
     parent: "south-east",
     strap: "Guaranteed rent for landlords in Oxford, Didcot, Bicester, Banbury and Abingdon.",
     intro: [
-      "Oxfordshire's demand comes from its universities, its hospitals and the science and engineering campuses that surround Oxford. Researchers, clinicians, engineers and visiting academics arrive on fixed-term contracts throughout the year, and Oxford's housing stock is tight enough that furnished, managed accommodation is always sought after.",
+      "Oxfordshire's demand comes from its universities, its hospitals and the science and engineering campuses that surround Oxford. Researchers, clinicians, engineers and visiting academics arrive on fixed-term contracts throughout the year, and Oxford's housing stock is tight enough that a furnished, managed home is always sought after.",
       "Alali Homes leases properties across Oxfordshire on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We take on the guests, the maintenance and the compliance, and you receive a fixed income for one to five years.",
     ],
     demand: [

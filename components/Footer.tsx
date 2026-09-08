@@ -16,7 +16,7 @@ const companyLinks = [
 const serviceLinks = [
   { label: "Hands-Off Management", href: "/#landlords" },
   { label: "Guaranteed Rent", href: "/#landlords" },
-  { label: "Serviced Accommodation", href: "/#process" },
+  { label: "Professional Guests", href: "/#value" },
   { label: "Property Management", href: "/#about" },
 ]
 
