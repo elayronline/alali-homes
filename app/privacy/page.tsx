@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Alali Homes",
-  description: "Privacy policy for Alali Homes Ltd. How we collect, use, and protect your personal data under the Data Protection Act 2018.",
+  description: "Privacy policy for Alali Homes Ltd. How we collect, use and protect the personal data you send us.",
   alternates: { canonical: "https://www.alalihomes.com/privacy" },
 }
 
@@ -12,8 +12,9 @@ export default function PrivacyPolicy() {
     <main className="mx-auto max-w-3xl px-4 py-28 sm:px-6">
       <h1 className="font-display text-3xl font-semibold text-charcoal">Privacy Policy</h1>
       <p className="mt-6 font-body text-grey-600 leading-relaxed">
-        This privacy policy will be updated with full details before launch. Alali Homes Ltd is
-        registered with the ICO for Data Protection under the Data Protection Act 2018.
+        This privacy policy will be updated with full details before launch. The details you submit
+        through our contact form are used only to respond to your enquiry and are not sold or
+        shared for marketing.
       </p>
       <Link
         href="/"
