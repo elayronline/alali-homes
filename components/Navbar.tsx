@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Logo } from "./Logo"
+import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { scrollToSection } from "@/lib/smoothScroll"
 
@@ -112,9 +113,9 @@ export function Navbar() {
       }}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <a href="/" onClick={(e) => { if (onHome) { e.preventDefault(); scrollToSection("hero") } }} className="cursor-pointer" aria-label="Alali Homes home">
+        <Link href="/" onClick={(e) => { if (onHome) { e.preventDefault(); scrollToSection("hero") } }} className="cursor-pointer" aria-label="Alali Homes home">
           <Logo />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-8 lg:flex">
