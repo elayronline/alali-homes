@@ -12,6 +12,7 @@ import { CTABanner } from "@/components/CTABanner"
 import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { GoldDivider } from "@/components/GoldDivider"
+import { HashScroll } from "@/components/HashScroll"
 import { AREA_SERVED } from "@/lib/areas"
 
 // Homepage-only structured data (Organization + WebSite live in the root layout)
@@ -96,6 +97,7 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <HashScroll />
       <Navbar />
       <main>
         <Hero />
