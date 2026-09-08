@@ -7,6 +7,7 @@ import { HowItWorks } from "@/components/HowItWorks"
 import { CTABanner } from "@/components/CTABanner"
 import { GoldDivider } from "@/components/GoldDivider"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { Skyline } from "@/components/Skyline"
 import { AREAS, getArea, getChildren, REGIONS } from "@/lib/areas"
 
 const SITE = "https://www.alalihomes.com"
@@ -97,29 +98,30 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="dark-glow grain relative overflow-hidden px-4 pt-36 pb-20 text-white sm:px-6 lg:pt-44 lg:pb-24">
+        <section className="light-glow relative overflow-hidden px-4 pt-36 pb-20 sm:px-6 lg:pt-44 lg:pb-24">
+          <Skyline className="opacity-[0.22]" />
           <div className="relative z-10 mx-auto max-w-6xl">
-            <nav aria-label="Breadcrumb" className="font-body text-xs text-white/45">
+            <nav aria-label="Breadcrumb" className="font-body text-xs text-grey-400">
               <ol className="flex flex-wrap items-center gap-2">
-                <li><Link href="/" className="hover:text-gold-light">Home</Link></li>
+                <li><Link href="/" className="hover:text-gold-dark">Home</Link></li>
                 {parent && (
                   <>
                     <li aria-hidden="true">/</li>
-                    <li><Link href={`/guaranteed-rent/${parent.slug}`} className="hover:text-gold-light">{parent.name.replace(/^the /, "")}</Link></li>
+                    <li><Link href={`/guaranteed-rent/${parent.slug}`} className="hover:text-gold-dark">{parent.name.replace(/^the /, "")}</Link></li>
                   </>
                 )}
                 <li aria-hidden="true">/</li>
-                <li aria-current="page" className="text-white/80">{displayName}</li>
+                <li aria-current="page" className="text-charcoal">{displayName}</li>
               </ol>
             </nav>
-            <span className="eyebrow eyebrow-light mt-8">Guaranteed Rent {displayName}</span>
-            <h1 className="display mt-6 max-w-4xl text-[2.2rem] !text-white sm:text-[3.1rem] md:text-[3.9rem]">
+            <span className="eyebrow mt-8">Guaranteed Rent {displayName}</span>
+            <h1 className="display mt-6 max-w-4xl text-[2.2rem] sm:text-[3.1rem] md:text-[3.9rem]">
               Guaranteed Rent for Landlords in <strong className="gold-text">{area.name}</strong>
             </h1>
-            <p className="mt-6 max-w-2xl font-body text-[1.02rem] font-light leading-[1.85] text-white/65">{area.strap}</p>
+            <p className="mt-6 max-w-2xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">{area.strap}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#contact" className="btn btn-gold btn-arrow">Get a Rent Quote</a>
-              <a href="#process" className="btn btn-outline-light">How It Works</a>
+              <a href="#process" className="btn btn-outline-dark">How It Works</a>
             </div>
           </div>
         </section>

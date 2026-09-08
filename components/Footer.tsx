@@ -49,7 +49,7 @@ function Column({ title, links }: { title: string; links: { label: string; href:
 
 export function Footer() {
   return (
-    <footer className="grain relative bg-black-brand px-4 pt-20 pb-8 text-white sm:px-6">
+    <footer className="relative bg-charcoal px-4 pt-20 pb-8 text-white sm:px-6">
       <div className="hairline absolute top-0 right-0 left-0" />
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">

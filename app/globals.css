@@ -274,3 +274,11 @@ input, select, textarea { font-family: var(--font-body); }
   animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--rise-delay, 0s);
 }
+
+/* Light hero surface: white with a warm gold wash, the counterpart of .dark-glow */
+.light-glow {
+  background:
+    radial-gradient(55% 60% at 80% 15%, rgba(198, 162, 78, 0.16) 0%, transparent 62%),
+    radial-gradient(40% 45% at 5% 95%, rgba(198, 162, 78, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%);
+}

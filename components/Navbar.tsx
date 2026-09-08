@@ -66,8 +66,8 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("")
   const pathname = usePathname()
   const onHome = pathname === "/"
-  // Every page that renders the navbar opens on a dark hero.
-  const onDark = !scrolled && !mobileOpen
+  // Light navbar on every page; it only gains blur and a shadow once scrolled.
+  const onDark = false
 
   useEffect(() => {
     const onScroll = () => {
@@ -106,12 +106,12 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        onDark ? "bg-transparent" : "bg-white/92 shadow-sm"
+        scrolled ? "bg-white/92 shadow-sm" : "bg-white/80"
       }`}
       style={{
-        backdropFilter: onDark ? undefined : "blur(20px)",
-        WebkitBackdropFilter: onDark ? undefined : "blur(20px)",
-        borderBottom: onDark ? "1px solid rgba(255, 255, 255, 0.08)" : "1px solid rgba(198, 162, 78, 0.18)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
+        borderBottom: "1px solid rgba(198, 162, 78, 0.18)",
       }}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">

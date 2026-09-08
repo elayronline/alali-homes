@@ -26,17 +26,17 @@ export function AreasWeCover() {
           {london && (
             <Link
               href={`/guaranteed-rent/${london.slug}`}
-              className="dark-glow grain group relative overflow-hidden rounded-2xl p-9 text-white transition-transform duration-300 hover:-translate-y-1 sm:p-11"
+              className="card light-glow group relative overflow-hidden p-9 sm:p-11"
             >
               <div className="relative z-10">
-                <span className="eyebrow eyebrow-light">Region</span>
-                <h3 className="display mt-4 text-[1.8rem] !text-white sm:text-[2.2rem]">
+                <span className="eyebrow">Region</span>
+                <h3 className="display mt-4 text-[1.8rem] sm:text-[2.2rem]">
                   Guaranteed Rent <strong className="gold-text">London</strong>
                 </h3>
-                <p className="mt-4 max-w-sm font-body text-[0.92rem] font-light leading-relaxed text-white/60">
+                <p className="mt-4 max-w-sm font-body text-[0.92rem] font-light leading-relaxed text-grey-600">
                   All 32 boroughs, from the City and Canary Wharf to Croydon, Bromley, Ealing and Barnet.
                 </p>
-                <span className="mt-8 inline-flex items-center gap-2 font-body text-[0.85rem] font-semibold text-gold-light">
+                <span className="mt-8 inline-flex items-center gap-2 font-body text-[0.85rem] font-semibold text-gold-dark">
                   Explore London
                   <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                 </span>
@@ -46,17 +46,17 @@ export function AreasWeCover() {
           {southEast && (
             <Link
               href={`/guaranteed-rent/${southEast.slug}`}
-              className="dark-glow grain group relative overflow-hidden rounded-2xl p-9 text-white transition-transform duration-300 hover:-translate-y-1 sm:p-11"
+              className="card light-glow group relative overflow-hidden p-9 sm:p-11"
             >
               <div className="relative z-10">
-                <span className="eyebrow eyebrow-light">Region</span>
-                <h3 className="display mt-4 text-[1.8rem] !text-white sm:text-[2.2rem]">
+                <span className="eyebrow">Region</span>
+                <h3 className="display mt-4 text-[1.8rem] sm:text-[2.2rem]">
                   Guaranteed Rent <strong className="gold-text">South East</strong>
                 </h3>
-                <p className="mt-4 max-w-sm font-body text-[0.92rem] font-light leading-relaxed text-white/60">
+                <p className="mt-4 max-w-sm font-body text-[0.92rem] font-light leading-relaxed text-grey-600">
                   Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.
                 </p>
-                <span className="mt-8 inline-flex items-center gap-2 font-body text-[0.85rem] font-semibold text-gold-light">
+                <span className="mt-8 inline-flex items-center gap-2 font-body text-[0.85rem] font-semibold text-gold-dark">
                   Explore the South East
                   <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                 </span>

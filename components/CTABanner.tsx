@@ -53,22 +53,22 @@ export function CTABanner() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mx-auto grid max-w-6xl overflow-hidden rounded-2xl shadow-[0_40px_80px_-40px_rgba(13,13,13,0.35)] lg:grid-cols-[0.85fr_1.15fr]"
+        className="mx-auto grid max-w-6xl overflow-hidden rounded-2xl shadow-[0_40px_80px_-48px_rgba(13,13,13,0.25)] lg:grid-cols-[0.85fr_1.15fr]"
       >
-        <div className="dark-glow grain relative p-9 text-white sm:p-12">
+        <div className="light-glow relative border border-gold/15 p-9 sm:p-12 lg:border-r-0"><span className="absolute top-0 left-9 h-px w-28 bg-gradient-to-r from-gold to-transparent sm:left-12" />
           <div className="relative z-10 flex h-full flex-col">
-            <span className="eyebrow eyebrow-light">Get in Touch</span>
-            <h2 className="display mt-5 text-[1.9rem] !text-white sm:text-[2.3rem]">
+            <span className="eyebrow">Get in Touch</span>
+            <h2 className="display mt-5 text-[1.9rem] sm:text-[2.3rem]">
               Let&apos;s start a <strong className="gold-text">conversation</strong>
             </h2>
-            <p className="mt-5 font-body text-[0.95rem] font-light leading-[1.8] text-white/60">
+            <p className="mt-5 font-body text-[0.95rem] font-light leading-[1.8] text-grey-600">
               Tell us about your property and we&apos;ll come back with a guaranteed rent figure within 48 hours.
             </p>
 
             <ul className="mt-8 space-y-3">
               {reassurance.map((r) => (
-                <li key={r} className="flex items-center gap-3 font-body text-[0.88rem] text-white/75">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/50 text-gold">
+                <li key={r} className="flex items-center gap-3 font-body text-[0.88rem] text-charcoal">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold-pale text-gold-dark">
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
                       <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -78,12 +78,12 @@ export function CTABanner() {
               ))}
             </ul>
 
-            <div className="mt-auto space-y-3 border-t border-white/10 pt-8">
-              <a href="tel:+442045158438" className="flex items-center gap-3 font-body text-[0.95rem] text-white/85 transition-colors hover:text-gold-light">
+            <div className="mt-auto space-y-3 border-t border-gold/15 pt-8">
+              <a href="tel:+442045158438" className="flex items-center gap-3 font-body text-[0.95rem] text-charcoal transition-colors hover:text-gold-dark">
                 <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
                 020 4515 8438
               </a>
-              <a href="mailto:info@alalihomes.com" className="flex items-center gap-3 font-body text-[0.95rem] text-white/85 transition-colors hover:text-gold-light">
+              <a href="mailto:info@alalihomes.com" className="flex items-center gap-3 font-body text-[0.95rem] text-charcoal transition-colors hover:text-gold-dark">
                 <Mail className="h-4 w-4 text-gold" aria-hidden="true" />
                 info@alalihomes.com
               </a>
@@ -91,7 +91,7 @@ export function CTABanner() {
           </div>
         </div>
 
-        <div id="contact-form" className="border border-gold/15 bg-white p-6 sm:p-10 lg:border-l-0">
+        <div id="contact-form" className="border border-gold/15 bg-white p-6 sm:p-10">
           {submitted ? (
             <div className="flex h-full flex-col items-center justify-center py-10 text-center" role="alert" aria-live="polite">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-pale">
