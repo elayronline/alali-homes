@@ -8,124 +8,87 @@ const painPoints = [
   "Chasing tenants for late or missed rent?",
   "Unexpected maintenance calls at all hours?",
   "Navigating ever-changing compliance regulations?",
-  "Tired of the hassle but don\u2019t want to sell?",
+  "Tired of the hassle but don’t want to sell?",
 ]
 
 const benefits = [
-  {
-    title: "Guaranteed Monthly Rent",
-    desc: "Paid whether the property is occupied or not.",
-  },
-  {
-    title: "Full Property Management",
-    desc: "Guests, maintenance, check-ins, emergencies.",
-  },
-  {
-    title: "Compliance Covered",
-    desc: "Gas safety, EICR, EPC, smoke/CO alarms.",
-  },
-  {
-    title: "Flexible Terms",
-    desc: "1\u20135 year agreements, clear terms, no hidden fees.",
-  },
-  {
-    title: "Property Protection",
-    desc: "Regular inspections, professional cleaning, condition guarantee.",
-  },
+  { title: "Guaranteed Monthly Rent", desc: "Paid whether the property is occupied or not." },
+  { title: "Full Property Management", desc: "Guests, maintenance, check-ins, emergencies." },
+  { title: "Compliance Covered", desc: "Gas safety, EICR, EPC, smoke/CO alarms." },
+  { title: "Flexible Terms", desc: "1–5 year agreements, clear terms, no hidden fees." },
+  { title: "Property Protection", desc: "Regular inspections, professional cleaning, condition guarantee." },
 ]
 
 export function ForLandlords() {
   return (
     <section id="landlords" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-6xl">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark"
+          className="max-w-3xl"
         >
-          For Landlords
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-3 font-display text-[1.6rem] leading-tight font-light text-charcoal sm:text-[2rem] md:text-[2.6rem]"
-        >
-          Your Property. Our Responsibility.{" "}
-          <strong className="font-semibold text-gold">Your Guaranteed Rent.</strong>
-        </motion.h2>
+          <span className="eyebrow">For Landlords</span>
+          <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
+            Your Property. Our Responsibility.{" "}
+            <strong className="gold-text">Your Guaranteed Rent.</strong>
+          </h2>
+        </motion.div>
 
-        <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-14 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           {/* Pain points */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-display text-lg font-semibold text-charcoal">Sound Familiar?</h3>
-            <div className="mt-6 space-y-4">
-              {painPoints.map((point, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-gold/30 bg-gold/5">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      className="text-gold"
-                    >
-                      <path
-                        d="M2 6l3 3 5-5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+            <h3 className="font-display text-lg font-semibold text-charcoal">Sound familiar?</h3>
+            <ul className="mt-6 space-y-4">
+              {painPoints.map((point) => (
+                <li key={point} className="flex items-start gap-3.5">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border border-gold/40 bg-gold-pale/60">
+                    <svg width="11" height="11" viewBox="0 0 12 12" fill="none" className="text-gold-dark">
+                      <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                  </div>
-                  <p className="font-body text-[0.92rem] font-light leading-relaxed text-grey-600">
-                    {point}
-                  </p>
-                </div>
+                  </span>
+                  <p className="font-body text-[0.95rem] font-light leading-relaxed text-grey-600">{point}</p>
+                </li>
               ))}
-            </div>
-            <p className="mt-8 font-body text-[0.95rem] font-medium text-charcoal">
+            </ul>
+            <p className="mt-9 font-body text-[0.98rem] font-medium text-charcoal">
               If any of this sounds like you, it&apos;s time to talk to Alali Homes.
             </p>
-            {/* CTA (#5) */}
-            <motion.button
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              onClick={() => scrollToSection("contact")}
-              className="mt-6 cursor-pointer rounded-sm bg-gold px-6 py-3 font-body text-[0.88rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg"
-            >
+            <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow mt-6">
               Submit Your Property
-            </motion.button>
+            </button>
           </motion.div>
 
-          {/* Benefits */}
-          <motion.div
+          {/* Benefits ledger */}
+          <motion.ol
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="space-y-3"
+            className="divide-y divide-gold/15 border-y border-gold/15"
           >
             {benefits.map((b, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-grey-200 bg-white p-4 pl-5 transition-all duration-200 sm:p-5 sm:pl-6 md:hover:-translate-y-0.5 md:hover:shadow-md"
-                style={{ borderLeft: "3px solid var(--gold)" }}
+              <li
+                key={b.title}
+                className="group grid grid-cols-[3rem_1fr] items-baseline gap-4 px-2 py-5 transition-colors hover:bg-cream sm:grid-cols-[4rem_1fr] sm:px-4"
               >
-                <h4 className="font-display text-[0.95rem] font-semibold text-charcoal">
-                  {b.title}
-                </h4>
-                <p className="mt-1 font-body text-[0.85rem] font-light text-grey-600">{b.desc}</p>
-              </div>
+                <span className="numeral text-[0.85rem] tracking-[0.15em] text-gold">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h4 className="font-display text-[1.02rem] font-semibold text-charcoal transition-colors group-hover:text-gold-dark">
+                    {b.title}
+                  </h4>
+                  <p className="mt-1 font-body text-[0.88rem] font-light text-grey-600">{b.desc}</p>
+                </div>
+              </li>
             ))}
-          </motion.div>
+          </motion.ol>
         </div>
       </div>
     </section>

@@ -66,6 +66,8 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("")
   const pathname = usePathname()
   const onHome = pathname === "/"
+  // Every page that renders the navbar opens on a dark hero.
+  const onDark = !scrolled && !mobileOpen
 
   useEffect(() => {
     const onScroll = () => {
@@ -104,17 +106,17 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 shadow-sm" : "bg-white/80"
+        onDark ? "bg-transparent" : "bg-white/92 shadow-sm"
       }`}
       style={{
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
-        borderBottom: "1px solid rgba(198, 162, 78, 0.12)",
+        backdropFilter: onDark ? undefined : "blur(20px)",
+        WebkitBackdropFilter: onDark ? undefined : "blur(20px)",
+        borderBottom: onDark ? "1px solid rgba(255, 255, 255, 0.08)" : "1px solid rgba(198, 162, 78, 0.18)",
       }}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" onClick={(e) => { if (onHome) { e.preventDefault(); scrollToSection("hero") } }} className="cursor-pointer" aria-label="Alali Homes home">
-          <Logo />
+          <Logo variant={onDark ? "light" : "dark"} />
         </Link>
 
         {/* Desktop nav */}
@@ -125,8 +127,10 @@ export function Navbar() {
               id={link.href}
               onHome={onHome}
               onNav={handleNav}
-              className={`cursor-pointer font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] transition-colors hover:text-gold ${
-                activeSection === link.href ? "text-gold" : "text-charcoal"
+              className={`cursor-pointer font-body text-[0.78rem] font-medium uppercase tracking-[0.12em] transition-colors ${
+                onDark
+                  ? activeSection === link.href ? "text-gold-light" : "text-white/80 hover:text-white"
+                  : activeSection === link.href ? "text-gold-dark" : "text-charcoal hover:text-gold-dark"
               }`}
             >
               {link.label}
@@ -136,7 +140,7 @@ export function Navbar() {
             id="contact"
             onHome={onHome}
             onNav={handleNav}
-            className="cursor-pointer rounded-sm bg-gold px-6 py-2.5 font-body text-[0.82rem] font-semibold uppercase tracking-[0.06em] text-white transition-all hover:bg-gold-dark"
+            className="btn btn-gold !px-6 !py-2.5 !text-[0.78rem] uppercase !tracking-[0.12em]"
           >
             Get In Touch
           </NavItem>
@@ -151,13 +155,13 @@ export function Navbar() {
           aria-controls="mobile-menu"
         >
           <span
-            className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
+            className={`block h-0.5 w-6 transition-all ${onDark ? "bg-white" : "bg-charcoal"} ${mobileOpen ? "translate-y-2 rotate-45" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "opacity-0" : ""}`}
+            className={`block h-0.5 w-6 transition-all ${onDark ? "bg-white" : "bg-charcoal"} ${mobileOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-0.5 w-6 bg-charcoal transition-all ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            className={`block h-0.5 w-6 transition-all ${onDark ? "bg-white" : "bg-charcoal"} ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`}
           />
         </button>
       </div>

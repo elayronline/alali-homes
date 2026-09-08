@@ -97,42 +97,29 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="bg-cream px-4 pt-32 pb-16 sm:px-6 sm:pt-40 sm:pb-20">
-          <div className="mx-auto max-w-6xl">
-            <nav aria-label="Breadcrumb" className="font-body text-xs text-grey-400">
+        <section className="dark-glow grain relative overflow-hidden px-4 pt-36 pb-20 text-white sm:px-6 lg:pt-44 lg:pb-24">
+          <div className="relative z-10 mx-auto max-w-6xl">
+            <nav aria-label="Breadcrumb" className="font-body text-xs text-white/45">
               <ol className="flex flex-wrap items-center gap-2">
-                <li><Link href="/" className="hover:text-gold">Home</Link></li>
+                <li><Link href="/" className="hover:text-gold-light">Home</Link></li>
                 {parent && (
                   <>
                     <li aria-hidden="true">/</li>
-                    <li><Link href={`/guaranteed-rent/${parent.slug}`} className="hover:text-gold">{parent.name.replace(/^the /, "")}</Link></li>
+                    <li><Link href={`/guaranteed-rent/${parent.slug}`} className="hover:text-gold-light">{parent.name.replace(/^the /, "")}</Link></li>
                   </>
                 )}
                 <li aria-hidden="true">/</li>
-                <li aria-current="page" className="text-charcoal">{displayName}</li>
+                <li aria-current="page" className="text-white/80">{displayName}</li>
               </ol>
             </nav>
-            <span className="mt-6 inline-block rounded-full border border-gold/25 bg-gold-pale/50 px-5 py-1.5 font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-              Guaranteed Rent {displayName}
-            </span>
-            <h1 className="mt-6 max-w-3xl font-display text-[2rem] leading-[1.15] font-light text-charcoal sm:text-[2.6rem] md:text-[3.2rem]">
-              Guaranteed Rent for Landlords in{" "}
-              <strong className="font-semibold text-gold">{area.name}</strong>
+            <span className="eyebrow eyebrow-light mt-8">Guaranteed Rent {displayName}</span>
+            <h1 className="display mt-6 max-w-4xl text-[2.2rem] !text-white sm:text-[3.1rem] md:text-[3.9rem]">
+              Guaranteed Rent for Landlords in <strong className="gold-text">{area.name}</strong>
             </h1>
-            <p className="mt-5 max-w-2xl font-body text-[1rem] font-light leading-[1.8] text-grey-600">{area.strap}</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="rounded-sm bg-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg"
-              >
-                Get a Rent Quote
-              </a>
-              <a
-                href="#process"
-                className="rounded-sm border border-charcoal/20 px-7 py-3.5 font-body text-[0.9rem] font-medium text-charcoal transition-all hover:border-gold hover:text-gold"
-              >
-                How It Works
-              </a>
+            <p className="mt-6 max-w-2xl font-body text-[1.02rem] font-light leading-[1.85] text-white/65">{area.strap}</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#contact" className="btn btn-gold btn-arrow">Get a Rent Quote</a>
+              <a href="#process" className="btn btn-outline-light">How It Works</a>
             </div>
           </div>
         </section>
@@ -151,19 +138,21 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         {/* Demand */}
         <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-6xl">
-            <p className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Who Stays Here</p>
-            <h2 className="mt-3 text-center font-display text-2xl font-semibold text-charcoal sm:text-3xl">
-              Where the demand in {area.name} comes from
-            </h2>
+            <div className="text-center">
+              <span className="eyebrow eyebrow-center">Who Stays Here</span>
+              <h2 className="display mt-5 text-[1.8rem] sm:text-[2.3rem] md:text-[2.7rem]">
+                Where the demand in <strong className="gold-text">{area.name}</strong> comes from
+              </h2>
+            </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               {area.demand.map((d) => (
-                <div key={d.title} className="rounded-lg border border-gold/15 bg-cream p-7">
+                <div key={d.title} className="card p-7">
                   <h3 className="font-display text-lg font-semibold text-charcoal">{d.title}</h3>
                   <p className="mt-3 font-body text-[0.92rem] leading-[1.8] text-grey-600">{d.text}</p>
                 </div>
               ))}
             </div>
-            <div className="mx-auto mt-12 max-w-3xl">
+            <div className="mx-auto mt-14 max-w-3xl border-l-2 border-gold pl-6">
               <h3 className="font-display text-xl font-semibold text-charcoal">Properties that work in {area.name}</h3>
               <p className="mt-3 font-body text-[0.98rem] leading-[1.85] text-grey-600">{area.properties}</p>
             </div>
@@ -173,16 +162,16 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         <GoldDivider />
 
         {/* Places */}
-        <section className="bg-grey-50 px-4 py-16 sm:px-6 sm:py-20">
+        <section className="bg-cream px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-center font-display text-2xl font-semibold text-charcoal sm:text-3xl">{area.placesLabel}</h2>
+            <h2 className="display text-center text-[1.8rem] sm:text-[2.3rem]">{area.placesLabel}</h2>
             {children.length > 0 ? (
               <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {children.map((c) => (
                   <li key={c.slug}>
                     <Link
                       href={`/guaranteed-rent/${c.slug}`}
-                      className="block rounded-lg border border-gold/20 bg-white p-5 transition-all hover:border-gold hover:shadow-md"
+                      className="card block p-6"
                     >
                       <span className="font-display text-base font-semibold text-charcoal">{c.name}</span>
                       <span className="mt-1 block font-body text-[0.82rem] text-grey-600">Guaranteed rent in {c.name}</span>
@@ -193,7 +182,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             ) : (
               <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
                 {area.places.map((p) => (
-                  <li key={p} className="rounded-full border border-gold/20 bg-white px-4 py-1.5 font-body text-[0.85rem] text-charcoal">
+                  <li key={p} className="rounded-full border border-gold/25 bg-white px-4 py-1.5 font-body text-[0.85rem] text-charcoal shadow-[0_8px_20px_-16px_rgba(13,13,13,0.4)]">
                     {p}
                   </li>
                 ))}
@@ -202,7 +191,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             {area.kind === "region" && area.slug === "london" && (
               <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
                 {area.places.map((p) => (
-                  <li key={p} className="rounded-full border border-gold/20 bg-white px-4 py-1.5 font-body text-[0.85rem] text-charcoal">
+                  <li key={p} className="rounded-full border border-gold/25 bg-white px-4 py-1.5 font-body text-[0.85rem] text-charcoal shadow-[0_8px_20px_-16px_rgba(13,13,13,0.4)]">
                     {p}
                   </li>
                 ))}
@@ -221,10 +210,12 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         {/* FAQ */}
         <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-3xl">
-            <p className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">FAQ</p>
-            <h2 className="mt-3 text-center font-display text-2xl font-semibold text-charcoal sm:text-3xl">
-              Guaranteed rent in {area.name}: common questions
-            </h2>
+            <div className="text-center">
+              <span className="eyebrow eyebrow-center">FAQ</span>
+              <h2 className="display mt-5 text-[1.8rem] sm:text-[2.3rem]">
+                Guaranteed rent in {area.name}: <strong className="gold-text">common questions</strong>
+              </h2>
+            </div>
             <dl className="mt-10 divide-y divide-gold/15">
               {area.faqs.map((f) => (
                 <div key={f.q} className="py-6">
@@ -240,7 +231,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         {(siblings.length > 0 || REGIONS.some((r) => r.slug !== area.slug)) && (
           <section className="bg-cream px-4 py-12 sm:px-6">
             <div className="mx-auto max-w-6xl">
-              <h2 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">Other areas we cover</h2>
+              <h2 className="eyebrow">Other areas we cover</h2>
               <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-body text-[0.9rem]">
                 {REGIONS.filter((r) => r.slug !== area.slug && r.slug !== area.parent).map((r) => (
                   <li key={r.slug}><Link href={`/guaranteed-rent/${r.slug}`} className="text-charcoal hover:text-gold">Guaranteed rent {r.name}</Link></li>

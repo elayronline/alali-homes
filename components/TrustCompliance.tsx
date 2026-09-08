@@ -5,93 +5,81 @@ import { motion } from "framer-motion"
 const badges = [
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <path d="M9 12l2 2 4-4" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M8 12l3 3 5-6" />
       </svg>
     ),
     title: "Companies House Registered",
-    subtitle: "Alali Homes Ltd",
+    subtitle: "Alali Homes Ltd · No. 17095100",
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M12 8v4" />
-        <circle cx="12" cy="16" r="0.5" fill="currentColor" />
+        <path d="M12 8v4M12 16h.01" />
       </svg>
     ),
     title: "Public Liability Insurance",
-    subtitle: "Fully Covered",
+    subtitle: "Fully covered",
   },
   {
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 7V5a4 4 0 00-8 0v2" />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="3" y="7" width="18" height="14" rx="2" />
+        <path d="M8 7V5a4 4 0 018 0v2" />
       </svg>
     ),
     title: "Professional Indemnity",
-    subtitle: "Insured Operations",
+    subtitle: "Insured operations",
   },
 ]
 
 export function TrustCompliance() {
   return (
-    <section id="about" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+    <section id="about" className="bg-cream px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-6xl">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark"
+          className="mx-auto max-w-3xl text-center"
         >
-          About Alali Homes
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-3 text-center font-display text-[1.6rem] leading-tight font-light text-charcoal sm:text-[2rem] md:text-[2.6rem]"
-        >
-          Fully Registered, Insured &{" "}
-          <strong className="font-semibold text-gold">Compliant</strong>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto mt-4 max-w-2xl text-center font-body text-[0.92rem] font-light leading-relaxed text-grey-600"
-        >
-          Alali Homes Ltd is a UK-registered guaranteed rent and property management company. We
-          offer landlords a better model: we lease your property, pay guaranteed rent, host vetted
-          professional guests, and manage everything to a professional standard.
-        </motion.p>
+          <span className="eyebrow eyebrow-center">About Alali Homes</span>
+          <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
+            Fully Registered, Insured &amp; <strong className="gold-text">Compliant</strong>
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600">
+            Alali Homes Ltd is a UK-registered guaranteed rent and property management company. We
+            offer landlords a better model: we lease your property, pay guaranteed rent, host vetted
+            professional guests, and manage everything to a professional standard.
+          </p>
+        </motion.div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-3">
+        <div className="mt-14 grid gap-5 sm:grid-cols-3">
           {badges.map((badge, i) => (
             <motion.div
-              key={i}
+              key={badge.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-center gap-4 rounded-lg border border-grey-200 bg-grey-50 p-5 transition-all duration-200 hover:shadow-md"
+              className="card flex items-center gap-5 p-6"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10 text-gold-dark">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/30 bg-gold-pale text-gold-dark">
                 {badge.icon}
               </div>
               <div>
-                <h3 className="font-display text-[0.88rem] font-semibold text-charcoal">
-                  {badge.title}
-                </h3>
-                <p className="mt-0.5 font-body text-[0.78rem] font-light text-grey-600">
-                  {badge.subtitle}
-                </p>
+                <h3 className="font-display text-[0.95rem] font-semibold text-charcoal">{badge.title}</h3>
+                <p className="mt-1 font-body text-[0.8rem] font-light text-grey-600">{badge.subtitle}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-10 text-center font-body text-[0.78rem] tracking-wide text-grey-400">
+          Registered office: 86-90 Paul Street, London, EC2A 4NE
+        </p>
       </div>
     </section>
   )

@@ -16,8 +16,7 @@ const landlordFAQs: FAQItem[] = [
   },
   {
     question: "What happens if the property sits empty?",
-    answer:
-      "You still get paid. That\u2019s the entire point. The void risk is ours, not yours.",
+    answer: "You still get paid. That’s the entire point. The void risk is ours, not yours.",
   },
   {
     question: "Is this Airbnb or holiday letting?",
@@ -55,7 +54,7 @@ const agentFAQs: FAQItem[] = [
   {
     question: "Do you compete with letting agents?",
     answer:
-      "No. We\u2019re an operator, not a letting agent. We don\u2019t list on Rightmove or compete for management fees. We partner with agents to offer an alternative for landlords who want guaranteed income.",
+      "No. We’re an operator, not a letting agent. We don’t list on Rightmove or compete for management fees. We partner with agents to offer an alternative for landlords who want guaranteed income.",
   },
   {
     question: "How does the referral work?",
@@ -70,116 +69,61 @@ function FAQAccordion({ item }: { item: FAQItem }) {
   const [height, setHeight] = useState(0)
 
   useEffect(() => {
-    if (contentRef.current) {
-      setHeight(contentRef.current.scrollHeight)
-    }
+    if (contentRef.current) setHeight(contentRef.current.scrollHeight)
   }, [open])
 
   return (
-    <div
-      className={`rounded-lg border transition-all duration-200 ${
-        open
-          ? "border-gold/25 bg-gold-pale/30 shadow-sm"
-          : "border-grey-200 bg-white hover:border-gold/15"
-      }`}
-    >
+    <div className="border-b border-gold/15">
       <button
         onClick={() => setOpen(!open)}
-        className="flex w-full cursor-pointer items-center justify-between p-5 text-left"
+        className="flex w-full cursor-pointer items-center justify-between gap-6 py-5 text-left"
         aria-expanded={open}
       >
-        <span className="pr-4 font-display text-[0.95rem] font-semibold text-charcoal">
-          &ldquo;{item.question}&rdquo;
+        <span className={`font-display text-[0.98rem] font-semibold transition-colors ${open ? "text-gold-dark" : "text-charcoal"}`}>
+          {item.question}
         </span>
         <span
-          className={`flex h-6 w-6 shrink-0 items-center justify-center text-gold transition-transform duration-300 ${
-            open ? "rotate-45" : ""
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+            open ? "rotate-45 border-gold bg-gold text-white" : "border-gold/30 text-gold"
           }`}
         >
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path
-              d="M7 1v12M1 7h12"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1v12M1 7h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         </span>
       </button>
-      {/* Fixed: auto-height instead of hardcoded 200px (#3) */}
-      <div
-        ref={contentRef}
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: open ? `${height}px` : "0px" }}
-      >
-        <p className="px-5 pb-5 font-body text-[0.88rem] font-light leading-relaxed text-grey-600">
-          {item.answer}
-        </p>
+      <div ref={contentRef} className="overflow-hidden transition-all duration-300" style={{ maxHeight: open ? `${height}px` : "0px" }}>
+        <p className="pr-14 pb-6 font-body text-[0.9rem] font-light leading-[1.8] text-grey-600">{item.answer}</p>
       </div>
     </div>
   )
 }
 
 export function FAQ() {
-  return (
-    <section id="faq" className="bg-grey-50 px-4 py-20 sm:px-6 sm:py-28">
-      <div className="mx-auto max-w-6xl">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark"
-        >
-          Frequently Asked
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-3 text-center font-display text-[1.6rem] leading-tight font-light text-charcoal sm:text-[2rem] md:text-[2.6rem]"
-        >
-          Questions Landlords &{" "}
-          <strong className="font-semibold text-gold">Agents Ask Us</strong>
-        </motion.h2>
+  const left = [...landlordFAQs.slice(0, 3), ...agentFAQs]
+  const right = landlordFAQs.slice(3)
 
-        <div className="mt-14 grid gap-3 lg:grid-cols-2 lg:gap-4">
-          <div className="space-y-3">
-            {landlordFAQs.slice(0, 3).map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <FAQAccordion item={faq} />
-              </motion.div>
+  return (
+    <section id="faq" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+      <div className="mx-auto max-w-6xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl">
+          <span className="eyebrow">Frequently Asked</span>
+          <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
+            Questions landlords &amp; <strong className="gold-text">agents ask us</strong>
+          </h2>
+        </motion.div>
+
+        <div className="mt-12 grid gap-x-14 lg:grid-cols-2">
+          <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="border-t border-gold/15">
+            {left.map((faq) => (
+              <FAQAccordion key={faq.question} item={faq} />
             ))}
-            {agentFAQs.map((faq, i) => (
-              <motion.div
-                key={`agent-${i}`}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i + 3) * 0.05 }}
-              >
-                <FAQAccordion item={faq} />
-              </motion.div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="border-t border-gold/15">
+            {right.map((faq) => (
+              <FAQAccordion key={faq.question} item={faq} />
             ))}
-          </div>
-          <div className="space-y-3">
-            {landlordFAQs.slice(3).map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <FAQAccordion item={faq} />
-              </motion.div>
-            ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

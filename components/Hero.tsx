@@ -1,166 +1,143 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { scrollToSection } from "@/lib/smoothScroll"
+import { AREAS } from "@/lib/areas"
 
 const stats = [
-  { value: "100%", label: "Your Rent, Guaranteed" },
-  { value: "0", label: "Zero Void Periods" },
-  { value: "1–5yr", label: "Long-Term Security" },
-  { value: "24/7", label: "We Handle Everything" },
+  { value: "100%", label: "Your rent, guaranteed" },
+  { value: "0", label: "Void periods" },
+  { value: "1–5yr", label: "Agreement terms" },
+  { value: "24/7", label: "We handle everything" },
 ]
 
-export function Hero() {
+const trust = ["UK registered & insured", "Zero void periods", "48-hour response"]
+
+/** CSS entrance: class + stagger delay via a custom property. */
+const rise = (delay = 0) => ({ className: "rise", style: { "--rise-delay": `${delay}s` } as React.CSSProperties })
+
+/** Fine architectural line-art: a terrace roofline drawn in gold hairlines. */
+function Skyline() {
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden bg-white"
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 900 320"
+      preserveAspectRatio="xMaxYMax meet"
+      className="pointer-events-none absolute right-0 bottom-0 z-0 h-[42%] w-auto max-w-[94vw] text-gold opacity-[0.26] lg:h-[60%]"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
     >
-      {/* Subtle warm gradient overlay */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at 70% 30%, rgba(198, 162, 78, 0.05) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(198, 162, 78, 0.03) 0%, transparent 50%)",
-        }}
-      />
+      <path d="M0 300H900" strokeOpacity="0.6" />
+      <path d="M40 300V150l60-40 60 40v150" />
+      <path d="M70 300v-60h60v60M85 190h30v30H85zM60 130v-25h10v18" />
+      <path d="M160 300V170l70-50 70 50v130" />
+      <path d="M195 300v-70h70v70M210 200h40v36h-40zM215 135v-25h10v18M275 135v-25h10v18" />
+      <path d="M300 300V90h120v210" />
+      <path d="M300 90l60-30 60 30M320 120h30v30h-30zM370 120h30v30h-30zM320 175h30v30h-30zM370 175h30v30h-30zM345 300v-60h30v60" />
+      <path d="M440 300V130h180v170" />
+      <path d="M440 130l90-40 90 40M470 300v-45a20 20 0 0 1 40 0v45M550 300v-45a20 20 0 0 1 40 0v45M465 170h30v35h-30zM520 170h30v35h-30zM575 170h30v35h-30z" />
+      <path d="M640 300V180l60-45 60 45v120" />
+      <path d="M670 300v-55h60v55M680 210h40v30h-40zM655 150v-25h10v18" />
+      <path d="M780 300V200l50-35 50 35v100" />
+      <path d="M805 300v-45h50v45M815 225h30v25h-30z" />
+      <circle cx="740" cy="70" r="46" strokeOpacity="0.45" />
+      <circle cx="740" cy="70" r="72" strokeOpacity="0.25" />
+      <circle cx="740" cy="70" r="98" strokeOpacity="0.12" />
+    </svg>
+  )
+}
 
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-4 pt-28 pb-20 sm:px-6 sm:pt-32 lg:grid-cols-2 lg:gap-16 lg:pt-0 lg:pb-0">
-        {/* Left column */}
-        <div className="flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block rounded-full border border-gold/25 bg-gold-pale/50 px-5 py-1.5 font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-              Guaranteed Rent & Hands-Off Management
-            </span>
-          </motion.div>
+export function Hero() {
+  const areaNames = AREAS.map((a) => a.name.replace(/^the /, ""))
+  const strip = [...areaNames, ...areaNames]
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-7 font-display text-[2.2rem] leading-[1.1] font-light text-charcoal sm:text-[2.8rem] md:text-[3.6rem]"
-          >
+  return (
+    <section id="hero" className="dark-glow grain relative overflow-hidden text-white">
+      <Skyline />
+
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-14 px-4 pt-36 pb-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-20 lg:pt-44 lg:pb-28">
+        <div>
+          <span {...rise(0)} className="rise eyebrow eyebrow-light">
+            Guaranteed Rent &amp; Hands-Off Management
+          </span>
+
+          <h1 {...rise(0.1)} className="rise display mt-8 text-[2.35rem] !text-white sm:text-[3.4rem] md:text-[4.3rem]">
             Guaranteed Rent.
             <br />
             Zero Voids.
             <br />
-            <strong className="font-semibold text-gold">Professionally Managed.</strong>
-          </motion.h1>
+            <strong className="gold-text">Professionally Managed.</strong>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 max-w-lg font-body text-[0.95rem] font-light leading-[1.8] text-grey-600"
-          >
+          <p {...rise(0.2)} className="rise mt-7 max-w-xl font-body text-[1.02rem] font-light leading-[1.85] text-white/65">
             We lease properties across London and the South East on guaranteed rent agreements,
             host vetted professional guests, and manage everything, so landlords receive reliable
             income every month without the hassle.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 flex flex-wrap gap-4"
-          >
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="cursor-pointer rounded-sm bg-gold px-7 py-3.5 font-body text-[0.9rem] font-semibold text-white transition-all hover:bg-gold-dark hover:shadow-lg focus:ring-2 focus:ring-gold/30 focus:ring-offset-2"
-            >
+          <div {...rise(0.3)} className="rise mt-10 flex flex-wrap gap-4">
+            <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow">
               Get a Rent Quote
             </button>
-            <button
-              onClick={() => scrollToSection("process")}
-              className="cursor-pointer rounded-sm border border-charcoal/20 px-7 py-3.5 font-body text-[0.9rem] font-medium text-charcoal transition-all hover:border-gold hover:text-gold focus:ring-2 focus:ring-gold/30 focus:ring-offset-2"
-            >
+            <button onClick={() => scrollToSection("process")} className="btn btn-outline-light">
               How It Works
             </button>
-          </motion.div>
+          </div>
 
-          {/* Trust micro-strip */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-6 flex flex-wrap items-center gap-4 font-body text-[0.75rem] text-grey-400"
-          >
-            <span className="flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-gold" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              UK registered &amp; insured
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-gold" aria-hidden="true">
-                <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              Zero void periods
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-gold" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M12 8v4l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
-              48-hour response
-            </span>
-          </motion.div>
+          <ul {...rise(0.45)} className="rise mt-10 flex flex-wrap gap-x-7 gap-y-3 font-body text-[0.78rem] tracking-wide text-white/50">
+            {trust.map((t) => (
+              <li key={t} className="flex items-center gap-2.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                {t}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Right column — stats card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="flex items-center justify-center lg:justify-end"
-        >
-          <div className="w-full max-w-md rounded-xl border border-grey-200 bg-white p-8 shadow-lg shadow-black/5">
-            {/* Gold top accent */}
-            <div className="mx-auto -mt-8 mb-6 h-1 w-16 rounded-b bg-gradient-to-r from-gold-dark to-gold" />
+        <div {...rise(0.35)} className="rise lg:justify-self-end">
+          <div className="float card-dark relative w-full max-w-md p-8 sm:p-10">
+            <span className="absolute top-0 left-10 h-px w-28 bg-gradient-to-r from-gold to-transparent" />
+            <p className="eyebrow eyebrow-light">The Alali Promise</p>
 
-            {/* Card headline */}
-            <p className="mb-6 text-center font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
-              The Alali Promise
-            </p>
-
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, i) => (
-                <div key={i} className="text-center">
-                  <p className="font-display text-3xl font-bold text-gold sm:text-4xl">
-                    {stat.value}
-                  </p>
-                  <p className="mt-1 font-body text-[0.78rem] font-medium text-charcoal">
-                    {stat.label}
-                  </p>
+            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-9">
+              {stats.map((s) => (
+                <div key={s.label}>
+                  <p className="numeral gold-text text-[2.5rem] sm:text-[2.9rem]">{s.value}</p>
+                  <p className="mt-2 font-body text-[0.8rem] text-white/60">{s.label}</p>
                 </div>
               ))}
             </div>
 
-            {/* Accepting + CTA */}
-            <div className="mt-7 border-t border-grey-200 pt-5">
-              <div className="flex items-center justify-center gap-2">
+            <div className="mt-9 flex items-center justify-between gap-4 border-t border-white/10 pt-6">
+              <span className="flex items-center gap-2.5 font-body text-[0.8rem] text-white/75">
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 </span>
-                <span className="font-body text-[0.8rem] font-medium text-charcoal">
-                  Accepting properties now
-                </span>
-              </div>
+                Accepting properties now
+              </span>
               <button
                 onClick={() => scrollToSection("process")}
-                className="mt-3 w-full cursor-pointer text-center font-body text-[0.82rem] font-medium text-gold transition-colors hover:text-gold-dark"
+                className="cursor-pointer font-body text-[0.8rem] font-medium text-gold-light transition-colors hover:text-gold"
               >
-                See how it works &rarr;
+                See how &rarr;
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+
+      <div className="relative z-10 border-t border-white/8">
+        <div className="overflow-hidden py-4">
+          <div className="marquee items-center gap-10 font-body text-[0.7rem] uppercase tracking-[0.28em] text-white/40">
+            {strip.map((n, i) => (
+              <span key={`${n}-${i}`} className="flex items-center gap-10">
+                {n}
+                <span className="h-1 w-1 rounded-full bg-gold/70" />
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

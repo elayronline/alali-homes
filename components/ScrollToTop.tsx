@@ -17,24 +17,12 @@ export function ScrollToTop() {
     <button
       onClick={scrollUp}
       aria-label="Scroll to top"
-      className={`fixed bottom-22 right-6 z-40 flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-grey-200 bg-white shadow-md transition-all duration-300 hover:border-gold hover:shadow-lg ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
+      className={`fixed right-6 bottom-22 z-40 flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-gold/40 bg-charcoal text-gold shadow-lg shadow-black/20 transition-all duration-300 hover:border-gold hover:bg-black-brand ${
+        visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
-      <svg
-        width="18"
-        height="18"
-        viewBox="0 0 18 18"
-        fill="none"
-        className="text-charcoal"
-      >
-        <path
-          d="M9 14V4M4 8l5-5 5 5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
+        <path d="M9 14V4M4 8l5-5 5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </button>
   )

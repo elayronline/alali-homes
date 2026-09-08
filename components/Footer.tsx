@@ -26,125 +26,73 @@ const legalLinks = [
   { label: "Cookie Policy", href: "/cookies" },
 ]
 
+const linkClass =
+  "font-body text-[0.85rem] font-light text-white/55 transition-colors duration-200 hover:text-gold-light"
+const headingClass = "font-body text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-gold"
+
+function Column({ title, links }: { title: string; links: { label: string; href: string }[] }) {
+  return (
+    <div>
+      <h4 className={headingClass}>{title}</h4>
+      <ul className="mt-5 space-y-2.5">
+        {links.map((link) => (
+          <li key={link.href + link.label}>
+            <a href={link.href} className={linkClass}>
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 export function Footer() {
   return (
-    <footer className="border-t border-grey-200 bg-charcoal px-4 pt-16 pb-8 sm:px-6">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Col 1: Logo + desc + social */}
+    <footer className="grain relative bg-black-brand px-4 pt-20 pb-8 text-white sm:px-6">
+      <div className="hairline absolute top-0 right-0 left-0" />
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
+          {/* Brand */}
           <div>
             <div aria-label="Alali Homes — Guaranteed Rent & Hands-Off Management">
-              <span className="font-display text-2xl font-light tracking-wide text-white">
-                Alali
-              </span>
-              <span className="ml-1.5 font-display text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-gold">
+              <span className="font-display text-3xl font-light tracking-wide text-white">Alali</span>
+              <span className="ml-2 font-display text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-gold">
                 Homes
               </span>
             </div>
-            <p className="mt-4 font-body text-[0.85rem] font-light leading-relaxed text-white/60">
+            <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/55">
               Guaranteed rent and hands-off management for landlords in London and the South East.
               Professional guests, zero voids.
             </p>
-            {/* Social links — min 44px touch targets */}
-            <div className="mt-5 flex gap-3">
-              <a
-                href="https://www.instagram.com/alalihomes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/50 transition-all hover:border-gold/40 hover:text-gold"
-                aria-label="Follow us on Instagram"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
+            <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">
+              <a href="tel:+442045158438" className="block transition-colors hover:text-gold-light">020 4515 8438</a>
+              <a href="mailto:info@alalihomes.com" className="block transition-colors hover:text-gold-light">info@alalihomes.com</a>
             </div>
+            <a
+              href="https://www.instagram.com/alalihomes"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Alali Homes on Instagram"
+              className="mt-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/70 transition-all hover:border-gold hover:text-gold"
+            >
+              <Instagram className="h-[18px] w-[18px]" aria-hidden="true" />
+            </a>
           </div>
 
-          {/* Col 2: Company */}
-          <div>
-            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
-              Company
-            </h4>
-            <ul className="mt-4 space-y-3">
-              {companyLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 3: Services */}
-          <div>
-            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
-              Services
-            </h4>
-            <ul className="mt-4 space-y-3">
-              {serviceLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 4: Areas */}
-          <div>
-            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
-              Areas We Cover
-            </h4>
-            <ul className="mt-4 space-y-3">
-              {areaLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 5: Legal */}
-          <div>
-            <h4 className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-gold">
-              Legal
-            </h4>
-            <ul className="mt-4 space-y-3">
-              {legalLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="font-body text-[0.85rem] font-light text-white/60 transition-colors duration-200 hover:text-gold"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Column title="Company" links={companyLinks} />
+          <Column title="Services" links={serviceLinks} />
+          <Column title="Areas We Cover" links={areaLinks} />
+          <Column title="Legal" links={legalLinks} />
         </div>
 
-        {/* Divider */}
-        <div className="mt-12 h-px bg-white/8" />
+        <div className="mt-16 h-px bg-white/8" />
 
-        {/* Bottom bar */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="font-body text-[0.75rem] font-light text-white/50">
+          <p className="font-body text-[0.75rem] font-light text-white/40">
             &copy; 2026 Alali Homes Ltd. All rights reserved.
           </p>
-          <p className="font-body text-[0.75rem] font-light text-white/50">
+          <p className="font-body text-[0.75rem] font-light text-white/40">
             Registered in England &amp; Wales &middot; Company No. 17095100
           </p>
         </div>
