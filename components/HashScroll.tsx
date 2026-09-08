@@ -13,8 +13,13 @@ export function HashScroll() {
     const go = () => {
       const id = window.location.hash.replace(/^#/, "")
       if (!id) return
-      // Let fonts/animations settle so the target's position is final.
-      window.setTimeout(() => scrollToSection(id), 150)
+      // Instant, not smooth: this is a page landing, and a smooth scroll requested
+      // this early is cancelled by the browser under the global scroll-behavior CSS.
+      const jump = () => scrollToSection(id, "auto")
+      jump()
+      // Fonts/animations can shift layout in the first moments; settle again.
+      window.setTimeout(jump, 150)
+      window.setTimeout(jump, 600)
     }
     go()
     window.addEventListener("hashchange", go)

@@ -1,7 +1,7 @@
-export function scrollToSection(id: string) {
+export function scrollToSection(id: string, behavior: ScrollBehavior = "smooth") {
   const el = document.getElementById(id)
   if (!el) return
   const navHeight = 80
   const top = el.getBoundingClientRect().top + window.scrollY - navHeight
-  window.scrollTo({ top, behavior: "smooth" })
+  window.scrollTo({ top, behavior })
 }
