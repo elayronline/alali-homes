@@ -37,7 +37,7 @@ export interface Area {
 const SHARED_FAQS: AreaFAQ[] = [
   {
     q: "What does your fee cover?",
-    a: "One fee covers the full service: finding and vetting professional occupants, day-to-day management, maintenance coordination, regular inspections, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement.",
+    a: "One fee covers the full service. We keep your property occupied with vetted working professionals, and handle every changeover in between: check-ins and check-outs, professional cleans and inspections, plus maintenance, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement.",
   },
   {
     q: "What is the income floor?",
@@ -59,7 +59,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords across all 32 London boroughs. Professional occupants, every detail managed.",
     intro: [
       "London has the deepest demand from working professionals in the country, and it is where an empty month costs a landlord most. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
-      "Alali Homes takes that work off you. We find and vet professional occupants, run your London property day to day, and report every month's income to you through your own landlord portal. Our fee is a share of what the property earns, so we only do well when you do.",
+      "Alali Homes takes that work off you. We keep your London property occupied with vetted professionals, handle every changeover, and report every month's income to you through your own landlord portal. Our fee is a share of what the property earns, so we only do well when you do.",
     ],
     demand: [
       {
@@ -107,7 +107,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
     intro: [
       "The South East is the country's busiest commuter region and one of its largest employment areas in its own right. Airports, ports, science campuses, garrisons and company headquarters sit within an hour of London, and each of them brings people who need a home for months at a time.",
-      "Alali Homes runs properties across the region from start to finish: we find and vet professional occupants, look after the property, and report every month's income to you through your landlord portal. If you own a house or flat anywhere in the South East and want the income without the letting cycle, we can give you a written estimate.",
+      "Alali Homes runs properties across the region from start to finish: we keep each property occupied with vetted professionals, handle every changeover, and report every month's income to you through your landlord portal. If you own a house or flat anywhere in the South East and want the income without the letting cycle, we can give you a written estimate.",
     ],
     demand: [
       {
@@ -276,7 +276,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords around Gatwick, Crawley, Horsham, Worthing and Chichester.",
     intro: [
       "West Sussex is dominated by Gatwick Airport and the Manor Royal business district beside it in Crawley, together one of the largest employment sites in the South East. Airlines, ground handlers, engineering firms and the companies headquartered around the airport all need homes for staff and contractors on fixed-term arrangements.",
-      "Alali Homes manages properties across West Sussex for vetted professional occupants. We find and vet the occupants, handle maintenance, arrange the compliance checks, and report every month's income through your landlord portal.",
+      "Alali Homes manages properties across West Sussex for vetted professional occupants. We keep it occupied with vetted professionals, handle every changeover and the maintenance, arrange the compliance checks, and report every month's income through your landlord portal.",
     ],
     demand: [
       {
@@ -360,7 +360,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords along the M4 corridor: Reading, Slough, Bracknell, Maidenhead and Newbury.",
     intro: [
       "Berkshire is the heart of the M4 corridor, the strip of technology and company headquarters that runs west from Heathrow through Slough, Maidenhead, Bracknell and Reading. Companies here relocate staff, host visiting teams and bring in contractors on a continuous basis, and the Elizabeth line has tied the county's towns directly into central London.",
-      "Alali Homes manages properties across Berkshire for vetted professional occupants. We find and manage the occupants and look after the property throughout, with a written statement every month and your own landlord portal.",
+      "Alali Homes manages properties across Berkshire for vetted professional occupants. We keep it occupied with vetted professionals and handle every changeover, with a written statement every month and your own landlord portal.",
     ],
     demand: [
       {

@@ -12,7 +12,7 @@ const values = [
       </svg>
     ),
     title: "One Fee, the Full Service",
-    description: "A single 15% share of what your property earns covers finding and vetting occupants, management, inspections, compliance tracking and your portal.",
+    description: "A single 15% share of what your property earns keeps it occupied with vetted professionals, with every changeover, clean and inspection handled for you.",
   },
   {
     num: "02",

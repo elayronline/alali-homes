@@ -40,8 +40,8 @@ export function Hero() {
           </h1>
 
           <p {...rise(0.2)} className="rise mt-7 max-w-xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">
-            We place vetted working professionals in your property and run everything for you, from
-            finding the right people to maintenance, compliance and inspections. Your property is
+            We keep your property occupied with vetted working professionals and run everything for
+            you: every changeover, clean and inspection, plus maintenance and compliance. Your property is
             looked after to a professional standard, your income is tracked in your own landlord
             portal, and none of the work is yours.
           </p>
