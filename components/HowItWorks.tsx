@@ -21,7 +21,7 @@ const steps = [
   {
     num: "03",
     title: "Agreement & Handover",
-    desc: "Once terms are agreed, we sign the agreement, arrange any compliance works, and prepare the property for its first guests. You follow every month’s income in your landlord portal.",
+    desc: "Once terms are agreed, we sign the agreement, arrange any compliance works, and prepare the property for its first occupants. You follow every month’s income in your landlord portal.",
     detail:
       "What happens next: we confirm the property is the right fit, help bring it to standard where needed, and agree a start date.",
   },

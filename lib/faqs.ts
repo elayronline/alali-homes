@@ -10,9 +10,9 @@ export interface FAQItem {
 
 export const landlordFAQs: FAQItem[] = [
   {
-    question: "How do you get paid?",
+    question: "What does your fee cover?",
     answer:
-      "We keep 15% of the rent your guests pay as our management fee. You receive the other 85% every month, with a written statement. Our fee is a share of what your property earns, so we only earn when you do.",
+      "One fee covers the full service: finding and vetting professional occupants, day-to-day management, maintenance coordination, regular inspections, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement. Because our fee is a share of what your property earns, we only do well when you do.",
   },
   {
     question: "What is the income floor?",
@@ -32,7 +32,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "Is this Airbnb or holiday letting?",
     answer:
-      "No. We do not take holiday bookings. Every guest is a working professional who has passed our vetting process. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout.",
+      "No. We do not take holiday bookings. Every occupant is a working professional who has passed our vetting process. No parties, no unknown occupants, and the property is inspected and professionally cleaned throughout.",
   },
   {
     question: "Will you change or damage my property?",
@@ -42,7 +42,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "Who will stay in my property?",
     answer:
-      "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
+      "Working professionals only. Every occupant goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
   },
   {
     question: "Who is responsible for compliance?",
@@ -65,7 +65,7 @@ export const agentFAQs: FAQItem[] = [
   {
     question: "Do you compete with letting agents?",
     answer:
-      "No. We don’t list on Rightmove or take on conventional long-term lets. We work with agents to offer landlords a fully managed alternative for professional guests, and you earn a referral fee for every property we take on.",
+      "No. We don’t list on Rightmove or take on conventional long-term lets. We work with agents to offer landlords a fully managed alternative for professional occupants, and you earn a referral fee for every property we take on.",
   },
   {
     question: "How does the referral work?",

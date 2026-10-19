@@ -12,10 +12,10 @@ const painPoints = [
 ]
 
 const benefits = [
-  { title: "85% of the Income, Every Month", desc: "Paid monthly, with a written statement." },
+  { title: "Vetted Professional Occupants", desc: "Working professionals only, every one approved by us." },
   { title: "A Quarterly Income Floor", desc: "We reduce or waive our fee if a quarter falls short." },
-  { title: "Your Own Landlord Portal", desc: "Track your income and payouts, month by month." },
-  { title: "Full Property Management", desc: "Guests, maintenance, check-ins, emergencies." },
+  { title: "Income You Can See", desc: "Paid monthly, with a statement and your own landlord portal." },
+  { title: "Full Property Management", desc: "Occupants, maintenance, check-ins, emergencies." },
   { title: "Compliance Arranged", desc: "Gas safety, EICR, EPC, smoke/CO alarms, booked and tracked." },
   { title: "Property Protection", desc: "Regular inspections, professional cleaning, agreed condition standards." },
 ]

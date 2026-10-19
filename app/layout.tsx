@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
   title: "Property Management London & South East | Alali Homes",
   description:
-    "Fully managed lettings in London and the South East. Vetted professional guests, 85% of the income to you, and your own landlord portal.",
+    "Fully managed lettings in London and the South East. Vetted professional occupants, every detail handled, and your own landlord portal.",
   keywords: [
     "property management London",
     "property management South East",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "hands-off property management",
     "hands-off property management for landlords",
     "landlord portal",
-    "professional guests",
+    "professional occupants",
     "Alali Homes",
   ],
   alternates: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Property Management London & South East | Alali Homes",
     description:
-      "We host vetted professional guests, manage everything, and pay you 85% of what your property earns, tracked month by month in your landlord portal.",
+      "Vetted professional occupants and a fully hands-off service, with your income tracked month by month in your own landlord portal.",
     url: "https://www.alalihomes.com",
     siteName: "Alali Homes",
     type: "website",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Property Management London & South East | Alali Homes",
     description:
-      "Fully managed lettings for landlords: vetted professional guests, 85% of the income to you, and a landlord portal.",
+      "Fully managed lettings for landlords: vetted professional occupants, every detail handled, and a landlord portal.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -97,7 +97,7 @@ const orgSchema = {
   },
   foundingDate: "2026-03-16",
   description:
-    "Property management company for landlords in London and the South East. We host vetted professional guests, manage everything, and pay landlords 85% of the income their property earns.",
+    "Property management company for landlords in London and the South East. We place vetted professional occupants, manage everything, and report every month's income through a landlord portal.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",
@@ -138,7 +138,7 @@ const orgSchema = {
   knowsAbout: [
     "Property Management",
     "Residential Lettings",
-    "Guest Vetting",
+    "Occupant Vetting",
     "Landlord Revenue Share",
   ],
 }

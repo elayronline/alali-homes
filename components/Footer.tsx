@@ -16,7 +16,7 @@ const companyLinks = [
 const serviceLinks = [
   { label: "Hands-Off Management", href: "/#landlords" },
   { label: "Landlord Portal", href: "/#portal" },
-  { label: "Professional Guests", href: "/#value" },
+  { label: "Professional Occupants", href: "/#value" },
   { label: "Property Management", href: "/#about" },
 ]
 
@@ -63,7 +63,7 @@ export function Footer() {
             </div>
             <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/70">
               Fully managed lettings for landlords in London and the South East. Vetted professional
-              guests, and 85% of the income paid to you.
+              occupants, every detail managed, and your income tracked month by month.
             </p>
             <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">
               <a href="tel:+442045158438" className="block transition-colors hover:text-gold-light">020 4515 8438</a>

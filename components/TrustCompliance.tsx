@@ -51,8 +51,8 @@ export function TrustCompliance() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600">
             Alali Homes Ltd is a UK-registered property management company. We offer landlords a
-            better model: we host vetted professional guests, manage everything to a professional
-            standard, and share what your property earns, 85% to you and 15% to us.
+            better model: we place vetted professional occupants, manage everything to a professional
+            standard, and share in what your property earns, so we only do well when you do.
           </p>
         </motion.div>
 

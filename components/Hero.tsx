@@ -5,13 +5,13 @@ import { AREAS } from "@/lib/areas"
 import { Skyline } from "@/components/Skyline"
 
 const stats = [
-  { value: "85%", label: "Of the income is yours" },
-  { value: "15%", label: "Our fee, only when you earn" },
-  { value: "60%", label: "Of market rent, your quarterly floor" },
+  { value: "100%", label: "Working professionals, vetted" },
   { value: "24/7", label: "We handle everything" },
+  { value: "48hr", label: "Written income estimate" },
+  { value: "Monthly", label: "Statements & portal access" },
 ]
 
-const trust = ["UK registered & insured", "Your own landlord portal", "48-hour response"]
+const trust = ["UK registered & insured", "Quarterly income floor", "Your own landlord portal"]
 
 /** CSS entrance: class + stagger delay via a custom property. */
 const rise = (delay = 0) => ({ style: { "--rise-delay": `${delay}s` } as React.CSSProperties })
@@ -32,17 +32,18 @@ export function Hero() {
           </span>
 
           <h1 className="display mt-8 text-[2.35rem] sm:text-[3.4rem] md:text-[4.3rem]">
-            Fully Managed.
+            Professional Occupants.
             <br />
-            Vetted Guests.
+            Every Detail Managed.
             <br />
-            <strong className="gold-text">You Keep 85%.</strong>
+            <strong className="gold-text">Income You Can See.</strong>
           </h1>
 
           <p {...rise(0.2)} className="rise mt-7 max-w-xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">
-            We manage properties across London and the South East for vetted professional guests.
-            We take care of everything, keep 15% of what your property earns, and pay you the rest
-            every month, with every pound tracked in your landlord portal.
+            We place vetted working professionals in your property and run everything for you, from
+            finding the right people to maintenance, compliance and inspections. Your property is
+            looked after to a professional standard, your income is tracked in your own landlord
+            portal, and none of the work is yours.
           </p>
 
           <div {...rise(0.3)} className="rise mt-10 flex flex-wrap gap-4">

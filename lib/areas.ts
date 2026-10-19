@@ -36,8 +36,8 @@ export interface Area {
 
 const SHARED_FAQS: AreaFAQ[] = [
   {
-    q: "How does the 15% fee work?",
-    a: "We keep 15% of the rent your guests pay as our management fee, and pay you the other 85% every month with a written statement. You can see every month's income and payout in your landlord portal.",
+    q: "What does your fee cover?",
+    a: "One fee covers the full service: finding and vetting professional occupants, day-to-day management, maintenance coordination, regular inspections, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement.",
   },
   {
     q: "What is the income floor?",
@@ -45,7 +45,7 @@ const SHARED_FAQS: AreaFAQ[] = [
   },
   {
     q: "Who will stay in the property?",
-    a: "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
+    a: "Working professionals only. Every occupant goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
   },
 ]
 
@@ -56,10 +56,10 @@ export const AREAS: Area[] = [
     name: "London",
     inName: "London",
     kind: "region",
-    strap: "Fully managed lettings for landlords across all 32 London boroughs. You keep 85% of what your property earns.",
+    strap: "Fully managed lettings for landlords across all 32 London boroughs. Professional occupants, every detail managed.",
     intro: [
-      "London has the deepest professional-guest demand in the country, and it is where an empty month costs a landlord most. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
-      "Alali Homes takes that work off you. We manage your London property and its guests ourselves, keep 15% of the rent your guests pay as our fee, and pay you the other 85% every month, with every month's income visible in your landlord portal.",
+      "London has the deepest demand from working professionals in the country, and it is where an empty month costs a landlord most. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
+      "Alali Homes takes that work off you. We find and vet professional occupants, run your London property day to day, and report every month's income to you through your own landlord portal. Our fee is a share of what the property earns, so we only do well when you do.",
     ],
     demand: [
       {
@@ -89,7 +89,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you cover outer London as well as central?",
-        a: "Yes. We take on properties in all 32 boroughs. Outer boroughs with good rail links, such as Croydon, Bromley, Ealing and Barnet, are often the best fit for contractor and professional guests who want space and a straightforward commute.",
+        a: "Yes. We take on properties in all 32 boroughs. Outer boroughs with good rail links, such as Croydon, Bromley, Ealing and Barnet, are often the best fit for contractor and professional occupants who want space and a straightforward commute.",
       },
       {
         q: "Do you handle licensing and compliance in London?",
@@ -107,7 +107,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
     intro: [
       "The South East is the country's busiest commuter region and one of its largest employment areas in its own right. Airports, ports, science campuses, garrisons and company headquarters sit within an hour of London, and each of them brings people who need a home for months at a time.",
-      "Alali Homes manages properties across the region on a simple share: we host vetted professional guests, look after the property, keep 15% of the rent your guests pay and pay you the rest every month. If you own a house or flat anywhere in the South East and want the income without the letting cycle, we can give you a written estimate.",
+      "Alali Homes runs properties across the region from start to finish: we find and vet professional occupants, look after the property, and report every month's income to you through your landlord portal. If you own a house or flat anywhere in the South East and want the income without the letting cycle, we can give you a written estimate.",
     ],
     demand: [
       {
@@ -131,7 +131,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties in smaller towns and villages?",
-        a: "Yes, where there is professional-guest demand within reach. A village close to a science park, garrison or airport can work well. A remote property with no employer nearby is harder for us to keep occupied, and we will tell you honestly if that is the case.",
+        a: "Yes, where there is demand from working professionals within reach. A village close to a science park, garrison or airport can work well. A remote property with no employer nearby is harder for us to keep occupied, and we will tell you honestly if that is the case.",
       },
       {
         q: "Is this the same as rent-to-rent or guaranteed rent?",
@@ -150,7 +150,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords from the Medway towns to the Channel coast.",
     intro: [
       "Kent's rental demand is shaped by its ports, its high-speed link to London and the growth around Ebbsfleet and the Thames Gateway. Contractors, logistics and port staff, and commuters priced out of the capital all need homes across the county, and much of that demand is for fixed-term, furnished homes rather than a conventional tenancy.",
-      "Alali Homes manages properties across Kent for vetted professional guests. You hand over the keys once, we run the property and look after everyone staying in it, and you receive 85% of the rent your guests pay every month.",
+      "Alali Homes manages properties across Kent for vetted professional occupants. You hand over the keys once, we run the property and look after everyone staying in it, and you follow every month's income in your landlord portal.",
     ],
     demand: [
       {
@@ -163,7 +163,7 @@ export const AREAS: Area[] = [
       },
       {
         title: "Medway, Maidstone and Canterbury",
-        text: "The Medway towns, the county town of Maidstone and the universities and hospital in Canterbury are steady sources of professional, clinical and academic guests on fixed contracts.",
+        text: "The Medway towns, the county town of Maidstone and the universities and hospital in Canterbury are steady sources of professional, clinical and academic occupants on fixed contracts.",
       },
     ],
     properties:
@@ -192,7 +192,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords across Guildford, Woking, Epsom and the M25 corridor.",
     intro: [
       "Surrey sits on the M25 with fast rail into Waterloo and Victoria, which makes it the natural home for relocating professionals who work in London or at the business parks around Leatherhead, Weybridge and Woking. Add Gatwick on the county's edge and a university and major hospital in Guildford, and you have a county with constant demand for managed, furnished homes.",
-      "Alali Homes manages Surrey properties for vetted professional guests. We take on the guests and the maintenance, arrange the compliance checks, keep 15% of the rent your guests pay and pay you the rest every month. Your property comes back in the agreed condition at the end.",
+      "Alali Homes manages Surrey properties for vetted professional occupants. We take on the occupants and the maintenance, arrange the compliance checks, and report every month's income through your landlord portal. Your property comes back in the agreed condition at the end.",
     ],
     demand: [
       {
@@ -219,7 +219,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "My property is in a Surrey village rather than a town. Is that a problem?",
-        a: "Not necessarily. If it is within easy reach of a station, a business park or Gatwick, it can work well for professional guests who want quieter surroundings. We will tell you honestly if we do not think it is a good fit.",
+        a: "Not necessarily. If it is within easy reach of a station, a business park or Gatwick, it can work well for professional occupants who want quieter surroundings. We will tell you honestly if we do not think it is a good fit.",
       },
     ],
   },
@@ -234,7 +234,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords in Brighton and Hove, Eastbourne, Hastings and Lewes.",
     intro: [
       "East Sussex is anchored by Brighton and Hove, a city with two universities, a large hospital and one of the biggest digital and creative employment clusters outside London. Along the coast, Eastbourne and Hastings have their own hospitals, colleges and regeneration programmes, each bringing people who need a home for a fixed period.",
-      "Alali Homes manages properties across East Sussex for vetted professional guests. We look after the property and its guests throughout, and pay you 85% of the rent your guests pay every month, with every month's income visible in your landlord portal.",
+      "Alali Homes manages properties across East Sussex for vetted professional occupants. We look after the property and the people staying in it throughout, and you see every month's income in your landlord portal.",
     ],
     demand: [
       {
@@ -261,7 +261,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties in Brighton that have been used as holiday lets?",
-        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We take it on as a fully managed let for vetted professional guests, not holiday lets.",
+        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We take it on as a fully managed let for vetted professional occupants, not holiday lets.",
       },
     ],
   },
@@ -276,7 +276,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords around Gatwick, Crawley, Horsham, Worthing and Chichester.",
     intro: [
       "West Sussex is dominated by Gatwick Airport and the Manor Royal business district beside it in Crawley, together one of the largest employment sites in the South East. Airlines, ground handlers, engineering firms and the companies headquartered around the airport all need homes for staff and contractors on fixed-term arrangements.",
-      "Alali Homes manages properties across West Sussex for vetted professional guests. We source and manage the guests, handle maintenance, arrange the compliance checks, and pay you 85% of the rent your guests pay every month.",
+      "Alali Homes manages properties across West Sussex for vetted professional occupants. We find and vet the occupants, handle maintenance, arrange the compliance checks, and report every month's income through your landlord portal.",
     ],
     demand: [
       {
@@ -303,7 +303,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Will airport crews and shift workers look after my property?",
-        a: "Every guest is referenced and approved by us, and we inspect regularly through the term. We manage the property day to day, so you deal with us, not with individual guests.",
+        a: "Every occupant is referenced and approved by us, and we inspect regularly through the term. We manage the property day to day, so you deal with us, not with individual occupants.",
       },
     ],
   },
@@ -317,8 +317,8 @@ export const AREAS: Area[] = [
     parent: "south-east",
     strap: "Fully managed lettings for landlords in Southampton, Portsmouth, Basingstoke, Winchester and Farnborough.",
     intro: [
-      "Hampshire has two port cities, a naval base, an army garrison, an aerospace cluster and a ring of company headquarters, which gives it some of the most varied contractor and professional-guest demand in the South East. People arrive for a refit, a deployment, a project or a relocation, and they need a proper home for the duration.",
-      "Alali Homes manages properties across Hampshire for vetted professional guests, from handover to return. We keep 15% of the rent your guests pay as our fee and pay you the rest every month, with a written statement.",
+      "Hampshire has two port cities, a naval base, an army garrison, an aerospace cluster and a ring of company headquarters, which gives it some of the most varied demand from contractors and working professionals in the South East. People arrive for a refit, a deployment, a project or a relocation, and they need a proper home for the duration.",
+      "Alali Homes manages properties across Hampshire for vetted professional occupants, from handover to return, with a written statement every month and every pound visible in your landlord portal.",
     ],
     demand: [
       {
@@ -360,12 +360,12 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords along the M4 corridor: Reading, Slough, Bracknell, Maidenhead and Newbury.",
     intro: [
       "Berkshire is the heart of the M4 corridor, the strip of technology and company headquarters that runs west from Heathrow through Slough, Maidenhead, Bracknell and Reading. Companies here relocate staff, host visiting teams and bring in contractors on a continuous basis, and the Elizabeth line has tied the county's towns directly into central London.",
-      "Alali Homes manages properties across Berkshire for vetted professional guests. We source and manage the guests and look after the property throughout, and you receive 85% of the rent your guests pay every month, with a written statement.",
+      "Alali Homes manages properties across Berkshire for vetted professional occupants. We find and manage the occupants and look after the property throughout, with a written statement every month and your own landlord portal.",
     ],
     demand: [
       {
         title: "The M4 technology corridor",
-        text: "Reading, Bracknell and the business parks between them host the UK operations of major technology and software companies. Their relocating staff and project teams are a constant source of professional guests.",
+        text: "Reading, Bracknell and the business parks between them host the UK operations of major technology and software companies. Their relocating staff and project teams are a constant source of professional occupants.",
       },
       {
         title: "Slough and Heathrow's western edge",
@@ -387,7 +387,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "I own a flat in a Reading town-centre development. Is that suitable?",
-        a: "Usually yes. Modern apartments near Reading station are exactly what relocating technology and professional guests ask for, and they are straightforward for us to take on and manage.",
+        a: "Usually yes. Modern apartments near Reading station are exactly what relocating technology and professional occupants ask for, and they are straightforward for us to take on and manage.",
       },
     ],
   },
@@ -402,7 +402,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords in Milton Keynes, High Wycombe, Aylesbury, Amersham and Marlow.",
     intro: [
       "Buckinghamshire runs from the Metropolitan line commuter towns of Amersham and Chesham up to Milton Keynes, one of the largest concentrations of company headquarters and logistics operations in the country. Between them sit High Wycombe, Aylesbury and Marlow, and on the county's southern edge the film studios at Pinewood.",
-      "Alali Homes manages properties across Buckinghamshire for vetted professional guests. We look after the property and the people staying in it throughout, and pay you 85% of the rent your guests pay every month.",
+      "Alali Homes manages properties across Buckinghamshire for vetted professional occupants. We look after the property and the people staying in it throughout, and you follow every month's income in your landlord portal.",
     ],
     demand: [
       {
@@ -429,7 +429,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you cover Milton Keynes even though it is administratively separate from Buckinghamshire?",
-        a: "Yes. Milton Keynes is one of the strongest areas of professional-guest demand in the region and we treat it as part of our Buckinghamshire coverage.",
+        a: "Yes. Milton Keynes is one of the strongest areas of demand from working professionals in the region and we treat it as part of our Buckinghamshire coverage.",
       },
     ],
   },
@@ -444,7 +444,7 @@ export const AREAS: Area[] = [
     strap: "Fully managed lettings for landlords in Oxford, Didcot, Bicester, Banbury and Abingdon.",
     intro: [
       "Oxfordshire's demand comes from its universities, its hospitals and the science and engineering campuses that surround Oxford. Researchers, clinicians, engineers and visiting academics arrive on fixed-term contracts throughout the year, and Oxford's housing stock is tight enough that a furnished, managed home is always sought after.",
-      "Alali Homes manages properties across Oxfordshire for vetted professional guests. We take on the guests and the maintenance, arrange the compliance checks, keep 15% of the rent your guests pay and pay you the rest every month.",
+      "Alali Homes manages properties across Oxfordshire for vetted professional occupants. We take on the occupants and the maintenance, arrange the compliance checks, and report every month's income through your landlord portal.",
     ],
     demand: [
       {
@@ -471,7 +471,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties near the hospitals in Headington?",
-        a: "Yes. Clinicians and researchers on fixed placements at the John Radcliffe and Churchill are a steady source of professional guests, and Headington properties are a strong fit.",
+        a: "Yes. Clinicians and researchers on fixed placements at the John Radcliffe and Churchill are a steady source of professional occupants, and Headington properties are a strong fit.",
       },
     ],
   },

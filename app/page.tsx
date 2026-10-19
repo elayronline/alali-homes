@@ -32,7 +32,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Fully Managed Lettings for Landlords",
   description:
-    "Alali Homes manages your property for vetted professional guests, handles everything day to day, and pays you 85% of the rent your guests pay every month, with a quarterly income floor and a landlord portal.",
+    "Alali Homes places vetted professional occupants in your property, handles everything day to day, and reports every month's income through a landlord portal, with a quarterly income floor.",
   provider: {
     "@type": "Organization",
     name: "Alali Homes Ltd",
@@ -42,7 +42,7 @@ const serviceSchema = {
   serviceType: "Property Management",
   offers: {
     "@type": "Offer",
-    description: "Management fee of 15% of the rent paid by guests, with a quarterly income floor.",
+    description: "Management fee of 15% of the rent paid by occupants, with a quarterly income floor.",
     priceCurrency: "GBP",
   },
 }

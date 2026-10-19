@@ -12,7 +12,7 @@ const cards = [
   {
     num: "02",
     title: "Solve Problem Stock",
-    desc: "Hard-to-let, high-void, or landlord-frustrated properties: we take them on and manage them for professional guests.",
+    desc: "Hard-to-let, high-void, or landlord-frustrated properties: we take them on and manage them for professional occupants.",
   },
   {
     num: "03",

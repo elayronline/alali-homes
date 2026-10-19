@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = getArea(slug)
   if (!area) return {}
   const title = `Property Management ${area.name.replace(/^the /, "")} | Alali Homes`
-  const description = `Fully managed lettings for landlords in ${area.name}. Vetted professional guests, 85% of the income to you, and your own landlord portal.`
+  const description = `Fully managed lettings for landlords in ${area.name}. Vetted professional occupants, every detail managed, and your own landlord portal.`
   const url = `${SITE}/property-management/${area.slug}`
   return {
     title,
@@ -76,7 +76,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       "@type": area.kind === "region" && area.slug === "london" ? "City" : "AdministrativeArea",
       name: displayName,
     },
-    offers: { "@type": "Offer", description: "Management fee of 15% of the rent paid by guests, with a quarterly income floor.", priceCurrency: "GBP" },
+    offers: { "@type": "Offer", description: "Management fee of 15% of the rent paid by occupants, with a quarterly income floor.", priceCurrency: "GBP" },
   }
 
   const faq = {
