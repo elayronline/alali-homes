@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Phone, Mail } from "lucide-react"
 
@@ -13,6 +13,16 @@ export function CTABanner() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState(false)
+
+  // The area rent check passes its postcode along so the visitor doesn't type it twice.
+  useEffect(() => {
+    const prefill = (e: Event) => {
+      const postcode = (e as CustomEvent<string>).detail
+      if (postcode) setFormData((f) => ({ ...f, postcode }))
+    }
+    window.addEventListener("alali:postcode", prefill)
+    return () => window.removeEventListener("alali:postcode", prefill)
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

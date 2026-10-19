@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfUse() {
   return (
-    <LegalPage title="Terms of Use" updated="8 September 2026">
+    <LegalPage title="Terms of Use" updated="19 October 2026">
       <section>
         <h2>About these terms</h2>
         <p>

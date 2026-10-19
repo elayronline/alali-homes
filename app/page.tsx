@@ -13,6 +13,7 @@ import { ScrollToTop } from "@/components/ScrollToTop"
 import { GoldDivider } from "@/components/GoldDivider"
 import { HashScroll } from "@/components/HashScroll"
 import { LandlordPortal } from "@/components/LandlordPortal"
+import { RentCheck } from "@/components/RentCheck"
 import { AREA_SERVED } from "@/lib/areas"
 import { agentFAQs, landlordFAQs } from "@/lib/faqs"
 
@@ -61,6 +62,7 @@ export default function Home() {
         <GoldDivider />
         <ForLandlords />
         <LandlordPortal />
+        <RentCheck />
         <MidPageCTA />
         <ForAgents />
         <GoldDivider />

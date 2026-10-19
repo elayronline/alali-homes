@@ -5,6 +5,7 @@ import { AREAS } from "@/lib/areas"
 // a build-time `new Date()` here would either lie or freeze at the last deploy.
 const HOME_UPDATED = "2026-10-19"
 const LEGAL_UPDATED = "2026-09-08"
+const PRIVACY_UPDATED = "2026-10-19"
 const TERMS_UPDATED = "2026-10-19"
 const AREAS_UPDATED = "2026-10-19"
 
@@ -19,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: a.kind === "region" ? 0.9 : 0.8,
     })),
-    { url: `${SITE}/privacy`, lastModified: new Date(LEGAL_UPDATED), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE}/privacy`, lastModified: new Date(PRIVACY_UPDATED), changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE}/terms`, lastModified: new Date(TERMS_UPDATED), changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE}/cookies`, lastModified: new Date(LEGAL_UPDATED), changeFrequency: "yearly", priority: 0.3 },
   ]
