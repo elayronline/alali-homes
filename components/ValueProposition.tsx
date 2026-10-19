@@ -11,8 +11,8 @@ const values = [
         <path d="M9 12l2 2 4-4" />
       </svg>
     ),
-    title: "Guaranteed Rent",
-    description: "Paid on time, every month. No voids, no missed payments. The risk sits with us.",
+    title: "You Keep 85%",
+    description: "We keep 15% of what your property earns. The rest is paid to you every month, with a written statement.",
   },
   {
     num: "02",
@@ -23,7 +23,7 @@ const values = [
       </svg>
     ),
     title: "Hands-Free Management",
-    description: "We handle everything — guests, maintenance, compliance, and day-to-day operations.",
+    description: "We handle everything: guests, maintenance, compliance checks and day-to-day operations.",
   },
   {
     num: "03",
@@ -44,8 +44,8 @@ const values = [
         <path d="M9 22V12h6v10" />
       </svg>
     ),
-    title: "Property Returned in Condition",
-    description: "Regular inspections, professional cleans, and a contractual commitment to maintain standards.",
+    title: "A Quarterly Income Floor",
+    description: "If a quarter falls below 60% of your property’s long-term market rent, we reduce or waive our fee to make up the gap.",
   },
 ]
 
@@ -72,8 +72,8 @@ export function ValueProposition() {
             transition={{ delay: 0.1 }}
             className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600 lg:justify-self-end"
           >
-            One agreement, one fixed monthly payment, and a property that is looked after to a
-            professional standard for the whole term. That is the entire offer.
+            One agreement, one simple fee, and a property looked after to a professional standard.
+            Our fee is a share of what your property earns, so we only do well when you do.
           </motion.p>
         </div>
 

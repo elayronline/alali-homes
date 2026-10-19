@@ -50,9 +50,9 @@ export function TrustCompliance() {
             Fully Registered, Insured &amp; <strong className="gold-text">Compliant</strong>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600">
-            Alali Homes Ltd is a UK-registered guaranteed rent and property management company. We
-            offer landlords a better model: we lease your property, pay guaranteed rent, host vetted
-            professional guests, and manage everything to a professional standard.
+            Alali Homes Ltd is a UK-registered property management company. We offer landlords a
+            better model: we host vetted professional guests, manage everything to a professional
+            standard, and share what your property earns, 85% to you and 15% to us.
           </p>
         </motion.div>
 

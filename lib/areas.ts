@@ -1,5 +1,5 @@
 /**
- * Areas Alali Homes covers. Each entry drives one page at /guaranteed-rent/[slug].
+ * Areas Alali Homes covers. Each entry drives one page at /property-management/[slug].
  *
  * Content rules (keep them):
  * - No rent figures, yields, counts or statistics. Nothing here may claim a number
@@ -36,12 +36,16 @@ export interface Area {
 
 const SHARED_FAQS: AreaFAQ[] = [
   {
-    q: "How is the rent guaranteed?",
-    a: "We sign a lease with you and pay the agreed rent every month for the term of that lease, whether or not the property is occupied. The obligation sits with Alali Homes Ltd.",
+    q: "How does the 15% fee work?",
+    a: "We keep 15% of the rent your guests pay as our management fee, and pay you the other 85% every month with a written statement. You can see every month's income and payout in your landlord portal.",
+  },
+  {
+    q: "What is the income floor?",
+    a: "If your payouts across a quarter come to less than 60% of the long-term market rent for your property, we reduce or waive our fee for that quarter to make up the difference, up to the full value of our fee. The market rent figure and the conditions are agreed in writing before you sign.",
   },
   {
     q: "Who will stay in the property?",
-    a: "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly through the term.",
+    a: "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
   },
 ]
 
@@ -52,10 +56,10 @@ export const AREAS: Area[] = [
     name: "London",
     inName: "London",
     kind: "region",
-    strap: "Guaranteed monthly rent for landlords across all 32 London boroughs, with your property fully managed.",
+    strap: "Fully managed lettings for landlords across all 32 London boroughs. You keep 85% of what your property earns.",
     intro: [
-      "London has the deepest professional-guest demand in the country, and it is where the cost of a void is highest. A month empty in the capital is a serious sum, and the letting cycle of viewings, referencing, gaps and re-lets repeats every year or two.",
-      "Alali Homes takes that cycle off you. We lease your London property under a guaranteed rent agreement, pay you a fixed rent every month for the term, and manage the property and its guests ourselves. You receive the same amount on the same date regardless of whether anyone is living there.",
+      "London has the deepest professional-guest demand in the country, and it is where an empty month costs a landlord most. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
+      "Alali Homes takes that work off you. We manage your London property and its guests ourselves, keep 15% of the rent your guests pay as our fee, and pay you the other 85% every month, with every month's income visible in your landlord portal.",
     ],
     demand: [
       {
@@ -72,7 +76,7 @@ export const AREAS: Area[] = [
       },
     ],
     properties:
-      "We take on flats and houses across London, from purpose-built apartments near a station to family houses in the outer boroughs. Properties within reach of the Tube, Elizabeth line or Overground and close to the employers above are the easiest for us to keep occupied, which is what lets us commit to a guaranteed figure.",
+      "We take on flats and houses across London, from purpose-built apartments near a station to family houses in the outer boroughs. Properties within reach of the Tube, Elizabeth line or Overground and close to the employers above are the easiest for us to keep occupied, and occupancy is what drives your income.",
     placesLabel: "London boroughs we cover",
     places: [
       "Barking and Dagenham", "Barnet", "Bexley", "Brent", "Bromley", "Camden", "City of London", "Croydon",
@@ -88,7 +92,7 @@ export const AREAS: Area[] = [
         a: "Yes. We take on properties in all 32 boroughs. Outer boroughs with good rail links, such as Croydon, Bromley, Ealing and Barnet, are often the best fit for contractor and professional guests who want space and a straightforward commute.",
       },
       {
-        q: "Does a London guaranteed rent agreement cover licensing and compliance?",
+        q: "Do you handle licensing and compliance in London?",
         a: "Compliance responsibilities are agreed in writing before we sign, including any borough licensing that applies to the property. We tell you what is needed and who is doing it before you commit.",
       },
     ],
@@ -100,10 +104,10 @@ export const AREAS: Area[] = [
     name: "the South East",
     inName: "the South East",
     kind: "region",
-    strap: "Guaranteed rent and full management for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
+    strap: "Fully managed lettings for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
     intro: [
       "The South East is the country's busiest commuter region and one of its largest employment areas in its own right. Airports, ports, science campuses, garrisons and company headquarters sit within an hour of London, and each of them brings people who need a home for months at a time.",
-      "Alali Homes leases properties across the region under guaranteed rent agreements, pays landlords a guaranteed rent every month for the term, and manages the property throughout. If you own a house or flat anywhere in the South East and want a fixed income without the letting cycle, we can give you a written figure.",
+      "Alali Homes manages properties across the region on a simple share: we host vetted professional guests, look after the property, keep 15% of the rent your guests pay and pay you the rest every month. If you own a house or flat anywhere in the South East and want the income without the letting cycle, we can give you a written estimate.",
     ],
     demand: [
       {
@@ -127,11 +131,11 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties in smaller towns and villages?",
-        a: "Yes, where there is professional-guest demand within reach. A village close to a science park, garrison or airport can work well. A remote property with no employer nearby is harder for us to guarantee, and we will tell you honestly if that is the case.",
+        a: "Yes, where there is professional-guest demand within reach. A village close to a science park, garrison or airport can work well. A remote property with no employer nearby is harder for us to keep occupied, and we will tell you honestly if that is the case.",
       },
       {
-        q: "Is a guaranteed rent scheme the same as rent-to-rent?",
-        a: "The structure is similar in that a company leases your property and lets it on. The difference is who you are dealing with. We are a registered limited company hosting our own professional guests, the lease is with Alali Homes Ltd, and the terms, break clauses and responsibilities are set out in writing before you sign.",
+        q: "Is this the same as rent-to-rent or guaranteed rent?",
+        a: "No. In rent-to-rent, a company leases your property for a fixed rent and keeps whatever it earns above that. We manage the property on your behalf instead: the income is yours, we keep a 15% share as our fee, and you can see every month's income and payout in your landlord portal. The terms, notice periods and responsibilities are set out in writing before you sign.",
       },
     ],
   },
@@ -143,10 +147,10 @@ export const AREAS: Area[] = [
     inName: "Kent",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords from the Medway towns to the Channel coast.",
+    strap: "Fully managed lettings for landlords from the Medway towns to the Channel coast.",
     intro: [
       "Kent's rental demand is shaped by its ports, its high-speed link to London and the growth around Ebbsfleet and the Thames Gateway. Contractors, logistics and port staff, and commuters priced out of the capital all need homes across the county, and much of that demand is for fixed-term, furnished homes rather than a conventional tenancy.",
-      "Alali Homes leases properties across Kent on guaranteed rent agreements and pays the landlord a guaranteed rent every month for the term. You hand over the keys once and receive a fixed income for one to five years while we manage the property and everyone living in it.",
+      "Alali Homes manages properties across Kent for vetted professional guests. You hand over the keys once, we run the property and look after everyone staying in it, and you receive 85% of the rent your guests pay every month.",
     ],
     demand: [
       {
@@ -173,7 +177,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you cover coastal Kent, such as Thanet and Dover?",
-        a: "Yes. The ports and the regeneration along the coast create contractor demand. We assess each property on its own merits and give you a written rent figure if we can guarantee it.",
+        a: "Yes. The ports and the regeneration along the coast create contractor demand. We assess each property on its own merits and give you a written income estimate if it is a good fit.",
       },
     ],
   },
@@ -185,10 +189,10 @@ export const AREAS: Area[] = [
     inName: "Surrey",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords across Guildford, Woking, Epsom and the M25 corridor.",
+    strap: "Fully managed lettings for landlords across Guildford, Woking, Epsom and the M25 corridor.",
     intro: [
       "Surrey sits on the M25 with fast rail into Waterloo and Victoria, which makes it the natural home for relocating professionals who work in London or at the business parks around Leatherhead, Weybridge and Woking. Add Gatwick on the county's edge and a university and major hospital in Guildford, and you have a county with constant demand for managed, furnished homes.",
-      "Alali Homes leases Surrey properties on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We take on the guests, the maintenance and the compliance. You receive a fixed income and your property back in the agreed condition at the end.",
+      "Alali Homes manages Surrey properties for vetted professional guests. We take on the guests and the maintenance, arrange the compliance checks, keep 15% of the rent your guests pay and pay you the rest every month. Your property comes back in the agreed condition at the end.",
     ],
     demand: [
       {
@@ -215,7 +219,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "My property is in a Surrey village rather than a town. Is that a problem?",
-        a: "Not necessarily. If it is within easy reach of a station, a business park or Gatwick, it can work well for professional guests who want quieter surroundings. We will tell you honestly if we cannot guarantee it.",
+        a: "Not necessarily. If it is within easy reach of a station, a business park or Gatwick, it can work well for professional guests who want quieter surroundings. We will tell you honestly if we do not think it is a good fit.",
       },
     ],
   },
@@ -227,10 +231,10 @@ export const AREAS: Area[] = [
     inName: "East Sussex",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords in Brighton and Hove, Eastbourne, Hastings and Lewes.",
+    strap: "Fully managed lettings for landlords in Brighton and Hove, Eastbourne, Hastings and Lewes.",
     intro: [
       "East Sussex is anchored by Brighton and Hove, a city with two universities, a large hospital and one of the biggest digital and creative employment clusters outside London. Along the coast, Eastbourne and Hastings have their own hospitals, colleges and regeneration programmes, each bringing people who need a home for a fixed period.",
-      "Alali Homes leases properties across East Sussex on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We manage the property and its guests throughout, and you receive the same fixed sum on the same date whether or not it is occupied.",
+      "Alali Homes manages properties across East Sussex for vetted professional guests. We look after the property and its guests throughout, and pay you 85% of the rent your guests pay every month, with every month's income visible in your landlord portal.",
     ],
     demand: [
       {
@@ -257,7 +261,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties in Brighton that have been used as holiday lets?",
-        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We take it on under a guaranteed rent agreement for vetted professional guests, not holiday lets.",
+        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We take it on as a fully managed let for vetted professional guests, not holiday lets.",
       },
     ],
   },
@@ -269,10 +273,10 @@ export const AREAS: Area[] = [
     inName: "West Sussex",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords around Gatwick, Crawley, Horsham, Worthing and Chichester.",
+    strap: "Fully managed lettings for landlords around Gatwick, Crawley, Horsham, Worthing and Chichester.",
     intro: [
       "West Sussex is dominated by Gatwick Airport and the Manor Royal business district beside it in Crawley, together one of the largest employment sites in the South East. Airlines, ground handlers, engineering firms and the companies headquartered around the airport all need homes for staff and contractors on fixed-term arrangements.",
-      "Alali Homes leases properties across West Sussex on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We source and manage the guests, handle maintenance and compliance, and pay you the same amount every month regardless of occupancy.",
+      "Alali Homes manages properties across West Sussex for vetted professional guests. We source and manage the guests, handle maintenance, arrange the compliance checks, and pay you 85% of the rent your guests pay every month.",
     ],
     demand: [
       {
@@ -299,7 +303,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Will airport crews and shift workers look after my property?",
-        a: "Every guest is referenced and approved by us, and we inspect regularly through the term. Because the lease is with Alali Homes Ltd, the responsibility for the property's condition sits with us, not with the individual guest.",
+        a: "Every guest is referenced and approved by us, and we inspect regularly through the term. We manage the property day to day, so you deal with us, not with individual guests.",
       },
     ],
   },
@@ -311,10 +315,10 @@ export const AREAS: Area[] = [
     inName: "Hampshire",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords in Southampton, Portsmouth, Basingstoke, Winchester and Farnborough.",
+    strap: "Fully managed lettings for landlords in Southampton, Portsmouth, Basingstoke, Winchester and Farnborough.",
     intro: [
       "Hampshire has two port cities, a naval base, an army garrison, an aerospace cluster and a ring of company headquarters, which gives it some of the most varied contractor and professional-guest demand in the South East. People arrive for a refit, a deployment, a project or a relocation, and they need a proper home for the duration.",
-      "Alali Homes leases properties across Hampshire on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We manage the property and its guests from handover to return, and you receive a fixed income whether or not the property is occupied.",
+      "Alali Homes manages properties across Hampshire for vetted professional guests, from handover to return. We keep 15% of the rent your guests pay as our fee and pay you the rest every month, with a written statement.",
     ],
     demand: [
       {
@@ -353,10 +357,10 @@ export const AREAS: Area[] = [
     inName: "Berkshire",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords along the M4 corridor: Reading, Slough, Bracknell, Maidenhead and Newbury.",
+    strap: "Fully managed lettings for landlords along the M4 corridor: Reading, Slough, Bracknell, Maidenhead and Newbury.",
     intro: [
       "Berkshire is the heart of the M4 corridor, the strip of technology and company headquarters that runs west from Heathrow through Slough, Maidenhead, Bracknell and Reading. Companies here relocate staff, host visiting teams and bring in contractors on a continuous basis, and the Elizabeth line has tied the county's towns directly into central London.",
-      "Alali Homes leases properties across Berkshire on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We source and manage the guests and look after the property throughout. You receive a fixed sum on a fixed date, every month.",
+      "Alali Homes manages properties across Berkshire for vetted professional guests. We source and manage the guests and look after the property throughout, and you receive 85% of the rent your guests pay every month, with a written statement.",
     ],
     demand: [
       {
@@ -395,10 +399,10 @@ export const AREAS: Area[] = [
     inName: "Buckinghamshire",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords in Milton Keynes, High Wycombe, Aylesbury, Amersham and Marlow.",
+    strap: "Fully managed lettings for landlords in Milton Keynes, High Wycombe, Aylesbury, Amersham and Marlow.",
     intro: [
       "Buckinghamshire runs from the Metropolitan line commuter towns of Amersham and Chesham up to Milton Keynes, one of the largest concentrations of company headquarters and logistics operations in the country. Between them sit High Wycombe, Aylesbury and Marlow, and on the county's southern edge the film studios at Pinewood.",
-      "Alali Homes leases properties across Buckinghamshire on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We manage the property and the people living in it throughout, and you receive a fixed income regardless of occupancy.",
+      "Alali Homes manages properties across Buckinghamshire for vetted professional guests. We look after the property and the people staying in it throughout, and pay you 85% of the rent your guests pay every month.",
     ],
     demand: [
       {
@@ -437,10 +441,10 @@ export const AREAS: Area[] = [
     inName: "Oxfordshire",
     kind: "county",
     parent: "south-east",
-    strap: "Guaranteed rent for landlords in Oxford, Didcot, Bicester, Banbury and Abingdon.",
+    strap: "Fully managed lettings for landlords in Oxford, Didcot, Bicester, Banbury and Abingdon.",
     intro: [
       "Oxfordshire's demand comes from its universities, its hospitals and the science and engineering campuses that surround Oxford. Researchers, clinicians, engineers and visiting academics arrive on fixed-term contracts throughout the year, and Oxford's housing stock is tight enough that a furnished, managed home is always sought after.",
-      "Alali Homes leases properties across Oxfordshire on guaranteed rent agreements and pays landlords a guaranteed rent every month for the term. We take on the guests, the maintenance and the compliance, and you receive a fixed income for one to five years.",
+      "Alali Homes manages properties across Oxfordshire for vetted professional guests. We take on the guests and the maintenance, arrange the compliance checks, keep 15% of the rent your guests pay and pay you the rest every month.",
     ],
     demand: [
       {
@@ -467,7 +471,7 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties near the hospitals in Headington?",
-        a: "Yes. Clinicians and researchers on fixed placements at the John Radcliffe and Churchill are among the most consistent guests we place, and Headington properties are a strong fit.",
+        a: "Yes. Clinicians and researchers on fixed placements at the John Radcliffe and Churchill are a steady source of professional guests, and Headington properties are a strong fit.",
       },
     ],
   },

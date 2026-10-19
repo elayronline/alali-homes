@@ -5,13 +5,13 @@ import { AREAS } from "@/lib/areas"
 import { Skyline } from "@/components/Skyline"
 
 const stats = [
-  { value: "100%", label: "Your rent, guaranteed" },
-  { value: "0", label: "Void periods" },
-  { value: "1–5yr", label: "Agreement terms" },
+  { value: "85%", label: "Of the income is yours" },
+  { value: "15%", label: "Our fee, only when you earn" },
+  { value: "60%", label: "Of market rent, your quarterly floor" },
   { value: "24/7", label: "We handle everything" },
 ]
 
-const trust = ["UK registered & insured", "Zero void periods", "48-hour response"]
+const trust = ["UK registered & insured", "Your own landlord portal", "48-hour response"]
 
 /** CSS entrance: class + stagger delay via a custom property. */
 const rise = (delay = 0) => ({ style: { "--rise-delay": `${delay}s` } as React.CSSProperties })
@@ -28,26 +28,26 @@ export function Hero() {
       <div className="relative z-10 mx-auto grid max-w-6xl gap-14 px-4 pt-36 pb-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-20 lg:pt-44 lg:pb-28">
         <div>
           <span className="eyebrow">
-            Guaranteed Rent &amp; Hands-Off Management
+            Fully Managed Lettings for Landlords
           </span>
 
           <h1 className="display mt-8 text-[2.35rem] sm:text-[3.4rem] md:text-[4.3rem]">
-            Guaranteed Rent.
+            Fully Managed.
             <br />
-            Zero Voids.
+            Vetted Guests.
             <br />
-            <strong className="gold-text">Professionally Managed.</strong>
+            <strong className="gold-text">You Keep 85%.</strong>
           </h1>
 
           <p {...rise(0.2)} className="rise mt-7 max-w-xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">
-            We lease properties across London and the South East on guaranteed rent agreements,
-            host vetted professional guests, and manage everything, so landlords receive reliable
-            income every month without the hassle.
+            We manage properties across London and the South East for vetted professional guests.
+            We take care of everything, keep 15% of what your property earns, and pay you the rest
+            every month, with every pound tracked in your landlord portal.
           </p>
 
           <div {...rise(0.3)} className="rise mt-10 flex flex-wrap gap-4">
             <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow">
-              Get a Rent Quote
+              Get an Income Estimate
             </button>
             <button onClick={() => scrollToSection("process")} className="btn btn-outline-dark">
               How It Works
