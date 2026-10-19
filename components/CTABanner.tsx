@@ -6,7 +6,7 @@ import { Phone, Mail } from "lucide-react"
 
 const roleOptions = ["Landlord", "Letting Agent", "Estate Agent", "Other"]
 
-const reassurance = ["No obligation, no hard sell", "Written income estimate within 48 hours", "Your details are never shared"]
+const reassurance = ["No obligation, no hard sell", "A written income estimate for your property", "Your details are never shared"]
 
 export function CTABanner() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", role: "", postcode: "", message: "" })
@@ -62,7 +62,7 @@ export function CTABanner() {
               Let&apos;s start a <strong className="gold-text">conversation</strong>
             </h2>
             <p className="mt-5 font-body text-[0.95rem] font-light leading-[1.8] text-grey-600">
-              Tell us about your property and we&apos;ll come back with a written income estimate within 48 hours.
+              Tell us about your property and we&apos;ll come back to you with a written income estimate.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -101,8 +101,7 @@ export function CTABanner() {
               </div>
               <h3 className="mt-6 font-display text-xl font-semibold text-charcoal">Thank you — we&apos;ve received your details.</h3>
               <p className="mt-3 max-w-md font-body text-[0.92rem] text-grey-600">
-                A member of our team will review your property and be in touch within{" "}
-                <strong className="font-medium text-charcoal">48 hours</strong> with a written income estimate.
+                A member of our team will review your property and be in touch with a written income estimate.
               </p>
               <p className="mt-2 font-body text-[0.82rem] text-grey-500">Check your inbox and phone for our response.</p>
               <button

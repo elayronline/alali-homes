@@ -14,7 +14,7 @@ const steps = [
   {
     num: "02",
     title: "We Review & Propose",
-    desc: "We’ll assess your property and come back within 48 hours with a written income estimate, your income floor and a clear breakdown of how our 15% fee works.",
+    desc: "We’ll assess your property and come back to you with a written income estimate, your income floor and a clear breakdown of how our 15% fee works.",
     detail:
       "What you’ll receive: a written estimate, the proposed agreement terms, and a summary of what we manage on your behalf.",
   },
@@ -83,7 +83,7 @@ export function HowItWorks() {
             Get Started
           </button>
           <p className="mt-4 font-body text-[0.8rem] font-light text-grey-500">
-            No commitment. We&apos;ll get back to you within 48 hours.
+            No commitment. We&apos;ll be in touch to talk it through.
           </p>
         </motion.div>
       </div>

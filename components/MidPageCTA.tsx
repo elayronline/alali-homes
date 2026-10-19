@@ -14,7 +14,7 @@ export function MidPageCTA() {
       >
         <div>
           <h3 className="display text-[1.6rem] !text-charcoal sm:text-[2rem]">
-            Get a written income estimate within <strong>48 hours</strong>
+            Find out what your property <strong>could earn</strong>
           </h3>
           <p className="mt-2 font-body text-[0.92rem] text-charcoal/70">
             No commitment, no obligation. Just a straightforward conversation.

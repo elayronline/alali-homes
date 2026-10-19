@@ -6,9 +6,9 @@ import { Skyline } from "@/components/Skyline"
 
 const stats = [
   { value: "100%", label: "Working professionals, vetted" },
-  { value: "24/7", label: "We handle everything" },
-  { value: "48hr", label: "Written income estimate" },
   { value: "1", label: "Simple fee, the full service" },
+  { value: "60%", label: "Of market rent, your quarterly income floor" },
+  { value: "All", label: "Changeovers, cleans & inspections handled" },
 ]
 
 const trust = ["UK registered & insured", "Quarterly income floor", "Your own landlord portal"]
