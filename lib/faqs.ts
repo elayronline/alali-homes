@@ -10,7 +10,7 @@ export interface FAQItem {
 
 export const landlordFAQs: FAQItem[] = [
   {
-    question: "What does your fee cover?",
+    question: "How much do you charge, and what does it cover?",
     answer:
       "One fee covers the full service. We keep your property occupied with vetted working professionals, and handle every changeover in between: check-ins and check-outs, professional cleans and inspections, plus maintenance, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement. Because our fee is a share of what your property earns, we only do well when you do.",
   },

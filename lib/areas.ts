@@ -36,7 +36,7 @@ export interface Area {
 
 const SHARED_FAQS: AreaFAQ[] = [
   {
-    q: "What does your fee cover?",
+    q: "How much do you charge, and what does it cover?",
     a: "One fee covers the full service. We keep your property occupied with vetted working professionals, and handle every changeover in between: check-ins and check-outs, professional cleans and inspections, plus maintenance, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement.",
   },
   {

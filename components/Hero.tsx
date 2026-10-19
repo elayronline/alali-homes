@@ -4,7 +4,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 import { AREAS } from "@/lib/areas"
 import { Skyline } from "@/components/Skyline"
 
-const trust = ["UK registered & insured", "Quarterly income floor", "Your own landlord portal"]
+const trust = ["UK registered company", "Quarterly income floor", "Your own landlord portal"]
 
 /** CSS entrance: class + stagger delay via a custom property. */
 const rise = (delay = 0) => ({ style: { "--rise-delay": `${delay}s` } as React.CSSProperties })
@@ -25,9 +25,9 @@ export function Hero() {
           </span>
 
           <h1 className="display mt-8 text-[2.35rem] sm:text-[3.4rem] md:text-[4.3rem]">
-            Professional Occupants.
+            Professional Occupants.{" "}
             <br />
-            Every Detail Managed.
+            Every Detail Managed.{" "}
             <br />
             <strong className="gold-text">Income You Can See.</strong>
           </h1>

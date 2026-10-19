@@ -16,22 +16,21 @@ const badges = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M12 8v4M12 16h.01" />
+        <path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z" />
+        <path d="M14 3v5h5M9 13h6M9 17h4" />
       </svg>
     ),
-    title: "Public Liability Insurance",
-    subtitle: "Fully covered",
+    title: "Written Agreements",
+    subtitle: "Fee, income floor and notice agreed upfront",
   },
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="3" y="7" width="18" height="14" rx="2" />
-        <path d="M8 7V5a4 4 0 018 0v2" />
+        <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
       </svg>
     ),
-    title: "Professional Indemnity",
-    subtitle: "Insured operations",
+    title: "Landlord Portal",
+    subtitle: "Every month's income and payout reported",
   },
 ]
 
@@ -47,7 +46,7 @@ export function TrustCompliance() {
         >
           <span className="eyebrow eyebrow-center">About Alali Homes</span>
           <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
-            Fully Registered, Insured &amp; <strong className="gold-text">Compliant</strong>
+            Registered, Transparent &amp; <strong className="gold-text">Accountable</strong>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600">
             Alali Homes Ltd is a UK-registered property management company. We offer landlords a

@@ -22,7 +22,7 @@ const cards = [
   {
     num: "04",
     title: "Reputation Protected",
-    desc: "Professional, compliant, insured. Your landlord gets a premium service — your name stays clean.",
+    desc: "Professional, transparent and accountable. Your landlord gets a premium service, and your name stays clean.",
   },
 ]
 
