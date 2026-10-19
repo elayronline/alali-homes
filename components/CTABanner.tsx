@@ -167,7 +167,11 @@ export function CTABanner() {
                   "Get My Income Estimate"
                 )}
               </button>
-              <p className="text-center font-body text-[0.75rem] text-grey-500">Your details are safe. We never share your information with third parties.</p>
+              <p className="text-center font-body text-[0.75rem] text-grey-500">
+                Every estimate is a range based on local rental evidence, not a guarantee of income.
+                <br />
+                Your details are safe. We never share your information with third parties.
+              </p>
             </form>
           )}
         </div>
