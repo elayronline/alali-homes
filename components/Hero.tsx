@@ -8,7 +8,7 @@ const stats = [
   { value: "100%", label: "Working professionals, vetted" },
   { value: "24/7", label: "We handle everything" },
   { value: "48hr", label: "Written income estimate" },
-  { value: "Monthly", label: "Statements & portal access" },
+  { value: "1", label: "Simple fee, the full service" },
 ]
 
 const trust = ["UK registered & insured", "Quarterly income floor", "Your own landlord portal"]
