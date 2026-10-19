@@ -52,7 +52,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "Where do you operate?",
     answer:
-      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site.",
+      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site. We assess every property individually and take it on where we can manage it to our standard.",
   },
   {
     question: "What if I want my property back?",

@@ -157,6 +157,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div className="mx-auto mt-14 max-w-3xl border-l-2 border-gold pl-6">
               <h3 className="font-display text-xl font-semibold text-charcoal">Properties that work in {area.name}</h3>
               <p className="mt-3 font-body text-[0.98rem] leading-[1.85] text-grey-600">{area.properties}</p>
+              <p className="mt-3 font-body text-[0.98rem] leading-[1.85] text-grey-600">
+                We assess every property individually and take it on where we can manage it to our standard.
+              </p>
             </div>
           </div>
         </section>
