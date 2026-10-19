@@ -4,19 +4,20 @@ import { motion } from "framer-motion"
 import { scrollToSection } from "@/lib/smoothScroll"
 
 const painPoints = [
-  "Months of void periods eating into your returns?",
   "Chasing tenants for late or missed rent?",
   "Unexpected maintenance calls at all hours?",
   "Navigating ever-changing compliance regulations?",
   "Tired of the hassle but don’t want to sell?",
+  "Want to see exactly what your property earns?",
 ]
 
 const benefits = [
-  { title: "Guaranteed Monthly Rent", desc: "Paid whether the property is occupied or not." },
-  { title: "Full Property Management", desc: "Guests, maintenance, check-ins, emergencies." },
-  { title: "Compliance Covered", desc: "Gas safety, EICR, EPC, smoke/CO alarms." },
-  { title: "Flexible Terms", desc: "1–5 year agreements, clear terms, no hidden fees." },
-  { title: "Property Protection", desc: "Regular inspections, professional cleaning, condition guarantee." },
+  { title: "Vetted Professional Occupants", desc: "Working professionals only, every one approved by us." },
+  { title: "A Quarterly Income Floor", desc: "We reduce or waive our fee if a quarter falls short." },
+  { title: "Income You Can See", desc: "Paid monthly, with a statement and your own landlord portal." },
+  { title: "Full Property Management", desc: "Occupants, maintenance, check-ins, emergencies." },
+  { title: "Compliance Arranged", desc: "Gas safety, EICR, EPC, smoke/CO alarms, booked and tracked." },
+  { title: "Property Protection", desc: "Regular inspections, professional cleaning, agreed condition standards." },
 ]
 
 export function ForLandlords() {
@@ -31,8 +32,8 @@ export function ForLandlords() {
         >
           <span className="eyebrow">For Landlords</span>
           <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
-            Your Property. Our Responsibility.{" "}
-            <strong className="gold-text">Your Guaranteed Rent.</strong>
+            Your Property. Our Work.{" "}
+            <strong className="gold-text">Your Income, Every Month.</strong>
           </h2>
         </motion.div>
 

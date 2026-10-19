@@ -2,8 +2,8 @@ import { Instagram } from "lucide-react"
 import { COUNTIES, REGIONS } from "@/lib/areas"
 
 const areaLinks = [
-  ...REGIONS.map((r) => ({ label: `Guaranteed Rent ${r.name.replace(/^the /, "")}`, href: `/guaranteed-rent/${r.slug}` })),
-  ...COUNTIES.map((c) => ({ label: c.name, href: `/guaranteed-rent/${c.slug}` })),
+  ...REGIONS.map((r) => ({ label: `Property Management ${r.name.replace(/^the /, "")}`, href: `/property-management/${r.slug}` })),
+  ...COUNTIES.map((c) => ({ label: c.name, href: `/property-management/${c.slug}` })),
 ]
 
 const companyLinks = [
@@ -15,8 +15,8 @@ const companyLinks = [
 
 const serviceLinks = [
   { label: "Hands-Off Management", href: "/#landlords" },
-  { label: "Guaranteed Rent", href: "/#landlords" },
-  { label: "Professional Guests", href: "/#value" },
+  { label: "Landlord Portal", href: "/#portal" },
+  { label: "Professional Occupants", href: "/#value" },
   { label: "Property Management", href: "/#about" },
 ]
 
@@ -55,15 +55,15 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <div aria-label="Alali Homes — Guaranteed Rent & Hands-Off Management">
+            <div aria-label="Alali Homes, fully managed lettings for landlords">
               <span className="font-display text-3xl font-light tracking-wide text-white">Alali</span>
               <span className="ml-2 font-display text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-gold">
                 Homes
               </span>
             </div>
             <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/70">
-              Guaranteed rent and hands-off management for landlords in London and the South East.
-              Professional guests, zero voids.
+              Fully managed lettings for landlords in London and the South East. Vetted professional
+              occupants, every detail managed, and your income tracked month by month.
             </p>
             <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">
               <a href="tel:+442045158438" className="block transition-colors hover:text-gold-light">020 4515 8438</a>

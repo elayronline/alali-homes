@@ -2,66 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-
-interface FAQItem {
-  question: string
-  answer: string
-}
-
-const landlordFAQs: FAQItem[] = [
-  {
-    question: "How is the rent actually guaranteed?",
-    answer:
-      "We sign a legally binding lease with you and pay an agreed rent every month for the contract term. This obligation sits with Alali Homes Ltd regardless of occupancy.",
-  },
-  {
-    question: "What happens if the property sits empty?",
-    answer: "You still get paid. That’s the entire point. The void risk is ours, not yours.",
-  },
-  {
-    question: "Is this Airbnb or holiday letting?",
-    answer:
-      "No. We do not take holiday bookings. Every guest is a working professional who has passed our vetting process. No parties, no unknown guests, and the property is inspected and professionally cleaned throughout the term.",
-  },
-  {
-    question: "Will you change or damage my property?",
-    answer:
-      "Any changes are agreed in writing before we start. We conduct regular inspections, professional cleans, and return the property to the agreed standard at the end of the term.",
-  },
-  {
-    question: "Who will stay in my property?",
-    answer:
-      "Working professionals only. Every guest goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly through the term.",
-  },
-  {
-    question: "Who is responsible for compliance works?",
-    answer:
-      "If compliance works are needed before we take the property on, responsibilities are agreed in writing before signing.",
-  },
-  {
-    question: "Where do you operate?",
-    answer:
-      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site.",
-  },
-  {
-    question: "What if I want my property back early?",
-    answer:
-      "Break clauses and notice periods are built into every agreement. We walk you through exit terms before you commit.",
-  },
-]
-
-const agentFAQs: FAQItem[] = [
-  {
-    question: "Do you compete with letting agents?",
-    answer:
-      "No. We’re an operator, not a letting agent. We don’t list on Rightmove or compete for management fees. We partner with agents to offer an alternative for landlords who want guaranteed income.",
-  },
-  {
-    question: "How does the referral work?",
-    answer:
-      "You introduce the landlord. We handle everything from assessment to onboarding. Referral terms are agreed in writing upfront. Agents are expected to disclose any referral arrangement to their client in line with the Estate Agents Act 1979.",
-  },
-]
+import { agentFAQs, landlordFAQs, type FAQItem } from "@/lib/faqs"
 
 function FAQAccordion({ item }: { item: FAQItem }) {
   const [open, setOpen] = useState(false)
@@ -100,8 +41,8 @@ function FAQAccordion({ item }: { item: FAQItem }) {
 }
 
 export function FAQ() {
-  const left = [...landlordFAQs.slice(0, 3), ...agentFAQs]
-  const right = landlordFAQs.slice(3)
+  const left = [...landlordFAQs.slice(0, 4), ...agentFAQs]
+  const right = landlordFAQs.slice(4)
 
   return (
     <section id="faq" className="bg-white px-4 py-20 sm:px-6 sm:py-28">

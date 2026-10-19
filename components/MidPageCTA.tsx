@@ -14,14 +14,14 @@ export function MidPageCTA() {
       >
         <div>
           <h3 className="display text-[1.6rem] !text-charcoal sm:text-[2rem]">
-            Get a guaranteed rent figure within <strong>48 hours</strong>
+            Find out what your property <strong>could earn</strong>
           </h3>
           <p className="mt-2 font-body text-[0.92rem] text-charcoal/70">
-            No commitment, no obligation. Just a straightforward conversation.
+            No commitment, no obligation. Every estimate is a range based on local evidence, not a guarantee.
           </p>
         </div>
         <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow shrink-0">
-          Get My Quote
+          Get My Estimate
         </button>
       </motion.div>
     </section>

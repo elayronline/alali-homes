@@ -9,21 +9,21 @@ const steps = [
     title: "Get in Touch",
     desc: "Contact us via the form or phone. Tell us about your property — location, type, bedrooms, and current situation. No commitment at this stage.",
     detail:
-      "What we need: basic property details and what you’re looking for — guaranteed rent, full management, or both.",
+      "What we need: basic property details and what you’d like from your property.",
   },
   {
     num: "02",
     title: "We Review & Propose",
-    desc: "We’ll assess your property and come back within 48 hours with a guaranteed rent figure and a clear breakdown of how the arrangement works.",
+    desc: "We’ll assess your property and come back to you with a written income estimate, your income floor and a clear breakdown of how our 15% fee works.",
     detail:
-      "What you’ll receive: a written rent offer, proposed agreement length, and a summary of what we manage on your behalf.",
+      "What you’ll receive: a written estimate, the proposed agreement terms, and a summary of what we manage on your behalf.",
   },
   {
     num: "03",
     title: "Agreement & Handover",
-    desc: "Once terms are agreed, we sign the contract, arrange any compliance works, and take over the property. Your guaranteed rent starts from the agreed date.",
+    desc: "Once terms are agreed, we sign the agreement, arrange any compliance works, and prepare the property for its first occupants. You follow every month’s income in your landlord portal.",
     detail:
-      "What happens next: we confirm the property is the right fit, help bring it to standard where needed, and agree your first day of rent.",
+      "What happens next: we confirm the property is the right fit, help bring it to standard where needed, and agree a start date.",
   },
 ]
 
@@ -39,7 +39,7 @@ export function HowItWorks() {
         >
           <span className="eyebrow eyebrow-center">The Process</span>
           <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
-            Three Steps to <strong className="gold-text">Guaranteed Rent</strong>
+            Three Steps to a <strong className="gold-text">Fully Managed Property</strong>
           </h2>
         </motion.div>
 
@@ -83,7 +83,7 @@ export function HowItWorks() {
             Get Started
           </button>
           <p className="mt-4 font-body text-[0.8rem] font-light text-grey-500">
-            No commitment. We&apos;ll get back to you within 48 hours.
+            No commitment. We&apos;ll be in touch to talk it through.
           </p>
         </motion.div>
       </div>

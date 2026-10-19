@@ -12,12 +12,12 @@ const cards = [
   {
     num: "02",
     title: "Solve Problem Stock",
-    desc: "Hard-to-let, high-void, or landlord-frustrated properties — we take them on and guarantee rent.",
+    desc: "Hard-to-let, high-void, or landlord-frustrated properties: we take them on and manage them for professional occupants.",
   },
   {
     num: "03",
     title: "We’re Not Competitors",
-    desc: "We’re an operator, not a letting agent. We don’t list on portals or compete for your management fees.",
+    desc: "We don’t list on portals or take on conventional long-term lets, so we never compete for your instructions.",
   },
   {
     num: "04",
@@ -48,9 +48,9 @@ export function ForAgents() {
             transition={{ delay: 0.1 }}
             className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-white/75"
           >
-            Not every landlord wants traditional letting. Some want guaranteed income. Others need a
-            hands-off solution for hard-to-let stock. That&apos;s where we come in — and you earn for
-            every successful referral.
+            Not every landlord wants traditional letting. Some want a hands-off option with income they
+            can track month by month. Others need a solution for hard-to-let stock. That&apos;s where we
+            come in, and you earn for every successful referral.
           </motion.p>
         </div>
 

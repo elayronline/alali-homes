@@ -20,27 +20,27 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
-  title: "Guaranteed Rent, London & the South East | Alali Homes",
+  title: "Property Management London & South East | Alali Homes",
   description:
-    "Guaranteed rent every month for landlords in London and the South East. We host vetted professional guests and manage everything. Zero voids.",
+    "Fully managed lettings in London and the South East. Vetted professional occupants, every detail handled, and your own landlord portal.",
   keywords: [
-    "guaranteed rent",
-    "guaranteed rent scheme",
-    "guaranteed rent London",
-    "guaranteed rent South East",
+    "property management London",
+    "property management South East",
+    "fully managed lettings",
+    "fully managed letting service",
     "hands-off property management",
     "hands-off property management for landlords",
-    "landlord guaranteed income",
-    "zero void periods",
+    "landlord portal",
+    "professional occupants",
     "Alali Homes",
   ],
   alternates: {
     canonical: "https://www.alalihomes.com",
   },
   openGraph: {
-    title: "Guaranteed Rent, London & the South East | Alali Homes",
+    title: "Property Management London & South East | Alali Homes",
     description:
-      "We lease your property, pay guaranteed rent every month, host vetted professional guests and manage everything. No voids. No hassle.",
+      "Vetted professional occupants and a fully hands-off service, with your income tracked month by month in your own landlord portal.",
     url: "https://www.alalihomes.com",
     siteName: "Alali Homes",
     type: "website",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Alali Homes — Guaranteed Rent & Hands-Off Management for Landlords",
+        alt: "Alali Homes, fully managed lettings for landlords",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guaranteed Rent, London & the South East | Alali Homes",
+    title: "Property Management London & South East | Alali Homes",
     description:
-      "UK landlords: get guaranteed rent, zero voids, and fully managed properties with Alali Homes.",
+      "Fully managed lettings for landlords: vetted professional occupants, every detail handled, and a landlord portal.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -97,7 +97,7 @@ const orgSchema = {
   },
   foundingDate: "2026-03-16",
   description:
-    "Guaranteed rent and property management company for landlords in London and the South East. We lease the property, host vetted professional guests and manage everything. Zero voids, 1–5 year agreements.",
+    "Property management company for landlords in London and the South East. We place vetted professional occupants, manage everything, and report every month's income through a landlord portal.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",
@@ -136,10 +136,10 @@ const orgSchema = {
     value: "2-10",
   },
   knowsAbout: [
-    "Guaranteed Rent",
     "Property Management",
     "Residential Lettings",
-    "Guest Vetting",
+    "Occupant Vetting",
+    "Landlord Revenue Share",
   ],
 }
 
@@ -150,7 +150,7 @@ const websiteSchema = {
   name: "Alali Homes",
   url: "https://www.alalihomes.com",
   description:
-    "Guaranteed rent and hands-off management for landlords in London and the South East. Zero voids, 1–5 year agreements.",
+    "Fully managed lettings for landlords in London and the South East, with a quarterly income floor and a landlord portal.",
   publisher: {
     "@type": "Organization",
     name: "Alali Homes Ltd",
