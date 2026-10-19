@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy" updated="19 October 2026">
+    <LegalPage title="Privacy Policy" updated="8 September 2026">
       <section>
         <h2>Who we are</h2>
         <p>
@@ -61,11 +61,6 @@ export default function PrivacyPolicy() {
           When you submit the form, your details are delivered to our inbox by Web3Forms, a form
           delivery service. This website is hosted by Vercel, which also provides the cookieless
           page-view analytics. Both act as processors on our behalf.
-        </p>
-        <p>
-          If you use the area rent check on our homepage, the postcode you enter is sent from our
-          server to postcodes.io, a free postcode lookup service, only to find your local authority.
-          We do not store the postcode or link it to you.
         </p>
       </section>
 
