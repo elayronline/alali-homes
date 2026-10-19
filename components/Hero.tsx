@@ -4,13 +4,6 @@ import { scrollToSection } from "@/lib/smoothScroll"
 import { AREAS } from "@/lib/areas"
 import { Skyline } from "@/components/Skyline"
 
-const stats = [
-  { value: "100%", label: "Working professionals, vetted" },
-  { value: "1", label: "Simple fee, the full service" },
-  { value: "60%", label: "Of market rent, your quarterly income floor" },
-  { value: "All", label: "Changeovers, cleans & inspections handled" },
-]
-
 const trust = ["UK registered & insured", "Quarterly income floor", "Your own landlord portal"]
 
 /** CSS entrance: class + stagger delay via a custom property. */
@@ -25,8 +18,8 @@ export function Hero() {
     <section id="hero" className="light-glow relative overflow-hidden bg-white">
       <Skyline />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl gap-14 px-4 pt-36 pb-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-20 lg:pt-44 lg:pb-28">
-        <div>
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pt-36 pb-20 sm:px-6 lg:pt-44 lg:pb-28">
+        <div className="max-w-4xl">
           <span className="eyebrow">
             Fully Managed Lettings for Landlords
           </span>
@@ -63,38 +56,6 @@ export function Hero() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div {...rise(0.35)} className="rise lg:justify-self-end">
-          <div className="float card relative w-full max-w-md p-8 sm:p-10">
-            <span className="absolute top-0 left-10 h-px w-28 bg-gradient-to-r from-gold to-transparent" />
-            <p className="eyebrow">The Alali Promise</p>
-
-            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-9">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <p className="numeral gold-text text-[2.5rem] sm:text-[2.9rem]">{s.value}</p>
-                  <p className="mt-2 font-body text-[0.8rem] text-grey-600">{s.label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-9 flex items-center justify-between gap-4 border-t border-gold/15 pt-6">
-              <span className="flex items-center gap-2.5 font-body text-[0.8rem] text-charcoal">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-                </span>
-                Accepting properties now
-              </span>
-              <button
-                onClick={() => scrollToSection("process")}
-                className="cursor-pointer font-body text-[0.8rem] font-medium text-gold-deep transition-colors hover:text-gold"
-              >
-                See how &rarr;
-              </button>
-            </div>
-          </div>
         </div>
       </div>
 
