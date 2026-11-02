@@ -29,7 +29,7 @@ function Volume({ x, w, h, gable = 0, chimney, tone = 1 }: Vol & { tone?: number
   return (
     <g opacity={tone}>
       {/* contact shadow */}
-      <ellipse cx={x + w / 2 + 8} cy={GROUND + 3} rx={w * 0.62} ry={7} fill="url(#contact)" style={{ mixBlendMode: "multiply" }} />
+      <ellipse cx={x + w / 2 + 8} cy={GROUND + 3} rx={w * 0.62} ry={7} fill="url(#contactShadow)" style={{ mixBlendMode: "multiply" }} />
       {/* cast shadow to the right */}
       <polygon
         points={`${x + w},${GROUND} ${x + w + D + h * 0.32},${GROUND - U * 0.3} ${x + w + D + h * 0.32 + 26},${GROUND + 4} ${x + w + 6},${GROUND + 4}`}
@@ -135,7 +135,7 @@ export function Skyline({ className = "" }: { className?: string }) {
           <stop offset="0" stopColor="#b9a87e" stopOpacity="0" />
           <stop offset="1" stopColor="#b9a87e" stopOpacity="0.16" />
         </linearGradient>
-        <radialGradient id="contact" cx="0.5" cy="0.5" r="0.5">
+        <radialGradient id="contactShadow" cx="0.5" cy="0.5" r="0.5">
           <stop offset="0" stopColor="#8f7c52" stopOpacity="0.28" />
           <stop offset="1" stopColor="#8f7c52" stopOpacity="0" />
         </radialGradient>
