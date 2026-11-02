@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { GoldDivider } from "@/components/GoldDivider"
 import { HashScroll } from "@/components/HashScroll"
-import { LandlordPortal } from "@/components/LandlordPortal"
+import { PropertyTypes } from "@/components/PropertyTypes"
 import { AREA_SERVED } from "@/lib/areas"
 import { agentFAQs, landlordFAQs } from "@/lib/faqs"
 
@@ -30,20 +30,23 @@ const faqSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Fully Managed Lettings for Landlords",
+  "@id": "https://www.alalihomes.com/#service",
+  name: "Guaranteed Rent for Landlords",
+  alternateName: ["Corporate Lets", "Guaranteed Rent Scheme", "Company Let"],
   description:
-    "Alali Homes places vetted professional occupants in your property, handles everything day to day, and reports every month's income through a landlord portal, with a quarterly income floor.",
-  provider: {
-    "@type": "Organization",
-    name: "Alali Homes Ltd",
-    url: "https://www.alalihomes.com",
-  },
+    "Alali Homes leases licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, paying landlords a guaranteed fixed rent every month with full property management and dedicated tenant support included.",
+  provider: { "@id": "https://www.alalihomes.com/#organization" },
   areaServed: AREA_SERVED,
-  serviceType: "Property Management",
-  offers: {
-    "@type": "Offer",
-    description: "Management fee of 15% of the rent paid by occupants, with a quarterly income floor.",
-    priceCurrency: "GBP",
+  serviceType: "Guaranteed Rent",
+  audience: { "@type": "Audience", audienceType: "Landlords and property owners" },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Properties we lease on guaranteed rent",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guaranteed rent for licensed HMOs", url: "https://www.alalihomes.com/hmo-guaranteed-rent" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate lets for 2-4 bedroom properties", url: "https://www.alalihomes.com/corporate-lets" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate lets for 1-bedroom self-contained flats", url: "https://www.alalihomes.com/corporate-lets" } },
+    ],
   },
 }
 
@@ -60,7 +63,7 @@ export default function Home() {
         <ValueProposition />
         <GoldDivider />
         <ForLandlords />
-        <LandlordPortal />
+        <PropertyTypes />
         <MidPageCTA />
         <ForAgents />
         <GoldDivider />

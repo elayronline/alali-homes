@@ -1,23 +1,27 @@
 # Alali Homes
 
-> Alali Homes Ltd is a property management company offering fully managed lettings to landlords in London and the South East. We keep landlords' properties occupied with vetted working professionals on fixed-term stays, handle every changeover, and report every month's income through a landlord portal.
+> Alali Homes Ltd is a guaranteed rent and corporate lettings company for landlords in London and the South East. It leases existing licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, pays the landlord a fixed rent every month whether or not the property is occupied, and provides full property management and dedicated tenant support for the whole term.
 
 ## Key facts
 
 - Company: Alali Homes Ltd, registered in England and Wales, company number 17095100, registered office 86-90 Paul Street, London EC2A 4NE.
 - Contact: info@alalihomes.com, 020 4515 8438, or the enquiry form at https://www.alalihomes.com/#contact
-- Areas: all 32 London boroughs, plus Kent, Surrey, East Sussex, West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Every property is assessed individually.
-- Who stays: working professionals only, such as people relocating for work, on contract placements, or placed by their employer. Every occupant is vetted. Not holiday lets.
-- Fee: 15% of the rent occupants pay. The landlord receives the other 85% every month with a written statement. The fee covers keeping the property occupied, vetting, check-ins and check-outs, cleans and inspections between occupants, maintenance coordination, compliance tracking and the landlord portal.
-- Income floor: if a landlord's payouts across a quarter fall below 60% of the property's long-term market rent, Alali Homes reduces or waives its fee for that quarter to make up the difference, up to the full value of the fee. The market rent figure and conditions are agreed in writing; the floor applies from the second quarter.
-- Not guaranteed rent or rent-to-rent: Alali Homes manages the property on the landlord's behalf, so the income belongs to the landlord.
-- Estimates: landlords receive a written income estimate for their property, given as a range based on local evidence, not a guarantee.
+- Service: guaranteed rent on a corporate lease (company let). Alali Homes Ltd is the landlord's tenant, so the landlord has one tenant, one monthly rent payment and one point of contact.
+- Lease length: 3 to 5 years. Rent, term, break clause and notice periods are agreed in writing before the landlord signs.
+- Guarantee: the agreed rent is paid every month for the full term regardless of occupancy. Voids and arrears are Alali Homes' risk, not the landlord's.
+- Property types: existing licensed HMOs, 2-4 bedroom houses and flats, and 1-bedroom self-contained flats.
+- Included: full property management (maintenance and repairs coordination, regular inspections, compliance tracking), dedicated support for tenants, and the property professionally maintained throughout the lease and returned in the agreed condition, allowing for fair wear and tear.
+- HMOs: taken on as licensed and managed in line with the licence conditions and HMO management regulations. Licence-holder and manager responsibilities are agreed in writing.
+- Compliance: the owner remains legally responsible for certain safety certificates (gas safety, EICR, EPC); Alali Homes tracks renewals and arranges them where agreed.
+- Areas: all 32 London boroughs, plus Kent, Surrey, East Sussex, West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Every property is assessed individually and receives a written rent offer if it is a good fit.
 - Agents: letting and estate agents can refer landlords and earn a referral fee, agreed in writing.
 
 ## Pages
 
-- [Home](https://www.alalihomes.com/): the full service, landlord portal, process and FAQ
-- [Property management in London](https://www.alalihomes.com/property-management/london)
-- [Property management in the South East](https://www.alalihomes.com/property-management/south-east)
-- County pages: [Kent](https://www.alalihomes.com/property-management/kent), [Surrey](https://www.alalihomes.com/property-management/surrey), [East Sussex](https://www.alalihomes.com/property-management/east-sussex), [West Sussex](https://www.alalihomes.com/property-management/west-sussex), [Hampshire](https://www.alalihomes.com/property-management/hampshire), [Berkshire](https://www.alalihomes.com/property-management/berkshire), [Buckinghamshire](https://www.alalihomes.com/property-management/buckinghamshire), [Oxfordshire](https://www.alalihomes.com/property-management/oxfordshire)
-- [Privacy policy](https://www.alalihomes.com/privacy), [Terms of use](https://www.alalihomes.com/terms)
+- [Home](https://www.alalihomes.com/): guaranteed rent, property types, process and FAQ
+- [HMO guaranteed rent](https://www.alalihomes.com/hmo-guaranteed-rent): guaranteed rent for licensed HMOs
+- [Corporate lets](https://www.alalihomes.com/corporate-lets): corporate lets for 2-4 bed properties and 1-bed flats
+- [Guaranteed rent London](https://www.alalihomes.com/guaranteed-rent/london)
+- [Guaranteed rent South East](https://www.alalihomes.com/guaranteed-rent/south-east)
+- County pages: [Kent](https://www.alalihomes.com/guaranteed-rent/kent), [Surrey](https://www.alalihomes.com/guaranteed-rent/surrey), [East Sussex](https://www.alalihomes.com/guaranteed-rent/east-sussex), [West Sussex](https://www.alalihomes.com/guaranteed-rent/west-sussex), [Hampshire](https://www.alalihomes.com/guaranteed-rent/hampshire), [Berkshire](https://www.alalihomes.com/guaranteed-rent/berkshire), [Buckinghamshire](https://www.alalihomes.com/guaranteed-rent/buckinghamshire), [Oxfordshire](https://www.alalihomes.com/guaranteed-rent/oxfordshire)
+- [Policies and statements](https://www.alalihomes.com/policies): modern slavery statement, complaints procedure, anti-bribery, equality and diversity, privacy, accessibility, cookies, terms

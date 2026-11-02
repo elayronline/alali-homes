@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const area = getArea(slug)
   if (!area) return {}
-  const title = `Property Management ${area.name.replace(/^the /, "")} | Alali Homes`
-  const description = `Fully managed lettings for landlords in ${area.name}. Vetted professional occupants, every detail managed, and your own landlord portal.`
-  const url = `${SITE}/property-management/${area.slug}`
+  const title = `Guaranteed Rent ${area.name.replace(/^the /, "")} | Corporate Lets | Alali Homes`
+  const description = `Guaranteed rent in ${area.name}: a fixed monthly rent on a 3–5 year corporate lease for HMOs, 2–4 bed and 1-bed flats, fully managed.`
+  const url = `${SITE}/guaranteed-rent/${area.slug}`
   return {
     title,
     description,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: "Alali Homes",
       type: "website",
       locale: "en_GB",
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `Property management in ${area.name} with Alali Homes` }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `Guaranteed rent in ${area.name} with Alali Homes` }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
   }
@@ -48,7 +48,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const parent = area.parent ? getArea(area.parent) : undefined
   const children = getChildren(area.slug)
   const siblings = parent ? getChildren(parent.slug).filter((a) => a.slug !== area.slug) : []
-  const url = `${SITE}/property-management/${area.slug}`
+  const url = `${SITE}/guaranteed-rent/${area.slug}`
   const displayName = area.name.replace(/^the /, "")
 
   const breadcrumb = {
@@ -57,9 +57,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE },
       ...(parent
-        ? [{ "@type": "ListItem", position: 2, name: `Property Management ${parent.name.replace(/^the /, "")}`, item: `${SITE}/property-management/${parent.slug}` }]
+        ? [{ "@type": "ListItem", position: 2, name: `Guaranteed Rent ${parent.name.replace(/^the /, "")}`, item: `${SITE}/guaranteed-rent/${parent.slug}` }]
         : []),
-      { "@type": "ListItem", position: parent ? 3 : 2, name: `Property Management ${displayName}`, item: url },
+      { "@type": "ListItem", position: parent ? 3 : 2, name: `Guaranteed Rent ${displayName}`, item: url },
     ],
   }
 
@@ -67,8 +67,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${url}#service`,
-    name: `Fully Managed Lettings for Landlords in ${area.name}`,
-    serviceType: "Property Management",
+    name: `Guaranteed Rent for Landlords in ${area.name}`,
+    serviceType: "Guaranteed Rent",
     description: area.strap,
     url,
     provider: { "@id": `${SITE}/#organization` },
@@ -76,7 +76,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       "@type": area.kind === "region" && area.slug === "london" ? "City" : "AdministrativeArea",
       name: displayName,
     },
-    offers: { "@type": "Offer", description: "Management fee of 15% of the rent paid by occupants, with a quarterly income floor.", priceCurrency: "GBP" },
+    audience: { "@type": "Audience", audienceType: "Landlords and property owners" },
   }
 
   const faq = {
@@ -107,20 +107,20 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 {parent && (
                   <>
                     <li aria-hidden="true">/</li>
-                    <li><Link href={`/property-management/${parent.slug}`} className="hover:text-gold-dark">{parent.name.replace(/^the /, "")}</Link></li>
+                    <li><Link href={`/guaranteed-rent/${parent.slug}`} className="hover:text-gold-dark">{parent.name.replace(/^the /, "")}</Link></li>
                   </>
                 )}
                 <li aria-hidden="true">/</li>
                 <li aria-current="page" className="text-charcoal">{displayName}</li>
               </ol>
             </nav>
-            <span className="eyebrow mt-8">Property Management {displayName}</span>
+            <span className="eyebrow mt-8">Corporate Lets {displayName}</span>
             <h1 className="display mt-6 max-w-4xl text-[2.2rem] sm:text-[3.1rem] md:text-[3.9rem]">
-              Fully Managed Lettings in <strong className="gold-text">{area.name}</strong>
+              Guaranteed Rent in <strong className="gold-text">{area.name}</strong>
             </h1>
             <p className="mt-6 max-w-2xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">{area.strap}</p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#contact" className="btn btn-gold btn-arrow">Get an Income Estimate</a>
+              <a href="#contact" className="btn btn-gold btn-arrow">Get a Guaranteed Rent Offer</a>
               <a href="#process" className="btn btn-outline-dark">How It Works</a>
             </div>
           </div>
@@ -141,13 +141,13 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         <section className="bg-white px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-6xl">
             <div className="text-center">
-              <span className="eyebrow eyebrow-center">Who Stays Here</span>
+              <span className="eyebrow eyebrow-center">What We Lease</span>
               <h2 className="display mt-5 text-[1.8rem] sm:text-[2.3rem] md:text-[2.7rem]">
-                Where the demand in <strong className="gold-text">{area.name}</strong> comes from
+                Properties we take on in <strong className="gold-text">{area.name}</strong>
               </h2>
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {area.demand.map((d) => (
+              {area.stock.map((d) => (
                 <div key={d.title} className="card p-7">
                   <h3 className="font-display text-lg font-semibold text-charcoal">{d.title}</h3>
                   <p className="mt-3 font-body text-[0.92rem] leading-[1.8] text-grey-600">{d.text}</p>
@@ -155,10 +155,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               ))}
             </div>
             <div className="mx-auto mt-14 max-w-3xl border-l-2 border-gold pl-6">
-              <h3 className="font-display text-xl font-semibold text-charcoal">Properties that work in {area.name}</h3>
+              <h3 className="font-display text-xl font-semibold text-charcoal">What you get in {area.name}</h3>
               <p className="mt-3 font-body text-[0.98rem] leading-[1.85] text-grey-600">{area.properties}</p>
               <p className="mt-3 font-body text-[0.98rem] leading-[1.85] text-grey-600">
-                We assess every property individually and take it on where we can manage it to our standard.
+                We assess every property individually and make a written rent offer where it is a good fit.
               </p>
             </div>
           </div>
@@ -175,11 +175,11 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 {children.map((c) => (
                   <li key={c.slug}>
                     <Link
-                      href={`/property-management/${c.slug}`}
+                      href={`/guaranteed-rent/${c.slug}`}
                       className="card block p-6"
                     >
                       <span className="font-display text-base font-semibold text-charcoal">{c.name}</span>
-                      <span className="mt-1 block font-body text-[0.82rem] text-grey-600">Property management in {c.name}</span>
+                      <span className="mt-1 block font-body text-[0.82rem] text-grey-600">Guaranteed rent in {c.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -218,7 +218,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             <div className="text-center">
               <span className="eyebrow eyebrow-center">FAQ</span>
               <h2 className="display mt-5 text-[1.8rem] sm:text-[2.3rem]">
-                Property management in {area.name}: <strong className="gold-text">common questions</strong>
+                Guaranteed rent in {area.name}: <strong className="gold-text">common questions</strong>
               </h2>
             </div>
             <dl className="mt-10 divide-y divide-gold/15">
@@ -239,13 +239,13 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <h2 className="eyebrow">Other areas we cover</h2>
               <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-body text-[0.9rem]">
                 {REGIONS.filter((r) => r.slug !== area.slug && r.slug !== area.parent).map((r) => (
-                  <li key={r.slug}><Link href={`/property-management/${r.slug}`} className="text-charcoal hover:text-gold">Property management {r.name}</Link></li>
+                  <li key={r.slug}><Link href={`/guaranteed-rent/${r.slug}`} className="text-charcoal hover:text-gold">Guaranteed rent {r.name.replace(/^the /, "")}</Link></li>
                 ))}
                 {parent && (
-                  <li><Link href={`/property-management/${parent.slug}`} className="text-charcoal hover:text-gold">All of {parent.name}</Link></li>
+                  <li><Link href={`/guaranteed-rent/${parent.slug}`} className="text-charcoal hover:text-gold">All of {parent.name}</Link></li>
                 )}
                 {siblings.map((s) => (
-                  <li key={s.slug}><Link href={`/property-management/${s.slug}`} className="text-charcoal hover:text-gold">{s.name}</Link></li>
+                  <li key={s.slug}><Link href={`/guaranteed-rent/${s.slug}`} className="text-charcoal hover:text-gold">{s.name}</Link></li>
                 ))}
               </ul>
             </div>

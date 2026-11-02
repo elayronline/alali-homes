@@ -1,10 +1,13 @@
 /**
- * Areas Alali Homes covers. Each entry drives one page at /property-management/[slug].
+ * Areas Alali Homes covers. Each entry drives one page at /guaranteed-rent/[slug].
  *
  * Content rules (keep them):
  * - No rent figures, yields, counts or statistics. Nothing here may claim a number
  *   about the local market or about Alali Homes' track record.
- * - Demand drivers are well-known employers, institutions and infrastructure only.
+ * - Never describe who lives in the properties. We lease to providers under corporate
+ *   lease agreements, so the copy is about the landlord's offer only.
+ * - Licensing statements stay general (councils set their own schemes). Never name a
+ *   borough's scheme or an Article 4 direction here without checking it is in force.
  * - Adding an area = adding an entry. The page, sitemap and links pick it up.
  */
 
@@ -26,7 +29,9 @@ export interface Area {
   /** Short line under the H1 */
   strap: string
   intro: string[]
-  demand: { title: string; text: string }[]
+  /** The three property types we lease, described for this area */
+  stock: { title: string; text: string }[]
+  /** "What you get" paragraph */
   properties: string
   /** Towns / boroughs / districts named on the page */
   places: string[]
@@ -34,20 +39,45 @@ export interface Area {
   faqs: AreaFAQ[]
 }
 
+const WHAT_YOU_GET =
+  "A fixed rent paid every month on a 3 to 5 year corporate lease with Alali Homes Ltd, whether or not the property is occupied. Full property management is included for the whole term: maintenance and repairs coordination, regular inspections, compliance tracking and dedicated support for tenants, so the property is professionally maintained and you never deal with day-to-day issues."
+
+function stock(hmoPlaces: string, housePlaces: string, flatPlaces: string) {
+  return [
+    {
+      title: "Licensed HMOs",
+      text: `Existing licensed HMOs in ${hmoPlaces} and nearby. We take the property on as it is licensed, manage it in line with the licence conditions and pay you a guaranteed rent for the whole lease.`,
+    },
+    {
+      title: "2–4 bed houses and flats",
+      text: `Two to four bedroom houses and flats in ${housePlaces}, leased on a 3 to 5 year corporate let with full property management included.`,
+    },
+    {
+      title: "1-bed self-contained flats",
+      text: `One-bedroom self-contained flats in ${flatPlaces}, with their own kitchen and bathroom, on the same guaranteed rent terms.`,
+    },
+  ]
+}
+
 const SHARED_FAQS: AreaFAQ[] = [
   {
-    q: "How much do you charge, and what does it cover?",
-    a: "One fee covers the full service. We keep your property occupied with vetted working professionals, and handle every changeover in between: check-ins and check-outs, professional cleans and inspections, plus maintenance, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement.",
+    q: "How does guaranteed rent work?",
+    a: "Alali Homes Ltd signs a corporate lease on your property for 3 to 5 years and pays you a fixed rent every month for the full term, whether or not the property is occupied. We provide full property management and dedicated tenant support throughout, and return the property in the condition agreed in the lease.",
   },
   {
-    q: "What is the income floor?",
-    a: "If your payouts across a quarter come to less than 60% of the long-term market rent for your property, we reduce or waive our fee for that quarter to make up the difference, up to the full value of our fee. The market rent figure and the conditions are agreed in writing before you sign.",
+    q: "What types of property do you take on?",
+    a: "Existing licensed HMOs, 2 to 4 bedroom houses and flats, and 1 bedroom self-contained flats. We assess every property individually and make a written rent offer where it is a good fit.",
   },
   {
-    q: "Who will stay in the property?",
-    a: "Working professionals only. Every occupant goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
+    q: "What happens if the property is empty?",
+    a: "You are still paid. The rent is guaranteed for the full term of the lease, so voids and arrears are our risk, not yours.",
   },
 ]
+
+const LICENSING_FAQ = (where: string): AreaFAQ => ({
+  q: `Do you take on licensed HMOs in ${where}?`,
+  a: `Yes. Licensing is set by each local council, and mandatory HMO licensing applies across England to HMOs with five or more people forming two or more households. We take existing licensed HMOs in ${where} on as they are licensed, manage them in line with the licence conditions, and agree who holds which responsibilities in writing before the lease starts.`,
+})
 
 export const AREAS: Area[] = [
   // ---------------------------------------------------------------- LONDON
@@ -56,27 +86,17 @@ export const AREAS: Area[] = [
     name: "London",
     inName: "London",
     kind: "region",
-    strap: "Fully managed lettings for landlords across all 32 London boroughs. Professional occupants, every detail managed.",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords across all 32 London boroughs.",
     intro: [
-      "London has the deepest demand from working professionals in the country, and it is where an empty month costs a landlord most. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
-      "Alali Homes takes that work off you. We keep your London property occupied with vetted professionals, handle every changeover, and report every month's income to you through your own landlord portal. Our fee is a share of what the property earns, so we only do well when you do.",
+      "In London an empty month or a missed rent payment costs a landlord more than anywhere else in the country, and running an HMO or a portfolio of flats in the capital is close to a full-time job. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
+      "Alali Homes takes that risk and that work off you. We lease your London property on a 3 to 5 year corporate let, pay you a fixed rent every month whether it is occupied or not, and manage it fully for the whole term.",
     ],
-    demand: [
-      {
-        title: "Relocating professionals and project teams",
-        text: "Financial and professional services firms in the City and Canary Wharf, technology companies around King's Cross and Shoreditch, and consultancies placing staff on multi-month engagements all need furnished, managed homes for people arriving in the capital.",
-      },
-      {
-        title: "Infrastructure and construction",
-        text: "London runs a permanent programme of large construction and engineering projects. The contractors delivering them are placed near site for months at a time and need somewhere to live that is not a hotel.",
-      },
-      {
-        title: "Hospitals, universities and Heathrow",
-        text: "NHS trusts, the universities and the airport at Heathrow each bring a steady flow of clinicians, academics, crew and specialist staff on fixed-term contracts who want a proper home for the duration.",
-      },
-    ],
-    properties:
-      "We take on flats and houses across London, from purpose-built apartments near a station to family houses in the outer boroughs. Properties within reach of the Tube, Elizabeth line or Overground and close to the employers above are the easiest for us to keep occupied, and occupancy is what drives your income.",
+    stock: stock(
+      "every London borough",
+      "inner and outer London, from Hackney and Lewisham to Croydon, Ealing and Barnet",
+      "within reach of the Tube, Elizabeth line and Overground",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "London boroughs we cover",
     places: [
       "Barking and Dagenham", "Barnet", "Bexley", "Brent", "Bromley", "Camden", "City of London", "Croydon",
@@ -89,11 +109,11 @@ export const AREAS: Area[] = [
       ...SHARED_FAQS,
       {
         q: "Do you cover outer London as well as central?",
-        a: "Yes. We take on properties in all 32 boroughs. Outer boroughs with good rail links, such as Croydon, Bromley, Ealing and Barnet, are often the best fit for contractor and professional occupants who want space and a straightforward commute.",
+        a: "Yes. We take on properties in all 32 boroughs, from central flats to houses in the outer boroughs.",
       },
       {
-        q: "Do you handle licensing and compliance in London?",
-        a: "Compliance responsibilities are agreed in writing before we sign, including any borough licensing that applies to the property. We tell you what is needed and who is doing it before you commit.",
+        q: "Do you take on licensed HMOs in London?",
+        a: "Yes. Many London boroughs run additional or selective licensing schemes on top of mandatory HMO licensing, so the rules depend on the borough. We take existing licensed HMOs on as they are licensed, manage them in line with the licence conditions, and agree who holds which responsibilities in writing before the lease starts.",
       },
     ],
   },
@@ -104,38 +124,28 @@ export const AREAS: Area[] = [
     name: "the South East",
     inName: "the South East",
     kind: "region",
-    strap: "Fully managed lettings for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
+    strap: "Guaranteed rent for landlords in Kent, Surrey, Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire.",
     intro: [
-      "The South East is the country's busiest commuter region and one of its largest employment areas in its own right. Airports, ports, science campuses, garrisons and company headquarters sit within an hour of London, and each of them brings people who need a home for months at a time.",
-      "Alali Homes runs properties across the region from start to finish: we keep each property occupied with vetted professionals, handle every changeover, and report every month's income to you through your landlord portal. If you own a house or flat anywhere in the South East and want the income without the letting cycle, we can give you a written estimate.",
+      "The South East has some of the strongest rental markets outside London, from the commuter towns on the main lines into the capital to the port cities, university towns and business hubs along the M3, M4 and M25. It also has many landlords who want the rent without the job of managing a property.",
+      "Alali Homes leases properties across the region on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management for the whole term. Each county has its own page with the local detail.",
     ],
-    demand: [
-      {
-        title: "Airports and ports",
-        text: "Gatwick, Heathrow's western catchment, the Channel ports at Dover and Folkestone and the docks at Southampton and Portsmouth employ large contractor and shift-working populations that live locally on fixed-term arrangements.",
-      },
-      {
-        title: "Science, defence and technology",
-        text: "The M4 corridor around Reading, the Oxfordshire science campuses, Farnborough's aerospace cluster and the naval and army bases in Hampshire bring engineers and specialists into the region on project contracts.",
-      },
-      {
-        title: "Company headquarters and business parks",
-        text: "Basingstoke, Milton Keynes, Slough, Bracknell and Crawley each host clusters of national and international companies whose relocating staff and visiting teams need a managed home near the office.",
-      },
-    ],
-    properties:
-      "Across the South East we take on family houses and flats in towns with a mainline station, a major employer or both. Properties near the places listed below are typically the easiest for us to keep occupied. Each county has its own page with the local detail.",
+    stock: stock(
+      "towns across the region, including Reading, Southampton, Portsmouth, Brighton and Oxford",
+      "commuter towns with a mainline station",
+      "town centres and station areas across the region",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Counties we cover in the South East",
     places: ["Kent", "Surrey", "East Sussex", "West Sussex", "Hampshire", "Berkshire", "Buckinghamshire", "Oxfordshire"],
     faqs: [
       ...SHARED_FAQS,
       {
         q: "Do you take on properties in smaller towns and villages?",
-        a: "Yes, where there is demand from working professionals within reach. A village close to a science park, garrison or airport can work well. A remote property with no employer nearby is harder for us to keep occupied, and we will tell you honestly if that is the case.",
+        a: "We assess every property individually. A property in a smaller town with good transport links can work well; a remote property is harder, and we will tell you honestly if we do not think it is a good fit.",
       },
       {
-        q: "Is this the same as rent-to-rent or guaranteed rent?",
-        a: "No. In rent-to-rent, a company leases your property for a fixed rent and keeps whatever it earns above that. We manage the property on your behalf instead: the income is yours, we keep a 15% share as our fee, and you can see every month's income and payout in your landlord portal. The terms, notice periods and responsibilities are set out in writing before you sign.",
+        q: "Is guaranteed rent the same as a letting agent?",
+        a: "No. A letting agent finds tenants and manages the property on your behalf, and you carry the voids and arrears. With guaranteed rent, Alali Homes Ltd becomes your tenant on a corporate lease, pays you a fixed rent every month for the whole term, and takes on the management and the risk of an empty month.",
       },
     ],
   },
@@ -147,27 +157,17 @@ export const AREAS: Area[] = [
     inName: "Kent",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords from the Medway towns to the Channel coast.",
+    strap: "Guaranteed rent on corporate leases for landlords from the Medway towns to the Channel coast.",
     intro: [
-      "Kent's rental demand is shaped by its ports, its high-speed link to London and the growth around Ebbsfleet and the Thames Gateway. Contractors, logistics and port staff, and commuters priced out of the capital all need homes across the county, and much of that demand is for fixed-term, furnished homes rather than a conventional tenancy.",
-      "Alali Homes manages properties across Kent for vetted professional occupants. You hand over the keys once, we run the property and look after everyone staying in it, and you follow every month's income in your landlord portal.",
+      "Kent covers everything from the Thames Gateway and the Medway towns to Canterbury, Ashford and the Channel coast, with high-speed rail into St Pancras from several of its towns. It has a large stock of HMOs and family houses, and many landlords managing them at a distance.",
+      "Alali Homes leases properties across Kent on 3 to 5 year corporate lets. You hand over the keys once, receive a fixed rent every month whether the property is occupied or not, and we manage everything for the term.",
     ],
-    demand: [
-      {
-        title: "Channel ports and logistics",
-        text: "Dover and the Eurotunnel terminal at Folkestone, together with the freight and logistics operations that serve them, place engineers, drivers and project teams in East Kent for extended periods.",
-      },
-      {
-        title: "Thames Gateway and Ebbsfleet",
-        text: "The development corridor between Dartford, Gravesend and Ebbsfleet, with its construction programmes and the international station, brings site teams and relocating staff into North Kent.",
-      },
-      {
-        title: "Medway, Maidstone and Canterbury",
-        text: "The Medway towns, the county town of Maidstone and the universities and hospital in Canterbury are steady sources of professional, clinical and academic occupants on fixed contracts.",
-      },
-    ],
-    properties:
-      "Houses and flats in the Medway towns, Maidstone, Ashford, Canterbury, Dartford and along the high-speed line to St Pancras are the most straightforward for us to keep occupied. Family houses suit contractor teams; flats near a station suit relocating professionals.",
+    stock: stock(
+      "the Medway towns, Maidstone and Canterbury",
+      "Dartford, Gravesend, Ashford, Tonbridge and Sevenoaks",
+      "Maidstone, Ashford, Canterbury and along the high-speed line",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in Kent",
     places: [
       "Ashford", "Canterbury", "Chatham", "Dartford", "Dover", "Folkestone", "Gillingham", "Gravesend",
@@ -175,41 +175,32 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("Kent"),
       {
-        q: "Do you cover coastal Kent, such as Thanet and Dover?",
-        a: "Yes. The ports and the regeneration along the coast create contractor demand. We assess each property on its own merits and give you a written income estimate if it is a good fit.",
+        q: "Do you take on properties on the Kent coast?",
+        a: "Yes. We cover Dover, Folkestone, Margate and the coastal towns as well as North and West Kent. We assess each property on its own merits and make a written rent offer if it is a good fit.",
       },
     ],
   },
 
-  // ---------------------------------------------------------------- SURREY
+  // ----------------------------------------------------------------- SURREY
   {
     slug: "surrey",
     name: "Surrey",
     inName: "Surrey",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords across Guildford, Woking, Epsom and the M25 corridor.",
+    strap: "Guaranteed rent on corporate leases for landlords across Guildford, Woking, Epsom and the M25 corridor.",
     intro: [
-      "Surrey sits on the M25 with fast rail into Waterloo and Victoria, which makes it the natural home for relocating professionals who work in London or at the business parks around Leatherhead, Weybridge and Woking. Add Gatwick on the county's edge and a university and major hospital in Guildford, and you have a county with constant demand for managed, furnished homes.",
-      "Alali Homes manages Surrey properties for vetted professional occupants. We take on the occupants and the maintenance, arrange the compliance checks, and report every month's income through your landlord portal. Your property comes back in the agreed condition at the end.",
+      "Surrey sits on the M25 with fast rail into Waterloo and Victoria, and its towns, from Guildford and Woking to Epsom and Redhill, are some of the most sought-after rental locations in the South East. Property values are high, and so is the cost of an empty month.",
+      "Alali Homes leases Surrey properties on 3 to 5 year corporate lets. You receive a fixed rent every month, we provide full property management and keep the property professionally maintained, and it comes back to you in the agreed condition at the end of the lease.",
     ],
-    demand: [
-      {
-        title: "Company headquarters and business parks",
-        text: "Weybridge, Leatherhead, Woking and Camberley host the UK bases of national and international companies. Relocating staff and visiting project teams need somewhere to live near the office for months at a time.",
-      },
-      {
-        title: "Guildford's university and hospital",
-        text: "The University of Surrey, the research park beside it and the Royal Surrey County Hospital bring academics, researchers and clinicians into Guildford on fixed-term contracts.",
-      },
-      {
-        title: "Gatwick and the London commute",
-        text: "Redhill, Reigate and Horley sit minutes from Gatwick, while Epsom, Esher and Walton-on-Thames are established commuter towns. Both attract professionals who want a home rather than a hotel.",
-      },
-    ],
-    properties:
-      "Flats and houses within walking distance of a mainline station in Guildford, Woking, Epsom, Redhill or Staines are the easiest for us to keep occupied. Larger houses near the business parks suit contractor and project teams.",
+    stock: stock(
+      "Guildford, Woking and Redhill",
+      "Guildford, Woking, Epsom, Camberley and Reigate",
+      "Woking, Guildford, Epsom and the station towns on the lines into London",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in Surrey",
     places: [
       "Camberley", "Dorking", "Epsom", "Esher", "Farnham", "Godalming", "Guildford", "Horley", "Leatherhead",
@@ -217,41 +208,32 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("Surrey"),
       {
-        q: "My property is in a Surrey village rather than a town. Is that a problem?",
-        a: "Not necessarily. If it is within easy reach of a station, a business park or Gatwick, it can work well for professional occupants who want quieter surroundings. We will tell you honestly if we do not think it is a good fit.",
+        q: "My property is in a quieter part of Surrey. Is it still a fit?",
+        a: "Possibly. Properties with good road or rail links usually work best. We assess each one individually and will tell you honestly if we do not think it is a good fit.",
       },
     ],
   },
 
-  // ----------------------------------------------------------- EAST SUSSEX
+  // ------------------------------------------------------------ EAST SUSSEX
   {
     slug: "east-sussex",
     name: "East Sussex",
     inName: "East Sussex",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords in Brighton and Hove, Eastbourne, Hastings and Lewes.",
+    strap: "Guaranteed rent on corporate leases for landlords in Brighton and Hove, Eastbourne, Hastings and Lewes.",
     intro: [
-      "East Sussex is anchored by Brighton and Hove, a city with two universities, a large hospital and one of the biggest digital and creative employment clusters outside London. Along the coast, Eastbourne and Hastings have their own hospitals, colleges and regeneration programmes, each bringing people who need a home for a fixed period.",
-      "Alali Homes manages properties across East Sussex for vetted professional occupants. We look after the property and the people staying in it throughout, and you see every month's income in your landlord portal.",
+      "East Sussex is anchored by Brighton and Hove, one of the busiest rental markets on the south coast, with Eastbourne, Hastings, Lewes and the Weald towns around it. It has a large HMO market and a strong stock of flats in converted period buildings.",
+      "Alali Homes leases properties across East Sussex on 3 to 5 year corporate lets. You receive a fixed rent every month for the whole term, and we look after the property and the tenants in it throughout.",
     ],
-    demand: [
-      {
-        title: "Brighton's universities and digital sector",
-        text: "The University of Sussex, the University of Brighton and the city's technology and creative companies bring academics, researchers and relocating professionals who want a furnished, managed home for a term or a contract.",
-      },
-      {
-        title: "Hospitals and public services",
-        text: "The Royal Sussex County Hospital in Brighton, Eastbourne District General and the Conquest Hospital in Hastings each rely on clinicians and specialist staff on fixed-term placements.",
-      },
-      {
-        title: "The London commute and Gatwick",
-        text: "Brighton, Lewes, Haywards Heath and Burgess Hill sit on the main line to Gatwick and London, which makes them a practical base for relocating professionals working in either.",
-      },
-    ],
-    properties:
-      "Flats in Brighton and Hove, particularly near the station and the hospital, and family houses in Lewes, Eastbourne and the commuter towns along the main line are the properties we can most reliably keep occupied.",
+    stock: stock(
+      "Brighton, Hove, Eastbourne and Hastings",
+      "Brighton and Hove, Lewes, Eastbourne and Bexhill-on-Sea",
+      "Brighton, Hove, Eastbourne and Hastings",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in East Sussex",
     places: [
       "Battle", "Bexhill-on-Sea", "Brighton", "Crowborough", "Eastbourne", "Hailsham", "Hastings", "Hove",
@@ -259,41 +241,32 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("Brighton, Hove and East Sussex"),
       {
-        q: "Do you take on properties in Brighton that have been used as holiday lets?",
-        a: "Yes. A property that has been let short-term is usually already furnished and compliant, which makes the handover straightforward. We take it on as a fully managed let for vetted professional occupants, not holiday lets.",
+        q: "My property is currently a holiday let. Can you take it on?",
+        a: "Often, yes. A property that has been a holiday let is usually already furnished and compliant, which makes the handover straightforward. We would take it on as a long-term corporate let with a fixed monthly rent, not as a holiday let.",
       },
     ],
   },
 
-  // ----------------------------------------------------------- WEST SUSSEX
+  // ------------------------------------------------------------ WEST SUSSEX
   {
     slug: "west-sussex",
     name: "West Sussex",
     inName: "West Sussex",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords around Gatwick, Crawley, Horsham, Worthing and Chichester.",
+    strap: "Guaranteed rent on corporate leases for landlords around Crawley, Horsham, Worthing and Chichester.",
     intro: [
-      "West Sussex is dominated by Gatwick Airport and the Manor Royal business district beside it in Crawley, together one of the largest employment sites in the South East. Airlines, ground handlers, engineering firms and the companies headquartered around the airport all need homes for staff and contractors on fixed-term arrangements.",
-      "Alali Homes manages properties across West Sussex for vetted professional occupants. We keep it occupied with vetted professionals, handle every changeover and the maintenance, arrange the compliance checks, and report every month's income through your landlord portal.",
+      "West Sussex runs from Crawley and the Gatwick area in the north to Worthing, Bognor Regis and Chichester on the coast, with mid-Sussex towns such as Horsham, Haywards Heath and Burgess Hill on the main line between them.",
+      "Alali Homes leases properties across West Sussex on 3 to 5 year corporate lets. We pay you a fixed rent every month, handle the maintenance and day-to-day running, track the compliance, and support the tenants, so you never have to.",
     ],
-    demand: [
-      {
-        title: "Gatwick Airport and Manor Royal",
-        text: "The airport, its airlines and the Manor Royal business district generate a permanent population of shift workers, engineers and relocating professionals who need to live within a short drive of the site.",
-      },
-      {
-        title: "Horsham, Burgess Hill and Haywards Heath",
-        text: "These mid-Sussex towns combine employers of their own with a direct rail line to Gatwick and London, which makes them practical bases for relocating professionals.",
-      },
-      {
-        title: "The coast: Worthing, Chichester and Bognor",
-        text: "St Richard's Hospital and the university in Chichester, Worthing Hospital and the employers along the coast bring clinicians, academics and project staff into the area on fixed contracts.",
-      },
-    ],
-    properties:
-      "Houses and flats in Crawley, Horsham, Haywards Heath and Burgess Hill within reach of Gatwick are the properties we can keep occupied most reliably. Family houses suit crews and contractor teams; flats near a station suit individual professionals.",
+    stock: stock(
+      "Crawley, Worthing and Chichester",
+      "Crawley, Horsham, Haywards Heath and Burgess Hill",
+      "Crawley, Worthing, Horsham and Chichester",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in West Sussex",
     places: [
       "Bognor Regis", "Burgess Hill", "Chichester", "Crawley", "East Grinstead", "Haywards Heath", "Horsham",
@@ -301,41 +274,32 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("West Sussex"),
       {
-        q: "Will airport crews and shift workers look after my property?",
-        a: "Every occupant is referenced and approved by us, and we inspect regularly through the term. We manage the property day to day, so you deal with us, not with individual occupants.",
+        q: "Will I have to deal with the tenants?",
+        a: "No. Your tenant is Alali Homes Ltd. We provide dedicated support to the people living in the property and manage it day to day, so you deal with us, never with individual tenants.",
       },
     ],
   },
 
-  // ------------------------------------------------------------- HAMPSHIRE
+  // -------------------------------------------------------------- HAMPSHIRE
   {
     slug: "hampshire",
     name: "Hampshire",
     inName: "Hampshire",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords in Southampton, Portsmouth, Basingstoke, Winchester and Farnborough.",
+    strap: "Guaranteed rent on corporate leases for landlords in Southampton, Portsmouth, Basingstoke, Winchester and Farnborough.",
     intro: [
-      "Hampshire has two port cities, a naval base, an army garrison, an aerospace cluster and a ring of company headquarters, which gives it some of the most varied demand from contractors and working professionals in the South East. People arrive for a refit, a deployment, a project or a relocation, and they need a proper home for the duration.",
-      "Alali Homes manages properties across Hampshire for vetted professional occupants, from handover to return, with a written statement every month and every pound visible in your landlord portal.",
+      "Hampshire has two port cities, Southampton and Portsmouth, each with a large HMO market, plus Basingstoke, Winchester, Farnborough and Aldershot further north. It is one of the most varied rental counties in the South East.",
+      "Alali Homes leases properties across Hampshire on 3 to 5 year corporate lets, from handover to return. You receive a fixed rent every month, and we provide full property management for the whole term.",
     ],
-    demand: [
-      {
-        title: "Southampton and Portsmouth",
-        text: "Southampton's port, university and hospital, and Portsmouth's naval base, dockyard and defence contractors, bring engineers, crew, clinicians and specialists into both cities on fixed-term contracts.",
-      },
-      {
-        title: "Farnborough, Aldershot and the defence sector",
-        text: "The aerospace and defence companies clustered around Farnborough, together with the army garrison at Aldershot, place technical staff and personnel in north-east Hampshire for months at a time.",
-      },
-      {
-        title: "Basingstoke and Winchester",
-        text: "Basingstoke's company headquarters and business parks and Winchester's hospital, university and county offices provide a steady flow of relocating professionals who want a managed home near work.",
-      },
-    ],
-    properties:
-      "Flats in Southampton, Portsmouth and Basingstoke and family houses around Farnborough, Aldershot, Fareham and Eastleigh are the properties we can most reliably keep occupied.",
+    stock: stock(
+      "Southampton, Portsmouth and Winchester",
+      "Basingstoke, Eastleigh, Fareham, Farnborough and Fleet",
+      "Southampton, Portsmouth, Basingstoke and Winchester",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in Hampshire",
     places: [
       "Aldershot", "Andover", "Basingstoke", "Eastleigh", "Fareham", "Farnborough", "Fleet", "Gosport",
@@ -343,41 +307,32 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("Southampton, Portsmouth and Hampshire"),
       {
-        q: "Do you take on properties near the naval base in Portsmouth or the garrison at Aldershot?",
-        a: "Yes. Defence-related demand is steady and long-term, and properties in Portsmouth, Gosport, Fareham, Aldershot and Farnborough are among the easiest for us to keep occupied.",
+        q: "Do you cover both Southampton and Portsmouth?",
+        a: "Yes. We cover both cities and the towns between them, including Eastleigh, Fareham, Gosport and Havant.",
       },
     ],
   },
 
-  // ------------------------------------------------------------- BERKSHIRE
+  // -------------------------------------------------------------- BERKSHIRE
   {
     slug: "berkshire",
     name: "Berkshire",
     inName: "Berkshire",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords along the M4 corridor: Reading, Slough, Bracknell, Maidenhead and Newbury.",
+    strap: "Guaranteed rent on corporate leases for landlords along the M4 corridor: Reading, Slough, Bracknell, Maidenhead and Newbury.",
     intro: [
-      "Berkshire is the heart of the M4 corridor, the strip of technology and company headquarters that runs west from Heathrow through Slough, Maidenhead, Bracknell and Reading. Companies here relocate staff, host visiting teams and bring in contractors on a continuous basis, and the Elizabeth line has tied the county's towns directly into central London.",
-      "Alali Homes manages properties across Berkshire for vetted professional occupants. We keep it occupied with vetted professionals and handle every changeover, with a written statement every month and your own landlord portal.",
+      "Berkshire sits along the M4 between London and the west, with the Elizabeth line running through Slough and Maidenhead to Reading. Reading and Slough have large HMO and flat markets, and the county's towns are among the busiest rental locations outside London.",
+      "Alali Homes leases properties across Berkshire on 3 to 5 year corporate lets. We pay you a fixed rent every month, occupied or not, and manage the property fully for the whole term.",
     ],
-    demand: [
-      {
-        title: "The M4 technology corridor",
-        text: "Reading, Bracknell and the business parks between them host the UK operations of major technology and software companies. Their relocating staff and project teams are a constant source of professional occupants.",
-      },
-      {
-        title: "Slough and Heathrow's western edge",
-        text: "The Slough Trading Estate and the companies serving Heathrow employ engineers, logistics staff and contractors who need a home within a short drive of the airport.",
-      },
-      {
-        title: "Newbury, Windsor and Maidenhead",
-        text: "Newbury's company headquarters, Windsor's proximity to Heathrow and Maidenhead's place on the Elizabeth line each attract professionals on fixed-term placements who want a managed home near work.",
-      },
-    ],
-    properties:
-      "Flats near the stations in Reading, Maidenhead, Slough and Bracknell are the easiest for us to keep occupied. Family houses in Wokingham, Newbury and Thatcham suit project teams and relocating families.",
+    stock: stock(
+      "Reading, Slough and Bracknell",
+      "Reading, Wokingham, Bracknell, Maidenhead and Newbury",
+      "Reading, Slough and Maidenhead near the Elizabeth line",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in Berkshire",
     places: [
       "Ascot", "Bracknell", "Crowthorne", "Maidenhead", "Newbury", "Reading", "Sandhurst", "Slough",
@@ -385,41 +340,32 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("Reading, Slough and Berkshire"),
       {
-        q: "I own a flat in a Reading town-centre development. Is that suitable?",
-        a: "Usually yes. Modern apartments near Reading station are exactly what relocating technology and professional occupants ask for, and they are straightforward for us to take on and manage.",
+        q: "I own a 1-bed flat in Reading. Is that a fit?",
+        a: "It can be. One-bedroom self-contained flats are one of the property types we lease. We assess each one individually and make a written rent offer if it is a good fit.",
       },
     ],
   },
 
-  // ------------------------------------------------------- BUCKINGHAMSHIRE
+  // -------------------------------------------------------- BUCKINGHAMSHIRE
   {
     slug: "buckinghamshire",
     name: "Buckinghamshire",
     inName: "Buckinghamshire",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords in Milton Keynes, High Wycombe, Aylesbury, Amersham and Marlow.",
+    strap: "Guaranteed rent on corporate leases for landlords in Milton Keynes, High Wycombe, Aylesbury, Amersham and Marlow.",
     intro: [
-      "Buckinghamshire runs from the Metropolitan line commuter towns of Amersham and Chesham up to Milton Keynes, one of the largest concentrations of company headquarters and logistics operations in the country. Between them sit High Wycombe, Aylesbury and Marlow, and on the county's southern edge the film studios at Pinewood.",
-      "Alali Homes manages properties across Buckinghamshire for vetted professional occupants. We look after the property and the people staying in it throughout, and you follow every month's income in your landlord portal.",
+      "Buckinghamshire runs from Milton Keynes in the north to High Wycombe, Amersham and the Chiltern and Metropolitan line towns in the south, with Aylesbury in between. Milton Keynes and High Wycombe in particular have large rental markets.",
+      "Alali Homes leases properties across Buckinghamshire on 3 to 5 year corporate lets. You receive a fixed rent every month, and we look after the property and the tenants in it throughout the lease.",
     ],
-    demand: [
-      {
-        title: "Milton Keynes",
-        text: "National and international companies base their UK headquarters and distribution operations in Milton Keynes. Relocating staff, visiting teams and contractors on site need a furnished, managed home near the city.",
-      },
-      {
-        title: "Pinewood Studios and the film industry",
-        text: "Productions at Pinewood bring crews into south Buckinghamshire for the length of a shoot, often several months, and they need homes rather than hotel rooms for that period.",
-      },
-      {
-        title: "High Wycombe, Aylesbury and the Chilterns commute",
-        text: "High Wycombe's employers, Aylesbury's hospital and county offices, and the Metropolitan and Chiltern line towns of Amersham, Beaconsfield and Gerrards Cross attract professionals who work locally or in London.",
-      },
-    ],
-    properties:
-      "Flats and houses in Milton Keynes, High Wycombe and Aylesbury are the properties we can keep occupied most reliably. Larger houses near Pinewood and in the Chiltern towns suit crews and relocating families.",
+    stock: stock(
+      "Milton Keynes, High Wycombe and Aylesbury",
+      "Milton Keynes, Aylesbury, High Wycombe and Bletchley",
+      "Milton Keynes, High Wycombe, Aylesbury and Amersham",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in Buckinghamshire",
     places: [
       "Amersham", "Aylesbury", "Beaconsfield", "Bletchley", "Buckingham", "Chesham", "Gerrards Cross",
@@ -427,52 +373,40 @@ export const AREAS: Area[] = [
     ],
     faqs: [
       ...SHARED_FAQS,
+      LICENSING_FAQ("Milton Keynes and Buckinghamshire"),
       {
-        q: "Do you cover Milton Keynes even though it is administratively separate from Buckinghamshire?",
-        a: "Yes. Milton Keynes is one of the strongest areas of demand from working professionals in the region and we treat it as part of our Buckinghamshire coverage.",
+        q: "Do you cover Milton Keynes?",
+        a: "Yes. Milton Keynes is part of our Buckinghamshire coverage, including Bletchley and Newport Pagnell.",
       },
     ],
   },
 
-  // ----------------------------------------------------------- OXFORDSHIRE
+  // ------------------------------------------------------------ OXFORDSHIRE
   {
     slug: "oxfordshire",
     name: "Oxfordshire",
     inName: "Oxfordshire",
     kind: "county",
     parent: "south-east",
-    strap: "Fully managed lettings for landlords in Oxford, Didcot, Bicester, Banbury and Abingdon.",
+    strap: "Guaranteed rent on corporate leases for landlords in Oxford, Didcot, Bicester, Banbury and Abingdon.",
     intro: [
-      "Oxfordshire's demand comes from its universities, its hospitals and the science and engineering campuses that surround Oxford. Researchers, clinicians, engineers and visiting academics arrive on fixed-term contracts throughout the year, and Oxford's housing stock is tight enough that a furnished, managed home is always sought after.",
-      "Alali Homes manages properties across Oxfordshire for vetted professional occupants. We take on the occupants and the maintenance, arrange the compliance checks, and report every month's income through your landlord portal.",
+      "Oxford has one of the tightest housing markets in the country and a large HMO stock, and the towns around it, from Didcot and Abingdon to Bicester, Banbury and Witney, have grown quickly. Managing property here takes time, and an empty month is expensive.",
+      "Alali Homes leases properties across Oxfordshire on 3 to 5 year corporate lets. We pay you a fixed rent every month, provide full property management and dedicated tenant support, and return the property in the agreed condition at the end of the lease.",
     ],
-    demand: [
-      {
-        title: "Oxford's universities and hospitals",
-        text: "The University of Oxford, Oxford Brookes and the John Radcliffe and Churchill hospitals bring a continuous flow of academics, researchers and clinicians who need a home for a term, a year or a fellowship.",
-      },
-      {
-        title: "Science and engineering campuses",
-        text: "The research campuses at Harwell and Culham near Didcot, and the science and business parks around Oxford, place scientists and engineers in the county on project contracts.",
-      },
-      {
-        title: "Bicester, Banbury and the motor industry",
-        text: "Bicester's growth and its motorsport and heritage engineering cluster, and Banbury's industrial employers, bring technical staff and contractors into north Oxfordshire.",
-      },
-    ],
-    properties:
-      "Flats and houses in Oxford itself, particularly Headington near the hospitals and Cowley, and family houses in Didcot, Abingdon, Kidlington and Bicester are the properties we can keep occupied most reliably.",
+    stock: stock(
+      "Oxford, including Headington and Cowley",
+      "Oxford, Didcot, Abingdon, Bicester and Banbury",
+      "Oxford, Didcot, Bicester and Witney",
+    ),
+    properties: WHAT_YOU_GET,
     placesLabel: "Towns we cover in Oxfordshire",
     places: [
-      "Abingdon", "Banbury", "Bicester", "Carterton", "Chipping Norton", "Didcot", "Headington", "Henley-on-Thames",
-      "Kidlington", "Oxford", "Thame", "Wallingford", "Witney",
+      "Abingdon", "Banbury", "Bicester", "Carterton", "Chipping Norton", "Didcot", "Headington",
+      "Henley-on-Thames", "Kidlington", "Oxford", "Thame", "Wallingford", "Witney",
     ],
     faqs: [
       ...SHARED_FAQS,
-      {
-        q: "Do you take on properties near the hospitals in Headington?",
-        a: "Yes. Clinicians and researchers on fixed placements at the John Radcliffe and Churchill are a steady source of professional occupants, and Headington properties are a strong fit.",
-      },
+      LICENSING_FAQ("Oxford and Oxfordshire"),
     ],
   },
 ]

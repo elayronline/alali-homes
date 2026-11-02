@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfUse() {
   return (
-    <LegalPage title="Terms of Use" updated="19 October 2026">
+    <LegalPage title="Terms of Use" updated="2 November 2026">
       <section>
         <h2>About these terms</h2>
         <p>
@@ -22,11 +22,11 @@ export default function TermsOfUse() {
       <section>
         <h2>Information only</h2>
         <p>
-          The content on this website describes our property management service
-          in general terms. It is provided for information only. Nothing on this site is an offer,
-          a valuation, or financial, legal or tax advice. Any income estimate, fee, term or arrangement we
-          may offer for a specific property is set out in a written proposal and agreement, and only
-          that document is binding.
+          The content on this website describes our guaranteed rent, corporate lettings and
+          property management services in general terms. It is provided for information only. Nothing on this site is an offer,
+          a valuation, or financial, legal or tax advice. Any rent, lease term or arrangement we may offer for
+          a specific property is set out in a written offer and lease, and only the signed lease is
+          binding.
         </p>
       </section>
 
@@ -34,7 +34,7 @@ export default function TermsOfUse() {
         <h2>Enquiries</h2>
         <p>
           Submitting an enquiry through this website does not create an agreement between you and
-          us. We will review your enquiry and, if we can help, respond with a proposal. How we handle
+          us. We will review your enquiry and, if we can help, respond with a written offer. How we handle
           the details you send us is explained in our <a href="/privacy">Privacy Policy</a>.
         </p>
       </section>

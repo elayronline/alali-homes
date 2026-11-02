@@ -6,10 +6,14 @@ import { Phone, Mail } from "lucide-react"
 
 const roleOptions = ["Landlord", "Letting Agent", "Estate Agent", "Other"]
 
-const reassurance = ["No obligation, no hard sell", "A written income estimate for your property", "Your details are never shared"]
+const propertyOptions = ["Licensed HMO", "2–4 bed house or flat", "1-bed self-contained flat", "Other"]
+
+const reassurance = ["No obligation, no hard sell", "A written guaranteed rent offer", "Your details are never shared"]
+
+const emptyForm = { name: "", email: "", phone: "", role: "", propertyType: "", postcode: "", message: "" }
 
 export function CTABanner() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", role: "", postcode: "", message: "" })
+  const [formData, setFormData] = useState(emptyForm)
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState(false)
@@ -32,6 +36,7 @@ export function CTABanner() {
           "Email Address": formData.email,
           "Phone Number": formData.phone || "Not provided",
           "I am a": formData.role,
+          "Property Type": formData.propertyType || "Not provided",
           "Property Postcode": formData.postcode || "Not provided",
           "Message": formData.message || "No additional details",
         }),
@@ -62,7 +67,7 @@ export function CTABanner() {
               Let&apos;s start a <strong className="gold-text">conversation</strong>
             </h2>
             <p className="mt-5 font-body text-[0.95rem] font-light leading-[1.8] text-grey-600">
-              Tell us about your property and we&apos;ll come back to you with a written income estimate.
+              Tell us about your property and we&apos;ll come back to you with a written guaranteed rent offer.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -101,13 +106,13 @@ export function CTABanner() {
               </div>
               <h3 className="mt-6 font-display text-xl font-semibold text-charcoal">Thank you — we&apos;ve received your details.</h3>
               <p className="mt-3 max-w-md font-body text-[0.92rem] text-grey-600">
-                A member of our team will review your property and be in touch with a written income estimate.
+                A member of our team will review your property and be in touch with a written guaranteed rent offer.
               </p>
               <p className="mt-2 font-body text-[0.82rem] text-grey-500">Check your inbox and phone for our response.</p>
               <button
                 onClick={() => {
                   setSubmitted(false)
-                  setFormData({ name: "", email: "", phone: "", role: "", postcode: "", message: "" })
+                  setFormData(emptyForm)
                 }}
                 className="mt-7 cursor-pointer font-body text-sm font-medium text-gold-deep transition-colors hover:text-gold"
               >
@@ -146,13 +151,24 @@ export function CTABanner() {
                   </select>
                 </div>
               </div>
-              <div>
-                <label htmlFor="form-postcode" className={label}>Property Postcode</label>
-                <input id="form-postcode" type="text" placeholder="e.g. SE1 1AA" value={formData.postcode} onChange={(e) => setFormData({ ...formData, postcode: e.target.value })} className="field" />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="form-property" className={label}>Property Type</label>
+                  <select id="form-property" value={formData.propertyType} onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })} className="field cursor-pointer" style={{ color: formData.propertyType ? undefined : "#999999" }}>
+                    <option value="">Select one</option>
+                    {propertyOptions.map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="form-postcode" className={label}>Property Postcode</label>
+                  <input id="form-postcode" type="text" placeholder="e.g. SE1 1AA" value={formData.postcode} onChange={(e) => setFormData({ ...formData, postcode: e.target.value })} className="field" />
+                </div>
               </div>
               <div>
                 <label htmlFor="form-message" className={label}>Anything else we should know?</label>
-                <textarea id="form-message" placeholder="Number of bedrooms, current situation, what you're looking for..." rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="field resize-none" />
+                <textarea id="form-message" placeholder="Number of bedrooms, HMO licence details, current situation..." rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="field resize-none" />
               </div>
               <button type="submit" disabled={submitting} className="btn btn-gold btn-arrow w-full disabled:cursor-not-allowed disabled:opacity-60">
                 {submitting ? (
@@ -164,11 +180,11 @@ export function CTABanner() {
                     Sending...
                   </span>
                 ) : (
-                  "Get My Income Estimate"
+                  "Get My Guaranteed Rent Offer"
                 )}
               </button>
               <p className="text-center font-body text-[0.75rem] text-grey-500">
-                Every estimate is a range based on local rental evidence, not a guarantee of income.
+                Every rent offer is made in writing after we assess the property, and only the signed lease is binding.
                 <br />
                 Your details are safe. We never share your information with third parties.
               </p>

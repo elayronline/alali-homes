@@ -20,8 +20,8 @@ const badges = [
         <path d="M14 3v5h5M9 13h6M9 17h4" />
       </svg>
     ),
-    title: "Written Agreements",
-    subtitle: "Fee, income floor and notice agreed upfront",
+    title: "Written Corporate Leases",
+    subtitle: "Rent, term and notice agreed upfront",
   },
   {
     icon: (
@@ -29,8 +29,8 @@ const badges = [
         <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />
       </svg>
     ),
-    title: "Landlord Portal",
-    subtitle: "Every month's income and payout reported",
+    title: "3–5 Year Terms",
+    subtitle: "Long-term, fixed monthly rent",
   },
 ]
 
@@ -49,9 +49,9 @@ export function TrustCompliance() {
             Registered, Transparent &amp; <strong className="gold-text">Accountable</strong>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600">
-            Alali Homes Ltd is a UK-registered property management company. We offer landlords a
-            better model: we place vetted professional occupants, manage everything to a professional
-            standard, and share in what your property earns, so we only do well when you do.
+            Alali Homes Ltd is a UK-registered corporate lettings company. We take properties on
+            3–5 year corporate leases, pay landlords a guaranteed rent every month, and provide full
+            property management and dedicated tenant support for the whole term.
           </p>
         </motion.div>
 

@@ -41,8 +41,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/guaranteed-rent/:slug",
-        destination: "/property-management/:slug",
+        source: "/property-management/:slug",
+        destination: "/guaranteed-rent/:slug",
         permanent: true,
       },
       {

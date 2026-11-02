@@ -11,8 +11,8 @@ const values = [
         <path d="M9 12l2 2 4-4" />
       </svg>
     ),
-    title: "One Fee, the Full Service",
-    description: "A single 15% share of what your property earns keeps it occupied with vetted professionals, with every changeover, clean and inspection handled for you.",
+    title: "Guaranteed Monthly Rent",
+    description: "A fixed rent paid to you every month for the full term of the lease, whether the property is occupied or not.",
   },
   {
     num: "02",
@@ -22,8 +22,8 @@ const values = [
         <path d="M8 12h8" />
       </svg>
     ),
-    title: "Hands-Free Management",
-    description: "We handle everything: occupants, maintenance, compliance checks and day-to-day operations.",
+    title: "Full Property Management",
+    description: "Maintenance, inspections, compliance tracking and day-to-day operations, all handled by us for the length of the lease.",
   },
   {
     num: "03",
@@ -33,8 +33,8 @@ const values = [
         <path d="M8 7V5a4 4 0 018 0v2M12 12v4" />
       </svg>
     ),
-    title: "Professional Occupants",
-    description: "Working professionals only. Every occupant passes our vetting process before they are approved.",
+    title: "3–5 Year Corporate Leases",
+    description: "Your tenant is Alali Homes Ltd. One company, one lease, one rent payment, with the terms agreed in writing upfront.",
   },
   {
     num: "04",
@@ -44,8 +44,8 @@ const values = [
         <path d="M9 22V12h6v10" />
       </svg>
     ),
-    title: "A Quarterly Income Floor",
-    description: "If a quarter falls below 60% of your property’s long-term market rent, we reduce or waive our fee to make up the gap.",
+    title: "Professionally Maintained",
+    description: "Regular inspections and dedicated support for tenants, with your property kept to a professional standard throughout the lease.",
   },
 ]
 
@@ -61,7 +61,7 @@ export function ValueProposition() {
           >
             <span className="eyebrow">Why Alali Homes</span>
             <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.8rem]">
-              Built for landlords who want the income,{" "}
+              Built for landlords who want the rent,{" "}
               <strong className="gold-text">not the job.</strong>
             </h2>
           </motion.div>
@@ -72,9 +72,9 @@ export function ValueProposition() {
             transition={{ delay: 0.1 }}
             className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600 lg:justify-self-end"
           >
-            Professional occupants, a property looked after to a professional standard, and a
-            clear view of every pound it earns. Our fee is a share of that income, so we only do
-            well when you do.
+            Guaranteed rent on a corporate lease, full property management, and a property looked
+            after to a professional standard from the first day of the lease to the last. No voids,
+            no arrears chasing, no calls about repairs.
           </motion.p>
         </div>
 

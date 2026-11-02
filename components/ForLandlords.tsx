@@ -8,16 +8,16 @@ const painPoints = [
   "Unexpected maintenance calls at all hours?",
   "Navigating ever-changing compliance regulations?",
   "Tired of the hassle but don’t want to sell?",
-  "Want to see exactly what your property earns?",
+  "Losing rent to void periods between tenancies?",
 ]
 
 const benefits = [
-  { title: "Vetted Professional Occupants", desc: "Working professionals only, every one approved by us." },
-  { title: "A Quarterly Income Floor", desc: "We reduce or waive our fee if a quarter falls short." },
-  { title: "Income You Can See", desc: "Paid monthly, with a statement and your own landlord portal." },
-  { title: "Full Property Management", desc: "Occupants, maintenance, check-ins, emergencies." },
-  { title: "Compliance Arranged", desc: "Gas safety, EICR, EPC, smoke/CO alarms, booked and tracked." },
-  { title: "Property Protection", desc: "Regular inspections, professional cleaning, agreed condition standards." },
+  { title: "Guaranteed Rent", desc: "A fixed rent every month for the full term, occupied or not." },
+  { title: "3–5 Year Corporate Lease", desc: "Alali Homes Ltd is your tenant. One lease, one payment, one contact." },
+  { title: "Zero Voids, Zero Arrears", desc: "The risk of an empty month or a missed payment sits with us." },
+  { title: "Full Property Management", desc: "Maintenance, repairs coordination, inspections and day-to-day running." },
+  { title: "Dedicated Tenant Support", desc: "Tenants come to us, not you, for anything they need." },
+  { title: "Professionally Maintained", desc: "Regular inspections and the property returned in the agreed condition." },
 ]
 
 export function ForLandlords() {
@@ -32,8 +32,8 @@ export function ForLandlords() {
         >
           <span className="eyebrow">For Landlords</span>
           <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
-            Your Property. Our Work.{" "}
-            <strong className="gold-text">Your Income, Every Month.</strong>
+            Your Property. Our Lease.{" "}
+            <strong className="gold-text">Your Rent, Every Month.</strong>
           </h2>
         </motion.div>
 
@@ -61,7 +61,7 @@ export function ForLandlords() {
               If any of this sounds like you, it&apos;s time to talk to Alali Homes.
             </p>
             <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow mt-6">
-              Submit Your Property
+              Get a Guaranteed Rent Offer
             </button>
           </motion.div>
 
