@@ -1,6 +1,9 @@
 /**
  * Homepage FAQs. The FAQ component renders these and the homepage FAQPage schema is built
  * from the same list, so the two can never drift apart.
+ *
+ * Copy rules: never describe who lives in the properties, never promise a turnaround time,
+ * and never claim a scheme, accreditation or insurance we have not confirmed.
  */
 
 export interface FAQItem {
@@ -10,54 +13,64 @@ export interface FAQItem {
 
 export const landlordFAQs: FAQItem[] = [
   {
-    question: "How much do you charge, and what does it cover?",
+    question: "What is guaranteed rent?",
     answer:
-      "One fee covers the full service. We keep your property occupied with vetted working professionals, and handle every changeover in between: check-ins and check-outs, professional cleans and inspections, plus maintenance, compliance tracking and your landlord portal. It is a 15% share of the rent your occupants pay, and the other 85% is paid to you every month with a written statement. Because our fee is a share of what your property earns, we only do well when you do.",
+      "Guaranteed rent means you receive a fixed rent every month for the whole term, whether or not the property is occupied. With Alali Homes, our company signs a corporate lease on your property for 3 to 5 years, pays you the agreed rent every month, and manages the property throughout. Voids, arrears and day-to-day management become our responsibility, not yours.",
   },
   {
-    question: "What is the income floor?",
+    question: "How is the rent actually guaranteed?",
     answer:
-      "If your payouts across a quarter come to less than 60% of the long-term market rent for your property, we reduce or waive our fee for that quarter to make up the difference, up to the full value of our fee. The market rent figure and the conditions are agreed in writing before you sign, and the floor applies from your second quarter, once the property is fully set up.",
+      "Alali Homes Ltd signs a legally binding corporate lease with you. The obligation to pay the agreed monthly rent sits with our company for the full term, regardless of occupancy. The rent, payment date, term and responsibilities are all set out in the lease before you sign.",
   },
   {
-    question: "What happens if the property is empty for a while?",
+    question: "What is a corporate let?",
     answer:
-      "Your income for that month is lower, and so is ours, because our fee is a share of what the property earns. That is why we only take on properties we expect to keep occupied, and why the income floor protects you across each quarter.",
+      "A corporate let, or company let, is a lease where the tenant is a company rather than an individual. Your tenant is Alali Homes Ltd, so you have one tenant, one rent payment each month and one point of contact for the whole lease.",
   },
   {
-    question: "How can I see what my property is earning?",
+    question: "What types of property do you take on?",
     answer:
-      "Through your landlord portal. It shows what your property earned each month, our fee and your payout, alongside your written monthly statement.",
+      "Existing licensed HMOs, 2 to 4 bedroom houses and flats, and 1 bedroom self-contained flats across London and the South East. We assess every property individually and make a written rent offer where it is a good fit.",
   },
   {
-    question: "Is this Airbnb or holiday letting?",
+    question: "Do you take on licensed HMOs?",
     answer:
-      "No. We do not take holiday bookings. Every occupant is a working professional who has passed our vetting process. No parties, no unknown occupants, and the property is inspected and professionally cleaned throughout.",
+      "Yes. Existing licensed HMOs are one of our main areas. We take the property on as it is licensed, manage it in line with the licence conditions and HMO management regulations, and agree in writing who holds which responsibilities before the lease starts.",
   },
   {
-    question: "Will you change or damage my property?",
+    question: "How long is the lease?",
     answer:
-      "Any changes are agreed in writing before we start. We conduct regular inspections and professional cleans, and return the property to the agreed standard at the end of the agreement.",
+      "Our corporate leases run for 3 to 5 years. The term, the rent and any break clause are agreed with you and written into the lease before you commit.",
   },
   {
-    question: "Who will stay in my property?",
+    question: "What happens if the property is empty?",
     answer:
-      "Working professionals only. Every occupant goes through our vetting process before they are approved, whether they are relocating for work, on a contract placement, or with a company sending staff to the area. We inspect the property regularly throughout.",
+      "You are still paid. The rent is guaranteed for the full term of the lease, so the risk of an empty month sits with us, not you.",
+  },
+  {
+    question: "What does the property management include?",
+    answer:
+      "Full property management for the length of the lease: day-to-day maintenance and repairs coordination, regular inspections, compliance tracking, and dedicated support for the tenants living in the property. You deal with us, never with individual tenants.",
+  },
+  {
+    question: "Will my property be looked after?",
+    answer:
+      "Yes. We keep the property professionally maintained throughout the lease, inspect it regularly, and return it to the condition agreed in the lease at the end of the term, allowing for fair wear and tear. Any changes to the property are agreed with you in writing first.",
   },
   {
     question: "Who is responsible for compliance?",
     answer:
-      "As the owner, you remain legally responsible for safety certificates such as gas safety, the EICR and the EPC. We arrange and track them for you, and any works needed before we start are agreed in writing before you sign.",
+      "As the owner, you remain legally responsible for certain safety certificates, such as gas safety, the EICR and the EPC. We track renewals for you and arrange them where agreed. Any works needed before the lease starts, and who pays for them, are agreed in writing before you sign.",
   },
   {
     question: "Where do you operate?",
     answer:
-      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site. We assess every property individually and take it on where we can manage it to our standard.",
+      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site.",
   },
   {
     question: "What if I want my property back?",
     answer:
-      "Every agreement has a clear notice period. We walk you through the exit terms before you commit.",
+      "Break clauses and notice periods are written into every lease. We walk you through the exit terms before you commit.",
   },
 ]
 
@@ -65,11 +78,11 @@ export const agentFAQs: FAQItem[] = [
   {
     question: "Do you compete with letting agents?",
     answer:
-      "No. We don’t list on Rightmove or take on conventional long-term lets. We work with agents to offer landlords a fully managed alternative for professional occupants, and you earn a referral fee for every property we take on.",
+      "No. We take properties on corporate leases. We don't list on Rightmove or compete for management instructions. We work with agents to offer landlords a guaranteed rent option, and you earn a referral fee for every property we take on.",
   },
   {
     question: "How does the referral work?",
     answer:
-      "You introduce the landlord. We handle everything from assessment to onboarding. Referral terms are agreed in writing upfront. Agents are expected to disclose any referral arrangement to their client in line with the Estate Agents Act 1979.",
+      "You introduce the landlord. We handle everything from assessment to signing the lease. Referral terms are agreed in writing upfront. Agents are expected to disclose any referral arrangement to their client in line with the Estate Agents Act 1979.",
   },
 ]

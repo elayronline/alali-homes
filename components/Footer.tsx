@@ -2,8 +2,8 @@ import { Instagram } from "lucide-react"
 import { COUNTIES, REGIONS } from "@/lib/areas"
 
 const areaLinks = [
-  ...REGIONS.map((r) => ({ label: `Property Management ${r.name.replace(/^the /, "")}`, href: `/property-management/${r.slug}` })),
-  ...COUNTIES.map((c) => ({ label: c.name, href: `/property-management/${c.slug}` })),
+  ...REGIONS.map((r) => ({ label: `Guaranteed Rent ${r.name.replace(/^the /, "")}`, href: `/guaranteed-rent/${r.slug}` })),
+  ...COUNTIES.map((c) => ({ label: c.name, href: `/guaranteed-rent/${c.slug}` })),
 ]
 
 const companyLinks = [
@@ -14,16 +14,19 @@ const companyLinks = [
 ]
 
 const serviceLinks = [
-  { label: "Hands-Off Management", href: "/#landlords" },
-  { label: "Landlord Portal", href: "/#portal" },
-  { label: "Professional Occupants", href: "/#value" },
-  { label: "Property Management", href: "/#about" },
+  { label: "Guaranteed Rent", href: "/#landlords" },
+  { label: "HMO Guaranteed Rent", href: "/hmo-guaranteed-rent" },
+  { label: "Corporate Lets", href: "/corporate-lets" },
+  { label: "Property Management", href: "/#value" },
 ]
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Use", href: "/terms" },
   { label: "Cookie Policy", href: "/cookies" },
+  { label: "Modern Slavery Statement", href: "/modern-slavery-statement" },
+  { label: "Complaints Procedure", href: "/complaints" },
+  { label: "All Policies", href: "/policies" },
 ]
 
 const linkClass =
@@ -55,15 +58,15 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <div aria-label="Alali Homes, fully managed lettings for landlords">
+            <div aria-label="Alali Homes, guaranteed rent for landlords">
               <span className="font-display text-3xl font-light tracking-wide text-white">Alali</span>
               <span className="ml-2 font-display text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-gold">
                 Homes
               </span>
             </div>
             <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/70">
-              Fully managed lettings for landlords in London and the South East. Vetted professional
-              occupants, every detail managed, and your income tracked month by month.
+              Guaranteed rent and corporate lets for landlords in London and the South East. A fixed
+              rent every month on a 3–5 year lease, with full property management included.
             </p>
             <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">
               <a href="tel:+442045158438" className="block transition-colors hover:text-gold-light">020 4515 8438</a>

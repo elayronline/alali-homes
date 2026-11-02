@@ -20,27 +20,32 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alalihomes.com"),
-  title: "Property Management London & South East | Alali Homes",
+  title: "Guaranteed Rent London & South East | Alali Homes",
   description:
-    "Fully managed lettings in London and the South East. Vetted professional occupants, every detail handled, and your own landlord portal.",
+    "Guaranteed rent for landlords on 3–5 year corporate leases. Licensed HMOs, 2–4 bed properties and 1-bed flats. Zero voids, full management included.",
   keywords: [
-    "property management London",
-    "property management South East",
-    "fully managed lettings",
-    "fully managed letting service",
-    "hands-off property management",
-    "hands-off property management for landlords",
-    "landlord portal",
-    "professional occupants",
+    "guaranteed rent",
+    "guaranteed rent London",
+    "guaranteed rent South East",
+    "guaranteed rent for landlords",
+    "guaranteed rent scheme",
+    "HMO guaranteed rent",
+    "guaranteed rent HMO",
+    "corporate lets",
+    "corporate let landlords",
+    "company let",
+    "corporate lease property",
+    "rent guarantee landlords",
+    "no void periods",
     "Alali Homes",
   ],
   alternates: {
     canonical: "https://www.alalihomes.com",
   },
   openGraph: {
-    title: "Property Management London & South East | Alali Homes",
+    title: "Guaranteed Rent London & South East | Alali Homes",
     description:
-      "Vetted professional occupants and a fully hands-off service, with your income tracked month by month in your own landlord portal.",
+      "A fixed rent every month on a 3–5 year corporate lease, with full property management and dedicated tenant support included.",
     url: "https://www.alalihomes.com",
     siteName: "Alali Homes",
     type: "website",
@@ -50,15 +55,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Alali Homes, fully managed lettings for landlords",
+        alt: "Alali Homes, guaranteed rent and corporate lets for landlords",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Property Management London & South East | Alali Homes",
+    title: "Guaranteed Rent London & South East | Alali Homes",
     description:
-      "Fully managed lettings for landlords: vetted professional occupants, every detail handled, and a landlord portal.",
+      "Guaranteed rent on 3–5 year corporate leases for licensed HMOs, 2–4 bed properties and 1-bed flats. Zero voids.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -97,7 +102,7 @@ const orgSchema = {
   },
   foundingDate: "2026-03-16",
   description:
-    "Property management company for landlords in London and the South East. We place vetted professional occupants, manage everything, and report every month's income through a landlord portal.",
+    "Guaranteed rent and corporate lettings company for landlords in London and the South East. We lease licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, pay a fixed rent every month, and provide full property management and dedicated tenant support.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",
@@ -135,11 +140,15 @@ const orgSchema = {
     "@type": "QuantitativeValue",
     value: "2-10",
   },
+  slogan: "Guaranteed Rent. Zero Voids. No Management Hassle.",
   knowsAbout: [
+    "Guaranteed Rent",
+    "Corporate Lets",
+    "Company Lets",
+    "HMO Management",
+    "HMO Licensing",
     "Property Management",
     "Residential Lettings",
-    "Occupant Vetting",
-    "Landlord Revenue Share",
   ],
 }
 
@@ -150,11 +159,9 @@ const websiteSchema = {
   name: "Alali Homes",
   url: "https://www.alalihomes.com",
   description:
-    "Fully managed lettings for landlords in London and the South East, with a quarterly income floor and a landlord portal.",
-  publisher: {
-    "@type": "Organization",
-    name: "Alali Homes Ltd",
-  },
+    "Guaranteed rent and corporate lets for landlords in London and the South East, on 3-5 year leases with full property management.",
+  inLanguage: "en-GB",
+  publisher: { "@id": "https://www.alalihomes.com/#organization" },
 }
 
 export default function RootLayout({

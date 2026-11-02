@@ -7,23 +7,23 @@ const steps = [
   {
     num: "01",
     title: "Get in Touch",
-    desc: "Contact us via the form or phone. Tell us about your property — location, type, bedrooms, and current situation. No commitment at this stage.",
+    desc: "Contact us via the form or phone. Tell us about your property: location, type, bedrooms, HMO licence if it has one, and current situation. No commitment at this stage.",
     detail:
       "What we need: basic property details and what you’d like from your property.",
   },
   {
     num: "02",
     title: "We Review & Propose",
-    desc: "We’ll assess your property and come back to you with a written income estimate, your income floor and a clear breakdown of how our 15% fee works.",
+    desc: "We assess your property and come back to you with a written guaranteed rent offer and the proposed lease terms.",
     detail:
-      "What you’ll receive: a written estimate, the proposed agreement terms, and a summary of what we manage on your behalf.",
+      "What you’ll receive: your monthly rent, the lease length, the break and notice terms, and a summary of what we manage.",
   },
   {
     num: "03",
-    title: "Agreement & Handover",
-    desc: "Once terms are agreed, we sign the agreement, arrange any compliance works, and prepare the property for its first occupants. You follow every month’s income in your landlord portal.",
+    title: "Lease & Handover",
+    desc: "Once terms are agreed, we sign the corporate lease, agree any compliance works, and take on the management. Your guaranteed rent starts on the date in the lease.",
     detail:
-      "What happens next: we confirm the property is the right fit, help bring it to standard where needed, and agree a start date.",
+      "What happens next: we confirm the property is ready, help bring it to standard where needed, and agree your first rent date.",
   },
 ]
 
@@ -39,7 +39,7 @@ export function HowItWorks() {
         >
           <span className="eyebrow eyebrow-center">The Process</span>
           <h2 className="display mt-5 text-[1.9rem] sm:text-[2.4rem] md:text-[2.9rem]">
-            Three Steps to a <strong className="gold-text">Fully Managed Property</strong>
+            Three Steps to <strong className="gold-text">Guaranteed Rent</strong>
           </h2>
         </motion.div>
 

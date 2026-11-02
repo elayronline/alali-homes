@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy" updated="8 September 2026">
+    <LegalPage title="Privacy Policy" updated="2 November 2026">
       <section>
         <h2>Who we are</h2>
         <p>
@@ -31,6 +31,7 @@ export default function PrivacyPolicy() {
           <li>your email address</li>
           <li>your phone number (optional)</li>
           <li>whether you are contacting us as a landlord, an agent or in another capacity</li>
+          <li>the type of property you are enquiring about (optional)</li>
           <li>the postcode of the property you are enquiring about (optional)</li>
           <li>anything you write in the message box (optional)</li>
         </ul>
