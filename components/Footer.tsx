@@ -39,7 +39,7 @@ function Column({ title, links }: { title: string; links: { label: string; href:
       <h3 className={headingClass}>{title}</h3>
       <ul className="mt-5 space-y-2.5">
         {links.map((link) => (
-          <li key={link.href + link.label}>
+          <li key={link.href}>
             <a href={link.href} className={linkClass}>
               {link.label}
             </a>
