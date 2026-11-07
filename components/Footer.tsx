@@ -5,7 +5,7 @@ const companyLinks = [
   { label: "About", href: "/#about" },
   { label: "How It Works", href: "/#process" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/#contact-form" },
 ]
 
 const serviceLinks = [

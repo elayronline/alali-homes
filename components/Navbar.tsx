@@ -138,7 +138,7 @@ export function Navbar() {
             </NavItem>
           ))}
           <NavItem
-            id="contact"
+            id="contact-form"
             onHome={onHome}
             onNav={handleNav}
             className="btn btn-gold !px-6 !py-2.5 !text-[0.78rem] uppercase !tracking-[0.12em]"
@@ -191,7 +191,7 @@ export function Navbar() {
             </NavItem>
           ))}
           <NavItem
-            id="contact"
+            id="contact-form"
             onHome={onHome}
             onNav={handleNav}
             className="mt-2 block w-full cursor-pointer rounded-sm bg-gold py-3 text-center font-body text-sm font-semibold uppercase tracking-wide text-white transition-all hover:bg-gold-dark"

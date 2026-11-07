@@ -96,7 +96,7 @@ export function CTABanner() {
           </div>
         </div>
 
-        <div id="contact-form" className="border border-gold/15 bg-white p-6 sm:p-10">
+        <div id="contact-form" className="scroll-mt-24 border border-gold/15 bg-white p-6 sm:p-10">
           {submitted ? (
             <div className="flex h-full flex-col items-center justify-center py-10 text-center" role="alert" aria-live="polite">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-pale">

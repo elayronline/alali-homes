@@ -79,7 +79,7 @@ export function HowItWorks() {
           transition={{ delay: 0.4 }}
           className="mt-14 text-center"
         >
-          <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow">
+          <button onClick={() => scrollToSection("contact-form")} className="btn btn-gold btn-arrow">
             Get Started
           </button>
           <p className="mt-4 font-body text-[0.8rem] font-light text-grey-500">

@@ -81,7 +81,7 @@ export function ForAgents() {
           transition={{ delay: 0.3 }}
           className="mt-14 flex flex-col items-center gap-4 text-center"
         >
-          <button onClick={() => scrollToSection("contact")} className="btn btn-outline-light btn-arrow">
+          <button onClick={() => scrollToSection("contact-form")} className="btn btn-outline-light btn-arrow">
             Refer a Property &amp; Earn
           </button>
           <p className="max-w-2xl font-body text-[0.78rem] font-light leading-relaxed text-white/65">

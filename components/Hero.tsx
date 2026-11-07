@@ -39,7 +39,7 @@ export function Hero() {
           </p>
 
           <div {...rise(0.3)} className="rise mt-10 flex flex-wrap gap-4">
-            <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow">
+            <button onClick={() => scrollToSection("contact-form")} className="btn btn-gold btn-arrow">
               Get a Guaranteed Rent Offer
             </button>
             <button onClick={() => scrollToSection("process")} className="btn btn-outline-dark">
