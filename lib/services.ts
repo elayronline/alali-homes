@@ -24,9 +24,9 @@ export interface ServiceContent {
 
 export const HMO_SERVICE: ServiceContent = {
   slug: "hmo-guaranteed-rent",
-  title: "HMO Guaranteed Rent London & South East | Alali Homes",
+  title: "HMO Guaranteed Rent for Landlords | Alali Homes",
   description:
-    "Guaranteed rent for licensed HMOs: a fixed monthly rent on a 3–5 year corporate lease, with full HMO management included. London and the South East.",
+    "Guaranteed rent for licensed HMOs: a fixed monthly rent on a 3–5 year corporate lease, with full HMO management included. London, the South East, the Midlands, Yorkshire and the North East.",
   eyebrow: "HMO Guaranteed Rent",
   h1: "Guaranteed Rent for",
   h1Gold: "Licensed HMOs",
@@ -139,7 +139,7 @@ export const CORPORATE_SERVICE: ServiceContent = {
     },
     {
       q: "What properties do you take on corporate lets?",
-      a: "2 to 4 bedroom houses and flats, 1 bedroom self-contained flats, and existing licensed HMOs across London and the South East. We assess every property individually and make a written rent offer where it is a good fit.",
+      a: "2 to 4 bedroom houses and flats, 1 bedroom self-contained flats, and existing licensed HMOs. In the North West we currently lease 1 to 3 bedroom properties only. We assess every property individually and make a written rent offer where it is a good fit.",
     },
     {
       q: "How is a corporate let different from a standard tenancy?",

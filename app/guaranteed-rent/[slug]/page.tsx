@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = getArea(slug)
   if (!area) return {}
   const title = `Guaranteed Rent ${area.name.replace(/^the /, "")} | Corporate Lets | Alali Homes`
-  const description = `Guaranteed rent in ${area.name}: a fixed monthly rent on a 3–5 year corporate lease for HMOs, 2–4 bed and 1-bed flats, fully managed.`
+  const description = `Guaranteed rent in ${area.name}: a fixed monthly rent on a 3–5 year corporate lease for ${area.typesShort ?? "HMOs, 2–4 bed and 1-bed flats"}, fully managed.`
   const url = `${SITE}/guaranteed-rent/${area.slug}`
   return {
     title,
@@ -50,6 +50,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const siblings = parent ? getChildren(parent.slug).filter((a) => a.slug !== area.slug) : []
   const url = `${SITE}/guaranteed-rent/${area.slug}`
   const displayName = area.name.replace(/^the /, "")
+  // Places without their own page; places that have one appear as cards instead.
+  const chips = area.places.filter((p) => !children.some((c) => c.name === p))
 
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -73,7 +75,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     url,
     provider: { "@id": `${SITE}/#organization` },
     areaServed: {
-      "@type": area.kind === "region" && area.slug === "london" ? "City" : "AdministrativeArea",
+      "@type": area.slug === "london" ? "City" : "AdministrativeArea",
       name: displayName,
     },
     audience: { "@type": "Audience", audienceType: "Landlords and property owners" },
@@ -146,7 +148,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 Properties we take on in <strong className="gold-text">{area.name}</strong>
               </h2>
             </div>
-            <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <div className={`mt-12 grid gap-8 ${area.stock.length === 2 ? "mx-auto max-w-4xl md:grid-cols-2" : "md:grid-cols-3"}`}>
               {area.stock.map((d) => (
                 <div key={d.title} className="card p-7">
                   <h3 className="font-display text-lg font-semibold text-charcoal">{d.title}</h3>
@@ -170,7 +172,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
         <section className="bg-cream px-4 py-16 sm:px-6 sm:py-20">
           <div className="mx-auto max-w-6xl">
             <h2 className="display text-center text-[1.8rem] sm:text-[2.3rem]">{area.placesLabel}</h2>
-            {children.length > 0 ? (
+            {children.length > 0 && (
               <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {children.map((c) => (
                   <li key={c.slug}>
@@ -184,18 +186,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   </li>
                 ))}
               </ul>
-            ) : (
-              <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
-                {area.places.map((p) => (
-                  <li key={p} className="rounded-full border border-gold/25 bg-white px-4 py-1.5 font-body text-[0.85rem] text-charcoal shadow-[0_8px_20px_-16px_rgba(13,13,13,0.4)]">
-                    {p}
-                  </li>
-                ))}
-              </ul>
             )}
-            {area.kind === "region" && area.slug === "london" && (
+            {chips.length > 0 && (
               <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
-                {area.places.map((p) => (
+                {chips.map((p) => (
                   <li key={p} className="rounded-full border border-gold/25 bg-white px-4 py-1.5 font-body text-[0.85rem] text-charcoal shadow-[0_8px_20px_-16px_rgba(13,13,13,0.4)]">
                     {p}
                   </li>

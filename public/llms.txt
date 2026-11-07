@@ -1,6 +1,6 @@
 # Alali Homes
 
-> Alali Homes Ltd is a guaranteed rent and corporate lettings company for landlords in London and the South East. It leases existing licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, pays the landlord a fixed rent every month whether or not the property is occupied, and provides full property management and dedicated tenant support for the whole term.
+> Alali Homes Ltd is a guaranteed rent and corporate lettings company for landlords in London, the South East, the Midlands, Yorkshire and the Humber, the North East and the North West. It leases existing licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, pays the landlord a fixed rent every month whether or not the property is occupied, and provides full property management and dedicated tenant support for the whole term.
 
 ## Key facts
 
@@ -9,12 +9,21 @@
 - Service: guaranteed rent on a corporate lease (company let). Alali Homes Ltd is the landlord's tenant, so the landlord has one tenant, one monthly rent payment and one point of contact.
 - Lease length: 3 to 5 years. Rent, term, break clause and notice periods are agreed in writing before the landlord signs.
 - Guarantee: the agreed rent is paid every month for the full term regardless of occupancy. Voids and arrears are Alali Homes' risk, not the landlord's.
-- Property types: existing licensed HMOs, 2-4 bedroom houses and flats, and 1-bedroom self-contained flats.
+- Property types: existing licensed HMOs, 2-4 bedroom houses and flats, and 1-bedroom self-contained flats. In the North West, 1-3 bedroom properties only.
 - Included: full property management (maintenance and repairs coordination, regular inspections, compliance tracking), dedicated support for tenants, and the property professionally maintained throughout the lease and returned in the agreed condition, allowing for fair wear and tear.
 - HMOs: taken on as licensed and managed in line with the licence conditions and HMO management regulations. Licence-holder and manager responsibilities are agreed in writing.
 - Compliance: the owner remains legally responsible for certain safety certificates (gas safety, EICR, EPC); Alali Homes tracks renewals and arranges them where agreed.
-- Areas: all 32 London boroughs, plus Kent, Surrey, East Sussex, West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Every property is assessed individually and receives a written rent offer if it is a good fit.
+- Every property is assessed individually and receives a written rent offer if it is a good fit.
 - Agents: letting and estate agents can refer landlords and earn a referral fee, agreed in writing.
+
+## Areas covered
+
+- London: all 32 boroughs.
+- South East: Kent, Surrey, East Sussex, West Sussex, Hampshire, Berkshire, Buckinghamshire, Oxfordshire.
+- Midlands: all of the West Midlands and East Midlands.
+- Yorkshire and the Humber: Barnsley, Bradford, Calderdale, East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield, York.
+- North East: Newcastle, Gateshead, South Tyneside.
+- North West (1-3 bedroom properties only): Liverpool, Central Lancashire, East Lancashire, Blackburn, Lancaster, Warrington, Halton, Cheshire East, Chester, Knowsley, St Helens, Wirral, Carlisle, Workington, Barrow-in-Furness.
 
 ## Pages
 
@@ -24,4 +33,8 @@
 - [Guaranteed rent London](https://www.alalihomes.com/guaranteed-rent/london)
 - [Guaranteed rent South East](https://www.alalihomes.com/guaranteed-rent/south-east)
 - County pages: [Kent](https://www.alalihomes.com/guaranteed-rent/kent), [Surrey](https://www.alalihomes.com/guaranteed-rent/surrey), [East Sussex](https://www.alalihomes.com/guaranteed-rent/east-sussex), [West Sussex](https://www.alalihomes.com/guaranteed-rent/west-sussex), [Hampshire](https://www.alalihomes.com/guaranteed-rent/hampshire), [Berkshire](https://www.alalihomes.com/guaranteed-rent/berkshire), [Buckinghamshire](https://www.alalihomes.com/guaranteed-rent/buckinghamshire), [Oxfordshire](https://www.alalihomes.com/guaranteed-rent/oxfordshire)
+- [Guaranteed rent Midlands](https://www.alalihomes.com/guaranteed-rent/midlands)
+- [Guaranteed rent Yorkshire and the Humber](https://www.alalihomes.com/guaranteed-rent/yorkshire)
+- [Guaranteed rent North East](https://www.alalihomes.com/guaranteed-rent/north-east)
+- [Guaranteed rent North West](https://www.alalihomes.com/guaranteed-rent/north-west)
 - [Policies and statements](https://www.alalihomes.com/policies): modern slavery statement, complaints procedure, anti-bribery, equality and diversity, privacy, accessibility, cookies, terms

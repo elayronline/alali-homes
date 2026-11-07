@@ -8,6 +8,7 @@
  *   lease agreements, so the copy is about the landlord's offer only.
  * - Licensing statements stay general (councils set their own schemes). Never name a
  *   borough's scheme or an Article 4 direction here without checking it is in force.
+ * - Never name the contracts or schemes behind our coverage on any public page.
  * - Adding an area = adding an entry. The page, sitemap and links pick it up.
  */
 
@@ -37,6 +38,8 @@ export interface Area {
   places: string[]
   placesLabel: string
   faqs: AreaFAQ[]
+  /** Property types in metadata, when this area does not take the full range */
+  typesShort?: string
 }
 
 const WHAT_YOU_GET =
@@ -51,6 +54,20 @@ function stock(hmoPlaces: string, housePlaces: string, flatPlaces: string) {
     {
       title: "2–4 bed houses and flats",
       text: `Two to four bedroom houses and flats in ${housePlaces}, leased on a 3 to 5 year corporate let with full property management included.`,
+    },
+    {
+      title: "1-bed self-contained flats",
+      text: `One-bedroom self-contained flats in ${flatPlaces}, with their own kitchen and bathroom, on the same guaranteed rent terms.`,
+    },
+  ]
+}
+
+/** Areas where we currently lease 1 to 3 bed properties only, so no HMOs and no 4 beds. */
+function stockSmall(housePlaces: string, flatPlaces: string) {
+  return [
+    {
+      title: "2–3 bed houses and flats",
+      text: `Two and three bedroom houses and flats in ${housePlaces}, leased on a 3 to 5 year corporate let with full property management included.`,
     },
     {
       title: "1-bed self-contained flats",
@@ -78,6 +95,15 @@ const LICENSING_FAQ = (where: string): AreaFAQ => ({
   q: `Do you take on licensed HMOs in ${where}?`,
   a: `Yes. Licensing is set by each local council, and mandatory HMO licensing applies across England to HMOs with five or more people forming two or more households. We take existing licensed HMOs in ${where} on as they are licensed, manage them in line with the licence conditions, and agree who holds which responsibilities in writing before the lease starts.`,
 })
+
+const SMALL_STOCK_FAQS = (where: string): AreaFAQ[] => [
+  SHARED_FAQS[0],
+  {
+    q: `What types of property do you take on in ${where}?`,
+    a: `In ${where} we currently lease 1 to 3 bedroom properties: 1-bed self-contained flats and 2 to 3 bedroom houses and flats. We assess every property individually and make a written rent offer where it is a good fit.`,
+  },
+  SHARED_FAQS[2],
+]
 
 export const AREAS: Area[] = [
   // ---------------------------------------------------------------- LONDON
@@ -409,6 +435,86 @@ export const AREAS: Area[] = [
       LICENSING_FAQ("Oxford and Oxfordshire"),
     ],
   },
+
+  // ------------------------------------------------------------ THE MIDLANDS
+  {
+    slug: "midlands",
+    name: "the Midlands",
+    inName: "the Midlands",
+    kind: "region",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords across all of the West Midlands and East Midlands.",
+    intro: [
+      "We cover all of the Midlands, from Birmingham and the Black Country to Nottingham, Derby, Leicester and Lincolnshire.",
+      "Alali Homes leases properties across the region on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management for the whole term.",
+    ],
+    stock: stock("towns and cities across the Midlands", "towns and cities across the Midlands", "town and city centres across the Midlands"),
+    properties: WHAT_YOU_GET,
+    placesLabel: "Where we cover in the Midlands",
+    places: [
+      "West Midlands", "Birmingham", "Coventry", "Wolverhampton", "Staffordshire", "Stoke-on-Trent", "Warwickshire", "Worcestershire",
+      "Shropshire", "Herefordshire", "East Midlands", "Nottingham", "Nottinghamshire", "Derby", "Derbyshire", "Leicester", "Leicestershire",
+      "Lincolnshire", "Northamptonshire", "Rutland",
+    ],
+    faqs: [...SHARED_FAQS, LICENSING_FAQ("the Midlands")],
+  },
+
+  // ------------------------------------------------- YORKSHIRE AND THE HUMBER
+  {
+    slug: "yorkshire",
+    name: "Yorkshire and the Humber",
+    inName: "Yorkshire and the Humber",
+    kind: "region",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Leeds, Sheffield, Bradford, Hull, York and across the region.",
+    intro: [
+      "We cover Barnsley, Bradford, Calderdale, the East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield and York.",
+      "Alali Homes leases properties across these areas on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management for the whole term.",
+    ],
+    stock: stock("Leeds, Sheffield, Bradford, Hull and York", "West and South Yorkshire, Hull, York and North Yorkshire", "city and town centres across the region"),
+    properties: WHAT_YOU_GET,
+    placesLabel: "Where we cover in Yorkshire and the Humber",
+    places: ["Barnsley", "Bradford", "Calderdale", "East Riding of Yorkshire", "Hull", "Kirklees", "Leeds", "North Lincolnshire", "North Yorkshire", "Rotherham", "Sheffield", "York"],
+    faqs: [...SHARED_FAQS, LICENSING_FAQ("Yorkshire")],
+  },
+
+  // -------------------------------------------------------------- NORTH EAST
+  {
+    slug: "north-east",
+    name: "the North East",
+    inName: "the North East",
+    kind: "region",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Newcastle, Gateshead and South Tyneside.",
+    intro: [
+      "In the North East we cover Newcastle, Gateshead and South Tyneside.",
+      "Alali Homes leases properties in these areas on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management for the whole term.",
+    ],
+    stock: stock("Newcastle, Gateshead and South Tyneside", "Newcastle, Gateshead and South Tyneside", "Newcastle, Gateshead and South Tyneside"),
+    properties: WHAT_YOU_GET,
+    placesLabel: "Where we cover in the North East",
+    places: ["Newcastle", "Gateshead", "South Tyneside"],
+    faqs: [...SHARED_FAQS, LICENSING_FAQ("the North East")],
+  },
+
+  // -------------------------------------------------------------- NORTH WEST
+  {
+    slug: "north-west",
+    name: "the North West",
+    inName: "the North West",
+    kind: "region",
+    typesShort: "1 to 3 bed properties",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords with 1 to 3 bed properties in Liverpool, Lancashire, Cheshire and Cumbria.",
+    intro: [
+      "We cover Liverpool, Central Lancashire, Lancaster, East Lancashire, Warrington and Halton, Cheshire East, Knowsley and St Helens, Blackburn, Carlisle, Chester, Barrow-in-Furness, Wirral and Workington. In this region we lease 1 to 3 bedroom properties.",
+      "Alali Homes takes these properties on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management for the whole term.",
+    ],
+    stock: stockSmall("our North West areas", "our North West areas"),
+    properties: WHAT_YOU_GET,
+    placesLabel: "Where we cover in the North West",
+    places: [
+      "Liverpool", "Central Lancashire", "Lancaster", "East Lancashire", "Warrington and Halton", "Cheshire East", "Knowsley and St Helens",
+      "Blackburn", "Carlisle", "Chester", "Barrow-in-Furness", "Wirral", "Workington",
+    ],
+    faqs: SMALL_STOCK_FAQS("the North West"),
+  },
 ]
 
 export function getArea(slug: string): Area | undefined {
@@ -423,7 +529,10 @@ export const REGIONS = AREAS.filter((a) => a.kind === "region")
 export const COUNTIES = AREAS.filter((a) => a.kind === "county")
 
 /** Schema.org areaServed list for the whole business */
-export const AREA_SERVED = [
-  { "@type": "City", name: "London" },
-  ...COUNTIES.map((c) => ({ "@type": "AdministrativeArea", name: c.name })),
-]
+export const AREA_SERVED = AREAS.filter((a) => a.slug !== "south-east").map((a) => ({
+  "@type": a.slug === "london" ? "City" : "AdministrativeArea",
+  name: a.name.replace(/^the /, ""),
+}))
+
+/** One sentence of coverage, used wherever the site states where we operate */
+export const COVERAGE = "London, the South East, the Midlands, Yorkshire and the Humber, the North East and the North West"
