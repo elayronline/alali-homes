@@ -51,7 +51,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const url = `${SITE}/guaranteed-rent/${area.slug}`
   const displayName = area.name.replace(/^the /, "")
   // Places without their own page; places that have one appear as cards instead.
-  const chips = area.places.filter((p) => !children.some((c) => c.name === p))
+  const chips = area.places.filter((p) => !children.some((c) => c.name === p)).sort((a, b) => a.localeCompare(b))
 
   const breadcrumb = {
     "@context": "https://schema.org",

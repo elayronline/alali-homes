@@ -9,6 +9,7 @@ import { scrollToSection } from "@/lib/smoothScroll"
 const navLinks = [
   { label: "Landlords", href: "landlords" },
   { label: "Properties", href: "properties" },
+  { label: "Areas", href: "areas" },
   { label: "Agents", href: "agents" },
   { label: "How It Works", href: "process" },
   { label: "About", href: "about" },

@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react"
-import { COVERAGE, REGIONS, getChildren } from "@/lib/areas"
+import { REGIONS, getChildren } from "@/lib/areas"
 
 const companyLinks = [
   { label: "About", href: "/#about" },
@@ -60,7 +60,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/70">
-              Guaranteed rent and corporate lets for landlords in {COVERAGE}. A fixed
+              Guaranteed rent and corporate lets for landlords. A fixed
               rent every month on a 3–5 year lease, with full property management included.
             </p>
             <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">

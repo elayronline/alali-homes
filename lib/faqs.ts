@@ -65,7 +65,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "Where do you operate?",
     answer:
-      "All 32 London boroughs; the South East (Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire); all of the Midlands; Yorkshire and the Humber (Barnsley, Bradford, Calderdale, East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield and York); the North East (Newcastle, Gateshead and South Tyneside); and the North West (Liverpool, Central and East Lancashire, Lancaster, Blackburn, Warrington and Halton, Cheshire East, Chester, Knowsley and St Helens, Wirral, Carlisle, Workington and Barrow-in-Furness). Each region has its own page on this site.",
+      "All 32 London boroughs; the South East (Berkshire, Buckinghamshire, East Sussex, Hampshire, Kent, Oxfordshire, Surrey and West Sussex); all of the Midlands; the North West (Barrow-in-Furness, Blackburn, Carlisle, Central Lancashire, Cheshire East, Chester, East Lancashire, Knowsley and St Helens, Lancaster, Liverpool, Warrington and Halton, Wirral and Workington); Yorkshire and the Humber (Barnsley, Bradford, Calderdale, East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield and York); and the North East (Gateshead, Newcastle and South Tyneside). Each region has its own page on this site.",
   },
   {
     question: "What if I want my property back?",
