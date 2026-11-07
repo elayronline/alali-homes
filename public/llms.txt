@@ -21,9 +21,9 @@
 - London: all 32 boroughs.
 - South East: Kent, Surrey, East Sussex, West Sussex, Hampshire, Berkshire, Buckinghamshire, Oxfordshire.
 - Midlands: all of the West Midlands and East Midlands.
+- North West (1-3 bedroom properties only): Barrow-in-Furness, Blackburn, Carlisle, Central Lancashire, Cheshire East, Chester, East Lancashire, Knowsley and St Helens, Lancaster, Liverpool, Warrington and Halton, Wirral, Workington.
 - Yorkshire and the Humber: Barnsley, Bradford, Calderdale, East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield, York.
-- North East: Newcastle, Gateshead, South Tyneside.
-- North West (1-3 bedroom properties only): Liverpool, Central Lancashire, East Lancashire, Blackburn, Lancaster, Warrington, Halton, Cheshire East, Chester, Knowsley, St Helens, Wirral, Carlisle, Workington, Barrow-in-Furness.
+- North East: Gateshead, Newcastle, South Tyneside.
 
 ## Pages
 

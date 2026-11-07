@@ -38,6 +38,8 @@ export interface Area {
   places: string[]
   placesLabel: string
   faqs: AreaFAQ[]
+  /** Short coverage line for the homepage, when the full places list is too long */
+  summary?: string
   /** Property types in metadata, when this area does not take the full range */
   typesShort?: string
 }
@@ -112,6 +114,7 @@ export const AREAS: Area[] = [
     name: "London",
     inName: "London",
     kind: "region",
+    summary: "All 32 London boroughs",
     strap: "Guaranteed rent on 3–5 year corporate leases for landlords across all 32 London boroughs.",
     intro: [
       "In London an empty month or a missed rent payment costs a landlord more than anywhere else in the country, and running an HMO or a portfolio of flats in the capital is close to a full-time job. A conventional let also brings the same cycle of viewings, referencing, gaps and re-lets every year or two.",
@@ -442,6 +445,7 @@ export const AREAS: Area[] = [
     name: "the Midlands",
     inName: "the Midlands",
     kind: "region",
+    summary: "All of the West Midlands and East Midlands",
     strap: "Guaranteed rent on 3–5 year corporate leases for landlords across all of the West Midlands and East Midlands.",
     intro: [
       "We cover all of the Midlands, from Birmingham and the Black Country to Nottingham, Derby, Leicester and Lincolnshire.",
@@ -525,7 +529,9 @@ export function getChildren(slug: string): Area[] {
   return AREAS.filter((a) => a.parent === slug)
 }
 
-export const REGIONS = AREAS.filter((a) => a.kind === "region")
+/** South to north; the northern regions run west to east, so a 3-column grid reads like a map. */
+const REGION_ORDER = ["london", "south-east", "midlands", "north-west", "yorkshire", "north-east"]
+export const REGIONS = REGION_ORDER.map((slug) => AREAS.find((a) => a.slug === slug)!)
 export const COUNTIES = AREAS.filter((a) => a.kind === "county")
 
 /** Schema.org areaServed list for the whole business */
@@ -533,6 +539,3 @@ export const AREA_SERVED = AREAS.filter((a) => a.slug !== "south-east").map((a) 
   "@type": a.slug === "london" ? "City" : "AdministrativeArea",
   name: a.name.replace(/^the /, ""),
 }))
-
-/** One sentence of coverage, used wherever the site states where we operate */
-export const COVERAGE = "London, the South East, the Midlands, Yorkshire and the Humber, the North East and the North West"

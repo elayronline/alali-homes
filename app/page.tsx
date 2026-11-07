@@ -13,6 +13,7 @@ import { ScrollToTop } from "@/components/ScrollToTop"
 import { GoldDivider } from "@/components/GoldDivider"
 import { HashScroll } from "@/components/HashScroll"
 import { PropertyTypes } from "@/components/PropertyTypes"
+import { AreasWeCover } from "@/components/AreasWeCover"
 import { AREA_SERVED } from "@/lib/areas"
 import { agentFAQs, landlordFAQs } from "@/lib/faqs"
 
@@ -64,6 +65,7 @@ export default function Home() {
         <GoldDivider />
         <ForLandlords />
         <PropertyTypes />
+        <AreasWeCover />
         <MidPageCTA />
         <ForAgents />
         <GoldDivider />
