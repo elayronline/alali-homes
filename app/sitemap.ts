@@ -3,11 +3,11 @@ import { AREAS } from "@/lib/areas"
 
 // Real last-content-change dates. Update a page's date when its content changes;
 // a build-time `new Date()` here would either lie or freeze at the last deploy.
-const HOME_UPDATED = "2026-11-02"
-const LEGAL_UPDATED = "2026-11-02"
+const HOME_UPDATED = "2026-11-07"
+const LEGAL_UPDATED = "2026-11-07"
 const COOKIES_UPDATED = "2026-09-08"
-const AREAS_UPDATED = "2026-11-02"
-const SERVICES_UPDATED = "2026-11-02"
+const AREAS_UPDATED = "2026-11-07"
+const SERVICES_UPDATED = "2026-11-07"
 
 const SITE = "https://www.alalihomes.com"
 

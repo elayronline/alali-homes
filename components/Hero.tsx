@@ -1,7 +1,7 @@
 "use client"
 
 import { scrollToSection } from "@/lib/smoothScroll"
-import { AREAS } from "@/lib/areas"
+import { AREAS, COVERAGE } from "@/lib/areas"
 import { Skyline } from "@/components/Skyline"
 
 const trust = ["Fixed rent every month", "3–5 year corporate leases", "Full property management included"]
@@ -33,8 +33,7 @@ export function Hero() {
           </h1>
 
           <p {...rise(0.2)} className="rise mt-7 max-w-xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">
-            We lease licensed HMOs, 2–4 bed properties and 1-bed self-contained flats across London
-            and the South East on 3–5 year corporate leases. You receive a fixed rent every month,
+            We lease licensed HMOs, 2–4 bed properties and 1-bed self-contained flats across {COVERAGE} on 3–5 year corporate leases. You receive a fixed rent every month,
             occupied or not, while we provide full property management and dedicated support for
             tenants, and keep your property professionally maintained for the whole term.
           </p>

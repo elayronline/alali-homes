@@ -30,7 +30,7 @@ export default function ModernSlaveryStatement() {
         <p>
           {COMPANY.name} is a private limited company registered in England and Wales (company
           number {COMPANY.number}), with its registered office at {COMPANY.address}. We take
-          residential properties in London and the South East on corporate leases, pay landlords a
+          residential properties in England on corporate leases, pay landlords a
           guaranteed rent, and provide property management for the length of each lease.
         </p>
       </section>

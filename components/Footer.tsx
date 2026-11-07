@@ -1,10 +1,5 @@
 import { Instagram } from "lucide-react"
-import { COUNTIES, REGIONS } from "@/lib/areas"
-
-const areaLinks = [
-  ...REGIONS.map((r) => ({ label: `Guaranteed Rent ${r.name.replace(/^the /, "")}`, href: `/guaranteed-rent/${r.slug}` })),
-  ...COUNTIES.map((c) => ({ label: c.name, href: `/guaranteed-rent/${c.slug}` })),
-]
+import { COVERAGE, REGIONS, getChildren } from "@/lib/areas"
 
 const companyLinks = [
   { label: "About", href: "/#about" },
@@ -55,7 +50,7 @@ export function Footer() {
     <footer className="relative bg-charcoal px-4 pt-20 pb-8 text-white sm:px-6">
       <div className="hairline absolute top-0 right-0 left-0" />
       <div className="relative z-10 mx-auto max-w-6xl">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
             <div aria-label="Alali Homes, guaranteed rent for landlords">
@@ -65,7 +60,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-5 max-w-xs font-body text-[0.88rem] font-light leading-relaxed text-white/70">
-              Guaranteed rent and corporate lets for landlords in London and the South East. A fixed
+              Guaranteed rent and corporate lets for landlords in {COVERAGE}. A fixed
               rent every month on a 3–5 year lease, with full property management included.
             </p>
             <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">
@@ -85,11 +80,32 @@ export function Footer() {
 
           <Column title="Company" links={companyLinks} />
           <Column title="Services" links={serviceLinks} />
-          <Column title="Areas We Cover" links={areaLinks} />
           <Column title="Legal" links={legalLinks} />
         </div>
 
-        <div className="mt-16 h-px bg-white/8" />
+        <div className="mt-14">
+          <h3 className={headingClass}>Areas We Cover</h3>
+          <div className="mt-5 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+            {REGIONS.map((r) => (
+              <div key={r.slug}>
+                <a href={`/guaranteed-rent/${r.slug}`} className="font-body text-[0.85rem] font-medium text-white/85 transition-colors duration-200 hover:text-gold-light">
+                  Guaranteed Rent {r.name.replace(/^the /, "")}
+                </a>
+                {getChildren(r.slug).length > 0 && (
+                  <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+                    {getChildren(r.slug).map((c) => (
+                      <li key={c.slug}>
+                        <a href={`/guaranteed-rent/${c.slug}`} className={linkClass}>{c.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14 h-px bg-white/8" />
 
         <div className="mt-6 flex flex-col items-center justify-between gap-3 sm:flex-row">
           <p className="font-body text-[0.75rem] font-light text-white/60">

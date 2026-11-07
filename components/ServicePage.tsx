@@ -152,7 +152,7 @@ export function ServicePage({ content: s }: { content: ServiceContent }) {
           <div className="mx-auto max-w-6xl">
             <h2 className="eyebrow">Areas we cover</h2>
             <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 font-body text-[0.9rem]">
-              {AREAS.map((a) => (
+              {AREAS.filter((a) => s.slug !== "hmo-guaranteed-rent" || !a.typesShort).map((a) => (
                 <li key={a.slug}>
                   <Link href={`/guaranteed-rent/${a.slug}`} className="text-charcoal hover:text-gold">
                     Guaranteed rent {a.name.replace(/^the /, "")}

@@ -30,7 +30,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "What types of property do you take on?",
     answer:
-      "Existing licensed HMOs, 2 to 4 bedroom houses and flats, and 1 bedroom self-contained flats across London and the South East. We assess every property individually and make a written rent offer where it is a good fit.",
+      "Existing licensed HMOs, 2 to 4 bedroom houses and flats, and 1 bedroom self-contained flats. In the North West we currently lease 1 to 3 bedroom properties only. We assess every property individually and make a written rent offer where it is a good fit.",
   },
   {
     question: "Do you take on licensed HMOs?",
@@ -65,7 +65,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "Where do you operate?",
     answer:
-      "London and the South East. That means all 32 London boroughs plus Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire. Each area has its own page on this site.",
+      "All 32 London boroughs; the South East (Kent, Surrey, East and West Sussex, Hampshire, Berkshire, Buckinghamshire and Oxfordshire); all of the Midlands; Yorkshire and the Humber (Barnsley, Bradford, Calderdale, East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield and York); the North East (Newcastle, Gateshead and South Tyneside); and the North West (Liverpool, Central and East Lancashire, Lancaster, Blackburn, Warrington and Halton, Cheshire East, Chester, Knowsley and St Helens, Wirral, Carlisle, Workington and Barrow-in-Furness). Each region has its own page on this site.",
   },
   {
     question: "What if I want my property back?",

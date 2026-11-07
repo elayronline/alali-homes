@@ -50,8 +50,8 @@ export function PropertyTypes() {
             transition={{ delay: 0.1 }}
             className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600 lg:justify-self-end"
           >
-            We assess every property individually across London and the South East and make a
-            written rent offer where it is a good fit.
+            We assess every property individually and make a written rent offer where it is a good
+            fit. In the North West we currently lease 1 to 3 bed properties only.
           </motion.p>
         </div>
 
