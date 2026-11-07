@@ -122,7 +122,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             </h1>
             <p className="mt-6 max-w-2xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">{area.strap}</p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#contact" className="btn btn-gold btn-arrow">Get a Guaranteed Rent Offer</a>
+              <a href="#contact-form" className="btn btn-gold btn-arrow">Get a Guaranteed Rent Offer</a>
               <a href="#process" className="btn btn-outline-dark">How It Works</a>
             </div>
           </div>

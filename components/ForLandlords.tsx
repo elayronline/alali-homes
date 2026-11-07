@@ -60,7 +60,7 @@ export function ForLandlords() {
             <p className="mt-9 font-body text-[0.98rem] font-medium text-charcoal">
               If any of this sounds like you, it&apos;s time to talk to Alali Homes.
             </p>
-            <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow mt-6">
+            <button onClick={() => scrollToSection("contact-form")} className="btn btn-gold btn-arrow mt-6">
               Get a Guaranteed Rent Offer
             </button>
           </motion.div>

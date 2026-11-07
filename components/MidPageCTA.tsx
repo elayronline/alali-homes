@@ -20,7 +20,7 @@ export function MidPageCTA() {
             No commitment, no obligation. Every offer is made in writing after we assess your property.
           </p>
         </div>
-        <button onClick={() => scrollToSection("contact")} className="btn btn-gold btn-arrow shrink-0">
+        <button onClick={() => scrollToSection("contact-form")} className="btn btn-gold btn-arrow shrink-0">
           Get My Rent Offer
         </button>
       </motion.div>
