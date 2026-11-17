@@ -22,11 +22,10 @@ import {
   POSTCODE_FAQ,
   SCHEME_FAQ,
   SHARED_FAQS,
-  SMALL_STOCK_FAQS,
   WHAT_YOU_GET,
   stock,
-  stockSmall,
 } from "@/lib/area-copy"
+import { NEW_AREAS } from "@/lib/areas-new"
 import { TOWNS } from "@/lib/towns"
 
 export type { Area, AreaFAQ, AreaKind } from "@/lib/area-copy"
@@ -256,7 +255,7 @@ const BASE_AREAS: Area[] = [
     placesLabel: "Towns we cover in Hampshire",
     places: [
       "Aldershot", "Andover", "Basingstoke", "Eastleigh", "Fareham", "Farnborough", "Fleet", "Gosport",
-      "Havant", "Petersfield", "Portsmouth", "Southampton", "Waterlooville", "Winchester",
+      "Havant", "Isle of Wight", "Lymington", "Petersfield", "Portsmouth", "Ringwood", "Southampton", "Waterlooville", "Winchester",
     ],
     faqs: [
       ...SHARED_FAQS,
@@ -264,6 +263,10 @@ const BASE_AREAS: Area[] = [
       {
         q: "Do you cover both Southampton and Portsmouth?",
         a: "Yes. We cover both cities and the towns between them, including Eastleigh, Fareham, Gosport and Havant.",
+      },
+      {
+        q: "Do you cover the Isle of Wight and the New Forest?",
+        a: "Yes. Our Hampshire coverage includes the Isle of Wight, the New Forest, Hart and Rushmoor as well as the cities and the M3 towns.",
       },
     ],
   },
@@ -406,7 +409,7 @@ const BASE_AREAS: Area[] = [
     kind: "region",
     strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Leeds, Sheffield, Bradford, Hull, York and across the region.",
     intro: [
-      "We cover Leeds, Bradford, Kirklees (Huddersfield and Dewsbury) and Calderdale (Halifax) in West Yorkshire; Sheffield, Barnsley and Rotherham in South Yorkshire; Hull and the East Riding of Yorkshire; York and North Yorkshire; and North Lincolnshire, including Scunthorpe.",
+      "We cover Leeds, Bradford, Kirklees (Huddersfield and Dewsbury), Calderdale (Halifax) and Wakefield (including Pontefract and Castleford) in West Yorkshire; Sheffield, Barnsley and Rotherham in South Yorkshire; Hull and the East Riding of Yorkshire; York and North Yorkshire; and North Lincolnshire, including Scunthorpe.",
       "These are areas with a large stock of terraced houses, back-to-backs, converted HMOs and city-centre flats. Alali Homes leases properties across them on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management and keep the property professionally maintained for the whole term.",
     ],
     stock: stock(
@@ -418,7 +421,7 @@ const BASE_AREAS: Area[] = [
     placesLabel: "Where we cover in Yorkshire and the Humber",
     places: [
       "Leeds", "Sheffield", "Bradford", "Hull", "York", "Huddersfield", "Dewsbury", "Halifax", "Barnsley", "Rotherham",
-      "Keighley", "Shipley", "Beverley", "Bridlington", "Harrogate", "Scarborough", "Scunthorpe",
+      "Wakefield", "Pontefract", "Castleford", "Keighley", "Shipley", "Beverley", "Bridlington", "Harrogate", "Scarborough", "Scunthorpe",
     ],
     faqs: [
       ...SHARED_FAQS,
@@ -467,30 +470,39 @@ const BASE_AREAS: Area[] = [
     name: "the North West",
     inName: "the North West",
     kind: "region",
-    typesShort: "1 to 3 bed properties",
-    strap: "Guaranteed rent on 3–5 year corporate leases for landlords with 1 to 3 bed properties in Liverpool, Lancashire, Cheshire and Cumbria.",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Liverpool, Lancashire, Cheshire and Cumbria.",
     intro: [
-      "We cover Liverpool, Knowsley and St Helens, the Wirral, Warrington and Halton (Widnes and Runcorn), Chester and Cheshire East (Crewe and Macclesfield), Central Lancashire (Preston and Chorley), East Lancashire (Burnley, Accrington and Nelson), Blackburn, Lancaster and Morecambe, and in Cumbria, Carlisle, Barrow-in-Furness and Workington. In this region we lease 1 to 3 bedroom properties.",
+      "We cover Liverpool, Knowsley and St Helens, the Wirral, Warrington and Halton (Widnes and Runcorn); Cheshire East and Cheshire West and Chester; Preston, Chorley and South Ribble; Blackburn with Darwen, Burnley, Hyndburn, Pendle, Rossendale and the Ribble Valley in east Lancashire; Lancaster and Morecambe; and in Cumbria, Cumberland and Westmorland and Furness.",
       "Alali Homes takes these properties on 3 to 5 year corporate lets. You receive a fixed rent every month, occupied or not, and we provide full property management for the whole term, so you never deal with repairs, inspections or an empty month.",
     ],
-    stock: stockSmall(
-      "Liverpool, the Wirral, St Helens, Warrington, Preston and Blackburn",
+    stock: stock(
+      "Liverpool, Preston, Blackburn and Burnley",
+      "Liverpool, the Wirral, St Helens, Warrington, Preston, Blackburn and Burnley",
       "Liverpool, Chester, Preston and Lancaster",
     ),
     properties: WHAT_YOU_GET,
     placesLabel: "Where we cover in the North West",
     places: [
-      "Liverpool", "Birkenhead", "Wallasey", "St Helens", "Knowsley", "Warrington", "Widnes", "Runcorn", "Chester", "Crewe",
-      "Macclesfield", "Preston", "Chorley", "Blackburn", "Burnley", "Accrington", "Lancaster", "Morecambe", "Carlisle",
-      "Barrow-in-Furness", "Workington",
+      "Liverpool", "Birkenhead", "Wallasey", "St Helens", "Knowsley", "Warrington", "Widnes", "Runcorn", "Chester", "Ellesmere Port",
+      "Northwich", "Crewe", "Macclesfield", "Preston", "Chorley", "Leyland", "Blackburn", "Darwen", "Burnley", "Accrington", "Nelson",
+      "Colne", "Rawtenstall", "Clitheroe", "Lancaster", "Morecambe", "Carlisle", "Workington", "Whitehaven", "Kendal", "Penrith",
+      "Barrow-in-Furness",
     ],
-    faqs: [...SMALL_STOCK_FAQS("the North West"), POSTCODE_FAQ("the North West")],
+    faqs: [
+      ...SHARED_FAQS,
+      LICENSING_FAQ("the North West"),
+      {
+        q: "Do you cover Cumbria?",
+        a: "Yes. We cover both Cumbrian councils, Cumberland and Westmorland and Furness, including Carlisle, Workington, Whitehaven, Kendal, Penrith and Barrow-in-Furness.",
+      },
+      POSTCODE_FAQ("the North West"),
+    ],
   },
 ]
 
 /** Counties and regions first, then the town pages that sit under them. */
 export const AREAS: Area[] = [
-  ...BASE_AREAS.map((a) => ({ ...a, faqs: [...a.faqs, SCHEME_FAQ(a.inName)] })),
+  ...[...BASE_AREAS, ...NEW_AREAS].map((a) => ({ ...a, faqs: [...a.faqs, SCHEME_FAQ(a.inName)] })),
   ...TOWNS,
 ]
 
@@ -503,7 +515,11 @@ export function getChildren(slug: string): Area[] {
 }
 
 /** South to north; the northern regions run west to east, so a 3-column grid reads like a map. */
-const REGION_ORDER = ["london", "south-east", "midlands", "north-west", "yorkshire", "north-east"]
+const REGION_ORDER = [
+  "london", "south-east", "east-of-england",
+  "south-west", "wales", "midlands",
+  "north-west", "yorkshire", "north-east",
+]
 export const REGIONS = REGION_ORDER.map((slug) => AREAS.find((a) => a.slug === slug)!)
 export const COUNTIES = AREAS.filter((a) => a.kind === "county")
 

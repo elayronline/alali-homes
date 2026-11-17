@@ -31,41 +31,26 @@ export interface Area {
   faqs: AreaFAQ[]
   /** Short coverage line for the homepage, when the full places list is too long */
   summary?: string
-  /** Property types in metadata, when this area does not take the full range */
-  typesShort?: string
 }
 
 
 export const WHAT_YOU_GET =
   "A fixed rent paid every month on a 3 to 5 year corporate lease with Alali Homes Ltd, whether or not the property is occupied. Full property management is included for the whole term: maintenance and repairs coordination, regular inspections, compliance tracking and dedicated support for tenants, so the property is professionally maintained and you never deal with day-to-day issues."
 
-export function stock(hmoPlaces: string, housePlaces: string, flatPlaces: string) {
+/** Three cards covering the full range we lease: HMOs, homes of every size, blocks and conversions. */
+export function stock(hmoPlaces: string, housePlaces: string, blockPlaces: string) {
   return [
     {
-      title: "Licensed HMOs",
-      text: `Existing licensed HMOs in ${hmoPlaces} and nearby. We take the property on as it is licensed, manage it in line with the licence conditions and pay you a guaranteed rent for the whole lease.`,
+      title: "HMOs of any size",
+      text: `Licensed HMOs in ${hmoPlaces} and nearby, from smaller shared houses to large HMOs. We take the property on as it is licensed, manage it in line with the licence conditions and pay you a guaranteed rent for the whole lease.`,
     },
     {
-      title: "2–4 bed houses and flats",
-      text: `Two to four bedroom houses and flats in ${housePlaces}, leased on a 3 to 5 year corporate let with full property management included.`,
+      title: "Studios to 4+ bed homes",
+      text: `Studios, flats and houses in ${housePlaces}, from 1-bed flats to 4+ bed family homes, leased on a 3 to 5 year corporate let with full property management included.`,
     },
     {
-      title: "1-bed self-contained flats",
-      text: `One-bedroom self-contained flats in ${flatPlaces}, with their own kitchen and bathroom, on the same guaranteed rent terms.`,
-    },
-  ]
-}
-
-/** Areas where we currently lease 1 to 3 bed properties only, so no HMOs and no 4 beds. */
-export function stockSmall(housePlaces: string, flatPlaces: string) {
-  return [
-    {
-      title: "2–3 bed houses and flats",
-      text: `Two and three bedroom houses and flats in ${housePlaces}, leased on a 3 to 5 year corporate let with full property management included.`,
-    },
-    {
-      title: "1-bed self-contained flats",
-      text: `One-bedroom self-contained flats in ${flatPlaces}, with their own kitchen and bathroom, on the same guaranteed rent terms.`,
+      title: "Blocks and converted buildings",
+      text: `Whole blocks of flats and converted buildings in ${blockPlaces}, including former care homes, hotels and offices, leased on the same guaranteed rent terms.`,
     },
   ]
 }
@@ -77,7 +62,7 @@ export const SHARED_FAQS: AreaFAQ[] = [
   },
   {
     q: "What types of property do you take on?",
-    a: "Existing licensed HMOs, 2 to 4 bedroom houses and flats, and 1 bedroom self-contained flats. We assess every property individually and make a written rent offer where it is a good fit.",
+    a: "Studios and 1-bed flats, 2 and 3 bed houses and flats, 4+ bed family homes, licensed HMOs of any size, whole blocks of flats, and converted buildings such as former care homes, hotels and offices. We assess every property individually and make a written rent offer where it is a good fit.",
   },
   {
     q: "What happens if the property is empty?",
@@ -100,12 +85,3 @@ export const LICENSING_FAQ = (where: string): AreaFAQ => ({
   q: `Do you take on licensed HMOs in ${where}?`,
   a: `Yes. Licensing is set by each local council, and mandatory HMO licensing applies across England to HMOs with five or more people forming two or more households. We take existing licensed HMOs in ${where} on as they are licensed, manage them in line with the licence conditions, and agree who holds which responsibilities in writing before the lease starts.`,
 })
-
-export const SMALL_STOCK_FAQS = (where: string): AreaFAQ[] => [
-  SHARED_FAQS[0],
-  {
-    q: `What types of property do you take on in ${where}?`,
-    a: `In ${where} we currently lease 1 to 3 bedroom properties: 1-bed self-contained flats and 2 to 3 bedroom houses and flats. We assess every property individually and make a written rent offer where it is a good fit.`,
-  },
-  SHARED_FAQS[2],
-]

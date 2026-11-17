@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = getArea(slug)
   if (!area) return {}
   const title = `Guaranteed Rent ${area.name.replace(/^the /, "")} | Corporate Lets | Alali Homes`
-  const description = `Guaranteed rent in ${area.name}: a fixed monthly rent on a 3–5 year corporate lease for ${area.typesShort ?? "HMOs, 2–4 bed and 1-bed flats"}, fully managed.`
+  const description = `Guaranteed rent in ${area.name}: a fixed monthly rent on a 3–5 year corporate lease for studios to 4+ bed homes, HMOs and blocks, fully managed.`
   const url = `${SITE}/guaranteed-rent/${area.slug}`
   return {
     title,

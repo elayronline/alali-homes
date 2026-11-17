@@ -30,7 +30,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "What types of property do you take on?",
     answer:
-      "Existing licensed HMOs, 2 to 4 bedroom houses and flats, and 1 bedroom self-contained flats. In the North West we currently lease 1 to 3 bedroom properties only. We assess every property individually and make a written rent offer where it is a good fit.",
+      "Studios and 1-bed flats, 2 and 3 bed houses and flats, 4+ bed family homes, licensed HMOs of any size, whole blocks of flats, and converted buildings such as former care homes, hotels and offices. We assess every property individually and make a written rent offer where it is a good fit.",
   },
   {
     question: "Do you take on licensed HMOs?",
@@ -65,7 +65,7 @@ export const landlordFAQs: FAQItem[] = [
   {
     question: "Where do you operate?",
     answer:
-      "All 32 London boroughs; the South East (Berkshire, Buckinghamshire, East Sussex, Hampshire, Kent, Oxfordshire, Surrey and West Sussex); all of the Midlands; the North West (Barrow-in-Furness, Blackburn, Carlisle, Central Lancashire, Cheshire East, Chester, East Lancashire, Knowsley and St Helens, Lancaster, Liverpool, Warrington and Halton, Wirral and Workington); Yorkshire and the Humber (Barnsley, Bradford, Calderdale, East Riding of Yorkshire, Hull, Kirklees, Leeds, North Lincolnshire, North Yorkshire, Rotherham, Sheffield and York); and the North East (Gateshead, Newcastle and South Tyneside). Each region has its own page on this site.",
+      "All 32 London boroughs; the South East (Berkshire, Buckinghamshire, East Sussex, Hampshire and the Isle of Wight, Kent, Oxfordshire, Surrey and West Sussex); the East of England (Essex, Hertfordshire and Bedfordshire); the whole of the South West; south, west, mid and north Wales; all of the Midlands; the North West (Merseyside, Cheshire, Lancashire and Cumbria); Yorkshire and the Humber; and the North East (Newcastle, Gateshead and South Tyneside). Each region has its own page on this site, and we confirm coverage for your postcode before anything else.",
   },
   {
     question: "What if I want my property back?",

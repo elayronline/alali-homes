@@ -95,12 +95,12 @@ export const CORPORATE_SERVICE: ServiceContent = {
   slug: "corporate-lets",
   title: "Corporate Lets for Landlords | Guaranteed Rent | Alali Homes",
   description:
-    "Corporate lets with guaranteed rent: Alali Homes Ltd leases your 2–4 bed property or 1-bed flat for 3–5 years and pays a fixed rent every month.",
+    "Corporate lets with guaranteed rent: Alali Homes Ltd leases your studio, flat, house, HMO or block for 3–5 years and pays a fixed rent every month.",
   eyebrow: "Corporate Lets",
   h1: "Corporate Lets with",
   h1Gold: "Guaranteed Rent",
   strap:
-    "Let your 2–4 bed property or 1-bed self-contained flat to Alali Homes Ltd on a 3–5 year corporate lease, with a fixed rent every month and full management included.",
+    "Let your studio, flat, family home, HMO, block of flats or converted building to Alali Homes Ltd on a 3–5 year corporate lease, with a fixed rent every month and full management included.",
   intro: [
     "A corporate let, or company let, is a lease where your tenant is a company rather than an individual. With Alali Homes, that company is us: we sign the lease, we pay the rent, and we are responsible for the property for the full term.",
     "You receive a fixed rent every month for 3 to 5 years, occupied or not. We provide full property management and dedicated support for the tenants, and keep your property professionally maintained from the first day of the lease to the last.",
@@ -139,7 +139,7 @@ export const CORPORATE_SERVICE: ServiceContent = {
     },
     {
       q: "What properties do you take on corporate lets?",
-      a: "2 to 4 bedroom houses and flats, 1 bedroom self-contained flats, and existing licensed HMOs. In the North West we currently lease 1 to 3 bedroom properties only. We assess every property individually and make a written rent offer where it is a good fit.",
+      a: "Studios and 1-bed flats, 2 and 3 bed houses and flats, 4+ bed family homes, licensed HMOs of any size, whole blocks of flats, and converted buildings such as former care homes, hotels and offices. We assess every property individually and make a written rent offer where it is a good fit.",
     },
     {
       q: "How is a corporate let different from a standard tenancy?",

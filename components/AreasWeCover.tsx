@@ -22,9 +22,6 @@ export function AreasWeCover() {
                 <p className="mt-3 font-body text-[0.9rem] font-light leading-relaxed text-grey-600">
                   {r.summary ?? [...r.places].sort((a, b) => a.localeCompare(b)).join(", ")}
                 </p>
-                {r.typesShort && (
-                  <p className="mt-3 font-body text-[0.82rem] font-medium text-charcoal">{r.typesShort} only</p>
-                )}
                 <span className="mt-auto pt-5 font-body text-[0.82rem] font-medium text-gold-deep">
                   Guaranteed rent {r.name.replace(/^the /, "")} &rarr;
                 </span>

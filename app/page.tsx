@@ -35,7 +35,7 @@ const serviceSchema = {
   name: "Guaranteed Rent for Landlords",
   alternateName: ["Corporate Lets", "Guaranteed Rent Scheme", "Company Let"],
   description:
-    "Alali Homes leases licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, paying landlords a guaranteed fixed rent every month with full property management and dedicated tenant support included.",
+    "Alali Homes leases studios, 1 to 4+ bedroom houses and flats, HMOs of any size, blocks of flats and converted buildings on 3-5 year corporate leases, paying landlords a guaranteed fixed rent every month with full property management and dedicated tenant support included.",
   provider: { "@id": "https://www.alalihomes.com/#organization" },
   areaServed: AREA_SERVED,
   serviceType: "Guaranteed Rent",
@@ -45,8 +45,8 @@ const serviceSchema = {
     name: "Properties we lease on guaranteed rent",
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guaranteed rent for licensed HMOs", url: "https://www.alalihomes.com/hmo-guaranteed-rent" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate lets for 2-4 bedroom properties", url: "https://www.alalihomes.com/corporate-lets" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate lets for 1-bedroom self-contained flats", url: "https://www.alalihomes.com/corporate-lets" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate lets for studios and 1 to 4+ bedroom homes", url: "https://www.alalihomes.com/corporate-lets" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Guaranteed rent for blocks of flats and converted buildings", url: "https://www.alalihomes.com/corporate-lets" } },
     ],
   },
 }

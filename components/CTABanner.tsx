@@ -6,7 +6,15 @@ import { Phone, Mail } from "lucide-react"
 
 const roleOptions = ["Landlord", "Letting Agent", "Estate Agent", "Other"]
 
-const propertyOptions = ["Licensed HMO", "2–4 bed house or flat", "1-bed self-contained flat", "Other"]
+const propertyOptions = [
+  "Studio or 1-bed flat",
+  "2–3 bed house or flat",
+  "4+ bed house",
+  "HMO",
+  "Block of flats",
+  "Converted building (care home, hotel, office)",
+  "Other",
+]
 
 const reassurance = ["No obligation, no hard sell", "A written guaranteed rent offer", "Your details are never shared"]
 
