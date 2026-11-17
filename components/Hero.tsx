@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
 
           <p {...rise(0.2)} className="rise mt-7 max-w-xl font-body text-[1.02rem] font-light leading-[1.85] text-grey-600">
-            We lease licensed HMOs, 2–4 bed properties and 1-bed self-contained flats on 3–5 year corporate leases.
+            We lease everything from studios and 1-bed flats to 4+ bed family homes, HMOs of any size, whole blocks of flats and converted buildings on 3–5 year corporate leases.
             You receive a fixed rent every month, occupied or not, while we provide full property management and dedicated support for
             tenants, and keep your property professionally maintained for the whole term.
           </p>

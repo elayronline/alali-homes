@@ -5,10 +5,8 @@ import {
   POSTCODE_FAQ,
   SCHEME_FAQ,
   SHARED_FAQS,
-  SMALL_STOCK_FAQS,
   WHAT_YOU_GET,
   stock,
-  stockSmall,
 } from "@/lib/area-copy"
 
 /**
@@ -288,24 +286,20 @@ export const TOWNS: Area[] = [
   }),
 
   // ------------------------------------------------------------ NORTH WEST
-  {
+  town({
     slug: "liverpool",
     name: "Liverpool",
-    inName: "Liverpool",
-    kind: "town",
     parent: "north-west",
-    typesShort: "1 to 3 bed properties",
-    strap: "Guaranteed rent on 3–5 year corporate leases for landlords with 1 to 3 bed properties in Liverpool, Knowsley, St Helens and the Wirral.",
-    intro: [
-      "Liverpool has a large rental market of terraced houses and flats, from the streets around the city centre to the suburbs on the Merseyrail lines. Across the Mersey are Birkenhead and Wallasey on the Wirral, and to the east Knowsley and St Helens. In Liverpool and the surrounding areas we lease 1 to 3 bedroom properties.",
-      OFFER("Liverpool"),
-    ],
-    stock: stockSmall("Liverpool, Knowsley, St Helens and the Wirral", "Liverpool city centre, Birkenhead and Wallasey"),
-    properties: WHAT_YOU_GET,
-    placesLabel: "In and around Liverpool",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Liverpool, Knowsley, St Helens and the Wirral.",
+    local:
+      "Liverpool has a large rental market of terraced houses, HMOs and flats, from the streets around the city centre to the suburbs on the Merseyrail lines. Across the Mersey are Birkenhead and Wallasey on the Wirral, and to the east Knowsley and St Helens.",
+    stockAt: ["Liverpool", "Liverpool, Knowsley, St Helens and the Wirral", "Liverpool city centre, Birkenhead and Wallasey"],
     places: ["Birkenhead", "Huyton", "Kirkby", "Prescot", "St Helens", "Wallasey", "Widnes"],
-    faqs: [...SMALL_STOCK_FAQS("Liverpool"), SCHEME_FAQ("Liverpool"), POSTCODE_FAQ("Liverpool")],
-  },
+    faq: {
+      q: "Do you cover the Wirral and St Helens?",
+      a: "Yes. As well as Liverpool we cover Knowsley, St Helens, the Wirral, and Warrington and Halton.",
+    },
+  }),
 
   // ------------------------------------------------------------ NORTH EAST
   town({
@@ -320,6 +314,164 @@ export const TOWNS: Area[] = [
     faq: {
       q: "Do you take on Tyneside flats in Newcastle?",
       a: "Yes. Tyneside flats, upper and lower, are self-contained and often fit the 1-bed and 2-bed properties we lease. We assess each one individually and make a written rent offer if it is a good fit.",
+    },
+  }),
+
+  // ------------------------------------------------------- EAST OF ENGLAND
+  town({
+    slug: "luton",
+    name: "Luton",
+    parent: "bedfordshire",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Luton, Dunstable and Houghton Regis.",
+    local:
+      "Luton sits on the M1 with Thameslink trains into central London and its own airport. It has a large rental market of terraced houses, HMOs and flats, with Dunstable and Houghton Regis immediately to the west.",
+    stockAt: ["Luton", "Luton, Dunstable and Houghton Regis", "Luton town centre and near the stations"],
+    places: ["Dunstable", "Harpenden", "Houghton Regis", "Leighton Buzzard"],
+    faq: {
+      q: "Do you cover Dunstable as well as Luton?",
+      a: "Yes. We cover Luton and the Central Bedfordshire towns around it, including Dunstable, Houghton Regis and Leighton Buzzard.",
+    },
+  }),
+  town({
+    slug: "southend-on-sea",
+    name: "Southend-on-Sea",
+    parent: "essex",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Southend-on-Sea, Leigh-on-Sea, Rayleigh and Canvey Island.",
+    local:
+      "Southend-on-Sea is the largest town in south Essex, with c2c and Greater Anglia trains into the City. Its rental stock runs from seafront flats and converted Victorian houses to family homes in Leigh-on-Sea, Westcliff and Shoeburyness, with Rayleigh, Rochford and Canvey Island close by.",
+    stockAt: ["Southend-on-Sea and Westcliff", "Southend-on-Sea, Leigh-on-Sea, Rayleigh and Canvey Island", "Southend-on-Sea town centre and the seafront"],
+    places: ["Benfleet", "Canvey Island", "Leigh-on-Sea", "Rayleigh", "Rochford", "Shoeburyness"],
+    faq: {
+      q: "Do you take on converted flats in Southend?",
+      a: "Yes. Flats in converted houses, purpose-built flats and whole blocks are all property types we lease. We assess each one individually and make a written rent offer if it is a good fit.",
+    },
+  }),
+  town({
+    slug: "chelmsford",
+    name: "Chelmsford",
+    parent: "essex",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Chelmsford, Maldon, Witham and Braintree.",
+    local:
+      "Chelmsford is the county town of Essex, on the Great Eastern main line into London Liverpool Street and the A12. It has a strong rental market of flats and family houses, with Maldon, Witham, Braintree and Billericay nearby.",
+    stockAt: ["Chelmsford", "Chelmsford, Witham, Braintree and Billericay", "Chelmsford city centre and near the station"],
+    places: ["Billericay", "Braintree", "Maldon", "South Woodham Ferrers", "Witham", "Writtle"],
+    faq: {
+      q: "Do you cover Maldon and Braintree?",
+      a: "Yes. We cover Chelmsford and the towns around it, including Maldon, Witham, Braintree and Billericay, as part of our Essex coverage.",
+    },
+  }),
+  town({
+    slug: "colchester",
+    name: "Colchester",
+    parent: "essex",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Colchester, Clacton-on-Sea and the Tendring coast.",
+    local:
+      "Colchester is the largest town in north Essex, on the Great Eastern main line into London Liverpool Street. Its rental stock ranges from town-centre flats to family houses, with the Tendring coast towns of Clacton-on-Sea, Frinton and Harwich to the east.",
+    stockAt: ["Colchester and Clacton-on-Sea", "Colchester, Clacton-on-Sea, Harwich and Tiptree", "Colchester town centre and near the stations"],
+    places: ["Clacton-on-Sea", "Frinton-on-Sea", "Halstead", "Harwich", "Tiptree", "Wivenhoe"],
+    faq: {
+      q: "Do you cover Clacton-on-Sea and Harwich?",
+      a: "Yes. We cover Colchester and all of Tendring, including Clacton-on-Sea, Frinton-on-Sea and Harwich.",
+    },
+  }),
+  town({
+    slug: "watford",
+    name: "Watford",
+    parent: "hertfordshire",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Watford, Bushey, Rickmansworth and Hemel Hempstead.",
+    local:
+      "Watford sits just outside the M25 with fast trains into London Euston and the Overground. It has a busy rental market of flats and houses, with Bushey, Rickmansworth, Croxley Green and Abbots Langley around it and Hemel Hempstead a few miles north.",
+    stockAt: ["Watford", "Watford, Bushey, Rickmansworth and Hemel Hempstead", "Watford town centre and near Watford Junction"],
+    places: ["Abbots Langley", "Borehamwood", "Bushey", "Croxley Green", "Hemel Hempstead", "Rickmansworth"],
+    faq: {
+      q: "Do you cover Three Rivers and Hertsmere?",
+      a: "Yes. As well as Watford we cover Three Rivers, including Rickmansworth and Croxley Green, and Hertsmere, including Bushey and Borehamwood.",
+    },
+  }),
+
+  // ------------------------------------------------------------ SOUTH WEST
+  town({
+    slug: "bristol",
+    name: "Bristol",
+    parent: "south-west",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Bristol and South Gloucestershire.",
+    local:
+      "Bristol is the largest city in the South West, where the M4 meets the M5, with fast trains to London Paddington. It has a large rental market of Victorian terraces, converted HMOs and flats, and the South Gloucestershire towns of Filton, Kingswood, Yate and Bradley Stoke border it to the north and east.",
+    stockAt: ["Bristol", "Bristol, Kingswood, Filton and Yate", "Bristol city centre and the harbourside"],
+    places: ["Bradley Stoke", "Filton", "Keynsham", "Kingswood", "Portishead", "Yate"],
+    faq: {
+      q: "Do you cover South Gloucestershire?",
+      a: "Yes. We cover Bristol and South Gloucestershire, including Filton, Kingswood, Bradley Stoke and Yate.",
+    },
+  }),
+  town({
+    slug: "bath",
+    name: "Bath",
+    parent: "somerset",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Bath, Keynsham and North East Somerset.",
+    local:
+      "Bath is a World Heritage city with a tight housing market, a large stock of Georgian and Victorian flats and houses, and a big HMO market. Bath and North East Somerset also takes in Keynsham, Midsomer Norton and Radstock.",
+    stockAt: ["Bath", "Bath, Keynsham and Midsomer Norton", "Bath city centre"],
+    places: ["Bradford-on-Avon", "Frome", "Keynsham", "Midsomer Norton", "Radstock"],
+    faq: {
+      q: "Do you take on period flats in Bath?",
+      a: "Yes. Flats in converted Georgian and Victorian buildings are property types we lease. We assess each one individually and make a written rent offer if it is a good fit.",
+    },
+  }),
+  town({
+    slug: "swindon",
+    name: "Swindon",
+    parent: "wiltshire",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Swindon, Chippenham and Royal Wootton Bassett.",
+    local:
+      "Swindon sits on the M4 and the Great Western main line between London and Bristol. It has a large rental market of terraced houses, newer estates and town-centre flats, with Chippenham, Royal Wootton Bassett and Highworth nearby.",
+    stockAt: ["Swindon", "Swindon, Royal Wootton Bassett and Chippenham", "Swindon town centre and near the station"],
+    places: ["Chippenham", "Highworth", "Marlborough", "Royal Wootton Bassett", "Wroughton"],
+    faq: {
+      q: "Do you take on new-build houses in Swindon?",
+      a: "Yes, if the property fits. Newer houses and flats are often a good fit because they are already compliant. We assess each one individually and make a written rent offer if it is.",
+    },
+  }),
+  town({
+    slug: "bournemouth",
+    name: "Bournemouth",
+    parent: "dorset",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Bournemouth, Poole and Christchurch.",
+    local:
+      "Bournemouth, Christchurch and Poole form one continuous conurbation on the Dorset coast. The rental stock runs from seafront flats and converted hotels to family houses and HMOs, with Ferndown and Wimborne just inland.",
+    stockAt: ["Bournemouth and Poole", "Bournemouth, Poole, Christchurch and Ferndown", "Bournemouth town centre and the seafront"],
+    places: ["Christchurch", "Ferndown", "Poole", "Wareham", "Wimborne Minster"],
+    faq: {
+      q: "Do you take on converted hotels and guest houses in Bournemouth?",
+      a: "Yes. Converted buildings, including former hotels and guest houses, are property types we lease, as are whole blocks of flats. We assess each one individually and make a written rent offer if it is a good fit.",
+    },
+  }),
+  town({
+    slug: "plymouth",
+    name: "Plymouth",
+    parent: "devon",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Plymouth, Plympton, Plymstock and Saltash.",
+    local:
+      "Plymouth sits on Plymouth Sound at the Devon and Cornwall border, with the naval base at Devonport. It has a large rental market of terraced houses, HMOs and flats, with Plympton and Plymstock on its edge and Saltash just across the Tamar.",
+    stockAt: ["Plymouth", "Plymouth, Plympton, Plymstock and Saltash", "Plymouth city centre and the Barbican"],
+    places: ["Ivybridge", "Plympton", "Plymstock", "Saltash", "Tavistock"],
+    faq: {
+      q: "Do you cover Saltash and south-east Cornwall?",
+      a: "Yes. We cover Plymouth and the surrounding areas, including Saltash and the rest of Cornwall, as well as Ivybridge and Tavistock in Devon.",
+    },
+  }),
+  town({
+    slug: "exeter",
+    name: "Exeter",
+    parent: "devon",
+    strap: "Guaranteed rent on 3–5 year corporate leases for landlords in Exeter, Exmouth, Cranbrook and East Devon.",
+    local:
+      "Exeter is Devon's county city, on the M5 with direct trains to London Paddington and Waterloo. It has a tight rental market of flats, terraces and HMOs, with Exmouth, Cranbrook, Crediton and Newton Abbot nearby.",
+    stockAt: ["Exeter", "Exeter, Exmouth, Cranbrook and Crediton", "Exeter city centre and near the stations"],
+    places: ["Cranbrook", "Crediton", "Exmouth", "Newton Abbot", "Tiverton", "Topsham"],
+    faq: {
+      q: "Do you cover East Devon and Teignbridge?",
+      a: "Yes. We cover all of Devon, including East Devon, Mid Devon and Teignbridge around Exeter.",
     },
   }),
 ]

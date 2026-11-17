@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Guaranteed Rent for Landlords | Corporate Lets | Alali Homes",
     description:
-      "Guaranteed rent on 3–5 year corporate leases for licensed HMOs, 2–4 bed properties and 1-bed flats. Zero voids.",
+      "Guaranteed rent on 3–5 year corporate leases for studios to 4+ bed homes, HMOs, blocks and conversions. Zero voids.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -106,7 +106,7 @@ const orgSchema = {
   },
   foundingDate: "2026-03-16",
   description:
-    "Guaranteed rent and corporate lettings company for landlords in London, the South East, the Midlands, Yorkshire and the Humber, the North East and the North West. We lease licensed HMOs, 2-4 bedroom properties and 1-bedroom self-contained flats on 3-5 year corporate leases, pay a fixed rent every month, and provide full property management and dedicated tenant support.",
+    "Guaranteed rent and corporate lettings company for landlords in London, the South East, the East of England, the South West, Wales, the Midlands, the North West, Yorkshire and the Humber, and the North East. We lease studios, 1 to 4+ bedroom houses and flats, HMOs of any size, blocks of flats and converted buildings on 3-5 year corporate leases, pay a fixed rent every month, and provide full property management and dedicated tenant support.",
   url: "https://www.alalihomes.com",
   email: "info@alalihomes.com",
   telephone: "+442045158438",

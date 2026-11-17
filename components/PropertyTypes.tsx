@@ -6,22 +6,29 @@ import { motion } from "framer-motion"
 const types = [
   {
     num: "01",
-    title: "Licensed HMOs",
-    desc: "Existing licensed HMOs taken on as they are, managed in line with the licence conditions, with a guaranteed rent for the whole lease.",
+    title: "HMOs of Any Size",
+    desc: "Licensed HMOs, from smaller shared houses to large HMOs, taken on as they are licensed and managed in line with the licence conditions.",
     href: "/hmo-guaranteed-rent",
     cta: "HMO guaranteed rent",
   },
   {
     num: "02",
-    title: "2–4 Bed Properties",
-    desc: "Houses and flats with two to four bedrooms, leased on a 3–5 year corporate let with full property management included.",
+    title: "Studios to 4+ Bed Homes",
+    desc: "Studios, 1-bed flats, 2 and 3 bed houses and flats, and 4+ bed family homes, leased on a 3–5 year corporate let with full management.",
     href: "/corporate-lets",
     cta: "Corporate lets",
   },
   {
     num: "03",
-    title: "1-Bed Self-Contained Flats",
-    desc: "One-bedroom self-contained flats with their own kitchen and bathroom, on the same guaranteed rent terms.",
+    title: "Blocks of Flats",
+    desc: "Whole blocks of flats taken on as one lease, with one fixed rent every month and the management of every unit handled for you.",
+    href: "/corporate-lets",
+    cta: "Corporate lets",
+  },
+  {
+    num: "04",
+    title: "Converted Buildings",
+    desc: "Converted buildings such as former care homes, hotels and offices, leased on the same guaranteed rent terms.",
     href: "/corporate-lets",
     cta: "Corporate lets",
   },
@@ -50,12 +57,12 @@ export function PropertyTypes() {
             transition={{ delay: 0.1 }}
             className="max-w-xl font-body text-[0.98rem] font-light leading-[1.85] text-grey-600 lg:justify-self-end"
           >
-            We assess every property individually and make a written rent offer where it is a good
-            fit. In the North West we currently lease 1 to 3 bed properties only.
+            From a single studio to a whole block, we assess every property individually and make a
+            written rent offer where it is a good fit.
           </motion.p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {types.map((t, i) => (
             <motion.div
               key={t.title}
