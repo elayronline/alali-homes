@@ -75,7 +75,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     url,
     provider: { "@id": `${SITE}/#organization` },
     areaServed: {
-      "@type": area.slug === "london" ? "City" : "AdministrativeArea",
+      "@type": area.slug === "london" || area.kind === "town" ? "City" : "AdministrativeArea",
       name: displayName,
     },
     audience: { "@type": "Audience", audienceType: "Landlords and property owners" },

@@ -11,7 +11,7 @@ const rise = (delay = 0) => ({ style: { "--rise-delay": `${delay}s` } as React.C
 
 
 export function Hero() {
-  const areaNames = AREAS.map((a) => a.name.replace(/^the /, ""))
+  const areaNames = AREAS.filter((a) => a.kind !== "town").map((a) => a.name.replace(/^the /, ""))
   const strip = [...areaNames, ...areaNames]
 
   return (

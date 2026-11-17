@@ -6,7 +6,7 @@ import { AREAS } from "@/lib/areas"
 const HOME_UPDATED = "2026-11-07"
 const LEGAL_UPDATED = "2026-11-07"
 const COOKIES_UPDATED = "2026-09-08"
-const AREAS_UPDATED = "2026-11-07"
+const AREAS_UPDATED = "2026-11-17"
 const SERVICES_UPDATED = "2026-11-07"
 
 const SITE = "https://www.alalihomes.com"
