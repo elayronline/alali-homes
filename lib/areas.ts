@@ -514,6 +514,11 @@ export function getChildren(slug: string): Area[] {
   return AREAS.filter((a) => a.parent === slug)
 }
 
+/** A region's children with each county's towns listed straight after it, so site-wide links reach every page. */
+export function getChildrenWithTowns(slug: string): Area[] {
+  return getChildren(slug).flatMap((c) => [c, ...getChildren(c.slug)])
+}
+
 /** South to north; the northern regions run west to east, so a 3-column grid reads like a map. */
 const REGION_ORDER = [
   "london", "south-east", "east-of-england",

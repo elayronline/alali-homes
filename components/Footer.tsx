@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react"
-import { REGIONS, getChildren } from "@/lib/areas"
+import { REGIONS, getChildrenWithTowns } from "@/lib/areas"
 
 const companyLinks = [
   { label: "About", href: "/#about" },
@@ -91,9 +91,9 @@ export function Footer() {
                 <a href={`/guaranteed-rent/${r.slug}`} className="font-body text-[0.85rem] font-medium text-white/85 transition-colors duration-200 hover:text-gold-light">
                   Guaranteed Rent {r.name.replace(/^the /, "")}
                 </a>
-                {getChildren(r.slug).length > 0 && (
+                {getChildrenWithTowns(r.slug).length > 0 && (
                   <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
-                    {getChildren(r.slug).map((c) => (
+                    {getChildrenWithTowns(r.slug).map((c) => (
                       <li key={c.slug}>
                         <a href={`/guaranteed-rent/${c.slug}`} className={linkClass}>{c.name}</a>
                       </li>
