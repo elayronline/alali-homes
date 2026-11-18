@@ -63,6 +63,18 @@ export function Footer() {
               Guaranteed rent and corporate lets for landlords. A fixed
               rent every month on a 3–5 year lease, with full property management included.
             </p>
+            <p className="mt-4 max-w-xs font-body text-[0.85rem] font-light leading-relaxed text-white/70">
+              Growing your portfolio? Our sister company,{" "}
+              <a
+                href="https://www.alalipropertypartners.com/hmo-sourcing"
+                target="_blank"
+                rel="noopener"
+                className="text-gold-light/90 underline-offset-4 transition-colors hover:text-gold-light hover:underline"
+              >
+                Alali Property Partners
+              </a>
+              , sources HMO and investment property for investors.
+            </p>
             <div className="mt-6 space-y-1.5 font-body text-[0.85rem] text-white/70">
               <a href="tel:+442045158438" className="block transition-colors hover:text-gold-light">020 4515 8438</a>
               <a href="mailto:info@alalihomes.com" className="block transition-colors hover:text-gold-light">info@alalihomes.com</a>
