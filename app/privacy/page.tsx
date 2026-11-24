@@ -32,7 +32,8 @@ export default function PrivacyPolicy() {
           <li>your phone number (optional)</li>
           <li>whether you are contacting us as a landlord, an agent or in another capacity</li>
           <li>the type of property you are enquiring about (optional)</li>
-          <li>the postcode of the property you are enquiring about (optional)</li>
+          <li>the full address of the property you are enquiring about</li>
+          <li>whether the property is currently vacant and, if not, the date it will become vacant</li>
           <li>anything you write in the message box (optional)</li>
         </ul>
         <p>

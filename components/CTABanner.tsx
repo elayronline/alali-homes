@@ -18,7 +18,12 @@ const propertyOptions = [
 
 const reassurance = ["No obligation, no hard sell", "A written guaranteed rent offer", "Your details are never shared"]
 
-const emptyForm = { name: "", email: "", phone: "", role: "", propertyType: "", postcode: "", message: "" }
+const emptyForm = { name: "", email: "", phone: "", role: "", propertyType: "", address: "", vacant: "", vacantFrom: "", message: "" }
+
+const todayISO = () => new Date().toISOString().slice(0, 10)
+
+const formatDate = (iso: string) =>
+  new Date(`${iso}T00:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
 
 export function CTABanner() {
   const [formData, setFormData] = useState(emptyForm)
@@ -45,7 +50,9 @@ export function CTABanner() {
           "Phone Number": formData.phone || "Not provided",
           "I am a": formData.role,
           "Property Type": formData.propertyType || "Not provided",
-          "Property Postcode": formData.postcode || "Not provided",
+          "Property Address": formData.address,
+          "Currently Vacant": formData.vacant,
+          "Vacant From": formData.vacant === "No" && formData.vacantFrom ? formatDate(formData.vacantFrom) : "N/A",
           "Message": formData.message || "No additional details",
         }),
       })
@@ -170,9 +177,23 @@ export function CTABanner() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="form-postcode" className={label}>Property Postcode</label>
-                  <input id="form-postcode" type="text" placeholder="e.g. SE1 1AA" value={formData.postcode} onChange={(e) => setFormData({ ...formData, postcode: e.target.value })} className="field" />
+                  <label htmlFor="form-vacant" className={label}>Is the property vacant? <span className="text-gold">*</span></label>
+                  <select id="form-vacant" required value={formData.vacant} onChange={(e) => setFormData({ ...formData, vacant: e.target.value, vacantFrom: e.target.value === "No" ? formData.vacantFrom : "" })} className="field cursor-pointer" style={{ color: formData.vacant ? undefined : "#999999" }}>
+                    <option value="" disabled>Select one</option>
+                    <option value="Yes">Yes, it&apos;s vacant now</option>
+                    <option value="No">No, not yet</option>
+                  </select>
                 </div>
+              </div>
+              {formData.vacant === "No" && (
+                <div>
+                  <label htmlFor="form-vacant-from" className={label}>When will it be vacant? <span className="text-gold">*</span></label>
+                  <input id="form-vacant-from" type="date" required min={todayISO()} value={formData.vacantFrom} onChange={(e) => setFormData({ ...formData, vacantFrom: e.target.value })} className="field" />
+                </div>
+              )}
+              <div>
+                <label htmlFor="form-address" className={label}>Full Property Address <span className="text-gold">*</span></label>
+                <textarea id="form-address" required rows={2} autoComplete="street-address" placeholder="e.g. 12 High Street, London, SE1 1AA" value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} className="field resize-none" />
               </div>
               <div>
                 <label htmlFor="form-message" className={label}>Anything else we should know?</label>
