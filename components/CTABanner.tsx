@@ -82,7 +82,7 @@ export function CTABanner() {
               Let&apos;s start a <strong className="gold-text">conversation</strong>
             </h2>
             <p className="mt-5 font-body text-[0.95rem] font-light leading-[1.8] text-grey-600">
-              Tell us about your property and we&apos;ll come back to you with a written guaranteed rent offer.
+              Tell us about your property and we&apos;ll be in touch.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -121,7 +121,7 @@ export function CTABanner() {
               </div>
               <h3 className="mt-6 font-display text-xl font-semibold text-charcoal">Thank you — we&apos;ve received your details.</h3>
               <p className="mt-3 max-w-md font-body text-[0.92rem] text-grey-600">
-                A member of our team will review your property and be in touch with a written guaranteed rent offer.
+                A member of our team will review your property and be in touch.
               </p>
               <p className="mt-2 font-body text-[0.82rem] text-grey-500">Check your inbox and phone for our response.</p>
               <button
